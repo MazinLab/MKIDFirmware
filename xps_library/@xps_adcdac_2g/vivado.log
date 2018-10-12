@@ -1,0 +1,204 @@
+#-----------------------------------------------------------
+# Vivado v2015.4 (64-bit)
+# SW Build 1412921 on Wed Nov 18 09:44:32 MST 2015
+# IP Build 1412160 on Tue Nov 17 13:47:24 MST 2015
+# Start of session at: Fri Apr 15 20:05:33 2016
+# Process ID: 27240
+# Current directory: /home/kids/mlib_strader/xps_library/@xps_adcdac_2g
+# Command line: vivado
+# Log file: /home/kids/mlib_strader/xps_library/@xps_adcdac_2g/vivado.log
+# Journal file: /home/kids/mlib_strader/xps_library/@xps_adcdac_2g/vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project /Scratch/firmware/fnal_adcdac/p_2/p_2.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/Scratch/firmware/fnal_adcdac/p_2/p_2.ipdefs/ip_0'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/home/kids/Xilinx/Vivado/2015.4/data/ip'.
+WARNING: [IP_Flow 19-3664] IP 'd_1_axis_subset_converter_0_0' generated file not found '/Scratch/firmware/fnal_adcdac/p_2/p_2.srcs/sources_1/bd/d_1/ip/d_1_axis_subset_converter_0_0/axis_subset_converter_v1_1/hdl/verilog/axis_subset_converter_v1_1_axis_subset_converter_d_1_axis_subset_converter_0_0.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'd_1_axis_subset_converter_0_0' generated file not found '/Scratch/firmware/fnal_adcdac/p_2/p_2.srcs/sources_1/bd/d_1/ip/d_1_axis_subset_converter_0_0/axis_subset_converter_v1_1/hdl/verilog/axis_subset_converter_v1_1_axis_subset_converter_d_1_axis_subset_converter_0_0.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'd_1_axis_subset_converter_0_2' generated file not found '/Scratch/firmware/fnal_adcdac/p_2/p_2.srcs/sources_1/bd/d_1/ip/d_1_axis_subset_converter_0_2/axis_subset_converter_v1_1/hdl/verilog/axis_subset_converter_v1_1_axis_subset_converter_d_1_axis_subset_converter_0_2.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'd_1_axis_subset_converter_0_2' generated file not found '/Scratch/firmware/fnal_adcdac/p_2/p_2.srcs/sources_1/bd/d_1/ip/d_1_axis_subset_converter_0_2/axis_subset_converter_v1_1/hdl/verilog/axis_subset_converter_v1_1_axis_subset_converter_d_1_axis_subset_converter_0_2.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'd_1_axis_subset_converter_0_3' generated file not found '/Scratch/firmware/fnal_adcdac/p_2/p_2.srcs/sources_1/bd/d_1/ip/d_1_axis_subset_converter_0_3/axis_subset_converter_v1_1/hdl/verilog/axis_subset_converter_v1_1_axis_subset_converter_d_1_axis_subset_converter_0_3.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'd_1_axis_subset_converter_0_3' generated file not found '/Scratch/firmware/fnal_adcdac/p_2/p_2.srcs/sources_1/bd/d_1/ip/d_1_axis_subset_converter_0_3/axis_subset_converter_v1_1/hdl/verilog/axis_subset_converter_v1_1_axis_subset_converter_d_1_axis_subset_converter_0_3.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'd_1_axis_subset_converter_0_4' generated file not found '/Scratch/firmware/fnal_adcdac/p_2/p_2.srcs/sources_1/bd/d_1/ip/d_1_axis_subset_converter_0_4/axis_subset_converter_v1_1/hdl/verilog/axis_subset_converter_v1_1_axis_subset_converter_d_1_axis_subset_converter_0_4.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'd_1_axis_subset_converter_0_4' generated file not found '/Scratch/firmware/fnal_adcdac/p_2/p_2.srcs/sources_1/bd/d_1/ip/d_1_axis_subset_converter_0_4/axis_subset_converter_v1_1/hdl/verilog/axis_subset_converter_v1_1_axis_subset_converter_d_1_axis_subset_converter_0_4.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'd_1_axis_subset_converter_0_5' generated file not found '/Scratch/firmware/fnal_adcdac/p_2/p_2.srcs/sources_1/bd/d_1/ip/d_1_axis_subset_converter_0_5/axis_subset_converter_v1_1/hdl/verilog/axis_subset_converter_v1_1_axis_subset_converter_d_1_axis_subset_converter_0_5.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'd_1_axis_subset_converter_0_5' generated file not found '/Scratch/firmware/fnal_adcdac/p_2/p_2.srcs/sources_1/bd/d_1/ip/d_1_axis_subset_converter_0_5/axis_subset_converter_v1_1/hdl/verilog/axis_subset_converter_v1_1_axis_subset_converter_d_1_axis_subset_converter_0_5.v'. Please regenerate to continue.
+open_project: Time (s): cpu = 00:00:19 ; elapsed = 00:00:11 . Memory (MB): peak = 6138.812 ; gain = 331.738 ; free physical = 40413 ; free virtual = 90074
+INFO: [Vivado 12-4158] Exported Hardware file is out of date. Exported hardware information may be inconsistent with respect to the current state of the design. It is recommended that you re-export the design and launch SDK otherwise SDK is launched with out of date hardware system file.
+launch_sdk -workspace /Scratch/firmware/fnal_adcdac/p_2/p_2.sdk -hwspec /Scratch/firmware/fnal_adcdac/p_2/p_2.sdk/d_1_wrapper.hdf
+INFO: [Vivado 12-393] Launching SDK...
+INFO: [Vivado 12-417] Running xsdk -workspace /Scratch/firmware/fnal_adcdac/p_2/p_2.sdk -hwspec /Scratch/firmware/fnal_adcdac/p_2/p_2.sdk/d_1_wrapper.hdf
+INFO: [Vivado 12-3157] SDK launch initiated. Please check console for any further messages.
+open_hw
+connect_hw_server
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2015.4
+  **** Build date : Nov 18 2015-09:53:32
+    ** Copyright 1986-1999, 2001-2015 Xilinx, Inc. All Rights Reserved.
+
+
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210251A087C5
+set_property PROGRAM.FILE {/Scratch/firmware/fnal_adcdac/p_2/p_2.sdk/d_1_wrapper_hw_platform_0/d_1_wrapper.bit} [lindex [get_hw_devices] 0]
+set_property PROBES.FILE {/Scratch/firmware/fnal_adcdac/p_2/p_2.runs/impl_1/debug_nets.ltx} [lindex [get_hw_devices] 0]
+current_hw_device [lindex [get_hw_devices] 0]
+refresh_hw_device [lindex [get_hw_devices] 0]
+INFO: [Labtools 27-1435] Device xc7vx330t (JTAG device index = 0) is not programmed (DONE status = 0).
+set_property PROBES.FILE {/Scratch/firmware/fnal_adcdac/p_2/p_2.runs/impl_1/debug_nets.ltx} [lindex [get_hw_devices] 0]
+set_property PROGRAM.FILE {/Scratch/firmware/fnal_adcdac/p_2/p_2.sdk/d_1_wrapper_hw_platform_0/d_1_wrapper.bit} [lindex [get_hw_devices] 0]
+program_hw_devices [lindex [get_hw_devices] 0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+program_hw_devices: Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 6186.598 ; gain = 0.000 ; free physical = 39959 ; free virtual = 89621
+refresh_hw_device [lindex [get_hw_devices] 0]
+INFO: [Labtools 27-2302] Device xc7vx330t (JTAG device index = 0) is programmed with a design that has 2 ILA core(s).
+INFO: [Labtools 27-2302] Device xc7vx330t (JTAG device index = 0) is programmed with a design that has 1 VIO core(s).
+WARNING: [Labtools 27-1952] VIO hw_probe OUTPUT_VALUE properties for hw_vio(s) [hw_vio_1] differ from output values in the VIO core(s).
+Resolution: 
+To synchronize the hw_probes properties and the VIO core outputs choose one of the following alternatives:
+  1) Execute the command 'Commit Output Values to VIO Core', to write down the hw_probe values to the core.
+  2) Execute the command 'Refresh Input and Output Values from VIO Core', to update the hw_probe properties with the core values.
+  3) First restore initial values in the core with the command 'Reset VIO Core Outputs', and then execute the command 'Refresh Input and Output Values from VIO Core'.
+refresh_hw_device: Time (s): cpu = 00:00:17 ; elapsed = 00:00:06 . Memory (MB): peak = 6213.609 ; gain = 27.012 ; free physical = 39937 ; free virtual = 89599
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7vx330t_0] -filter {CELL_NAME=~"d_1_i/ila_0"}]]
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_2 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7vx330t_0] -filter {CELL_NAME=~"d_1_i/ila_1"}]]
+startgroup
+set_property OUTPUT_VALUE 1 [get_hw_probes d_1_i/vio_jesd_reset -of_objects [get_hw_vios -of_objects [get_hw_devices xc7vx330t_0] -filter {CELL_NAME=~"d_1_i/vio_0"}]]
+commit_hw_vio [get_hw_probes {d_1_i/vio_jesd_reset} -of_objects [get_hw_vios -of_objects [get_hw_devices xc7vx330t_0] -filter {CELL_NAME=~"d_1_i/vio_0"}]]
+endgroup
+startgroup
+set_property OUTPUT_VALUE 0 [get_hw_probes d_1_i/vio_adc_tready -of_objects [get_hw_vios -of_objects [get_hw_devices xc7vx330t_0] -filter {CELL_NAME=~"d_1_i/vio_0"}]]
+commit_hw_vio [get_hw_probes {d_1_i/vio_adc_tready} -of_objects [get_hw_vios -of_objects [get_hw_devices xc7vx330t_0] -filter {CELL_NAME=~"d_1_i/vio_0"}]]
+endgroup
+startgroup
+set_property OUTPUT_VALUE 0 [get_hw_probes d_1_i/vio_0_sysref_req -of_objects [get_hw_vios -of_objects [get_hw_devices xc7vx330t_0] -filter {CELL_NAME=~"d_1_i/vio_0"}]]
+commit_hw_vio [get_hw_probes {d_1_i/vio_0_sysref_req} -of_objects [get_hw_vios -of_objects [get_hw_devices xc7vx330t_0] -filter {CELL_NAME=~"d_1_i/vio_0"}]]
+endgroup
+startgroup
+set_property OUTPUT_VALUE 0 [get_hw_probes d_1_i/vio_jesd_reset -of_objects [get_hw_vios -of_objects [get_hw_devices xc7vx330t_0] -filter {CELL_NAME=~"d_1_i/vio_0"}]]
+commit_hw_vio [get_hw_probes {d_1_i/vio_jesd_reset} -of_objects [get_hw_vios -of_objects [get_hw_devices xc7vx330t_0] -filter {CELL_NAME=~"d_1_i/vio_0"}]]
+endgroup
+startgroup
+set_property OUTPUT_VALUE 1 [get_hw_probes d_1_i/vio_0_sysref_req -of_objects [get_hw_vios -of_objects [get_hw_devices xc7vx330t_0] -filter {CELL_NAME=~"d_1_i/vio_0"}]]
+commit_hw_vio [get_hw_probes {d_1_i/vio_0_sysref_req} -of_objects [get_hw_vios -of_objects [get_hw_devices xc7vx330t_0] -filter {CELL_NAME=~"d_1_i/vio_0"}]]
+endgroup
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7vx330t_0] -filter {CELL_NAME=~"d_1_i/ila_0"}] -trigger_now
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_1' trigger was armed at 2016-Apr-15 20:08:44
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7vx330t_0] -filter {CELL_NAME=~"d_1_i/ila_0"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7vx330t_0] -filter {CELL_NAME=~"d_1_i/ila_0"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_1' triggered at 2016-Apr-15 20:08:44
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7vx330t_0] -filter {CELL_NAME=~"d_1_i/ila_1"}] -trigger_now
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_2' trigger was armed at 2016-Apr-15 20:09:09
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7vx330t_0] -filter {CELL_NAME=~"d_1_i/ila_1"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7vx330t_0] -filter {CELL_NAME=~"d_1_i/ila_1"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_2' triggered at 2016-Apr-15 20:09:09
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7vx330t_0] -filter {CELL_NAME=~"d_1_i/ila_1"}] -trigger_now
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_2' trigger was armed at 2016-Apr-15 20:09:22
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7vx330t_0] -filter {CELL_NAME=~"d_1_i/ila_1"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7vx330t_0] -filter {CELL_NAME=~"d_1_i/ila_1"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_2' triggered at 2016-Apr-15 20:09:22
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7vx330t_0] -filter {CELL_NAME=~"d_1_i/ila_0"}] -trigger_now
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_1' trigger was armed at 2016-Apr-15 20:09:27
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7vx330t_0] -filter {CELL_NAME=~"d_1_i/ila_0"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7vx330t_0] -filter {CELL_NAME=~"d_1_i/ila_0"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_1' triggered at 2016-Apr-15 20:09:27
+startgroup
+set_property OUTPUT_VALUE 1 [get_hw_probes d_1_i/vio_adc_tready -of_objects [get_hw_vios -of_objects [get_hw_devices xc7vx330t_0] -filter {CELL_NAME=~"d_1_i/vio_0"}]]
+commit_hw_vio [get_hw_probes {d_1_i/vio_adc_tready} -of_objects [get_hw_vios -of_objects [get_hw_devices xc7vx330t_0] -filter {CELL_NAME=~"d_1_i/vio_0"}]]
+endgroup
+open_bd_design {/Scratch/firmware/fnal_adcdac/p_2/p_2.srcs/sources_1/bd/d_1/d_1.bd}
+Adding component instance block -- xilinx.com:ip:clk_wiz:5.2 - clk_1
+Adding component instance block -- xilinx.com:ip:proc_sys_reset:5.0 - rst_100M
+Adding component instance block -- xilinx.com:ip:axi_uartlite:2.0 - axi_uartlite_0
+Adding component instance block -- xilinx.com:ip:axi_gpio:2.0 - axi_gpio_0
+Adding component instance block -- xilinx.com:ip:microblaze:9.5 - mb_0
+Adding component instance block -- xilinx.com:ip:mdm:3.2 - mdm_1
+Adding component instance block -- xilinx.com:ip:axi_quad_spi:3.2 - lmk_spi_0
+Adding component instance block -- fnal.gov:user:spi2lmk0:1.0 - spi2lmk0_0
+Adding component instance block -- xilinx.com:ip:axi_quad_spi:3.2 - adc0_spi_1
+Adding component instance block -- fnal.gov:user:spi2adc0:1.0 - spi2adc0_0
+Adding component instance block -- xilinx.com:ip:axi_quad_spi:3.2 - adc1_spi_2
+Adding component instance block -- xilinx.com:ip:axi_quad_spi:3.2 - dac_spi_3
+Adding component instance block -- fnal.gov:user:spi2adc1:1.0 - spi2adc1_0
+Adding component instance block -- fnal.gov:user:spi2dac0:1.0 - spi2dac0_0
+Adding component instance block -- xilinx.com:ip:jesd204:6.2 - jesd204_0
+Adding component instance block -- xilinx.com:ip:jesd204_phy:3.0 - jesd204_phy_0
+Adding component instance block -- xilinx.com:ip:jesd204:6.2 - jesd204_1
+Adding component instance block -- xilinx.com:ip:jesd204_phy:3.0 - jesd204_phy_1
+Adding component instance block -- xilinx.com:ip:jesd204:6.2 - jesd204_2
+Adding component instance block -- xilinx.com:ip:jesd204_phy:3.0 - jesd204_phy_2
+Adding component instance block -- xilinx.com:ip:ila:6.0 - ila_0
+Adding component instance block -- xilinx.com:ip:ila:6.0 - ila_1
+Adding component instance block -- xilinx.com:ip:util_ds_buf:2.1 - adc0_ref_0
+Adding component instance block -- xilinx.com:ip:util_ds_buf:2.1 - adc1_ref_0
+Adding component instance block -- xilinx.com:ip:util_ds_buf:2.1 - adc0_core_0
+Adding component instance block -- xilinx.com:ip:util_ds_buf:2.1 - adc1_core_0
+Adding component instance block -- xilinx.com:ip:util_ds_buf:2.1 - adc0_core_1
+Adding component instance block -- xilinx.com:ip:util_ds_buf:2.1 - adc1_core_1
+Adding component instance block -- xilinx.com:ip:util_ds_buf:2.1 - dac_ref_0
+Adding component instance block -- xilinx.com:ip:util_ds_buf:2.1 - dac_core_0
+Adding component instance block -- xilinx.com:ip:util_ds_buf:2.1 - dac_core_1
+Adding component instance block -- xilinx.com:ip:util_ds_buf:2.1 - adc_sysref_0
+Adding component instance block -- xilinx.com:ip:util_ds_buf:2.1 - dac_sysref_0
+Adding component instance block -- xilinx.com:ip:util_ds_buf:2.1 - dac0_sync_0
+Adding component instance block -- xilinx.com:ip:util_ds_buf:2.1 - dac1_sync_0
+Adding component instance block -- xilinx.com:ip:xlconstant:1.1 - lmk_reset
+Adding component instance block -- xilinx.com:ip:xlconstant:1.1 - adc0_resetb
+Adding component instance block -- xilinx.com:ip:xlconstant:1.1 - adc1_resetb
+Adding component instance block -- xilinx.com:ip:xlconstant:1.1 - dac_resetb
+Adding component instance block -- xilinx.com:ip:xlconstant:1.1 - spi_oeb
+Adding component instance block -- xilinx.com:ip:xlconstant:1.1 - dac0_txen
+Adding component instance block -- xilinx.com:ip:xlconstant:1.1 - dac1_txen
+Adding component instance block -- xilinx.com:ip:util_ds_buf:2.1 - util_ds_buf_0
+Adding component instance block -- xilinx.com:ip:util_ds_buf:2.1 - util_ds_buf_1
+Adding component instance block -- xilinx.com:ip:vio:3.0 - vio_0
+Adding component instance block -- xilinx.com:ip:axis_subset_converter:1.1 - asc_0
+Adding component instance block -- xilinx.com:ip:c_counter_binary:12.0 - ramp_cntr
+Adding component instance block -- xilinx.com:ip:util_vector_logic:2.0 - util_vector_logic_0
+Adding component instance block -- xilinx.com:ip:selectio_wiz:5.1 - bus_0
+Adding component instance block -- xilinx.com:ip:selectio_wiz:5.1 - bus_1
+Adding component instance block -- xilinx.com:ip:axis_subset_converter:1.1 - axis_subset_converter_0
+Adding component instance block -- xilinx.com:ip:axis_subset_converter:1.1 - axis_subset_converter_1
+Adding component instance block -- xilinx.com:ip:axis_broadcaster:1.1 - axis_broadcaster_0
+Adding component instance block -- xilinx.com:ip:clk_wiz:5.2 - clk_wiz_0
+Adding component instance block -- xilinx.com:ip:proc_sys_reset:5.0 - proc_sys_reset_0
+Adding component instance block -- xilinx.com:ip:axis_broadcaster:1.1 - axis_broadcaster_1
+Adding component instance block -- xilinx.com:ip:axis_subset_converter:1.1 - axis_subset_converter_2
+Adding component instance block -- xilinx.com:ip:axis_subset_converter:1.1 - axis_subset_converter_3
+Adding component instance block -- xilinx.com:ip:selectio_wiz:5.1 - bus_2
+Adding component instance block -- xilinx.com:ip:selectio_wiz:5.1 - bus_3
+Adding component instance block -- xilinx.com:ip:util_ds_buf:2.1 - zdok1_trdy0
+Adding component instance block -- xilinx.com:ip:axis_clock_converter:1.1 - axis_clock_converter_0
+Adding component instance block -- xilinx.com:ip:axis_clock_converter:1.1 - axis_clock_converter_1
+Adding component instance block -- xilinx.com:ip:axis_clock_converter:1.1 - axis_clock_converter_2
+Adding component instance block -- xilinx.com:ip:axis_clock_converter:1.1 - axis_clock_converter_3
+Adding component instance block -- xilinx.com:ip:selectio_wiz:5.1 - selectio_wiz_0
+Adding component instance block -- xilinx.com:ip:xlconcat:2.1 - xlconcat_1
+Adding component instance block -- xilinx.com:ip:util_vector_logic:2.0 - util_vector_logic_9
+Adding component instance block -- xilinx.com:ip:lmb_v10:3.0 - dlmb_v10
+Adding component instance block -- xilinx.com:ip:lmb_v10:3.0 - ilmb_v10
+Adding component instance block -- xilinx.com:ip:lmb_bram_if_cntlr:4.0 - dlmb_bram_if_cntlr
+Adding component instance block -- xilinx.com:ip:lmb_bram_if_cntlr:4.0 - ilmb_bram_if_cntlr
+Adding component instance block -- xilinx.com:ip:blk_mem_gen:8.3 - lmb_bram
+Adding component instance block -- xilinx.com:ip:axi_crossbar:2.1 - xbar
+Successfully read diagram <d_1> from BD file </Scratch/firmware/fnal_adcdac/p_2/p_2.srcs/sources_1/bd/d_1/d_1.bd>
+open_bd_design: Time (s): cpu = 00:00:11 ; elapsed = 00:00:08 . Memory (MB): peak = 6451.824 ; gain = 227.332 ; free physical = 39550 ; free virtual = 89213
+startgroup
+set_property OUTPUT_VALUE 1 [get_hw_probes d_1_i/vio_jesd_reset -of_objects [get_hw_vios -of_objects [get_hw_devices xc7vx330t_0] -filter {CELL_NAME=~"d_1_i/vio_0"}]]
+commit_hw_vio [get_hw_probes {d_1_i/vio_jesd_reset} -of_objects [get_hw_vios -of_objects [get_hw_devices xc7vx330t_0] -filter {CELL_NAME=~"d_1_i/vio_0"}]]
+endgroup
+startgroup
+set_property OUTPUT_VALUE 0 [get_hw_probes d_1_i/vio_adc_tready -of_objects [get_hw_vios -of_objects [get_hw_devices xc7vx330t_0] -filter {CELL_NAME=~"d_1_i/vio_0"}]]
+commit_hw_vio [get_hw_probes {d_1_i/vio_adc_tready} -of_objects [get_hw_vios -of_objects [get_hw_devices xc7vx330t_0] -filter {CELL_NAME=~"d_1_i/vio_0"}]]
+endgroup
+startgroup
+set_property OUTPUT_VALUE 0 [get_hw_probes d_1_i/vio_0_sysref_req -of_objects [get_hw_vios -of_objects [get_hw_devices xc7vx330t_0] -filter {CELL_NAME=~"d_1_i/vio_0"}]]
+commit_hw_vio [get_hw_probes {d_1_i/vio_0_sysref_req} -of_objects [get_hw_vios -of_objects [get_hw_devices xc7vx330t_0] -filter {CELL_NAME=~"d_1_i/vio_0"}]]
+endgroup
+exit
+INFO: [Common 17-206] Exiting Vivado at Fri Apr 15 20:45:37 2016...

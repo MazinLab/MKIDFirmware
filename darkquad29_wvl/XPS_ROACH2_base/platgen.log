@@ -1,0 +1,2106 @@
+Release 14.3 - platgen Xilinx EDK 14.3 Build EDK_P.40xd
+ (lin64)
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: platgen -p xc6vsx475tff1759-1 -lang vhdl -intstyle default -msg
+__xps/ise/xmsgprops.lst system.mhs 
+
+WARNING:EDK - INFO:Security:67 - XILINXD_LICENSE_FILE is set to
+   '/home/kids/Xilinx/Vivado/2015.4/data/ip/core_licenses:/home/kids/.Xilinx' in
+   /home/kids/.flexlmrc.
+   INFO:Security:71 - If a license for part 'xc6vsx475t' is available, it will
+   be possible to use 'XPS_TDP' instead of 'XPS'.
+   WARNING:Security:42 - Your software subscription period has lapsed. Your
+   current version of Xilinx tools will continue to function, but you no longer
+   qualify for Xilinx software updates or new releases.
+
+
+Parse /Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs ...
+
+Read MPD definitions ...
+WARNING:EDK:4088 - IPNAME: opb_bram_if_cntlr, INSTANCE:
+   darkquad29_wvl_a2g_ctrl_lut_dump_dac_lut_buffer - Superseded core for
+   architecture 'virtex6sx' -
+   /Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs line 596
+    
+WARNING:EDK:4088 - IPNAME: opb_bram_if_cntlr, INSTANCE:
+   darkquad29_wvl_acc_iq_avg0_ss_bram - Superseded core for architecture
+   'virtex6sx' -
+   /Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs line 710
+    
+WARNING:EDK:4088 - IPNAME: opb_bram_if_cntlr, INSTANCE:
+   darkquad29_wvl_acc_iq_avg1_ss_bram - Superseded core for architecture
+   'virtex6sx' -
+   /Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs line 764
+    
+WARNING:EDK:4088 - IPNAME: opb_bram_if_cntlr, INSTANCE:
+   darkquad29_wvl_acc_iq_avg2_ss_bram - Superseded core for architecture
+   'virtex6sx' -
+   /Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs line 818
+    
+WARNING:EDK:4088 - IPNAME: opb_bram_if_cntlr, INSTANCE:
+   darkquad29_wvl_acc_iq_avg3_ss_bram - Superseded core for architecture
+   'virtex6sx' -
+   /Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs line 872
+    
+WARNING:EDK:4088 - IPNAME: opb_bram_if_cntlr, INSTANCE:
+   darkquad29_wvl_adc_in_snp_cal0_ss_bram - Superseded core for architecture
+   'virtex6sx' -
+   /Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs line
+   1138 
+WARNING:EDK:4088 - IPNAME: opb_bram_if_cntlr, INSTANCE:
+   darkquad29_wvl_adc_in_snp_cal1_ss_bram - Superseded core for architecture
+   'virtex6sx' -
+   /Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs line
+   1192 
+WARNING:EDK:4088 - IPNAME: opb_bram_if_cntlr, INSTANCE:
+   darkquad29_wvl_adc_in_snp_cal2_ss_bram - Superseded core for architecture
+   'virtex6sx' -
+   /Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs line
+   1246 
+WARNING:EDK:4088 - IPNAME: opb_bram_if_cntlr, INSTANCE:
+   darkquad29_wvl_adc_in_snp_cal3_ss_bram - Superseded core for architecture
+   'virtex6sx' -
+   /Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs line
+   1300 
+WARNING:EDK:4088 - IPNAME: opb_bram_if_cntlr, INSTANCE:
+   darkquad29_wvl_capture0_energy_cal_lut_energy_coeffs - Superseded core for
+   architecture 'virtex6sx' -
+   /Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs line
+   1474 
+WARNING:EDK:4088 - IPNAME: opb_bram_if_cntlr, INSTANCE:
+   darkquad29_wvl_capture0_pix - Superseded core for architecture 'virtex6sx' -
+   /Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs line
+   1516 
+WARNING:EDK:4088 - IPNAME: opb_bram_if_cntlr, INSTANCE:
+   darkquad29_wvl_capture1_energy_cal_lut_energy_coeffs - Superseded core for
+   architecture 'virtex6sx' -
+   /Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs line
+   1606 
+WARNING:EDK:4088 - IPNAME: opb_bram_if_cntlr, INSTANCE:
+   darkquad29_wvl_capture1_pix - Superseded core for architecture 'virtex6sx' -
+   /Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs line
+   1648 
+WARNING:EDK:4088 - IPNAME: opb_bram_if_cntlr, INSTANCE:
+   darkquad29_wvl_capture2_energy_cal_lut_energy_coeffs - Superseded core for
+   architecture 'virtex6sx' -
+   /Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs line
+   1738 
+WARNING:EDK:4088 - IPNAME: opb_bram_if_cntlr, INSTANCE:
+   darkquad29_wvl_capture2_pix - Superseded core for architecture 'virtex6sx' -
+   /Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs line
+   1780 
+WARNING:EDK:4088 - IPNAME: opb_bram_if_cntlr, INSTANCE:
+   darkquad29_wvl_capture3_energy_cal_lut_energy_coeffs - Superseded core for
+   architecture 'virtex6sx' -
+   /Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs line
+   1870 
+WARNING:EDK:4088 - IPNAME: opb_bram_if_cntlr, INSTANCE:
+   darkquad29_wvl_capture3_pix - Superseded core for architecture 'virtex6sx' -
+   /Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs line
+   1912 
+WARNING:EDK:4088 - IPNAME: opb_bram_if_cntlr, INSTANCE:
+   darkquad29_wvl_prog_fir0_single_chan_coeffs - Superseded core for
+   architecture 'virtex6sx' -
+   /Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs line
+   2700 
+WARNING:EDK:4088 - IPNAME: opb_bram_if_cntlr, INSTANCE:
+   darkquad29_wvl_prog_fir1_single_chan_coeffs - Superseded core for
+   architecture 'virtex6sx' -
+   /Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs line
+   2742 
+WARNING:EDK:4088 - IPNAME: opb_bram_if_cntlr, INSTANCE:
+   darkquad29_wvl_prog_fir2_single_chan_coeffs - Superseded core for
+   architecture 'virtex6sx' -
+   /Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs line
+   2784 
+WARNING:EDK:4088 - IPNAME: opb_bram_if_cntlr, INSTANCE:
+   darkquad29_wvl_prog_fir3_single_chan_coeffs - Superseded core for
+   architecture 'virtex6sx' -
+   /Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs line
+   2826 
+WARNING:EDK:4088 - IPNAME: opb_bram_if_cntlr, INSTANCE:
+   darkquad29_wvl_snp_phs_ss_bram - Superseded core for architecture 'virtex6sx'
+   - /Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs line
+   2880 
+WARNING:EDK:4088 - IPNAME: opb_opb_lite, INSTANCE: opb2opb_bridge_opb1 -
+   Superseded core for architecture 'virtex6sx' -
+   /Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs line
+   2972 
+WARNING:EDK:4088 - IPNAME: opb_opb_lite, INSTANCE: opb2opb_bridge_opb2 -
+   Superseded core for architecture 'virtex6sx' -
+   /Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs line
+   2993 
+WARNING:EDK:4088 - IPNAME: opb_opb_lite, INSTANCE: opb2opb_bridge_opb3 -
+   Superseded core for architecture 'virtex6sx' -
+   /Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs line
+   3014 
+WARNING:EDK:4088 - IPNAME: opb_opb_lite, INSTANCE: opb2opb_bridge_opb4 -
+   Superseded core for architecture 'virtex6sx' -
+   /Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs line
+   3035 
+WARNING:EDK:4088 - IPNAME: opb_bram_if_cntlr, INSTANCE:
+   darkquad29_wvl_a2g_ctrl_lut_dump_dac_lut_buffer - Superseded core for
+   architecture 'virtex6sx' -
+   /Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs line 596
+    
+WARNING:EDK:4088 - IPNAME: opb_bram_if_cntlr, INSTANCE:
+   darkquad29_wvl_acc_iq_avg0_ss_bram - Superseded core for architecture
+   'virtex6sx' -
+   /Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs line 710
+    
+WARNING:EDK:4088 - IPNAME: opb_bram_if_cntlr, INSTANCE:
+   darkquad29_wvl_acc_iq_avg1_ss_bram - Superseded core for architecture
+   'virtex6sx' -
+   /Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs line 764
+    
+WARNING:EDK:4088 - IPNAME: opb_bram_if_cntlr, INSTANCE:
+   darkquad29_wvl_acc_iq_avg2_ss_bram - Superseded core for architecture
+   'virtex6sx' -
+   /Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs line 818
+    
+WARNING:EDK:4088 - IPNAME: opb_bram_if_cntlr, INSTANCE:
+   darkquad29_wvl_acc_iq_avg3_ss_bram - Superseded core for architecture
+   'virtex6sx' -
+   /Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs line 872
+    
+WARNING:EDK:4088 - IPNAME: opb_bram_if_cntlr, INSTANCE:
+   darkquad29_wvl_adc_in_snp_cal0_ss_bram - Superseded core for architecture
+   'virtex6sx' -
+   /Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs line
+   1138 
+WARNING:EDK:4088 - IPNAME: opb_bram_if_cntlr, INSTANCE:
+   darkquad29_wvl_adc_in_snp_cal1_ss_bram - Superseded core for architecture
+   'virtex6sx' -
+   /Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs line
+   1192 
+WARNING:EDK:4088 - IPNAME: opb_bram_if_cntlr, INSTANCE:
+   darkquad29_wvl_adc_in_snp_cal2_ss_bram - Superseded core for architecture
+   'virtex6sx' -
+   /Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs line
+   1246 
+WARNING:EDK:4088 - IPNAME: opb_bram_if_cntlr, INSTANCE:
+   darkquad29_wvl_adc_in_snp_cal3_ss_bram - Superseded core for architecture
+   'virtex6sx' -
+   /Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs line
+   1300 
+WARNING:EDK:4088 - IPNAME: opb_bram_if_cntlr, INSTANCE:
+   darkquad29_wvl_capture0_energy_cal_lut_energy_coeffs - Superseded core for
+   architecture 'virtex6sx' -
+   /Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs line
+   1474 
+WARNING:EDK:4088 - IPNAME: opb_bram_if_cntlr, INSTANCE:
+   darkquad29_wvl_capture0_pix - Superseded core for architecture 'virtex6sx' -
+   /Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs line
+   1516 
+WARNING:EDK:4088 - IPNAME: opb_bram_if_cntlr, INSTANCE:
+   darkquad29_wvl_capture1_energy_cal_lut_energy_coeffs - Superseded core for
+   architecture 'virtex6sx' -
+   /Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs line
+   1606 
+WARNING:EDK:4088 - IPNAME: opb_bram_if_cntlr, INSTANCE:
+   darkquad29_wvl_capture1_pix - Superseded core for architecture 'virtex6sx' -
+   /Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs line
+   1648 
+WARNING:EDK:4088 - IPNAME: opb_bram_if_cntlr, INSTANCE:
+   darkquad29_wvl_capture2_energy_cal_lut_energy_coeffs - Superseded core for
+   architecture 'virtex6sx' -
+   /Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs line
+   1738 
+WARNING:EDK:4088 - IPNAME: opb_bram_if_cntlr, INSTANCE:
+   darkquad29_wvl_capture2_pix - Superseded core for architecture 'virtex6sx' -
+   /Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs line
+   1780 
+WARNING:EDK:4088 - IPNAME: opb_bram_if_cntlr, INSTANCE:
+   darkquad29_wvl_capture3_energy_cal_lut_energy_coeffs - Superseded core for
+   architecture 'virtex6sx' -
+   /Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs line
+   1870 
+WARNING:EDK:4088 - IPNAME: opb_bram_if_cntlr, INSTANCE:
+   darkquad29_wvl_capture3_pix - Superseded core for architecture 'virtex6sx' -
+   /Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs line
+   1912 
+WARNING:EDK:4088 - IPNAME: opb_bram_if_cntlr, INSTANCE:
+   darkquad29_wvl_prog_fir0_single_chan_coeffs - Superseded core for
+   architecture 'virtex6sx' -
+   /Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs line
+   2700 
+WARNING:EDK:4088 - IPNAME: opb_bram_if_cntlr, INSTANCE:
+   darkquad29_wvl_prog_fir1_single_chan_coeffs - Superseded core for
+   architecture 'virtex6sx' -
+   /Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs line
+   2742 
+WARNING:EDK:4088 - IPNAME: opb_bram_if_cntlr, INSTANCE:
+   darkquad29_wvl_prog_fir2_single_chan_coeffs - Superseded core for
+   architecture 'virtex6sx' -
+   /Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs line
+   2784 
+WARNING:EDK:4088 - IPNAME: opb_bram_if_cntlr, INSTANCE:
+   darkquad29_wvl_prog_fir3_single_chan_coeffs - Superseded core for
+   architecture 'virtex6sx' -
+   /Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs line
+   2826 
+WARNING:EDK:4088 - IPNAME: opb_bram_if_cntlr, INSTANCE:
+   darkquad29_wvl_snp_phs_ss_bram - Superseded core for architecture 'virtex6sx'
+   - /Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs line
+   2880 
+WARNING:EDK:4088 - IPNAME: opb_opb_lite, INSTANCE: opb2opb_bridge_opb1 -
+   Superseded core for architecture 'virtex6sx' -
+   /Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs line
+   2972 
+WARNING:EDK:4088 - IPNAME: opb_opb_lite, INSTANCE: opb2opb_bridge_opb2 -
+   Superseded core for architecture 'virtex6sx' -
+   /Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs line
+   2993 
+WARNING:EDK:4088 - IPNAME: opb_opb_lite, INSTANCE: opb2opb_bridge_opb3 -
+   Superseded core for architecture 'virtex6sx' -
+   /Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs line
+   3014 
+WARNING:EDK:4088 - IPNAME: opb_opb_lite, INSTANCE: opb2opb_bridge_opb4 -
+   Superseded core for architecture 'virtex6sx' -
+   /Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs line
+   3035 
+
+Overriding IP level properties ...
+
+Computing clock values...
+INFO:EDK:740 - Cannot determine the input clock associated with port :
+   infrastructure_inst:sys_clk. Clock DRCs will not be performed on this core
+   and cores connected to it. 
+INFO:EDK:740 - Cannot determine the input clock associated with port :
+   infrastructure_inst:epb_clk. Clock DRCs will not be performed on this core
+   and cores connected to it. 
+INFO:EDK:740 - Cannot determine the input clock associated with port :
+   infrastructure_inst:epb_clk. Clock DRCs will not be performed on this core
+   and cores connected to it. 
+INFO:EDK:740 - Cannot determine the input clock associated with port :
+   infrastructure_inst:epb_clk. Clock DRCs will not be performed on this core
+   and cores connected to it. 
+INFO:EDK:740 - Cannot determine the input clock associated with port :
+   darkquad29_wvl_adc_in_adcdac_2g:adc_clk_out. Clock DRCs will not be performed
+   on this core and cores connected to it. 
+INFO:EDK:740 - Cannot determine the input clock associated with port :
+   darkquad29_wvl_adc_in_adcdac_2g:adc_clk_out. Clock DRCs will not be performed
+   on this core and cores connected to it. 
+INFO:EDK:740 - Cannot determine the input clock associated with port :
+   infrastructure_inst:epb_clk. Clock DRCs will not be performed on this core
+   and cores connected to it. 
+INFO:EDK:740 - Cannot determine the input clock associated with port :
+   infrastructure_inst:epb_clk. Clock DRCs will not be performed on this core
+   and cores connected to it. 
+INFO:EDK:740 - Cannot determine the input clock associated with port :
+   infrastructure_inst:epb_clk. Clock DRCs will not be performed on this core
+   and cores connected to it. 
+INFO:EDK:740 - Cannot determine the input clock associated with port :
+   infrastructure_inst:epb_clk. Clock DRCs will not be performed on this core
+   and cores connected to it. 
+INFO:EDK:740 - Cannot determine the input clock associated with port :
+   infrastructure_inst:epb_clk. Clock DRCs will not be performed on this core
+   and cores connected to it. 
+INFO:EDK:740 - Cannot determine the input clock associated with port :
+   infrastructure_inst:epb_clk. Clock DRCs will not be performed on this core
+   and cores connected to it. 
+INFO:EDK:740 - Cannot determine the input clock associated with port :
+   infrastructure_inst:epb_clk. Clock DRCs will not be performed on this core
+   and cores connected to it. 
+INFO:EDK:740 - Cannot determine the input clock associated with port :
+   infrastructure_inst:epb_clk. Clock DRCs will not be performed on this core
+   and cores connected to it. 
+INFO:EDK:740 - Cannot determine the input clock associated with port :
+   infrastructure_inst:epb_clk. Clock DRCs will not be performed on this core
+   and cores connected to it. 
+INFO:EDK:740 - Cannot determine the input clock associated with port :
+   infrastructure_inst:epb_clk. Clock DRCs will not be performed on this core
+   and cores connected to it. 
+INFO:EDK:740 - Cannot determine the input clock associated with port :
+   infrastructure_inst:epb_clk. Clock DRCs will not be performed on this core
+   and cores connected to it. 
+INFO:EDK:740 - Cannot determine the input clock associated with port :
+   infrastructure_inst:epb_clk. Clock DRCs will not be performed on this core
+   and cores connected to it. 
+INFO:EDK:740 - Cannot determine the input clock associated with port :
+   infrastructure_inst:epb_clk. Clock DRCs will not be performed on this core
+   and cores connected to it. 
+INFO:EDK:740 - Cannot determine the input clock associated with port :
+   infrastructure_inst:epb_clk. Clock DRCs will not be performed on this core
+   and cores connected to it. 
+INFO:EDK:740 - Cannot determine the input clock associated with port :
+   infrastructure_inst:epb_clk. Clock DRCs will not be performed on this core
+   and cores connected to it. 
+INFO:EDK:740 - Cannot determine the input clock associated with port :
+   infrastructure_inst:epb_clk. Clock DRCs will not be performed on this core
+   and cores connected to it. 
+INFO:EDK:740 - Cannot determine the input clock associated with port :
+   infrastructure_inst:epb_clk. Clock DRCs will not be performed on this core
+   and cores connected to it. 
+INFO:EDK:740 - Cannot determine the input clock associated with port :
+   infrastructure_inst:epb_clk. Clock DRCs will not be performed on this core
+   and cores connected to it. 
+INFO:EDK:740 - Cannot determine the input clock associated with port :
+   infrastructure_inst:epb_clk. Clock DRCs will not be performed on this core
+   and cores connected to it. 
+INFO:EDK:740 - Cannot determine the input clock associated with port :
+   infrastructure_inst:epb_clk. Clock DRCs will not be performed on this core
+   and cores connected to it. 
+INFO:EDK:740 - Cannot determine the input clock associated with port :
+   infrastructure_inst:epb_clk. Clock DRCs will not be performed on this core
+   and cores connected to it. 
+INFO:EDK:740 - Cannot determine the input clock associated with port :
+   infrastructure_inst:epb_clk. Clock DRCs will not be performed on this core
+   and cores connected to it. 
+INFO:EDK:740 - Cannot determine the input clock associated with port :
+   infrastructure_inst:epb_clk. Clock DRCs will not be performed on this core
+   and cores connected to it. 
+INFO:EDK:740 - Cannot determine the input clock associated with port :
+   infrastructure_inst:epb_clk. Clock DRCs will not be performed on this core
+   and cores connected to it. 
+INFO:EDK:740 - Cannot determine the input clock associated with port :
+   infrastructure_inst:epb_clk. Clock DRCs will not be performed on this core
+   and cores connected to it. 
+INFO:EDK:740 - Cannot determine the input clock associated with port :
+   infrastructure_inst:epb_clk. Clock DRCs will not be performed on this core
+   and cores connected to it. 
+INFO:EDK:740 - Cannot determine the input clock associated with port :
+   infrastructure_inst:epb_clk. Clock DRCs will not be performed on this core
+   and cores connected to it. 
+INFO:EDK:740 - Cannot determine the input clock associated with port :
+   infrastructure_inst:epb_clk. Clock DRCs will not be performed on this core
+   and cores connected to it. 
+INFO:EDK:740 - Cannot determine the input clock associated with port :
+   infrastructure_inst:epb_clk. Clock DRCs will not be performed on this core
+   and cores connected to it. 
+INFO:EDK:740 - Cannot determine the input clock associated with port :
+   infrastructure_inst:epb_clk. Clock DRCs will not be performed on this core
+   and cores connected to it. 
+INFO:EDK:740 - Cannot determine the input clock associated with port :
+   infrastructure_inst:sys_clk. Clock DRCs will not be performed on this core
+   and cores connected to it. 
+INFO:EDK:740 - Cannot determine the input clock associated with port :
+   infrastructure_inst:epb_clk. Clock DRCs will not be performed on this core
+   and cores connected to it. 
+INFO:EDK:740 - Cannot determine the input clock associated with port :
+   infrastructure_inst:epb_clk. Clock DRCs will not be performed on this core
+   and cores connected to it. 
+INFO:EDK:740 - Cannot determine the input clock associated with port :
+   infrastructure_inst:epb_clk. Clock DRCs will not be performed on this core
+   and cores connected to it. 
+INFO:EDK:740 - Cannot determine the input clock associated with port :
+   infrastructure_inst:epb_clk. Clock DRCs will not be performed on this core
+   and cores connected to it. 
+INFO:EDK:740 - Cannot determine the input clock associated with port :
+   infrastructure_inst:epb_clk. Clock DRCs will not be performed on this core
+   and cores connected to it. 
+INFO:EDK:740 - Cannot determine the input clock associated with port :
+   infrastructure_inst:epb_clk. Clock DRCs will not be performed on this core
+   and cores connected to it. 
+INFO:EDK:740 - Cannot determine the input clock associated with port :
+   infrastructure_inst:epb_clk. Clock DRCs will not be performed on this core
+   and cores connected to it. 
+INFO:EDK:740 - Cannot determine the input clock associated with port :
+   infrastructure_inst:epb_clk. Clock DRCs will not be performed on this core
+   and cores connected to it. 
+INFO:EDK:740 - Cannot determine the input clock associated with port :
+   infrastructure_inst:epb_clk. Clock DRCs will not be performed on this core
+   and cores connected to it. 
+INFO:EDK:740 - Cannot determine the input clock associated with port :
+   infrastructure_inst:epb_clk. Clock DRCs will not be performed on this core
+   and cores connected to it. 
+INFO:EDK:740 - Cannot determine the input clock associated with port :
+   infrastructure_inst:epb_clk. Clock DRCs will not be performed on this core
+   and cores connected to it. 
+INFO:EDK:740 - Cannot determine the input clock associated with port :
+   infrastructure_inst:epb_clk. Clock DRCs will not be performed on this core
+   and cores connected to it. 
+INFO:EDK:740 - Cannot determine the input clock associated with port :
+   infrastructure_inst:epb_clk. Clock DRCs will not be performed on this core
+   and cores connected to it. 
+INFO:EDK:740 - Cannot determine the input clock associated with port :
+   infrastructure_inst:epb_clk. Clock DRCs will not be performed on this core
+   and cores connected to it. 
+INFO:EDK:740 - Cannot determine the input clock associated with port :
+   infrastructure_inst:epb_clk. Clock DRCs will not be performed on this core
+   and cores connected to it. 
+INFO:EDK:740 - Cannot determine the input clock associated with port :
+   infrastructure_inst:epb_clk. Clock DRCs will not be performed on this core
+   and cores connected to it. 
+INFO:EDK:740 - Cannot determine the input clock associated with port :
+   infrastructure_inst:epb_clk. Clock DRCs will not be performed on this core
+   and cores connected to it. 
+INFO:EDK:740 - Cannot determine the input clock associated with port :
+   infrastructure_inst:epb_clk. Clock DRCs will not be performed on this core
+   and cores connected to it. 
+INFO:EDK:740 - Cannot determine the input clock associated with port :
+   infrastructure_inst:epb_clk. Clock DRCs will not be performed on this core
+   and cores connected to it. 
+INFO:EDK:740 - Cannot determine the input clock associated with port :
+   infrastructure_inst:epb_clk. Clock DRCs will not be performed on this core
+   and cores connected to it. 
+INFO:EDK:740 - Cannot determine the input clock associated with port :
+   infrastructure_inst:epb_clk. Clock DRCs will not be performed on this core
+   and cores connected to it. 
+INFO:EDK:740 - Cannot determine the input clock associated with port :
+   infrastructure_inst:epb_clk. Clock DRCs will not be performed on this core
+   and cores connected to it. 
+INFO:EDK:740 - Cannot determine the input clock associated with port :
+   infrastructure_inst:epb_clk. Clock DRCs will not be performed on this core
+   and cores connected to it. 
+INFO:EDK:740 - Cannot determine the input clock associated with port :
+   infrastructure_inst:epb_clk. Clock DRCs will not be performed on this core
+   and cores connected to it. 
+INFO:EDK:740 - Cannot determine the input clock associated with port :
+   infrastructure_inst:epb_clk. Clock DRCs will not be performed on this core
+   and cores connected to it. 
+INFO:EDK:740 - Cannot determine the input clock associated with port :
+   infrastructure_inst:epb_clk. Clock DRCs will not be performed on this core
+   and cores connected to it. 
+INFO:EDK:740 - Cannot determine the input clock associated with port :
+   infrastructure_inst:epb_clk. Clock DRCs will not be performed on this core
+   and cores connected to it. 
+INFO:EDK:740 - Cannot determine the input clock associated with port :
+   infrastructure_inst:epb_clk. Clock DRCs will not be performed on this core
+   and cores connected to it. 
+INFO:EDK:740 - Cannot determine the input clock associated with port :
+   infrastructure_inst:epb_clk. Clock DRCs will not be performed on this core
+   and cores connected to it. 
+INFO:EDK:740 - Cannot determine the input clock associated with port :
+   infrastructure_inst:epb_clk. Clock DRCs will not be performed on this core
+   and cores connected to it. 
+INFO:EDK:740 - Cannot determine the input clock associated with port :
+   infrastructure_inst:epb_clk. Clock DRCs will not be performed on this core
+   and cores connected to it. 
+INFO:EDK:740 - Cannot determine the input clock associated with port :
+   infrastructure_inst:epb_clk. Clock DRCs will not be performed on this core
+   and cores connected to it. 
+INFO:EDK:740 - Cannot determine the input clock associated with port :
+   infrastructure_inst:epb_clk. Clock DRCs will not be performed on this core
+   and cores connected to it. 
+INFO:EDK:740 - Cannot determine the input clock associated with port :
+   infrastructure_inst:epb_clk. Clock DRCs will not be performed on this core
+   and cores connected to it. 
+INFO:EDK:740 - Cannot determine the input clock associated with port :
+   infrastructure_inst:epb_clk. Clock DRCs will not be performed on this core
+   and cores connected to it. 
+INFO:EDK:740 - Cannot determine the input clock associated with port :
+   infrastructure_inst:epb_clk. Clock DRCs will not be performed on this core
+   and cores connected to it. 
+INFO:EDK:740 - Cannot determine the input clock associated with port :
+   infrastructure_inst:epb_clk. Clock DRCs will not be performed on this core
+   and cores connected to it. 
+INFO:EDK:740 - Cannot determine the input clock associated with port :
+   infrastructure_inst:epb_clk. Clock DRCs will not be performed on this core
+   and cores connected to it. 
+INFO:EDK:740 - Cannot determine the input clock associated with port :
+   infrastructure_inst:epb_clk. Clock DRCs will not be performed on this core
+   and cores connected to it. 
+INFO:EDK:740 - Cannot determine the input clock associated with port :
+   infrastructure_inst:epb_clk. Clock DRCs will not be performed on this core
+   and cores connected to it. 
+INFO:EDK:740 - Cannot determine the input clock associated with port :
+   infrastructure_inst:epb_clk. Clock DRCs will not be performed on this core
+   and cores connected to it. 
+INFO:EDK:740 - Cannot determine the input clock associated with port :
+   infrastructure_inst:epb_clk. Clock DRCs will not be performed on this core
+   and cores connected to it. 
+INFO:EDK:740 - Cannot determine the input clock associated with port :
+   infrastructure_inst:epb_clk. Clock DRCs will not be performed on this core
+   and cores connected to it. 
+INFO:EDK:740 - Cannot determine the input clock associated with port :
+   infrastructure_inst:epb_clk. Clock DRCs will not be performed on this core
+   and cores connected to it. 
+INFO:EDK:740 - Cannot determine the input clock associated with port :
+   infrastructure_inst:epb_clk. Clock DRCs will not be performed on this core
+   and cores connected to it. 
+INFO:EDK:740 - Cannot determine the input clock associated with port :
+   infrastructure_inst:epb_clk. Clock DRCs will not be performed on this core
+   and cores connected to it. 
+INFO:EDK:740 - Cannot determine the input clock associated with port :
+   infrastructure_inst:epb_clk. Clock DRCs will not be performed on this core
+   and cores connected to it. 
+INFO:EDK:740 - Cannot determine the input clock associated with port :
+   infrastructure_inst:epb_clk. Clock DRCs will not be performed on this core
+   and cores connected to it. 
+INFO:EDK:740 - Cannot determine the input clock associated with port :
+   infrastructure_inst:epb_clk. Clock DRCs will not be performed on this core
+   and cores connected to it. 
+INFO:EDK:740 - Cannot determine the input clock associated with port :
+   infrastructure_inst:epb_clk. Clock DRCs will not be performed on this core
+   and cores connected to it. 
+INFO:EDK:740 - Cannot determine the input clock associated with port :
+   infrastructure_inst:epb_clk. Clock DRCs will not be performed on this core
+   and cores connected to it. 
+INFO:EDK:740 - Cannot determine the input clock associated with port :
+   infrastructure_inst:epb_clk. Clock DRCs will not be performed on this core
+   and cores connected to it. 
+INFO:EDK:740 - Cannot determine the input clock associated with port :
+   infrastructure_inst:epb_clk. Clock DRCs will not be performed on this core
+   and cores connected to it. 
+INFO:EDK:740 - Cannot determine the input clock associated with port :
+   infrastructure_inst:epb_clk. Clock DRCs will not be performed on this core
+   and cores connected to it. 
+INFO:EDK:740 - Cannot determine the input clock associated with port :
+   infrastructure_inst:epb_clk. Clock DRCs will not be performed on this core
+   and cores connected to it. 
+INFO:EDK:740 - Cannot determine the input clock associated with port :
+   infrastructure_inst:epb_clk. Clock DRCs will not be performed on this core
+   and cores connected to it. 
+INFO:EDK:740 - Cannot determine the input clock associated with port :
+   infrastructure_inst:epb_clk. Clock DRCs will not be performed on this core
+   and cores connected to it. 
+INFO:EDK:740 - Cannot determine the input clock associated with port :
+   infrastructure_inst:epb_clk. Clock DRCs will not be performed on this core
+   and cores connected to it. 
+INFO:EDK:740 - Cannot determine the input clock associated with port :
+   infrastructure_inst:epb_clk. Clock DRCs will not be performed on this core
+   and cores connected to it. 
+INFO:EDK:740 - Cannot determine the input clock associated with port :
+   infrastructure_inst:epb_clk. Clock DRCs will not be performed on this core
+   and cores connected to it. 
+INFO:EDK:740 - Cannot determine the input clock associated with port :
+   infrastructure_inst:epb_clk. Clock DRCs will not be performed on this core
+   and cores connected to it. 
+INFO:EDK:740 - Cannot determine the input clock associated with port :
+   infrastructure_inst:epb_clk. Clock DRCs will not be performed on this core
+   and cores connected to it. 
+INFO:EDK:740 - Cannot determine the input clock associated with port :
+   infrastructure_inst:epb_clk. Clock DRCs will not be performed on this core
+   and cores connected to it. 
+INFO:EDK:740 - Cannot determine the input clock associated with port :
+   infrastructure_inst:epb_clk. Clock DRCs will not be performed on this core
+   and cores connected to it. 
+INFO:EDK:740 - Cannot determine the input clock associated with port :
+   infrastructure_inst:epb_clk. Clock DRCs will not be performed on this core
+   and cores connected to it. 
+INFO:EDK:740 - Cannot determine the input clock associated with port :
+   infrastructure_inst:epb_clk. Clock DRCs will not be performed on this core
+   and cores connected to it. 
+INFO:EDK:740 - Cannot determine the input clock associated with port :
+   infrastructure_inst:epb_clk. Clock DRCs will not be performed on this core
+   and cores connected to it. 
+INFO:EDK:740 - Cannot determine the input clock associated with port :
+   infrastructure_inst:epb_clk. Clock DRCs will not be performed on this core
+   and cores connected to it. 
+INFO:EDK:740 - Cannot determine the input clock associated with port :
+   infrastructure_inst:epb_clk. Clock DRCs will not be performed on this core
+   and cores connected to it. 
+INFO:EDK:740 - Cannot determine the input clock associated with port :
+   infrastructure_inst:epb_clk. Clock DRCs will not be performed on this core
+   and cores connected to it. 
+INFO:EDK:740 - Cannot determine the input clock associated with port :
+   infrastructure_inst:epb_clk. Clock DRCs will not be performed on this core
+   and cores connected to it. 
+INFO:EDK:740 - Cannot determine the input clock associated with port :
+   infrastructure_inst:epb_clk. Clock DRCs will not be performed on this core
+   and cores connected to it. 
+INFO:EDK:740 - Cannot determine the input clock associated with port :
+   infrastructure_inst:epb_clk. Clock DRCs will not be performed on this core
+   and cores connected to it. 
+INFO:EDK:740 - Cannot determine the input clock associated with port :
+   infrastructure_inst:epb_clk. Clock DRCs will not be performed on this core
+   and cores connected to it. 
+INFO:EDK:740 - Cannot determine the input clock associated with port :
+   infrastructure_inst:epb_clk. Clock DRCs will not be performed on this core
+   and cores connected to it. 
+INFO:EDK:740 - Cannot determine the input clock associated with port :
+   infrastructure_inst:epb_clk. Clock DRCs will not be performed on this core
+   and cores connected to it. 
+INFO:EDK:740 - Cannot determine the input clock associated with port :
+   infrastructure_inst:epb_clk. Clock DRCs will not be performed on this core
+   and cores connected to it. 
+INFO:EDK:740 - Cannot determine the input clock associated with port :
+   infrastructure_inst:epb_clk. Clock DRCs will not be performed on this core
+   and cores connected to it. 
+INFO:EDK:740 - Cannot determine the input clock associated with port :
+   infrastructure_inst:epb_clk. Clock DRCs will not be performed on this core
+   and cores connected to it. 
+INFO:EDK:740 - Cannot determine the input clock associated with port :
+   infrastructure_inst:epb_clk. Clock DRCs will not be performed on this core
+   and cores connected to it. 
+INFO:EDK:740 - Cannot determine the input clock associated with port :
+   infrastructure_inst:epb_clk. Clock DRCs will not be performed on this core
+   and cores connected to it. 
+INFO:EDK:740 - Cannot determine the input clock associated with port :
+   infrastructure_inst:epb_clk. Clock DRCs will not be performed on this core
+   and cores connected to it. 
+INFO:EDK:740 - Cannot determine the input clock associated with port :
+   infrastructure_inst:epb_clk. Clock DRCs will not be performed on this core
+   and cores connected to it. 
+INFO:EDK:740 - Cannot determine the input clock associated with port :
+   infrastructure_inst:epb_clk. Clock DRCs will not be performed on this core
+   and cores connected to it. 
+INFO:EDK:740 - Cannot determine the input clock associated with port :
+   infrastructure_inst:epb_clk. Clock DRCs will not be performed on this core
+   and cores connected to it. 
+INFO:EDK:740 - Cannot determine the input clock associated with port :
+   infrastructure_inst:epb_clk. Clock DRCs will not be performed on this core
+   and cores connected to it. 
+INFO:EDK:740 - Cannot determine the input clock associated with port :
+   infrastructure_inst:epb_clk. Clock DRCs will not be performed on this core
+   and cores connected to it. 
+INFO:EDK:740 - Cannot determine the input clock associated with port :
+   infrastructure_inst:epb_clk. Clock DRCs will not be performed on this core
+   and cores connected to it. 
+INFO:EDK:740 - Cannot determine the input clock associated with port :
+   infrastructure_inst:epb_clk. Clock DRCs will not be performed on this core
+   and cores connected to it. 
+INFO:EDK:740 - Cannot determine the input clock associated with port :
+   darkquad29_wvl_adc_in_adcdac_2g:adc_clk_out. Clock DRCs will not be performed
+   on this core and cores connected to it. 
+INFO:EDK:740 - Cannot determine the input clock associated with port :
+   infrastructure_inst:epb_clk. Clock DRCs will not be performed on this core
+   and cores connected to it. 
+INFO:EDK:740 - Cannot determine the input clock associated with port :
+   infrastructure_inst:epb_clk. Clock DRCs will not be performed on this core
+   and cores connected to it. 
+INFO:EDK:740 - Cannot determine the input clock associated with port :
+   darkquad29_wvl_adc_in_adcdac_2g:adc_clk_out. Clock DRCs will not be performed
+   on this core and cores connected to it. 
+INFO:EDK:740 - Cannot determine the input clock associated with port :
+   infrastructure_inst:epb_clk. Clock DRCs will not be performed on this core
+   and cores connected to it. 
+INFO:EDK:740 - Cannot determine the input clock associated with port :
+   infrastructure_inst:epb_clk. Clock DRCs will not be performed on this core
+   and cores connected to it. 
+INFO:EDK:740 - Cannot determine the input clock associated with port :
+   darkquad29_wvl_adc_in_adcdac_2g:adc_clk_out. Clock DRCs will not be performed
+   on this core and cores connected to it. 
+INFO:EDK:740 - Cannot determine the input clock associated with port :
+   infrastructure_inst:epb_clk. Clock DRCs will not be performed on this core
+   and cores connected to it. 
+INFO:EDK:740 - Cannot determine the input clock associated with port :
+   infrastructure_inst:epb_clk. Clock DRCs will not be performed on this core
+   and cores connected to it. 
+INFO:EDK:740 - Cannot determine the input clock associated with port :
+   darkquad29_wvl_adc_in_adcdac_2g:adc_clk_out. Clock DRCs will not be performed
+   on this core and cores connected to it. 
+INFO:EDK:740 - Cannot determine the input clock associated with port :
+   infrastructure_inst:epb_clk. Clock DRCs will not be performed on this core
+   and cores connected to it. 
+INFO:EDK:740 - Cannot determine the input clock associated with port :
+   infrastructure_inst:epb_clk. Clock DRCs will not be performed on this core
+   and cores connected to it. 
+INFO:EDK:740 - Cannot determine the input clock associated with port :
+   infrastructure_inst:epb_clk. Clock DRCs will not be performed on this core
+   and cores connected to it. 
+INFO:EDK:740 - Cannot determine the input clock associated with port :
+   infrastructure_inst:epb_clk. Clock DRCs will not be performed on this core
+   and cores connected to it. 
+INFO:EDK:740 - Cannot determine the input clock associated with port :
+   infrastructure_inst:epb_clk. Clock DRCs will not be performed on this core
+   and cores connected to it. 
+INFO:EDK:740 - Cannot determine the input clock associated with port :
+   infrastructure_inst:epb_clk. Clock DRCs will not be performed on this core
+   and cores connected to it. 
+INFO:EDK:740 - Cannot determine the input clock associated with port :
+   infrastructure_inst:epb_clk. Clock DRCs will not be performed on this core
+   and cores connected to it. 
+INFO:EDK:740 - Cannot determine the input clock associated with port :
+   infrastructure_inst:epb_clk. Clock DRCs will not be performed on this core
+   and cores connected to it. 
+INFO:EDK:740 - Cannot determine the input clock associated with port :
+   infrastructure_inst:epb_clk. Clock DRCs will not be performed on this core
+   and cores connected to it. 
+INFO:EDK:740 - Cannot determine the input clock associated with port :
+   infrastructure_inst:epb_clk. Clock DRCs will not be performed on this core
+   and cores connected to it. 
+INFO:EDK:740 - Cannot determine the input clock associated with port :
+   infrastructure_inst:epb_clk. Clock DRCs will not be performed on this core
+   and cores connected to it. 
+INFO:EDK:740 - Cannot determine the input clock associated with port :
+   infrastructure_inst:epb_clk. Clock DRCs will not be performed on this core
+   and cores connected to it. 
+INFO:EDK:740 - Cannot determine the input clock associated with port :
+   infrastructure_inst:epb_clk. Clock DRCs will not be performed on this core
+   and cores connected to it. 
+INFO:EDK:740 - Cannot determine the input clock associated with port :
+   infrastructure_inst:epb_clk. Clock DRCs will not be performed on this core
+   and cores connected to it. 
+INFO:EDK:740 - Cannot determine the input clock associated with port :
+   infrastructure_inst:epb_clk. Clock DRCs will not be performed on this core
+   and cores connected to it. 
+INFO:EDK:740 - Cannot determine the input clock associated with port :
+   infrastructure_inst:epb_clk. Clock DRCs will not be performed on this core
+   and cores connected to it. 
+INFO:EDK:740 - Cannot determine the input clock associated with port :
+   infrastructure_inst:epb_clk. Clock DRCs will not be performed on this core
+   and cores connected to it. 
+INFO:EDK:740 - Cannot determine the input clock associated with port :
+   infrastructure_inst:epb_clk. Clock DRCs will not be performed on this core
+   and cores connected to it. 
+INFO:EDK:740 - Cannot determine the input clock associated with port :
+   infrastructure_inst:epb_clk. Clock DRCs will not be performed on this core
+   and cores connected to it. 
+INFO:EDK:740 - Cannot determine the input clock associated with port :
+   infrastructure_inst:epb_clk. Clock DRCs will not be performed on this core
+   and cores connected to it. 
+INFO:EDK:740 - Cannot determine the input clock associated with port :
+   infrastructure_inst:epb_clk. Clock DRCs will not be performed on this core
+   and cores connected to it. 
+INFO:EDK:740 - Cannot determine the input clock associated with port :
+   infrastructure_inst:epb_clk. Clock DRCs will not be performed on this core
+   and cores connected to it. 
+INFO:EDK:740 - Cannot determine the input clock associated with port :
+   infrastructure_inst:epb_clk. Clock DRCs will not be performed on this core
+   and cores connected to it. 
+INFO:EDK:740 - Cannot determine the input clock associated with port :
+   infrastructure_inst:epb_clk. Clock DRCs will not be performed on this core
+   and cores connected to it. 
+INFO:EDK:740 - Cannot determine the input clock associated with port :
+   infrastructure_inst:epb_clk. Clock DRCs will not be performed on this core
+   and cores connected to it. 
+INFO:EDK:740 - Cannot determine the input clock associated with port :
+   infrastructure_inst:epb_clk. Clock DRCs will not be performed on this core
+   and cores connected to it. 
+INFO:EDK:740 - Cannot determine the input clock associated with port :
+   infrastructure_inst:epb_clk. Clock DRCs will not be performed on this core
+   and cores connected to it. 
+INFO:EDK:740 - Cannot determine the input clock associated with port :
+   infrastructure_inst:epb_clk. Clock DRCs will not be performed on this core
+   and cores connected to it. 
+INFO:EDK:740 - Cannot determine the input clock associated with port :
+   infrastructure_inst:epb_clk. Clock DRCs will not be performed on this core
+   and cores connected to it. 
+INFO:EDK:740 - Cannot determine the input clock associated with port :
+   infrastructure_inst:epb_clk. Clock DRCs will not be performed on this core
+   and cores connected to it. 
+INFO:EDK:740 - Cannot determine the input clock associated with port :
+   infrastructure_inst:epb_clk. Clock DRCs will not be performed on this core
+   and cores connected to it. 
+INFO:EDK:740 - Cannot determine the input clock associated with port :
+   infrastructure_inst:epb_clk. Clock DRCs will not be performed on this core
+   and cores connected to it. 
+INFO:EDK:740 - Cannot determine the input clock associated with port :
+   infrastructure_inst:epb_clk. Clock DRCs will not be performed on this core
+   and cores connected to it. 
+INFO:EDK:740 - Cannot determine the input clock associated with port :
+   infrastructure_inst:epb_clk. Clock DRCs will not be performed on this core
+   and cores connected to it. 
+INFO:EDK:740 - Cannot determine the input clock associated with port :
+   infrastructure_inst:epb_clk. Clock DRCs will not be performed on this core
+   and cores connected to it. 
+INFO:EDK:740 - Cannot determine the input clock associated with port :
+   infrastructure_inst:epb_clk. Clock DRCs will not be performed on this core
+   and cores connected to it. 
+INFO:EDK:740 - Cannot determine the input clock associated with port :
+   infrastructure_inst:epb_clk. Clock DRCs will not be performed on this core
+   and cores connected to it. 
+INFO:EDK:740 - Cannot determine the input clock associated with port :
+   infrastructure_inst:epb_clk. Clock DRCs will not be performed on this core
+   and cores connected to it. 
+INFO:EDK:740 - Cannot determine the input clock associated with port :
+   infrastructure_inst:epb_clk. Clock DRCs will not be performed on this core
+   and cores connected to it. 
+INFO:EDK:740 - Cannot determine the input clock associated with port :
+   infrastructure_inst:epb_clk. Clock DRCs will not be performed on this core
+   and cores connected to it. 
+INFO:EDK:740 - Cannot determine the input clock associated with port :
+   infrastructure_inst:epb_clk. Clock DRCs will not be performed on this core
+   and cores connected to it. 
+INFO:EDK:740 - Cannot determine the input clock associated with port :
+   infrastructure_inst:epb_clk. Clock DRCs will not be performed on this core
+   and cores connected to it. 
+INFO:EDK:740 - Cannot determine the input clock associated with port :
+   infrastructure_inst:epb_clk. Clock DRCs will not be performed on this core
+   and cores connected to it. 
+INFO:EDK:740 - Cannot determine the input clock associated with port :
+   infrastructure_inst:epb_clk. Clock DRCs will not be performed on this core
+   and cores connected to it. 
+INFO:EDK:740 - Cannot determine the input clock associated with port :
+   infrastructure_inst:epb_clk. Clock DRCs will not be performed on this core
+   and cores connected to it. 
+INFO:EDK:740 - Cannot determine the input clock associated with port :
+   infrastructure_inst:epb_clk. Clock DRCs will not be performed on this core
+   and cores connected to it. 
+INFO:EDK:740 - Cannot determine the input clock associated with port :
+   infrastructure_inst:epb_clk. Clock DRCs will not be performed on this core
+   and cores connected to it. 
+INFO:EDK:740 - Cannot determine the input clock associated with port :
+   infrastructure_inst:epb_clk. Clock DRCs will not be performed on this core
+   and cores connected to it. 
+INFO:EDK:740 - Cannot determine the input clock associated with port :
+   infrastructure_inst:epb_clk. Clock DRCs will not be performed on this core
+   and cores connected to it. 
+INFO:EDK:1039 - Did not update the value for parameter:
+   darkquad29_wvl_a2g_ctrl_lut_dump_dac_lut_buffer:c_opb_clk_period_ps.
+   Top-level frequency could not be propagated to this IP. Please make sure that
+   you have specified the frequency of the top-level clock port, and that the
+   clocks are properly connected.
+INFO:EDK:1039 - Did not update the value for parameter:
+   darkquad29_wvl_acc_iq_avg0_ss_bram:c_opb_clk_period_ps. Top-level frequency
+   could not be propagated to this IP. Please make sure that you have specified
+   the frequency of the top-level clock port, and that the clocks are properly
+   connected.
+INFO:EDK:1039 - Did not update the value for parameter:
+   darkquad29_wvl_acc_iq_avg1_ss_bram:c_opb_clk_period_ps. Top-level frequency
+   could not be propagated to this IP. Please make sure that you have specified
+   the frequency of the top-level clock port, and that the clocks are properly
+   connected.
+INFO:EDK:1039 - Did not update the value for parameter:
+   darkquad29_wvl_acc_iq_avg2_ss_bram:c_opb_clk_period_ps. Top-level frequency
+   could not be propagated to this IP. Please make sure that you have specified
+   the frequency of the top-level clock port, and that the clocks are properly
+   connected.
+INFO:EDK:1039 - Did not update the value for parameter:
+   darkquad29_wvl_acc_iq_avg3_ss_bram:c_opb_clk_period_ps. Top-level frequency
+   could not be propagated to this IP. Please make sure that you have specified
+   the frequency of the top-level clock port, and that the clocks are properly
+   connected.
+INFO:EDK:1039 - Did not update the value for parameter:
+   darkquad29_wvl_adc_in_snp_cal0_ss_bram:c_opb_clk_period_ps. Top-level
+   frequency could not be propagated to this IP. Please make sure that you have
+   specified the frequency of the top-level clock port, and that the clocks are
+   properly connected.
+INFO:EDK:1039 - Did not update the value for parameter:
+   darkquad29_wvl_adc_in_snp_cal1_ss_bram:c_opb_clk_period_ps. Top-level
+   frequency could not be propagated to this IP. Please make sure that you have
+   specified the frequency of the top-level clock port, and that the clocks are
+   properly connected.
+INFO:EDK:1039 - Did not update the value for parameter:
+   darkquad29_wvl_adc_in_snp_cal2_ss_bram:c_opb_clk_period_ps. Top-level
+   frequency could not be propagated to this IP. Please make sure that you have
+   specified the frequency of the top-level clock port, and that the clocks are
+   properly connected.
+INFO:EDK:1039 - Did not update the value for parameter:
+   darkquad29_wvl_adc_in_snp_cal3_ss_bram:c_opb_clk_period_ps. Top-level
+   frequency could not be propagated to this IP. Please make sure that you have
+   specified the frequency of the top-level clock port, and that the clocks are
+   properly connected.
+INFO:EDK:1039 - Did not update the value for parameter:
+   darkquad29_wvl_capture0_energy_cal_lut_energy_coeffs:c_opb_clk_period_ps.
+   Top-level frequency could not be propagated to this IP. Please make sure that
+   you have specified the frequency of the top-level clock port, and that the
+   clocks are properly connected.
+INFO:EDK:1039 - Did not update the value for parameter:
+   darkquad29_wvl_capture0_pix:c_opb_clk_period_ps. Top-level frequency could
+   not be propagated to this IP. Please make sure that you have specified the
+   frequency of the top-level clock port, and that the clocks are properly
+   connected.
+INFO:EDK:1039 - Did not update the value for parameter:
+   darkquad29_wvl_capture1_energy_cal_lut_energy_coeffs:c_opb_clk_period_ps.
+   Top-level frequency could not be propagated to this IP. Please make sure that
+   you have specified the frequency of the top-level clock port, and that the
+   clocks are properly connected.
+INFO:EDK:1039 - Did not update the value for parameter:
+   darkquad29_wvl_capture1_pix:c_opb_clk_period_ps. Top-level frequency could
+   not be propagated to this IP. Please make sure that you have specified the
+   frequency of the top-level clock port, and that the clocks are properly
+   connected.
+INFO:EDK:1039 - Did not update the value for parameter:
+   darkquad29_wvl_capture2_energy_cal_lut_energy_coeffs:c_opb_clk_period_ps.
+   Top-level frequency could not be propagated to this IP. Please make sure that
+   you have specified the frequency of the top-level clock port, and that the
+   clocks are properly connected.
+INFO:EDK:1039 - Did not update the value for parameter:
+   darkquad29_wvl_capture2_pix:c_opb_clk_period_ps. Top-level frequency could
+   not be propagated to this IP. Please make sure that you have specified the
+   frequency of the top-level clock port, and that the clocks are properly
+   connected.
+INFO:EDK:1039 - Did not update the value for parameter:
+   darkquad29_wvl_capture3_energy_cal_lut_energy_coeffs:c_opb_clk_period_ps.
+   Top-level frequency could not be propagated to this IP. Please make sure that
+   you have specified the frequency of the top-level clock port, and that the
+   clocks are properly connected.
+INFO:EDK:1039 - Did not update the value for parameter:
+   darkquad29_wvl_capture3_pix:c_opb_clk_period_ps. Top-level frequency could
+   not be propagated to this IP. Please make sure that you have specified the
+   frequency of the top-level clock port, and that the clocks are properly
+   connected.
+INFO:EDK:1039 - Did not update the value for parameter:
+   darkquad29_wvl_prog_fir0_single_chan_coeffs:c_opb_clk_period_ps. Top-level
+   frequency could not be propagated to this IP. Please make sure that you have
+   specified the frequency of the top-level clock port, and that the clocks are
+   properly connected.
+INFO:EDK:1039 - Did not update the value for parameter:
+   darkquad29_wvl_prog_fir1_single_chan_coeffs:c_opb_clk_period_ps. Top-level
+   frequency could not be propagated to this IP. Please make sure that you have
+   specified the frequency of the top-level clock port, and that the clocks are
+   properly connected.
+INFO:EDK:1039 - Did not update the value for parameter:
+   darkquad29_wvl_prog_fir2_single_chan_coeffs:c_opb_clk_period_ps. Top-level
+   frequency could not be propagated to this IP. Please make sure that you have
+   specified the frequency of the top-level clock port, and that the clocks are
+   properly connected.
+INFO:EDK:1039 - Did not update the value for parameter:
+   darkquad29_wvl_prog_fir3_single_chan_coeffs:c_opb_clk_period_ps. Top-level
+   frequency could not be propagated to this IP. Please make sure that you have
+   specified the frequency of the top-level clock port, and that the clocks are
+   properly connected.
+INFO:EDK:1039 - Did not update the value for parameter:
+   darkquad29_wvl_snp_phs_ss_bram:c_opb_clk_period_ps. Top-level frequency could
+   not be propagated to this IP. Please make sure that you have specified the
+   frequency of the top-level clock port, and that the clocks are properly
+   connected.
+
+Performing IP level DRCs on properties...
+
+Running DRC Tcl procedures for OPTION IPLEVEL_DRC_PROC...
+INFO:EDK:4130 - IPNAME: opb_v20, INSTANCE:opb0 - tool is overriding PARAMETER
+   C_NUM_MASTERS value to 1 -
+   /Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/pcores/opb_v20_v1_1
+   0_c/data/opb_v20_v2_1_0.mpd line 74 
+INFO:EDK:4130 - IPNAME: opb_v20, INSTANCE:opb0 - tool is overriding PARAMETER
+   C_NUM_SLAVES value to 31 -
+   /Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/pcores/opb_v20_v1_1
+   0_c/data/opb_v20_v2_1_0.mpd line 75 
+INFO:EDK:4130 - IPNAME: opb_v20, INSTANCE:opb1 - tool is overriding PARAMETER
+   C_NUM_MASTERS value to 1 -
+   /Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/pcores/opb_v20_v1_1
+   0_c/data/opb_v20_v2_1_0.mpd line 74 
+INFO:EDK:4130 - IPNAME: opb_v20, INSTANCE:opb1 - tool is overriding PARAMETER
+   C_NUM_SLAVES value to 32 -
+   /Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/pcores/opb_v20_v1_1
+   0_c/data/opb_v20_v2_1_0.mpd line 75 
+INFO:EDK:4130 - IPNAME: opb_v20, INSTANCE:opb2 - tool is overriding PARAMETER
+   C_NUM_MASTERS value to 1 -
+   /Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/pcores/opb_v20_v1_1
+   0_c/data/opb_v20_v2_1_0.mpd line 74 
+INFO:EDK:4130 - IPNAME: opb_v20, INSTANCE:opb2 - tool is overriding PARAMETER
+   C_NUM_SLAVES value to 32 -
+   /Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/pcores/opb_v20_v1_1
+   0_c/data/opb_v20_v2_1_0.mpd line 75 
+INFO:EDK:4130 - IPNAME: opb_v20, INSTANCE:opb3 - tool is overriding PARAMETER
+   C_NUM_MASTERS value to 1 -
+   /Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/pcores/opb_v20_v1_1
+   0_c/data/opb_v20_v2_1_0.mpd line 74 
+INFO:EDK:4130 - IPNAME: opb_v20, INSTANCE:opb3 - tool is overriding PARAMETER
+   C_NUM_SLAVES value to 32 -
+   /Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/pcores/opb_v20_v1_1
+   0_c/data/opb_v20_v2_1_0.mpd line 75 
+INFO:EDK:4130 - IPNAME: opb_v20, INSTANCE:opb4 - tool is overriding PARAMETER
+   C_NUM_MASTERS value to 1 -
+   /Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/pcores/opb_v20_v1_1
+   0_c/data/opb_v20_v2_1_0.mpd line 74 
+INFO:EDK:4130 - IPNAME: opb_v20, INSTANCE:opb4 - tool is overriding PARAMETER
+   C_NUM_SLAVES value to 18 -
+   /Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/pcores/opb_v20_v1_1
+   0_c/data/opb_v20_v2_1_0.mpd line 75 
+
+Checking platform address map ...
+
+Checking platform configuration ...
+IPNAME: opb_v20, INSTANCE: opb0 - 1 master(s) : 31 slave(s) 
+IPNAME: opb_v20, INSTANCE: opb1 - 1 master(s) : 32 slave(s) 
+IPNAME: opb_v20, INSTANCE: opb2 - 1 master(s) : 32 slave(s) 
+IPNAME: opb_v20, INSTANCE: opb3 - 1 master(s) : 32 slave(s) 
+IPNAME: opb_v20, INSTANCE: opb4 - 1 master(s) : 18 slave(s) 
+
+Checking port drivers...
+WARNING:EDK:4181 - PORT: sys_clk90, CONNECTOR: sys_clk90 - floating connection -
+   /Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs line 96 
+WARNING:EDK:4181 - PORT: sys_clk180, CONNECTOR: sys_clk180 - floating connection
+   - /Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs line
+   97 
+WARNING:EDK:4181 - PORT: sys_clk270, CONNECTOR: sys_clk270 - floating connection
+   - /Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs line
+   98 
+WARNING:EDK:4181 - PORT: sys_clk_lock, CONNECTOR: sys_clk_lock - floating
+   connection -
+   /Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs line 99 
+WARNING:EDK:4181 - PORT: sys_clk2x90, CONNECTOR: sys_clk2x90 - floating
+   connection -
+   /Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs line 101
+    
+WARNING:EDK:4181 - PORT: sys_clk2x180, CONNECTOR: sys_clk2x180 - floating
+   connection -
+   /Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs line 102
+    
+WARNING:EDK:4181 - PORT: sys_clk2x270, CONNECTOR: sys_clk2x270 - floating
+   connection -
+   /Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs line 103
+    
+WARNING:EDK:4181 - PORT: aux_clk, CONNECTOR: aux_clk - floating connection -
+   /Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs line 104
+    
+WARNING:EDK:4181 - PORT: aux_clk90, CONNECTOR: aux_clk90 - floating connection -
+   /Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs line 105
+    
+WARNING:EDK:4181 - PORT: aux_clk180, CONNECTOR: aux_clk180 - floating connection
+   - /Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs line
+   106 
+WARNING:EDK:4181 - PORT: aux_clk270, CONNECTOR: aux_clk270 - floating connection
+   - /Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs line
+   107 
+WARNING:EDK:4181 - PORT: aux_clk2x, CONNECTOR: aux_clk2x - floating connection -
+   /Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs line 108
+    
+WARNING:EDK:4181 - PORT: aux_clk2x90, CONNECTOR: aux_clk2x90 - floating
+   connection -
+   /Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs line 109
+    
+WARNING:EDK:4181 - PORT: aux_clk2x180, CONNECTOR: aux_clk2x180 - floating
+   connection -
+   /Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs line 110
+    
+WARNING:EDK:4181 - PORT: aux_clk2x270, CONNECTOR: aux_clk2x270 - floating
+   connection -
+   /Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs line 111
+    
+WARNING:EDK:4181 - PORT: clk_100, CONNECTOR: clk_100 - floating connection -
+   /Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs line 116
+    
+WARNING:EDK:4181 - PORT: soft_reset, CONNECTOR: soft_reset - floating connection
+   - /Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs line
+   176 
+WARNING:EDK:4181 - PORT: adc_clk90_out, CONNECTOR: adc0_clk90 - floating
+   connection -
+   /Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs line 990
+    
+WARNING:EDK:4181 - PORT: adc_mmcm_locked, CONNECTOR: adc0_mmcm_locked - floating
+   connection -
+   /Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs line 993
+    
+
+Performing Clock DRCs...
+INFO:EDK:4060 - INSTANCE: darkquad29_wvl_a2g_ctrl_lut_dump_dac_lut_buffer,
+   PARAMETER: c_opb_clk_period_ps - Did not implement clock DRCs for the
+   parameter. Top-level frequency could not be propagated to this IP. Please
+   make sure that you have specified the frequency of the top-level clock port,
+   and that the clocks are properly connected.
+INFO:EDK:4060 - INSTANCE: darkquad29_wvl_acc_iq_avg0_ss_bram, PARAMETER:
+   c_opb_clk_period_ps - Did not implement clock DRCs for the parameter.
+   Top-level frequency could not be propagated to this IP. Please make sure that
+   you have specified the frequency of the top-level clock port, and that the
+   clocks are properly connected.
+INFO:EDK:4060 - INSTANCE: darkquad29_wvl_acc_iq_avg1_ss_bram, PARAMETER:
+   c_opb_clk_period_ps - Did not implement clock DRCs for the parameter.
+   Top-level frequency could not be propagated to this IP. Please make sure that
+   you have specified the frequency of the top-level clock port, and that the
+   clocks are properly connected.
+INFO:EDK:4060 - INSTANCE: darkquad29_wvl_acc_iq_avg2_ss_bram, PARAMETER:
+   c_opb_clk_period_ps - Did not implement clock DRCs for the parameter.
+   Top-level frequency could not be propagated to this IP. Please make sure that
+   you have specified the frequency of the top-level clock port, and that the
+   clocks are properly connected.
+INFO:EDK:4060 - INSTANCE: darkquad29_wvl_acc_iq_avg3_ss_bram, PARAMETER:
+   c_opb_clk_period_ps - Did not implement clock DRCs for the parameter.
+   Top-level frequency could not be propagated to this IP. Please make sure that
+   you have specified the frequency of the top-level clock port, and that the
+   clocks are properly connected.
+INFO:EDK:4060 - INSTANCE: darkquad29_wvl_adc_in_snp_cal0_ss_bram, PARAMETER:
+   c_opb_clk_period_ps - Did not implement clock DRCs for the parameter.
+   Top-level frequency could not be propagated to this IP. Please make sure that
+   you have specified the frequency of the top-level clock port, and that the
+   clocks are properly connected.
+INFO:EDK:4060 - INSTANCE: darkquad29_wvl_adc_in_snp_cal1_ss_bram, PARAMETER:
+   c_opb_clk_period_ps - Did not implement clock DRCs for the parameter.
+   Top-level frequency could not be propagated to this IP. Please make sure that
+   you have specified the frequency of the top-level clock port, and that the
+   clocks are properly connected.
+INFO:EDK:4060 - INSTANCE: darkquad29_wvl_adc_in_snp_cal2_ss_bram, PARAMETER:
+   c_opb_clk_period_ps - Did not implement clock DRCs for the parameter.
+   Top-level frequency could not be propagated to this IP. Please make sure that
+   you have specified the frequency of the top-level clock port, and that the
+   clocks are properly connected.
+INFO:EDK:4060 - INSTANCE: darkquad29_wvl_adc_in_snp_cal3_ss_bram, PARAMETER:
+   c_opb_clk_period_ps - Did not implement clock DRCs for the parameter.
+   Top-level frequency could not be propagated to this IP. Please make sure that
+   you have specified the frequency of the top-level clock port, and that the
+   clocks are properly connected.
+INFO:EDK:4060 - INSTANCE: darkquad29_wvl_capture0_energy_cal_lut_energy_coeffs,
+   PARAMETER: c_opb_clk_period_ps - Did not implement clock DRCs for the
+   parameter. Top-level frequency could not be propagated to this IP. Please
+   make sure that you have specified the frequency of the top-level clock port,
+   and that the clocks are properly connected.
+INFO:EDK:4060 - INSTANCE: darkquad29_wvl_capture0_pix, PARAMETER:
+   c_opb_clk_period_ps - Did not implement clock DRCs for the parameter.
+   Top-level frequency could not be propagated to this IP. Please make sure that
+   you have specified the frequency of the top-level clock port, and that the
+   clocks are properly connected.
+INFO:EDK:4060 - INSTANCE: darkquad29_wvl_capture1_energy_cal_lut_energy_coeffs,
+   PARAMETER: c_opb_clk_period_ps - Did not implement clock DRCs for the
+   parameter. Top-level frequency could not be propagated to this IP. Please
+   make sure that you have specified the frequency of the top-level clock port,
+   and that the clocks are properly connected.
+INFO:EDK:4060 - INSTANCE: darkquad29_wvl_capture1_pix, PARAMETER:
+   c_opb_clk_period_ps - Did not implement clock DRCs for the parameter.
+   Top-level frequency could not be propagated to this IP. Please make sure that
+   you have specified the frequency of the top-level clock port, and that the
+   clocks are properly connected.
+INFO:EDK:4060 - INSTANCE: darkquad29_wvl_capture2_energy_cal_lut_energy_coeffs,
+   PARAMETER: c_opb_clk_period_ps - Did not implement clock DRCs for the
+   parameter. Top-level frequency could not be propagated to this IP. Please
+   make sure that you have specified the frequency of the top-level clock port,
+   and that the clocks are properly connected.
+INFO:EDK:4060 - INSTANCE: darkquad29_wvl_capture2_pix, PARAMETER:
+   c_opb_clk_period_ps - Did not implement clock DRCs for the parameter.
+   Top-level frequency could not be propagated to this IP. Please make sure that
+   you have specified the frequency of the top-level clock port, and that the
+   clocks are properly connected.
+INFO:EDK:4060 - INSTANCE: darkquad29_wvl_capture3_energy_cal_lut_energy_coeffs,
+   PARAMETER: c_opb_clk_period_ps - Did not implement clock DRCs for the
+   parameter. Top-level frequency could not be propagated to this IP. Please
+   make sure that you have specified the frequency of the top-level clock port,
+   and that the clocks are properly connected.
+INFO:EDK:4060 - INSTANCE: darkquad29_wvl_capture3_pix, PARAMETER:
+   c_opb_clk_period_ps - Did not implement clock DRCs for the parameter.
+   Top-level frequency could not be propagated to this IP. Please make sure that
+   you have specified the frequency of the top-level clock port, and that the
+   clocks are properly connected.
+INFO:EDK:4060 - INSTANCE: darkquad29_wvl_prog_fir0_single_chan_coeffs,
+   PARAMETER: c_opb_clk_period_ps - Did not implement clock DRCs for the
+   parameter. Top-level frequency could not be propagated to this IP. Please
+   make sure that you have specified the frequency of the top-level clock port,
+   and that the clocks are properly connected.
+INFO:EDK:4060 - INSTANCE: darkquad29_wvl_prog_fir1_single_chan_coeffs,
+   PARAMETER: c_opb_clk_period_ps - Did not implement clock DRCs for the
+   parameter. Top-level frequency could not be propagated to this IP. Please
+   make sure that you have specified the frequency of the top-level clock port,
+   and that the clocks are properly connected.
+INFO:EDK:4060 - INSTANCE: darkquad29_wvl_prog_fir2_single_chan_coeffs,
+   PARAMETER: c_opb_clk_period_ps - Did not implement clock DRCs for the
+   parameter. Top-level frequency could not be propagated to this IP. Please
+   make sure that you have specified the frequency of the top-level clock port,
+   and that the clocks are properly connected.
+INFO:EDK:4060 - INSTANCE: darkquad29_wvl_prog_fir3_single_chan_coeffs,
+   PARAMETER: c_opb_clk_period_ps - Did not implement clock DRCs for the
+   parameter. Top-level frequency could not be propagated to this IP. Please
+   make sure that you have specified the frequency of the top-level clock port,
+   and that the clocks are properly connected.
+INFO:EDK:4060 - INSTANCE: darkquad29_wvl_snp_phs_ss_bram, PARAMETER:
+   c_opb_clk_period_ps - Did not implement clock DRCs for the parameter.
+   Top-level frequency could not be propagated to this IP. Please make sure that
+   you have specified the frequency of the top-level clock port, and that the
+   clocks are properly connected.
+
+Performing Reset DRCs...
+
+Overriding system level properties...
+
+Running system level update procedures...
+
+Running UPDATE Tcl procedures for OPTION SYSLEVEL_UPDATE_PROC...
+
+Running system level DRCs...
+
+Performing System level DRCs on properties...
+
+Running DRC Tcl procedures for OPTION SYSLEVEL_DRC_PROC...
+
+Running UPDATE Tcl procedures for OPTION PLATGEN_SYSLEVEL_UPDATE_PROC...
+NETLIST CACHE HIT - Copying
+/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/../cache_dir/b7ccff9f7
+9e16f5bcdaebc78f49ee99d4412ccb9.ngc to
+/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/implementation/darkqua
+d29_wvl_a2g_ctrl_lut_dump_dac_lut_buffer_ramblk_wrapper/bram.ngc
+NETLIST CACHE HIT - Copying
+/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/../cache_dir/d132803fc
+31cdb47beef16df85ee5f7f657c1335.ngc to
+/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/implementation/darkqua
+d29_wvl_acc_iq_avg0_ss_bram_ramblk_wrapper/bram.ngc
+NETLIST CACHE HIT - Copying
+/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/../cache_dir/d132803fc
+31cdb47beef16df85ee5f7f657c1335.ngc to
+/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/implementation/darkqua
+d29_wvl_acc_iq_avg1_ss_bram_ramblk_wrapper/bram.ngc
+NETLIST CACHE HIT - Copying
+/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/../cache_dir/d132803fc
+31cdb47beef16df85ee5f7f657c1335.ngc to
+/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/implementation/darkqua
+d29_wvl_acc_iq_avg2_ss_bram_ramblk_wrapper/bram.ngc
+NETLIST CACHE HIT - Copying
+/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/../cache_dir/d132803fc
+31cdb47beef16df85ee5f7f657c1335.ngc to
+/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/implementation/darkqua
+d29_wvl_acc_iq_avg3_ss_bram_ramblk_wrapper/bram.ngc
+NETLIST CACHE HIT - Copying
+/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/../cache_dir/26d63b125
+327d8a92774292ef0539e7e723cea84.ngc to
+/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/implementation/darkqua
+d29_wvl_adc_in_snp_cal0_ss_bram_ramblk_wrapper/bram.ngc
+NETLIST CACHE HIT - Copying
+/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/../cache_dir/26d63b125
+327d8a92774292ef0539e7e723cea84.ngc to
+/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/implementation/darkqua
+d29_wvl_adc_in_snp_cal1_ss_bram_ramblk_wrapper/bram.ngc
+NETLIST CACHE HIT - Copying
+/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/../cache_dir/26d63b125
+327d8a92774292ef0539e7e723cea84.ngc to
+/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/implementation/darkqua
+d29_wvl_adc_in_snp_cal2_ss_bram_ramblk_wrapper/bram.ngc
+NETLIST CACHE HIT - Copying
+/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/../cache_dir/26d63b125
+327d8a92774292ef0539e7e723cea84.ngc to
+/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/implementation/darkqua
+d29_wvl_adc_in_snp_cal3_ss_bram_ramblk_wrapper/bram.ngc
+NETLIST CACHE HIT - Copying
+/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/../cache_dir/f9648430e
+075fbfda846bd792c027350ae82b6de.ngc to
+/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/implementation/darkqua
+d29_wvl_capture0_energy_cal_lut_energy_coeffs_ramblk_wrapper/bram.ngc
+NETLIST CACHE HIT - Copying
+/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/../cache_dir/d132803fc
+31cdb47beef16df85ee5f7f657c1335.ngc to
+/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/implementation/darkqua
+d29_wvl_capture0_pix_ramblk_wrapper/bram.ngc
+NETLIST CACHE HIT - Copying
+/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/../cache_dir/f9648430e
+075fbfda846bd792c027350ae82b6de.ngc to
+/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/implementation/darkqua
+d29_wvl_capture1_energy_cal_lut_energy_coeffs_ramblk_wrapper/bram.ngc
+NETLIST CACHE HIT - Copying
+/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/../cache_dir/d132803fc
+31cdb47beef16df85ee5f7f657c1335.ngc to
+/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/implementation/darkqua
+d29_wvl_capture1_pix_ramblk_wrapper/bram.ngc
+NETLIST CACHE HIT - Copying
+/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/../cache_dir/f9648430e
+075fbfda846bd792c027350ae82b6de.ngc to
+/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/implementation/darkqua
+d29_wvl_capture2_energy_cal_lut_energy_coeffs_ramblk_wrapper/bram.ngc
+NETLIST CACHE HIT - Copying
+/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/../cache_dir/d132803fc
+31cdb47beef16df85ee5f7f657c1335.ngc to
+/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/implementation/darkqua
+d29_wvl_capture2_pix_ramblk_wrapper/bram.ngc
+NETLIST CACHE HIT - Copying
+/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/../cache_dir/f9648430e
+075fbfda846bd792c027350ae82b6de.ngc to
+/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/implementation/darkqua
+d29_wvl_capture3_energy_cal_lut_energy_coeffs_ramblk_wrapper/bram.ngc
+NETLIST CACHE HIT - Copying
+/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/../cache_dir/d132803fc
+31cdb47beef16df85ee5f7f657c1335.ngc to
+/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/implementation/darkqua
+d29_wvl_capture3_pix_ramblk_wrapper/bram.ngc
+NETLIST CACHE HIT - Copying
+/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/../cache_dir/d132803fc
+31cdb47beef16df85ee5f7f657c1335.ngc to
+/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/implementation/darkqua
+d29_wvl_prog_fir0_single_chan_coeffs_ramblk_wrapper/bram.ngc
+NETLIST CACHE HIT - Copying
+/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/../cache_dir/d132803fc
+31cdb47beef16df85ee5f7f657c1335.ngc to
+/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/implementation/darkqua
+d29_wvl_prog_fir1_single_chan_coeffs_ramblk_wrapper/bram.ngc
+NETLIST CACHE HIT - Copying
+/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/../cache_dir/d132803fc
+31cdb47beef16df85ee5f7f657c1335.ngc to
+/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/implementation/darkqua
+d29_wvl_prog_fir2_single_chan_coeffs_ramblk_wrapper/bram.ngc
+NETLIST CACHE HIT - Copying
+/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/../cache_dir/d132803fc
+31cdb47beef16df85ee5f7f657c1335.ngc to
+/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/implementation/darkqua
+d29_wvl_prog_fir3_single_chan_coeffs_ramblk_wrapper/bram.ngc
+NETLIST CACHE HIT - Copying
+/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/../cache_dir/26d63b125
+327d8a92774292ef0539e7e723cea84.ngc to
+/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/implementation/darkqua
+d29_wvl_snp_phs_ss_bram_ramblk_wrapper/bram.ngc
+
+Modify defaults ...
+
+Creating stub ...
+
+Processing licensed instances ...
+Completion time: 0.00 seconds
+
+Creating hardware output directories ...
+
+Managing hardware (BBD-specified) netlist files ...
+IPNAME:darkquad29_wvl INSTANCE:darkquad29_wvl_xsg_core_config -
+/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs line 189 -
+Copying (BBD-specified) netlist files.
+IPNAME:temac INSTANCE:temac_inst -
+/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs line 37 -
+Copying (BBD-specified) netlist files.
+IPNAME:bram_block_custom
+INSTANCE:darkquad29_wvl_a2g_ctrl_lut_dump_dac_lut_buffer_ramblk -
+/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs line 578 -
+Copying (BBD-specified) netlist files.
+IPNAME:bram_block_custom INSTANCE:darkquad29_wvl_acc_iq_avg0_ss_bram_ramblk -
+/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs line 692 -
+Copying (BBD-specified) netlist files.
+IPNAME:bram_block_custom INSTANCE:darkquad29_wvl_acc_iq_avg1_ss_bram_ramblk -
+/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs line 746 -
+Copying (BBD-specified) netlist files.
+IPNAME:bram_block_custom INSTANCE:darkquad29_wvl_acc_iq_avg2_ss_bram_ramblk -
+/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs line 800 -
+Copying (BBD-specified) netlist files.
+IPNAME:bram_block_custom INSTANCE:darkquad29_wvl_acc_iq_avg3_ss_bram_ramblk -
+/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs line 854 -
+Copying (BBD-specified) netlist files.
+IPNAME:bram_block_custom INSTANCE:darkquad29_wvl_adc_in_snp_cal0_ss_bram_ramblk
+- /Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs line 1120
+- Copying (BBD-specified) netlist files.
+IPNAME:bram_block_custom INSTANCE:darkquad29_wvl_adc_in_snp_cal1_ss_bram_ramblk
+- /Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs line 1174
+- Copying (BBD-specified) netlist files.
+IPNAME:bram_block_custom INSTANCE:darkquad29_wvl_adc_in_snp_cal2_ss_bram_ramblk
+- /Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs line 1228
+- Copying (BBD-specified) netlist files.
+IPNAME:bram_block_custom INSTANCE:darkquad29_wvl_adc_in_snp_cal3_ss_bram_ramblk
+- /Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs line 1282
+- Copying (BBD-specified) netlist files.
+IPNAME:bram_block_custom
+INSTANCE:darkquad29_wvl_capture0_energy_cal_lut_energy_coeffs_ramblk -
+/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs line 1456 -
+Copying (BBD-specified) netlist files.
+IPNAME:bram_block_custom INSTANCE:darkquad29_wvl_capture0_pix_ramblk -
+/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs line 1498 -
+Copying (BBD-specified) netlist files.
+IPNAME:bram_block_custom
+INSTANCE:darkquad29_wvl_capture1_energy_cal_lut_energy_coeffs_ramblk -
+/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs line 1588 -
+Copying (BBD-specified) netlist files.
+IPNAME:bram_block_custom INSTANCE:darkquad29_wvl_capture1_pix_ramblk -
+/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs line 1630 -
+Copying (BBD-specified) netlist files.
+IPNAME:bram_block_custom
+INSTANCE:darkquad29_wvl_capture2_energy_cal_lut_energy_coeffs_ramblk -
+/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs line 1720 -
+Copying (BBD-specified) netlist files.
+IPNAME:bram_block_custom INSTANCE:darkquad29_wvl_capture2_pix_ramblk -
+/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs line 1762 -
+Copying (BBD-specified) netlist files.
+IPNAME:bram_block_custom
+INSTANCE:darkquad29_wvl_capture3_energy_cal_lut_energy_coeffs_ramblk -
+/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs line 1852 -
+Copying (BBD-specified) netlist files.
+IPNAME:bram_block_custom INSTANCE:darkquad29_wvl_capture3_pix_ramblk -
+/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs line 1894 -
+Copying (BBD-specified) netlist files.
+IPNAME:qdr_controller INSTANCE:qdr0_controller -
+/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs line 2140 -
+Copying (BBD-specified) netlist files.
+IPNAME:opb_qdr_sniffer INSTANCE:qdr0_sniffer -
+/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs line 2181 -
+Copying (BBD-specified) netlist files.
+IPNAME:qdr_controller INSTANCE:qdr1_controller -
+/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs line 2220 -
+Copying (BBD-specified) netlist files.
+IPNAME:opb_qdr_sniffer INSTANCE:qdr1_sniffer -
+/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs line 2261 -
+Copying (BBD-specified) netlist files.
+IPNAME:qdr_controller INSTANCE:qdr2_controller -
+/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs line 2300 -
+Copying (BBD-specified) netlist files.
+IPNAME:opb_qdr_sniffer INSTANCE:qdr2_sniffer -
+/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs line 2341 -
+Copying (BBD-specified) netlist files.
+IPNAME:qdr_controller INSTANCE:qdr3_controller -
+/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs line 2380 -
+Copying (BBD-specified) netlist files.
+IPNAME:opb_qdr_sniffer INSTANCE:qdr3_sniffer -
+/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs line 2421 -
+Copying (BBD-specified) netlist files.
+IPNAME:gbe_udp INSTANCE:darkquad29_wvl_gbe64_one_gbe -
+/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs line 2496 -
+Copying (BBD-specified) netlist files.
+IPNAME:bram_block_custom
+INSTANCE:darkquad29_wvl_prog_fir0_single_chan_coeffs_ramblk -
+/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs line 2682 -
+Copying (BBD-specified) netlist files.
+IPNAME:bram_block_custom
+INSTANCE:darkquad29_wvl_prog_fir1_single_chan_coeffs_ramblk -
+/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs line 2724 -
+Copying (BBD-specified) netlist files.
+IPNAME:bram_block_custom
+INSTANCE:darkquad29_wvl_prog_fir2_single_chan_coeffs_ramblk -
+/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs line 2766 -
+Copying (BBD-specified) netlist files.
+IPNAME:bram_block_custom
+INSTANCE:darkquad29_wvl_prog_fir3_single_chan_coeffs_ramblk -
+/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs line 2808 -
+Copying (BBD-specified) netlist files.
+IPNAME:bram_block_custom INSTANCE:darkquad29_wvl_snp_phs_ss_bram_ramblk -
+/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs line 2862 -
+Copying (BBD-specified) netlist files.
+
+Managing cache ...
+
+Elaborating instances ...
+
+Writing HDL for elaborated instances ...
+
+Inserting wrapper level ...
+Completion time: 0.00 seconds
+
+Constructing platform-level connectivity ...
+Completion time: 3.00 seconds
+
+Writing (top-level) BMM ...
+
+Writing (top-level and wrappers) HDL ...
+
+Generating synthesis project file ...
+
+Running XST synthesis ...
+
+INFO:EDK:4211 - The following instances are synthesized with XST. The MPD option
+   IMP_NETLIST=TRUE indicates that a NGC file is to be produced using XST
+   synthesis. IMP_NETLIST=FALSE (default) instances are not synthesized. 
+INSTANCE:temac_inst -
+/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs line 37 -
+Running XST synthesis
+INSTANCE:sgmii_phy_inst -
+/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs line 48 -
+Running XST synthesis
+INSTANCE:infrastructure_inst -
+/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs line 77 -
+Running XST synthesis
+INSTANCE:reset_block_inst -
+/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs line 119 -
+Running XST synthesis
+INSTANCE:opb0 -
+/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs line 129 -
+Running XST synthesis
+INSTANCE:epb_opb_bridge_inst -
+/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs line 138 -
+Running XST synthesis
+INSTANCE:epb_infrastructure_inst -
+/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs line 155 -
+Running XST synthesis
+INSTANCE:sys_block_inst -
+/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs line 164 -
+Running XST synthesis
+INSTANCE:darkquad29_wvl_xsg_core_config -
+/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs line 189 -
+Running XST synthesis
+INSTANCE:darkquad29_wvl_a2g_ctrl_adcdac_2g_ctrl -
+/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs line 507 -
+Running XST synthesis
+INSTANCE:darkquad29_wvl_a2g_ctrl_en_bram_dump -
+/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs line 530 -
+Running XST synthesis
+INSTANCE:darkquad29_wvl_a2g_ctrl_in_val -
+/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs line 542 -
+Running XST synthesis
+INSTANCE:darkquad29_wvl_a2g_ctrl_last_tx_data -
+/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs line 554 -
+Running XST synthesis
+INSTANCE:darkquad29_wvl_a2g_ctrl_lut_dump_buffer_size -
+/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs line 566 -
+Running XST synthesis
+INSTANCE:darkquad29_wvl_a2g_ctrl_lut_dump_dac_lut_buffer_ramblk -
+/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs line 578 -
+Running XST synthesis
+INSTANCE:darkquad29_wvl_a2g_ctrl_lut_dump_dac_lut_buffer -
+/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs line 596 -
+Running XST synthesis
+INSTANCE:darkquad29_wvl_a2g_ctrl_lut_dump_data_period -
+/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs line 608 -
+Running XST synthesis
+INSTANCE:darkquad29_wvl_a2g_ctrl_lut_dump_sending_data -
+/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs line 620 -
+Running XST synthesis
+INSTANCE:darkquad29_wvl_a2g_ctrl_reg_rx_full -
+/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs line 632 -
+Running XST synthesis
+INSTANCE:darkquad29_wvl_a2g_ctrl_reg_tx_full -
+/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs line 644 -
+Running XST synthesis
+INSTANCE:darkquad29_wvl_a2g_ctrl_rst -
+/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs line 656 -
+Running XST synthesis
+INSTANCE:darkquad29_wvl_a2g_ctrl_tx_en -
+/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs line 668 -
+Running XST synthesis
+INSTANCE:darkquad29_wvl_a2g_ctrl_v7_ready -
+/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs line 680 -
+Running XST synthesis
+INSTANCE:darkquad29_wvl_acc_iq_avg0_ss_bram_ramblk -
+/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs line 692 -
+Running XST synthesis
+INSTANCE:darkquad29_wvl_acc_iq_avg0_ss_bram -
+/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs line 710 -
+Running XST synthesis
+INSTANCE:darkquad29_wvl_acc_iq_avg0_ss_ctrl -
+/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs line 722 -
+Running XST synthesis
+INSTANCE:darkquad29_wvl_acc_iq_avg0_ss_status -
+/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs line 734 -
+Running XST synthesis
+INSTANCE:darkquad29_wvl_acc_iq_avg1_ss_bram_ramblk -
+/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs line 746 -
+Running XST synthesis
+INSTANCE:darkquad29_wvl_acc_iq_avg1_ss_bram -
+/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs line 764 -
+Running XST synthesis
+INSTANCE:darkquad29_wvl_acc_iq_avg1_ss_ctrl -
+/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs line 776 -
+Running XST synthesis
+INSTANCE:darkquad29_wvl_acc_iq_avg1_ss_status -
+/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs line 788 -
+Running XST synthesis
+INSTANCE:darkquad29_wvl_acc_iq_avg2_ss_bram_ramblk -
+/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs line 800 -
+Running XST synthesis
+INSTANCE:darkquad29_wvl_acc_iq_avg2_ss_bram -
+/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs line 818 -
+Running XST synthesis
+INSTANCE:darkquad29_wvl_acc_iq_avg2_ss_ctrl -
+/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs line 830 -
+Running XST synthesis
+INSTANCE:darkquad29_wvl_acc_iq_avg2_ss_status -
+/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs line 842 -
+Running XST synthesis
+INSTANCE:darkquad29_wvl_acc_iq_avg3_ss_bram_ramblk -
+/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs line 854 -
+Running XST synthesis
+INSTANCE:darkquad29_wvl_acc_iq_avg3_ss_bram -
+/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs line 872 -
+Running XST synthesis
+INSTANCE:darkquad29_wvl_acc_iq_avg3_ss_ctrl -
+/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs line 884 -
+Running XST synthesis
+INSTANCE:darkquad29_wvl_acc_iq_avg3_ss_status -
+/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs line 896 -
+Running XST synthesis
+INSTANCE:darkquad29_wvl_acc_iq_start_acc -
+/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs line 908 -
+Running XST synthesis
+INSTANCE:darkquad29_wvl_adc_in_adcdac_2g -
+/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs line 920 -
+Running XST synthesis
+INSTANCE:darkquad29_wvl_adc_in_dly_val -
+/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs line 1024 -
+Running XST synthesis
+INSTANCE:darkquad29_wvl_adc_in_i_scale -
+/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs line 1036 -
+Running XST synthesis
+INSTANCE:darkquad29_wvl_adc_in_inc_phs -
+/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs line 1048 -
+Running XST synthesis
+INSTANCE:darkquad29_wvl_adc_in_load_dly -
+/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs line 1060 -
+Running XST synthesis
+INSTANCE:darkquad29_wvl_adc_in_locked -
+/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs line 1072 -
+Running XST synthesis
+INSTANCE:darkquad29_wvl_adc_in_n_miss_pps -
+/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs line 1084 -
+Running XST synthesis
+INSTANCE:darkquad29_wvl_adc_in_pos_phs -
+/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs line 1096 -
+Running XST synthesis
+INSTANCE:darkquad29_wvl_adc_in_raw_pps -
+/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs line 1108 -
+Running XST synthesis
+INSTANCE:darkquad29_wvl_adc_in_snp_cal0_ss_bram_ramblk -
+/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs line 1120 -
+Running XST synthesis
+INSTANCE:darkquad29_wvl_adc_in_snp_cal0_ss_bram -
+/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs line 1138 -
+Running XST synthesis
+INSTANCE:darkquad29_wvl_adc_in_snp_cal0_ss_ctrl -
+/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs line 1150 -
+Running XST synthesis
+INSTANCE:darkquad29_wvl_adc_in_snp_cal0_ss_status -
+/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs line 1162 -
+Running XST synthesis
+INSTANCE:darkquad29_wvl_adc_in_snp_cal1_ss_bram_ramblk -
+/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs line 1174 -
+Running XST synthesis
+INSTANCE:darkquad29_wvl_adc_in_snp_cal1_ss_bram -
+/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs line 1192 -
+Running XST synthesis
+INSTANCE:darkquad29_wvl_adc_in_snp_cal1_ss_ctrl -
+/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs line 1204 -
+Running XST synthesis
+INSTANCE:darkquad29_wvl_adc_in_snp_cal1_ss_status -
+/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs line 1216 -
+Running XST synthesis
+INSTANCE:darkquad29_wvl_adc_in_snp_cal2_ss_bram_ramblk -
+/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs line 1228 -
+Running XST synthesis
+INSTANCE:darkquad29_wvl_adc_in_snp_cal2_ss_bram -
+/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs line 1246 -
+Running XST synthesis
+INSTANCE:darkquad29_wvl_adc_in_snp_cal2_ss_ctrl -
+/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs line 1258 -
+Running XST synthesis
+INSTANCE:darkquad29_wvl_adc_in_snp_cal2_ss_status -
+/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs line 1270 -
+Running XST synthesis
+INSTANCE:darkquad29_wvl_adc_in_snp_cal3_ss_bram_ramblk -
+/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs line 1282 -
+Running XST synthesis
+INSTANCE:darkquad29_wvl_adc_in_snp_cal3_ss_bram -
+/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs line 1300 -
+Running XST synthesis
+INSTANCE:darkquad29_wvl_adc_in_snp_cal3_ss_ctrl -
+/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs line 1312 -
+Running XST synthesis
+INSTANCE:darkquad29_wvl_adc_in_snp_cal3_ss_status -
+/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs line 1324 -
+Running XST synthesis
+INSTANCE:darkquad29_wvl_adc_in_trig -
+/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs line 1336 -
+Running XST synthesis
+INSTANCE:darkquad29_wvl_adc_in_ts0 -
+/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs line 1348 -
+Running XST synthesis
+INSTANCE:darkquad29_wvl_adc_in_ts1 -
+/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs line 1360 -
+Running XST synthesis
+INSTANCE:darkquad29_wvl_adc_in_ts2 -
+/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs line 1372 -
+Running XST synthesis
+INSTANCE:darkquad29_wvl_adc_in_ts3 -
+/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs line 1384 -
+Running XST synthesis
+INSTANCE:darkquad29_wvl_adc_in_valid -
+/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs line 1396 -
+Running XST synthesis
+INSTANCE:darkquad29_wvl_board_num -
+/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs line 1408 -
+Running XST synthesis
+INSTANCE:darkquad29_wvl_capture0_base_kf -
+/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs line 1420 -
+Running XST synthesis
+INSTANCE:darkquad29_wvl_capture0_base_kq -
+/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs line 1432 -
+Running XST synthesis
+INSTANCE:darkquad29_wvl_capture0_cps_lim -
+/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs line 1444 -
+Running XST synthesis
+INSTANCE:darkquad29_wvl_capture0_energy_cal_lut_energy_coeffs_ramblk -
+/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs line 1456 -
+Running XST synthesis
+INSTANCE:darkquad29_wvl_capture0_energy_cal_lut_energy_coeffs -
+/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs line 1474 -
+Running XST synthesis
+INSTANCE:darkquad29_wvl_capture0_load_thresh -
+/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs line 1486 -
+Running XST synthesis
+INSTANCE:darkquad29_wvl_capture0_pix_ramblk -
+/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs line 1498 -
+Running XST synthesis
+INSTANCE:darkquad29_wvl_capture0_pix -
+/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs line 1516 -
+Running XST synthesis
+INSTANCE:darkquad29_wvl_capture0_threshold -
+/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs line 1528 -
+Running XST synthesis
+INSTANCE:darkquad29_wvl_capture0_use_energy_cal -
+/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs line 1540 -
+Running XST synthesis
+INSTANCE:darkquad29_wvl_capture1_base_kf -
+/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs line 1552 -
+Running XST synthesis
+INSTANCE:darkquad29_wvl_capture1_base_kq -
+/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs line 1564 -
+Running XST synthesis
+INSTANCE:darkquad29_wvl_capture1_cps_lim -
+/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs line 1576 -
+Running XST synthesis
+INSTANCE:darkquad29_wvl_capture1_energy_cal_lut_energy_coeffs_ramblk -
+/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs line 1588 -
+Running XST synthesis
+INSTANCE:darkquad29_wvl_capture1_energy_cal_lut_energy_coeffs -
+/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs line 1606 -
+Running XST synthesis
+INSTANCE:darkquad29_wvl_capture1_load_thresh -
+/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs line 1618 -
+Running XST synthesis
+INSTANCE:darkquad29_wvl_capture1_pix_ramblk -
+/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs line 1630 -
+Running XST synthesis
+INSTANCE:darkquad29_wvl_capture1_pix -
+/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs line 1648 -
+Running XST synthesis
+INSTANCE:darkquad29_wvl_capture1_threshold -
+/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs line 1660 -
+Running XST synthesis
+INSTANCE:darkquad29_wvl_capture1_use_energy_cal -
+/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs line 1672 -
+Running XST synthesis
+INSTANCE:darkquad29_wvl_capture2_base_kf -
+/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs line 1684 -
+Running XST synthesis
+INSTANCE:darkquad29_wvl_capture2_base_kq -
+/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs line 1696 -
+Running XST synthesis
+INSTANCE:darkquad29_wvl_capture2_cps_lim -
+/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs line 1708 -
+Running XST synthesis
+INSTANCE:darkquad29_wvl_capture2_energy_cal_lut_energy_coeffs_ramblk -
+/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs line 1720 -
+Running XST synthesis
+INSTANCE:darkquad29_wvl_capture2_energy_cal_lut_energy_coeffs -
+/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs line 1738 -
+Running XST synthesis
+INSTANCE:darkquad29_wvl_capture2_load_thresh -
+/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs line 1750 -
+Running XST synthesis
+INSTANCE:darkquad29_wvl_capture2_pix_ramblk -
+/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs line 1762 -
+Running XST synthesis
+INSTANCE:darkquad29_wvl_capture2_pix -
+/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs line 1780 -
+Running XST synthesis
+INSTANCE:darkquad29_wvl_capture2_threshold -
+/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs line 1792 -
+Running XST synthesis
+INSTANCE:darkquad29_wvl_capture2_use_energy_cal -
+/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs line 1804 -
+Running XST synthesis
+INSTANCE:darkquad29_wvl_capture3_base_kf -
+/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs line 1816 -
+Running XST synthesis
+INSTANCE:darkquad29_wvl_capture3_base_kq -
+/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs line 1828 -
+Running XST synthesis
+INSTANCE:darkquad29_wvl_capture3_cps_lim -
+/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs line 1840 -
+Running XST synthesis
+INSTANCE:darkquad29_wvl_capture3_energy_cal_lut_energy_coeffs_ramblk -
+/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs line 1852 -
+Running XST synthesis
+INSTANCE:darkquad29_wvl_capture3_energy_cal_lut_energy_coeffs -
+/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs line 1870 -
+Running XST synthesis
+INSTANCE:darkquad29_wvl_capture3_load_thresh -
+/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs line 1882 -
+Running XST synthesis
+INSTANCE:darkquad29_wvl_capture3_pix_ramblk -
+/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs line 1894 -
+Running XST synthesis
+INSTANCE:darkquad29_wvl_capture3_pix -
+/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs line 1912 -
+Running XST synthesis
+INSTANCE:darkquad29_wvl_capture3_threshold -
+/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs line 1924 -
+Running XST synthesis
+INSTANCE:darkquad29_wvl_capture3_use_energy_cal -
+/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs line 1936 -
+Running XST synthesis
+INSTANCE:darkquad29_wvl_chan_sel_ch_bin0 -
+/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs line 1948 -
+Running XST synthesis
+INSTANCE:darkquad29_wvl_chan_sel_ch_bin1 -
+/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs line 1960 -
+Running XST synthesis
+INSTANCE:darkquad29_wvl_chan_sel_ch_bin2 -
+/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs line 1972 -
+Running XST synthesis
+INSTANCE:darkquad29_wvl_chan_sel_ch_bin3 -
+/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs line 1984 -
+Running XST synthesis
+INSTANCE:darkquad29_wvl_chan_sel_load -
+/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs line 1996 -
+Running XST synthesis
+INSTANCE:darkquad29_wvl_check_lag_data_ch -
+/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs line 2008 -
+Running XST synthesis
+INSTANCE:darkquad29_wvl_check_lag_dds_ch -
+/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs line 2020 -
+Running XST synthesis
+INSTANCE:darkquad29_wvl_check_lag_latch -
+/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs line 2032 -
+Running XST synthesis
+INSTANCE:darkquad29_wvl_conv_phase0_centers -
+/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs line 2044 -
+Running XST synthesis
+INSTANCE:darkquad29_wvl_conv_phase0_load_centers -
+/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs line 2056 -
+Running XST synthesis
+INSTANCE:darkquad29_wvl_conv_phase1_centers -
+/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs line 2068 -
+Running XST synthesis
+INSTANCE:darkquad29_wvl_conv_phase1_load_centers -
+/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs line 2080 -
+Running XST synthesis
+INSTANCE:darkquad29_wvl_conv_phase2_centers -
+/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs line 2092 -
+Running XST synthesis
+INSTANCE:darkquad29_wvl_conv_phase2_load_centers -
+/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs line 2104 -
+Running XST synthesis
+INSTANCE:darkquad29_wvl_conv_phase3_centers -
+/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs line 2116 -
+Running XST synthesis
+INSTANCE:darkquad29_wvl_conv_phase3_load_centers -
+/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs line 2128 -
+Running XST synthesis
+INSTANCE:qdr0_controller -
+/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs line 2140 -
+Running XST synthesis
+INSTANCE:qdr0_sniffer -
+/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs line 2181 -
+Running XST synthesis
+INSTANCE:qdr1_controller -
+/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs line 2220 -
+Running XST synthesis
+INSTANCE:qdr1_sniffer -
+/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs line 2261 -
+Running XST synthesis
+INSTANCE:qdr2_controller -
+/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs line 2300 -
+Running XST synthesis
+INSTANCE:qdr2_sniffer -
+/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs line 2341 -
+Running XST synthesis
+INSTANCE:qdr3_controller -
+/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs line 2380 -
+Running XST synthesis
+INSTANCE:qdr3_sniffer -
+/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs line 2421 -
+Running XST synthesis
+INSTANCE:darkquad29_wvl_dds_lut_run -
+/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs line 2460 -
+Running XST synthesis
+INSTANCE:darkquad29_wvl_dds_shift -
+/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs line 2472 -
+Running XST synthesis
+INSTANCE:darkquad29_wvl_gbe64_dest_ip -
+/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs line 2484 -
+Running XST synthesis
+INSTANCE:darkquad29_wvl_gbe64_one_gbe -
+/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs line 2496 -
+Running XST synthesis
+INSTANCE:darkquad29_wvl_gbe64_rst -
+/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs line 2538 -
+Running XST synthesis
+INSTANCE:darkquad29_wvl_gbe64_tx_afull -
+/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs line 2550 -
+Running XST synthesis
+INSTANCE:darkquad29_wvl_gbe64_tx_overrun -
+/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs line 2562 -
+Running XST synthesis
+INSTANCE:darkquad29_wvl_gbe64_words_per_frame -
+/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs line 2574 -
+Running XST synthesis
+INSTANCE:darkquad29_wvl_n_eof_sent -
+/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs line 2586 -
+Running XST synthesis
+INSTANCE:darkquad29_wvl_n_photons -
+/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs line 2598 -
+Running XST synthesis
+INSTANCE:darkquad29_wvl_pfb_fft_check_fft_oflow -
+/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs line 2610 -
+Running XST synthesis
+INSTANCE:darkquad29_wvl_phase_dmp_ch_we -
+/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs line 2622 -
+Running XST synthesis
+INSTANCE:darkquad29_wvl_phase_dmp_on -
+/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs line 2634 -
+Running XST synthesis
+INSTANCE:darkquad29_wvl_phase_port -
+/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs line 2646 -
+Running XST synthesis
+INSTANCE:darkquad29_wvl_photon_port -
+/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs line 2658 -
+Running XST synthesis
+INSTANCE:darkquad29_wvl_prog_fir0_load_chan -
+/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs line 2670 -
+Running XST synthesis
+INSTANCE:darkquad29_wvl_prog_fir0_single_chan_coeffs_ramblk -
+/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs line 2682 -
+Running XST synthesis
+INSTANCE:darkquad29_wvl_prog_fir0_single_chan_coeffs -
+/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs line 2700 -
+Running XST synthesis
+INSTANCE:darkquad29_wvl_prog_fir1_load_chan -
+/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs line 2712 -
+Running XST synthesis
+INSTANCE:darkquad29_wvl_prog_fir1_single_chan_coeffs_ramblk -
+/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs line 2724 -
+Running XST synthesis
+INSTANCE:darkquad29_wvl_prog_fir1_single_chan_coeffs -
+/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs line 2742 -
+Running XST synthesis
+INSTANCE:darkquad29_wvl_prog_fir2_load_chan -
+/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs line 2754 -
+Running XST synthesis
+INSTANCE:darkquad29_wvl_prog_fir2_single_chan_coeffs_ramblk -
+/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs line 2766 -
+Running XST synthesis
+INSTANCE:darkquad29_wvl_prog_fir2_single_chan_coeffs -
+/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs line 2784 -
+Running XST synthesis
+INSTANCE:darkquad29_wvl_prog_fir3_load_chan -
+/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs line 2796 -
+Running XST synthesis
+INSTANCE:darkquad29_wvl_prog_fir3_single_chan_coeffs_ramblk -
+/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs line 2808 -
+Running XST synthesis
+INSTANCE:darkquad29_wvl_prog_fir3_single_chan_coeffs -
+/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs line 2826 -
+Running XST synthesis
+INSTANCE:darkquad29_wvl_run -
+/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs line 2838 -
+Running XST synthesis
+INSTANCE:darkquad29_wvl_sel_ch -
+/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs line 2850 -
+Running XST synthesis
+INSTANCE:darkquad29_wvl_snp_phs_ss_bram_ramblk -
+/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs line 2862 -
+Running XST synthesis
+INSTANCE:darkquad29_wvl_snp_phs_ss_bram -
+/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs line 2880 -
+Running XST synthesis
+INSTANCE:darkquad29_wvl_snp_phs_ss_ctrl -
+/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs line 2892 -
+Running XST synthesis
+INSTANCE:darkquad29_wvl_snp_phs_ss_status -
+/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs line 2904 -
+Running XST synthesis
+INSTANCE:darkquad29_wvl_start_cap -
+/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs line 2916 -
+Running XST synthesis
+INSTANCE:darkquad29_wvl_timekeeper_base_ts -
+/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs line 2928 -
+Running XST synthesis
+INSTANCE:darkquad29_wvl_timekeeper_sec_now -
+/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs line 2940 -
+Running XST synthesis
+INSTANCE:darkquad29_wvl_trig_snp -
+/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs line 2952 -
+Running XST synthesis
+INSTANCE:opb1 -
+/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs line 2964 -
+Running XST synthesis
+INSTANCE:opb2opb_bridge_opb1 -
+/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs line 2972 -
+Running XST synthesis
+INSTANCE:opb2 -
+/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs line 2985 -
+Running XST synthesis
+INSTANCE:opb2opb_bridge_opb2 -
+/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs line 2993 -
+Running XST synthesis
+INSTANCE:opb3 -
+/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs line 3006 -
+Running XST synthesis
+INSTANCE:opb2opb_bridge_opb3 -
+/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs line 3014 -
+Running XST synthesis
+INSTANCE:opb4 -
+/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs line 3027 -
+Running XST synthesis
+INSTANCE:opb2opb_bridge_opb4 -
+/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs line 3035 -
+Running XST synthesis
+
+Running NGCBUILD ...
+IPNAME:system_temac_inst_wrapper INSTANCE:temac_inst -
+/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs line 37 -
+Running NGCBUILD
+IPNAME:system_darkquad29_wvl_xsg_core_config_wrapper
+INSTANCE:darkquad29_wvl_xsg_core_config -
+/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs line 189 -
+Running NGCBUILD
+IPNAME:system_darkquad29_wvl_a2g_ctrl_lut_dump_dac_lut_buffer_ramblk_wrapper
+INSTANCE:darkquad29_wvl_a2g_ctrl_lut_dump_dac_lut_buffer_ramblk -
+/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs line 578 -
+Running NGCBUILD
+IPNAME:system_darkquad29_wvl_acc_iq_avg0_ss_bram_ramblk_wrapper
+INSTANCE:darkquad29_wvl_acc_iq_avg0_ss_bram_ramblk -
+/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs line 692 -
+Running NGCBUILD
+IPNAME:system_darkquad29_wvl_acc_iq_avg1_ss_bram_ramblk_wrapper
+INSTANCE:darkquad29_wvl_acc_iq_avg1_ss_bram_ramblk -
+/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs line 746 -
+Running NGCBUILD
+IPNAME:system_darkquad29_wvl_acc_iq_avg2_ss_bram_ramblk_wrapper
+INSTANCE:darkquad29_wvl_acc_iq_avg2_ss_bram_ramblk -
+/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs line 800 -
+Running NGCBUILD
+IPNAME:system_darkquad29_wvl_acc_iq_avg3_ss_bram_ramblk_wrapper
+INSTANCE:darkquad29_wvl_acc_iq_avg3_ss_bram_ramblk -
+/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs line 854 -
+Running NGCBUILD
+IPNAME:system_darkquad29_wvl_adc_in_snp_cal0_ss_bram_ramblk_wrapper
+INSTANCE:darkquad29_wvl_adc_in_snp_cal0_ss_bram_ramblk -
+/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs line 1120 -
+Running NGCBUILD
+IPNAME:system_darkquad29_wvl_adc_in_snp_cal1_ss_bram_ramblk_wrapper
+INSTANCE:darkquad29_wvl_adc_in_snp_cal1_ss_bram_ramblk -
+/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs line 1174 -
+Running NGCBUILD
+IPNAME:system_darkquad29_wvl_adc_in_snp_cal2_ss_bram_ramblk_wrapper
+INSTANCE:darkquad29_wvl_adc_in_snp_cal2_ss_bram_ramblk -
+/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs line 1228 -
+Running NGCBUILD
+IPNAME:system_darkquad29_wvl_adc_in_snp_cal3_ss_bram_ramblk_wrapper
+INSTANCE:darkquad29_wvl_adc_in_snp_cal3_ss_bram_ramblk -
+/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs line 1282 -
+Running NGCBUILD
+IPNAME:system_darkquad29_wvl_capture0_energy_cal_lut_energy_coeffs_ramblk_wrappe
+r INSTANCE:darkquad29_wvl_capture0_energy_cal_lut_energy_coeffs_ramblk -
+/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs line 1456 -
+Running NGCBUILD
+IPNAME:system_darkquad29_wvl_capture0_pix_ramblk_wrapper
+INSTANCE:darkquad29_wvl_capture0_pix_ramblk -
+/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs line 1498 -
+Running NGCBUILD
+IPNAME:system_darkquad29_wvl_capture1_energy_cal_lut_energy_coeffs_ramblk_wrappe
+r INSTANCE:darkquad29_wvl_capture1_energy_cal_lut_energy_coeffs_ramblk -
+/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs line 1588 -
+Running NGCBUILD
+IPNAME:system_darkquad29_wvl_capture1_pix_ramblk_wrapper
+INSTANCE:darkquad29_wvl_capture1_pix_ramblk -
+/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs line 1630 -
+Running NGCBUILD
+IPNAME:system_darkquad29_wvl_capture2_energy_cal_lut_energy_coeffs_ramblk_wrappe
+r INSTANCE:darkquad29_wvl_capture2_energy_cal_lut_energy_coeffs_ramblk -
+/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs line 1720 -
+Running NGCBUILD
+IPNAME:system_darkquad29_wvl_capture2_pix_ramblk_wrapper
+INSTANCE:darkquad29_wvl_capture2_pix_ramblk -
+/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs line 1762 -
+Running NGCBUILD
+IPNAME:system_darkquad29_wvl_capture3_energy_cal_lut_energy_coeffs_ramblk_wrappe
+r INSTANCE:darkquad29_wvl_capture3_energy_cal_lut_energy_coeffs_ramblk -
+/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs line 1852 -
+Running NGCBUILD
+IPNAME:system_darkquad29_wvl_capture3_pix_ramblk_wrapper
+INSTANCE:darkquad29_wvl_capture3_pix_ramblk -
+/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs line 1894 -
+Running NGCBUILD
+IPNAME:system_qdr0_controller_wrapper INSTANCE:qdr0_controller -
+/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs line 2140 -
+Running NGCBUILD
+IPNAME:system_qdr0_sniffer_wrapper INSTANCE:qdr0_sniffer -
+/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs line 2181 -
+Running NGCBUILD
+IPNAME:system_qdr1_controller_wrapper INSTANCE:qdr1_controller -
+/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs line 2220 -
+Running NGCBUILD
+IPNAME:system_qdr1_sniffer_wrapper INSTANCE:qdr1_sniffer -
+/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs line 2261 -
+Running NGCBUILD
+IPNAME:system_qdr2_controller_wrapper INSTANCE:qdr2_controller -
+/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs line 2300 -
+Running NGCBUILD
+IPNAME:system_qdr2_sniffer_wrapper INSTANCE:qdr2_sniffer -
+/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs line 2341 -
+Running NGCBUILD
+IPNAME:system_qdr3_controller_wrapper INSTANCE:qdr3_controller -
+/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs line 2380 -
+Running NGCBUILD
+IPNAME:system_qdr3_sniffer_wrapper INSTANCE:qdr3_sniffer -
+/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs line 2421 -
+Running NGCBUILD
+IPNAME:system_darkquad29_wvl_gbe64_one_gbe_wrapper
+INSTANCE:darkquad29_wvl_gbe64_one_gbe -
+/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs line 2496 -
+Running NGCBUILD
+IPNAME:system_darkquad29_wvl_prog_fir0_single_chan_coeffs_ramblk_wrapper
+INSTANCE:darkquad29_wvl_prog_fir0_single_chan_coeffs_ramblk -
+/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs line 2682 -
+Running NGCBUILD
+IPNAME:system_darkquad29_wvl_prog_fir1_single_chan_coeffs_ramblk_wrapper
+INSTANCE:darkquad29_wvl_prog_fir1_single_chan_coeffs_ramblk -
+/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs line 2724 -
+Running NGCBUILD
+IPNAME:system_darkquad29_wvl_prog_fir2_single_chan_coeffs_ramblk_wrapper
+INSTANCE:darkquad29_wvl_prog_fir2_single_chan_coeffs_ramblk -
+/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs line 2766 -
+Running NGCBUILD
+IPNAME:system_darkquad29_wvl_prog_fir3_single_chan_coeffs_ramblk_wrapper
+INSTANCE:darkquad29_wvl_prog_fir3_single_chan_coeffs_ramblk -
+/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs line 2808 -
+Running NGCBUILD
+IPNAME:system_darkquad29_wvl_snp_phs_ss_bram_ramblk_wrapper
+INSTANCE:darkquad29_wvl_snp_phs_ss_bram_ramblk -
+/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/system.mhs line 2862 -
+Running NGCBUILD
+INFO:EDK:3509 - NCF files should not be modified as they will be regenerated.
+   If any constraint needs to be overridden, this should be done by modifying
+   the data/system.ucf file.
+
+Rebuilding cache ...
+
+Total run time: 1307.00 seconds

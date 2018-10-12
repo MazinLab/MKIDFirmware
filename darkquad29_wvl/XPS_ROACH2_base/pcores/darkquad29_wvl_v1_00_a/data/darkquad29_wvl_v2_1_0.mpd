@@ -1,0 +1,609 @@
+#############################################################################
+##
+## IP Name  : darkquad29_wvl
+## Desc     : Automatically generated IP core wrapping a
+##            Simulink Xilinx System Generator netlist.
+##            Please do not modify by hand, this file will be erased
+##
+#############################################################################
+
+BEGIN darkquad29_wvl
+
+###################
+# Generic Options #
+###################
+OPTION IPTYPE = IP
+OPTION STYLE  = BLACKBOX
+
+###################
+# Clock port      #
+###################
+PORT clk = "", DIR = I, SIGIS = CLK, CLK_FREQ = 250000000
+
+###################
+# Interfaces      #
+###################
+
+# darkquad29_wvl/XSG_core_config
+
+# darkquad29_wvl/a2g_ctrl/adcdac_2g_ctrl
+PORT darkquad29_wvl_a2g_ctrl_adcdac_2g_ctrl_user_rx_data = "", DIR = in, VEC = [7:0]
+PORT darkquad29_wvl_a2g_ctrl_adcdac_2g_ctrl_user_rx_full = "", DIR = in
+PORT darkquad29_wvl_a2g_ctrl_adcdac_2g_ctrl_user_rx_val = "", DIR = in
+PORT darkquad29_wvl_a2g_ctrl_adcdac_2g_ctrl_user_tx_full = "", DIR = in
+PORT darkquad29_wvl_a2g_ctrl_adcdac_2g_ctrl_user_rx_rst = "", DIR = out
+PORT darkquad29_wvl_a2g_ctrl_adcdac_2g_ctrl_user_tx_data = "", DIR = out, VEC = [7:0]
+PORT darkquad29_wvl_a2g_ctrl_adcdac_2g_ctrl_user_tx_rst = "", DIR = out
+PORT darkquad29_wvl_a2g_ctrl_adcdac_2g_ctrl_user_tx_val = "", DIR = out
+
+# darkquad29_wvl/a2g_ctrl/en_bram_dump
+PORT darkquad29_wvl_a2g_ctrl_en_bram_dump_user_data_out = "", DIR = in, VEC = [31:0]
+
+# darkquad29_wvl/a2g_ctrl/in_val
+PORT darkquad29_wvl_a2g_ctrl_in_val_user_data_out = "", DIR = in, VEC = [31:0]
+
+# darkquad29_wvl/a2g_ctrl/last_tx_data
+PORT darkquad29_wvl_a2g_ctrl_last_tx_data_user_data_in = "", DIR = out, VEC = [31:0]
+
+# darkquad29_wvl/a2g_ctrl/lut_dump/buffer_size
+PORT darkquad29_wvl_a2g_ctrl_lut_dump_buffer_size_user_data_out = "", DIR = in, VEC = [31:0]
+
+# darkquad29_wvl/a2g_ctrl/lut_dump/dac_lut_buffer
+PORT darkquad29_wvl_a2g_ctrl_lut_dump_dac_lut_buffer_data_out = "", DIR = in, VEC = [7:0]
+PORT darkquad29_wvl_a2g_ctrl_lut_dump_dac_lut_buffer_addr = "", DIR = out, VEC = [11:0]
+PORT darkquad29_wvl_a2g_ctrl_lut_dump_dac_lut_buffer_data_in = "", DIR = out, VEC = [7:0]
+PORT darkquad29_wvl_a2g_ctrl_lut_dump_dac_lut_buffer_we = "", DIR = out
+
+# darkquad29_wvl/a2g_ctrl/lut_dump/data_period
+PORT darkquad29_wvl_a2g_ctrl_lut_dump_data_period_user_data_out = "", DIR = in, VEC = [31:0]
+
+# darkquad29_wvl/a2g_ctrl/lut_dump/sending_data
+PORT darkquad29_wvl_a2g_ctrl_lut_dump_sending_data_user_data_in = "", DIR = out, VEC = [31:0]
+
+# darkquad29_wvl/a2g_ctrl/reg_rx_full
+PORT darkquad29_wvl_a2g_ctrl_reg_rx_full_user_data_in = "", DIR = out, VEC = [31:0]
+
+# darkquad29_wvl/a2g_ctrl/reg_tx_full
+PORT darkquad29_wvl_a2g_ctrl_reg_tx_full_user_data_in = "", DIR = out, VEC = [31:0]
+
+# darkquad29_wvl/a2g_ctrl/rst
+PORT darkquad29_wvl_a2g_ctrl_rst_user_data_out = "", DIR = in, VEC = [31:0]
+
+# darkquad29_wvl/a2g_ctrl/tx_en
+PORT darkquad29_wvl_a2g_ctrl_tx_en_user_data_out = "", DIR = in, VEC = [31:0]
+
+# darkquad29_wvl/a2g_ctrl/v7_ready
+PORT darkquad29_wvl_a2g_ctrl_v7_ready_user_data_in = "", DIR = out, VEC = [31:0]
+
+# darkquad29_wvl/acc_iq/avg0/ss/bram
+PORT darkquad29_wvl_acc_iq_avg0_ss_bram_data_out = "", DIR = in, VEC = [31:0]
+PORT darkquad29_wvl_acc_iq_avg0_ss_bram_addr = "", DIR = out, VEC = [9:0]
+PORT darkquad29_wvl_acc_iq_avg0_ss_bram_data_in = "", DIR = out, VEC = [31:0]
+PORT darkquad29_wvl_acc_iq_avg0_ss_bram_we = "", DIR = out
+
+# darkquad29_wvl/acc_iq/avg0/ss/ctrl
+PORT darkquad29_wvl_acc_iq_avg0_ss_ctrl_user_data_out = "", DIR = in, VEC = [31:0]
+
+# darkquad29_wvl/acc_iq/avg0/ss/status
+PORT darkquad29_wvl_acc_iq_avg0_ss_status_user_data_in = "", DIR = out, VEC = [31:0]
+
+# darkquad29_wvl/acc_iq/avg1/ss/bram
+PORT darkquad29_wvl_acc_iq_avg1_ss_bram_data_out = "", DIR = in, VEC = [31:0]
+PORT darkquad29_wvl_acc_iq_avg1_ss_bram_addr = "", DIR = out, VEC = [9:0]
+PORT darkquad29_wvl_acc_iq_avg1_ss_bram_data_in = "", DIR = out, VEC = [31:0]
+PORT darkquad29_wvl_acc_iq_avg1_ss_bram_we = "", DIR = out
+
+# darkquad29_wvl/acc_iq/avg1/ss/ctrl
+PORT darkquad29_wvl_acc_iq_avg1_ss_ctrl_user_data_out = "", DIR = in, VEC = [31:0]
+
+# darkquad29_wvl/acc_iq/avg1/ss/status
+PORT darkquad29_wvl_acc_iq_avg1_ss_status_user_data_in = "", DIR = out, VEC = [31:0]
+
+# darkquad29_wvl/acc_iq/avg2/ss/bram
+PORT darkquad29_wvl_acc_iq_avg2_ss_bram_data_out = "", DIR = in, VEC = [31:0]
+PORT darkquad29_wvl_acc_iq_avg2_ss_bram_addr = "", DIR = out, VEC = [9:0]
+PORT darkquad29_wvl_acc_iq_avg2_ss_bram_data_in = "", DIR = out, VEC = [31:0]
+PORT darkquad29_wvl_acc_iq_avg2_ss_bram_we = "", DIR = out
+
+# darkquad29_wvl/acc_iq/avg2/ss/ctrl
+PORT darkquad29_wvl_acc_iq_avg2_ss_ctrl_user_data_out = "", DIR = in, VEC = [31:0]
+
+# darkquad29_wvl/acc_iq/avg2/ss/status
+PORT darkquad29_wvl_acc_iq_avg2_ss_status_user_data_in = "", DIR = out, VEC = [31:0]
+
+# darkquad29_wvl/acc_iq/avg3/ss/bram
+PORT darkquad29_wvl_acc_iq_avg3_ss_bram_data_out = "", DIR = in, VEC = [31:0]
+PORT darkquad29_wvl_acc_iq_avg3_ss_bram_addr = "", DIR = out, VEC = [9:0]
+PORT darkquad29_wvl_acc_iq_avg3_ss_bram_data_in = "", DIR = out, VEC = [31:0]
+PORT darkquad29_wvl_acc_iq_avg3_ss_bram_we = "", DIR = out
+
+# darkquad29_wvl/acc_iq/avg3/ss/ctrl
+PORT darkquad29_wvl_acc_iq_avg3_ss_ctrl_user_data_out = "", DIR = in, VEC = [31:0]
+
+# darkquad29_wvl/acc_iq/avg3/ss/status
+PORT darkquad29_wvl_acc_iq_avg3_ss_status_user_data_in = "", DIR = out, VEC = [31:0]
+
+# darkquad29_wvl/acc_iq/start_acc
+PORT darkquad29_wvl_acc_iq_start_acc_user_data_out = "", DIR = in, VEC = [31:0]
+
+# darkquad29_wvl/adc_in/adcdac_2g
+PORT darkquad29_wvl_adc_in_adcdac_2g_user_data_i0 = "", DIR = in, VEC = [11:0]
+PORT darkquad29_wvl_adc_in_adcdac_2g_user_data_i1 = "", DIR = in, VEC = [11:0]
+PORT darkquad29_wvl_adc_in_adcdac_2g_user_data_i2 = "", DIR = in, VEC = [11:0]
+PORT darkquad29_wvl_adc_in_adcdac_2g_user_data_i3 = "", DIR = in, VEC = [11:0]
+PORT darkquad29_wvl_adc_in_adcdac_2g_user_data_i4 = "", DIR = in, VEC = [11:0]
+PORT darkquad29_wvl_adc_in_adcdac_2g_user_data_i5 = "", DIR = in, VEC = [11:0]
+PORT darkquad29_wvl_adc_in_adcdac_2g_user_data_i6 = "", DIR = in, VEC = [11:0]
+PORT darkquad29_wvl_adc_in_adcdac_2g_user_data_i7 = "", DIR = in, VEC = [11:0]
+PORT darkquad29_wvl_adc_in_adcdac_2g_user_data_q0 = "", DIR = in, VEC = [11:0]
+PORT darkquad29_wvl_adc_in_adcdac_2g_user_data_q1 = "", DIR = in, VEC = [11:0]
+PORT darkquad29_wvl_adc_in_adcdac_2g_user_data_q2 = "", DIR = in, VEC = [11:0]
+PORT darkquad29_wvl_adc_in_adcdac_2g_user_data_q3 = "", DIR = in, VEC = [11:0]
+PORT darkquad29_wvl_adc_in_adcdac_2g_user_data_q4 = "", DIR = in, VEC = [11:0]
+PORT darkquad29_wvl_adc_in_adcdac_2g_user_data_q5 = "", DIR = in, VEC = [11:0]
+PORT darkquad29_wvl_adc_in_adcdac_2g_user_data_q6 = "", DIR = in, VEC = [11:0]
+PORT darkquad29_wvl_adc_in_adcdac_2g_user_data_q7 = "", DIR = in, VEC = [11:0]
+PORT darkquad29_wvl_adc_in_adcdac_2g_user_info_i0 = "", DIR = in, VEC = [1:0]
+PORT darkquad29_wvl_adc_in_adcdac_2g_user_info_i1 = "", DIR = in, VEC = [1:0]
+PORT darkquad29_wvl_adc_in_adcdac_2g_user_info_i2 = "", DIR = in, VEC = [1:0]
+PORT darkquad29_wvl_adc_in_adcdac_2g_user_info_i3 = "", DIR = in, VEC = [1:0]
+PORT darkquad29_wvl_adc_in_adcdac_2g_user_info_i4 = "", DIR = in, VEC = [1:0]
+PORT darkquad29_wvl_adc_in_adcdac_2g_user_info_i5 = "", DIR = in, VEC = [1:0]
+PORT darkquad29_wvl_adc_in_adcdac_2g_user_info_i6 = "", DIR = in, VEC = [1:0]
+PORT darkquad29_wvl_adc_in_adcdac_2g_user_info_i7 = "", DIR = in, VEC = [1:0]
+PORT darkquad29_wvl_adc_in_adcdac_2g_user_info_q0 = "", DIR = in, VEC = [1:0]
+PORT darkquad29_wvl_adc_in_adcdac_2g_user_info_q1 = "", DIR = in, VEC = [1:0]
+PORT darkquad29_wvl_adc_in_adcdac_2g_user_info_q2 = "", DIR = in, VEC = [1:0]
+PORT darkquad29_wvl_adc_in_adcdac_2g_user_info_q3 = "", DIR = in, VEC = [1:0]
+PORT darkquad29_wvl_adc_in_adcdac_2g_user_info_q4 = "", DIR = in, VEC = [1:0]
+PORT darkquad29_wvl_adc_in_adcdac_2g_user_info_q5 = "", DIR = in, VEC = [1:0]
+PORT darkquad29_wvl_adc_in_adcdac_2g_user_info_q6 = "", DIR = in, VEC = [1:0]
+PORT darkquad29_wvl_adc_in_adcdac_2g_user_info_q7 = "", DIR = in, VEC = [1:0]
+PORT darkquad29_wvl_adc_in_adcdac_2g_user_mmcm_locked = "", DIR = in
+PORT darkquad29_wvl_adc_in_adcdac_2g_user_sync = "", DIR = in
+PORT darkquad29_wvl_adc_in_adcdac_2g_user_valid = "", DIR = in
+PORT darkquad29_wvl_adc_in_adcdac_2g_user_dly_val = "", DIR = out, VEC = [4:0]
+PORT darkquad29_wvl_adc_in_adcdac_2g_user_inc_mmcm_phs = "", DIR = out
+PORT darkquad29_wvl_adc_in_adcdac_2g_user_load_dly0 = "", DIR = out, VEC = [5:0]
+PORT darkquad29_wvl_adc_in_adcdac_2g_user_pos_mmcm_phs = "", DIR = out
+PORT darkquad29_wvl_adc_in_adcdac_2g_user_rdy_i0 = "", DIR = out
+
+# darkquad29_wvl/adc_in/dly_val
+PORT darkquad29_wvl_adc_in_dly_val_user_data_out = "", DIR = in, VEC = [31:0]
+
+# darkquad29_wvl/adc_in/i_scale
+PORT darkquad29_wvl_adc_in_i_scale_user_data_out = "", DIR = in, VEC = [31:0]
+
+# darkquad29_wvl/adc_in/inc_phs
+PORT darkquad29_wvl_adc_in_inc_phs_user_data_out = "", DIR = in, VEC = [31:0]
+
+# darkquad29_wvl/adc_in/load_dly
+PORT darkquad29_wvl_adc_in_load_dly_user_data_out = "", DIR = in, VEC = [31:0]
+
+# darkquad29_wvl/adc_in/locked
+PORT darkquad29_wvl_adc_in_locked_user_data_in = "", DIR = out, VEC = [31:0]
+
+# darkquad29_wvl/adc_in/n_miss_pps
+PORT darkquad29_wvl_adc_in_n_miss_pps_user_data_in = "", DIR = out, VEC = [31:0]
+
+# darkquad29_wvl/adc_in/pos_phs
+PORT darkquad29_wvl_adc_in_pos_phs_user_data_out = "", DIR = in, VEC = [31:0]
+
+# darkquad29_wvl/adc_in/raw_pps
+PORT darkquad29_wvl_adc_in_raw_pps_user_data_in = "", DIR = out, VEC = [31:0]
+
+# darkquad29_wvl/adc_in/snp_cal0/ss/bram
+PORT darkquad29_wvl_adc_in_snp_cal0_ss_bram_data_out = "", DIR = in, VEC = [63:0]
+PORT darkquad29_wvl_adc_in_snp_cal0_ss_bram_addr = "", DIR = out, VEC = [8:0]
+PORT darkquad29_wvl_adc_in_snp_cal0_ss_bram_data_in = "", DIR = out, VEC = [63:0]
+PORT darkquad29_wvl_adc_in_snp_cal0_ss_bram_we = "", DIR = out
+
+# darkquad29_wvl/adc_in/snp_cal0/ss/ctrl
+PORT darkquad29_wvl_adc_in_snp_cal0_ss_ctrl_user_data_out = "", DIR = in, VEC = [31:0]
+
+# darkquad29_wvl/adc_in/snp_cal0/ss/status
+PORT darkquad29_wvl_adc_in_snp_cal0_ss_status_user_data_in = "", DIR = out, VEC = [31:0]
+
+# darkquad29_wvl/adc_in/snp_cal1/ss/bram
+PORT darkquad29_wvl_adc_in_snp_cal1_ss_bram_data_out = "", DIR = in, VEC = [63:0]
+PORT darkquad29_wvl_adc_in_snp_cal1_ss_bram_addr = "", DIR = out, VEC = [8:0]
+PORT darkquad29_wvl_adc_in_snp_cal1_ss_bram_data_in = "", DIR = out, VEC = [63:0]
+PORT darkquad29_wvl_adc_in_snp_cal1_ss_bram_we = "", DIR = out
+
+# darkquad29_wvl/adc_in/snp_cal1/ss/ctrl
+PORT darkquad29_wvl_adc_in_snp_cal1_ss_ctrl_user_data_out = "", DIR = in, VEC = [31:0]
+
+# darkquad29_wvl/adc_in/snp_cal1/ss/status
+PORT darkquad29_wvl_adc_in_snp_cal1_ss_status_user_data_in = "", DIR = out, VEC = [31:0]
+
+# darkquad29_wvl/adc_in/snp_cal2/ss/bram
+PORT darkquad29_wvl_adc_in_snp_cal2_ss_bram_data_out = "", DIR = in, VEC = [63:0]
+PORT darkquad29_wvl_adc_in_snp_cal2_ss_bram_addr = "", DIR = out, VEC = [8:0]
+PORT darkquad29_wvl_adc_in_snp_cal2_ss_bram_data_in = "", DIR = out, VEC = [63:0]
+PORT darkquad29_wvl_adc_in_snp_cal2_ss_bram_we = "", DIR = out
+
+# darkquad29_wvl/adc_in/snp_cal2/ss/ctrl
+PORT darkquad29_wvl_adc_in_snp_cal2_ss_ctrl_user_data_out = "", DIR = in, VEC = [31:0]
+
+# darkquad29_wvl/adc_in/snp_cal2/ss/status
+PORT darkquad29_wvl_adc_in_snp_cal2_ss_status_user_data_in = "", DIR = out, VEC = [31:0]
+
+# darkquad29_wvl/adc_in/snp_cal3/ss/bram
+PORT darkquad29_wvl_adc_in_snp_cal3_ss_bram_data_out = "", DIR = in, VEC = [63:0]
+PORT darkquad29_wvl_adc_in_snp_cal3_ss_bram_addr = "", DIR = out, VEC = [8:0]
+PORT darkquad29_wvl_adc_in_snp_cal3_ss_bram_data_in = "", DIR = out, VEC = [63:0]
+PORT darkquad29_wvl_adc_in_snp_cal3_ss_bram_we = "", DIR = out
+
+# darkquad29_wvl/adc_in/snp_cal3/ss/ctrl
+PORT darkquad29_wvl_adc_in_snp_cal3_ss_ctrl_user_data_out = "", DIR = in, VEC = [31:0]
+
+# darkquad29_wvl/adc_in/snp_cal3/ss/status
+PORT darkquad29_wvl_adc_in_snp_cal3_ss_status_user_data_in = "", DIR = out, VEC = [31:0]
+
+# darkquad29_wvl/adc_in/trig
+PORT darkquad29_wvl_adc_in_trig_user_data_out = "", DIR = in, VEC = [31:0]
+
+# darkquad29_wvl/adc_in/ts0
+PORT darkquad29_wvl_adc_in_ts0_user_data_in = "", DIR = out, VEC = [31:0]
+
+# darkquad29_wvl/adc_in/ts1
+PORT darkquad29_wvl_adc_in_ts1_user_data_in = "", DIR = out, VEC = [31:0]
+
+# darkquad29_wvl/adc_in/ts2
+PORT darkquad29_wvl_adc_in_ts2_user_data_in = "", DIR = out, VEC = [31:0]
+
+# darkquad29_wvl/adc_in/ts3
+PORT darkquad29_wvl_adc_in_ts3_user_data_in = "", DIR = out, VEC = [31:0]
+
+# darkquad29_wvl/adc_in/valid
+PORT darkquad29_wvl_adc_in_valid_user_data_in = "", DIR = out, VEC = [31:0]
+
+# darkquad29_wvl/board_num
+PORT darkquad29_wvl_board_num_user_data_out = "", DIR = in, VEC = [31:0]
+
+# darkquad29_wvl/capture0/base_kf
+PORT darkquad29_wvl_capture0_base_kf_user_data_out = "", DIR = in, VEC = [31:0]
+
+# darkquad29_wvl/capture0/base_kq
+PORT darkquad29_wvl_capture0_base_kq_user_data_out = "", DIR = in, VEC = [31:0]
+
+# darkquad29_wvl/capture0/cps_lim
+PORT darkquad29_wvl_capture0_cps_lim_user_data_out = "", DIR = in, VEC = [31:0]
+
+# darkquad29_wvl/capture0/energy_cal_lut/energy_coeffs
+PORT darkquad29_wvl_capture0_energy_cal_lut_energy_coeffs_data_out = "", DIR = in, VEC = [63:0]
+PORT darkquad29_wvl_capture0_energy_cal_lut_energy_coeffs_addr = "", DIR = out, VEC = [9:0]
+PORT darkquad29_wvl_capture0_energy_cal_lut_energy_coeffs_data_in = "", DIR = out, VEC = [63:0]
+PORT darkquad29_wvl_capture0_energy_cal_lut_energy_coeffs_we = "", DIR = out
+
+# darkquad29_wvl/capture0/load_thresh
+PORT darkquad29_wvl_capture0_load_thresh_user_data_out = "", DIR = in, VEC = [31:0]
+
+# darkquad29_wvl/capture0/pix
+PORT darkquad29_wvl_capture0_pix_data_out = "", DIR = in, VEC = [31:0]
+PORT darkquad29_wvl_capture0_pix_addr = "", DIR = out, VEC = [9:0]
+PORT darkquad29_wvl_capture0_pix_data_in = "", DIR = out, VEC = [31:0]
+PORT darkquad29_wvl_capture0_pix_we = "", DIR = out
+
+# darkquad29_wvl/capture0/threshold
+PORT darkquad29_wvl_capture0_threshold_user_data_out = "", DIR = in, VEC = [31:0]
+
+# darkquad29_wvl/capture0/use_energy_cal
+PORT darkquad29_wvl_capture0_use_energy_cal_user_data_out = "", DIR = in, VEC = [31:0]
+
+# darkquad29_wvl/capture1/base_kf
+PORT darkquad29_wvl_capture1_base_kf_user_data_out = "", DIR = in, VEC = [31:0]
+
+# darkquad29_wvl/capture1/base_kq
+PORT darkquad29_wvl_capture1_base_kq_user_data_out = "", DIR = in, VEC = [31:0]
+
+# darkquad29_wvl/capture1/cps_lim
+PORT darkquad29_wvl_capture1_cps_lim_user_data_out = "", DIR = in, VEC = [31:0]
+
+# darkquad29_wvl/capture1/energy_cal_lut/energy_coeffs
+PORT darkquad29_wvl_capture1_energy_cal_lut_energy_coeffs_data_out = "", DIR = in, VEC = [63:0]
+PORT darkquad29_wvl_capture1_energy_cal_lut_energy_coeffs_addr = "", DIR = out, VEC = [9:0]
+PORT darkquad29_wvl_capture1_energy_cal_lut_energy_coeffs_data_in = "", DIR = out, VEC = [63:0]
+PORT darkquad29_wvl_capture1_energy_cal_lut_energy_coeffs_we = "", DIR = out
+
+# darkquad29_wvl/capture1/load_thresh
+PORT darkquad29_wvl_capture1_load_thresh_user_data_out = "", DIR = in, VEC = [31:0]
+
+# darkquad29_wvl/capture1/pix
+PORT darkquad29_wvl_capture1_pix_data_out = "", DIR = in, VEC = [31:0]
+PORT darkquad29_wvl_capture1_pix_addr = "", DIR = out, VEC = [9:0]
+PORT darkquad29_wvl_capture1_pix_data_in = "", DIR = out, VEC = [31:0]
+PORT darkquad29_wvl_capture1_pix_we = "", DIR = out
+
+# darkquad29_wvl/capture1/threshold
+PORT darkquad29_wvl_capture1_threshold_user_data_out = "", DIR = in, VEC = [31:0]
+
+# darkquad29_wvl/capture1/use_energy_cal
+PORT darkquad29_wvl_capture1_use_energy_cal_user_data_out = "", DIR = in, VEC = [31:0]
+
+# darkquad29_wvl/capture2/base_kf
+PORT darkquad29_wvl_capture2_base_kf_user_data_out = "", DIR = in, VEC = [31:0]
+
+# darkquad29_wvl/capture2/base_kq
+PORT darkquad29_wvl_capture2_base_kq_user_data_out = "", DIR = in, VEC = [31:0]
+
+# darkquad29_wvl/capture2/cps_lim
+PORT darkquad29_wvl_capture2_cps_lim_user_data_out = "", DIR = in, VEC = [31:0]
+
+# darkquad29_wvl/capture2/energy_cal_lut/energy_coeffs
+PORT darkquad29_wvl_capture2_energy_cal_lut_energy_coeffs_data_out = "", DIR = in, VEC = [63:0]
+PORT darkquad29_wvl_capture2_energy_cal_lut_energy_coeffs_addr = "", DIR = out, VEC = [9:0]
+PORT darkquad29_wvl_capture2_energy_cal_lut_energy_coeffs_data_in = "", DIR = out, VEC = [63:0]
+PORT darkquad29_wvl_capture2_energy_cal_lut_energy_coeffs_we = "", DIR = out
+
+# darkquad29_wvl/capture2/load_thresh
+PORT darkquad29_wvl_capture2_load_thresh_user_data_out = "", DIR = in, VEC = [31:0]
+
+# darkquad29_wvl/capture2/pix
+PORT darkquad29_wvl_capture2_pix_data_out = "", DIR = in, VEC = [31:0]
+PORT darkquad29_wvl_capture2_pix_addr = "", DIR = out, VEC = [9:0]
+PORT darkquad29_wvl_capture2_pix_data_in = "", DIR = out, VEC = [31:0]
+PORT darkquad29_wvl_capture2_pix_we = "", DIR = out
+
+# darkquad29_wvl/capture2/threshold
+PORT darkquad29_wvl_capture2_threshold_user_data_out = "", DIR = in, VEC = [31:0]
+
+# darkquad29_wvl/capture2/use_energy_cal
+PORT darkquad29_wvl_capture2_use_energy_cal_user_data_out = "", DIR = in, VEC = [31:0]
+
+# darkquad29_wvl/capture3/base_kf
+PORT darkquad29_wvl_capture3_base_kf_user_data_out = "", DIR = in, VEC = [31:0]
+
+# darkquad29_wvl/capture3/base_kq
+PORT darkquad29_wvl_capture3_base_kq_user_data_out = "", DIR = in, VEC = [31:0]
+
+# darkquad29_wvl/capture3/cps_lim
+PORT darkquad29_wvl_capture3_cps_lim_user_data_out = "", DIR = in, VEC = [31:0]
+
+# darkquad29_wvl/capture3/energy_cal_lut/energy_coeffs
+PORT darkquad29_wvl_capture3_energy_cal_lut_energy_coeffs_data_out = "", DIR = in, VEC = [63:0]
+PORT darkquad29_wvl_capture3_energy_cal_lut_energy_coeffs_addr = "", DIR = out, VEC = [9:0]
+PORT darkquad29_wvl_capture3_energy_cal_lut_energy_coeffs_data_in = "", DIR = out, VEC = [63:0]
+PORT darkquad29_wvl_capture3_energy_cal_lut_energy_coeffs_we = "", DIR = out
+
+# darkquad29_wvl/capture3/load_thresh
+PORT darkquad29_wvl_capture3_load_thresh_user_data_out = "", DIR = in, VEC = [31:0]
+
+# darkquad29_wvl/capture3/pix
+PORT darkquad29_wvl_capture3_pix_data_out = "", DIR = in, VEC = [31:0]
+PORT darkquad29_wvl_capture3_pix_addr = "", DIR = out, VEC = [9:0]
+PORT darkquad29_wvl_capture3_pix_data_in = "", DIR = out, VEC = [31:0]
+PORT darkquad29_wvl_capture3_pix_we = "", DIR = out
+
+# darkquad29_wvl/capture3/threshold
+PORT darkquad29_wvl_capture3_threshold_user_data_out = "", DIR = in, VEC = [31:0]
+
+# darkquad29_wvl/capture3/use_energy_cal
+PORT darkquad29_wvl_capture3_use_energy_cal_user_data_out = "", DIR = in, VEC = [31:0]
+
+# darkquad29_wvl/chan_sel/ch_bin0
+PORT darkquad29_wvl_chan_sel_ch_bin0_user_data_out = "", DIR = in, VEC = [31:0]
+
+# darkquad29_wvl/chan_sel/ch_bin1
+PORT darkquad29_wvl_chan_sel_ch_bin1_user_data_out = "", DIR = in, VEC = [31:0]
+
+# darkquad29_wvl/chan_sel/ch_bin2
+PORT darkquad29_wvl_chan_sel_ch_bin2_user_data_out = "", DIR = in, VEC = [31:0]
+
+# darkquad29_wvl/chan_sel/ch_bin3
+PORT darkquad29_wvl_chan_sel_ch_bin3_user_data_out = "", DIR = in, VEC = [31:0]
+
+# darkquad29_wvl/chan_sel/load
+PORT darkquad29_wvl_chan_sel_load_user_data_out = "", DIR = in, VEC = [31:0]
+
+# darkquad29_wvl/check_lag/data_ch
+PORT darkquad29_wvl_check_lag_data_ch_user_data_in = "", DIR = out, VEC = [31:0]
+
+# darkquad29_wvl/check_lag/dds_ch
+PORT darkquad29_wvl_check_lag_dds_ch_user_data_in = "", DIR = out, VEC = [31:0]
+
+# darkquad29_wvl/check_lag/latch
+PORT darkquad29_wvl_check_lag_latch_user_data_out = "", DIR = in, VEC = [31:0]
+
+# darkquad29_wvl/conv_phase0/centers
+PORT darkquad29_wvl_conv_phase0_centers_user_data_out = "", DIR = in, VEC = [31:0]
+
+# darkquad29_wvl/conv_phase0/load_centers
+PORT darkquad29_wvl_conv_phase0_load_centers_user_data_out = "", DIR = in, VEC = [31:0]
+
+# darkquad29_wvl/conv_phase1/centers
+PORT darkquad29_wvl_conv_phase1_centers_user_data_out = "", DIR = in, VEC = [31:0]
+
+# darkquad29_wvl/conv_phase1/load_centers
+PORT darkquad29_wvl_conv_phase1_load_centers_user_data_out = "", DIR = in, VEC = [31:0]
+
+# darkquad29_wvl/conv_phase2/centers
+PORT darkquad29_wvl_conv_phase2_centers_user_data_out = "", DIR = in, VEC = [31:0]
+
+# darkquad29_wvl/conv_phase2/load_centers
+PORT darkquad29_wvl_conv_phase2_load_centers_user_data_out = "", DIR = in, VEC = [31:0]
+
+# darkquad29_wvl/conv_phase3/centers
+PORT darkquad29_wvl_conv_phase3_centers_user_data_out = "", DIR = in, VEC = [31:0]
+
+# darkquad29_wvl/conv_phase3/load_centers
+PORT darkquad29_wvl_conv_phase3_load_centers_user_data_out = "", DIR = in, VEC = [31:0]
+
+# darkquad29_wvl/dds_lut/qdr0
+PORT darkquad29_wvl_dds_lut_qdr0_ack = "", DIR = in
+PORT darkquad29_wvl_dds_lut_qdr0_cal_fail = "", DIR = in
+PORT darkquad29_wvl_dds_lut_qdr0_data_out = "", DIR = in, VEC = [71:0]
+PORT darkquad29_wvl_dds_lut_qdr0_data_valid = "", DIR = in
+PORT darkquad29_wvl_dds_lut_qdr0_phy_ready = "", DIR = in
+PORT darkquad29_wvl_dds_lut_qdr0_address = "", DIR = out, VEC = [31:0]
+PORT darkquad29_wvl_dds_lut_qdr0_be = "", DIR = out, VEC = [7:0]
+PORT darkquad29_wvl_dds_lut_qdr0_data_in = "", DIR = out, VEC = [71:0]
+PORT darkquad29_wvl_dds_lut_qdr0_rd_en = "", DIR = out
+PORT darkquad29_wvl_dds_lut_qdr0_wr_en = "", DIR = out
+
+# darkquad29_wvl/dds_lut/qdr1
+PORT darkquad29_wvl_dds_lut_qdr1_ack = "", DIR = in
+PORT darkquad29_wvl_dds_lut_qdr1_cal_fail = "", DIR = in
+PORT darkquad29_wvl_dds_lut_qdr1_data_out = "", DIR = in, VEC = [71:0]
+PORT darkquad29_wvl_dds_lut_qdr1_data_valid = "", DIR = in
+PORT darkquad29_wvl_dds_lut_qdr1_phy_ready = "", DIR = in
+PORT darkquad29_wvl_dds_lut_qdr1_address = "", DIR = out, VEC = [31:0]
+PORT darkquad29_wvl_dds_lut_qdr1_be = "", DIR = out, VEC = [7:0]
+PORT darkquad29_wvl_dds_lut_qdr1_data_in = "", DIR = out, VEC = [71:0]
+PORT darkquad29_wvl_dds_lut_qdr1_rd_en = "", DIR = out
+PORT darkquad29_wvl_dds_lut_qdr1_wr_en = "", DIR = out
+
+# darkquad29_wvl/dds_lut/qdr2
+PORT darkquad29_wvl_dds_lut_qdr2_ack = "", DIR = in
+PORT darkquad29_wvl_dds_lut_qdr2_cal_fail = "", DIR = in
+PORT darkquad29_wvl_dds_lut_qdr2_data_out = "", DIR = in, VEC = [71:0]
+PORT darkquad29_wvl_dds_lut_qdr2_data_valid = "", DIR = in
+PORT darkquad29_wvl_dds_lut_qdr2_phy_ready = "", DIR = in
+PORT darkquad29_wvl_dds_lut_qdr2_address = "", DIR = out, VEC = [31:0]
+PORT darkquad29_wvl_dds_lut_qdr2_be = "", DIR = out, VEC = [7:0]
+PORT darkquad29_wvl_dds_lut_qdr2_data_in = "", DIR = out, VEC = [71:0]
+PORT darkquad29_wvl_dds_lut_qdr2_rd_en = "", DIR = out
+PORT darkquad29_wvl_dds_lut_qdr2_wr_en = "", DIR = out
+
+# darkquad29_wvl/dds_lut/qdr3
+PORT darkquad29_wvl_dds_lut_qdr3_ack = "", DIR = in
+PORT darkquad29_wvl_dds_lut_qdr3_cal_fail = "", DIR = in
+PORT darkquad29_wvl_dds_lut_qdr3_data_out = "", DIR = in, VEC = [71:0]
+PORT darkquad29_wvl_dds_lut_qdr3_data_valid = "", DIR = in
+PORT darkquad29_wvl_dds_lut_qdr3_phy_ready = "", DIR = in
+PORT darkquad29_wvl_dds_lut_qdr3_address = "", DIR = out, VEC = [31:0]
+PORT darkquad29_wvl_dds_lut_qdr3_be = "", DIR = out, VEC = [7:0]
+PORT darkquad29_wvl_dds_lut_qdr3_data_in = "", DIR = out, VEC = [71:0]
+PORT darkquad29_wvl_dds_lut_qdr3_rd_en = "", DIR = out
+PORT darkquad29_wvl_dds_lut_qdr3_wr_en = "", DIR = out
+
+# darkquad29_wvl/dds_lut/run
+PORT darkquad29_wvl_dds_lut_run_user_data_out = "", DIR = in, VEC = [31:0]
+
+# darkquad29_wvl/dds_shift
+PORT darkquad29_wvl_dds_shift_user_data_out = "", DIR = in, VEC = [31:0]
+
+# darkquad29_wvl/gbe64/dest_ip
+PORT darkquad29_wvl_gbe64_dest_ip_user_data_out = "", DIR = in, VEC = [31:0]
+
+# darkquad29_wvl/gbe64/one_gbe
+PORT darkquad29_wvl_gbe64_one_gbe_app_dbg_data = "", DIR = in, VEC = [31:0]
+PORT darkquad29_wvl_gbe64_one_gbe_app_dbg_dvld = "", DIR = in
+PORT darkquad29_wvl_gbe64_one_gbe_app_rx_badframe = "", DIR = in
+PORT darkquad29_wvl_gbe64_one_gbe_app_rx_data = "", DIR = in, VEC = [7:0]
+PORT darkquad29_wvl_gbe64_one_gbe_app_rx_dvld = "", DIR = in
+PORT darkquad29_wvl_gbe64_one_gbe_app_rx_eof = "", DIR = in
+PORT darkquad29_wvl_gbe64_one_gbe_app_rx_overrun = "", DIR = in
+PORT darkquad29_wvl_gbe64_one_gbe_app_rx_srcip = "", DIR = in, VEC = [31:0]
+PORT darkquad29_wvl_gbe64_one_gbe_app_rx_srcport = "", DIR = in, VEC = [15:0]
+PORT darkquad29_wvl_gbe64_one_gbe_app_tx_afull = "", DIR = in
+PORT darkquad29_wvl_gbe64_one_gbe_app_tx_overflow = "", DIR = in
+PORT darkquad29_wvl_gbe64_one_gbe_app_rx_ack = "", DIR = out
+PORT darkquad29_wvl_gbe64_one_gbe_app_rx_rst = "", DIR = out
+PORT darkquad29_wvl_gbe64_one_gbe_app_tx_data = "", DIR = out, VEC = [7:0]
+PORT darkquad29_wvl_gbe64_one_gbe_app_tx_destip = "", DIR = out, VEC = [31:0]
+PORT darkquad29_wvl_gbe64_one_gbe_app_tx_destport = "", DIR = out, VEC = [15:0]
+PORT darkquad29_wvl_gbe64_one_gbe_app_tx_dvld = "", DIR = out
+PORT darkquad29_wvl_gbe64_one_gbe_app_tx_eof = "", DIR = out
+PORT darkquad29_wvl_gbe64_one_gbe_app_tx_rst = "", DIR = out
+
+# darkquad29_wvl/gbe64/rst
+PORT darkquad29_wvl_gbe64_rst_user_data_out = "", DIR = in, VEC = [31:0]
+
+# darkquad29_wvl/gbe64/tx_afull
+PORT darkquad29_wvl_gbe64_tx_afull_user_data_in = "", DIR = out, VEC = [31:0]
+
+# darkquad29_wvl/gbe64/tx_overrun
+PORT darkquad29_wvl_gbe64_tx_overrun_user_data_in = "", DIR = out, VEC = [31:0]
+
+# darkquad29_wvl/gbe64/words_per_frame
+PORT darkquad29_wvl_gbe64_words_per_frame_user_data_out = "", DIR = in, VEC = [31:0]
+
+# darkquad29_wvl/n_eof_sent
+PORT darkquad29_wvl_n_eof_sent_user_data_in = "", DIR = out, VEC = [31:0]
+
+# darkquad29_wvl/n_photons
+PORT darkquad29_wvl_n_photons_user_data_in = "", DIR = out, VEC = [31:0]
+
+# darkquad29_wvl/pfb_fft/check/fft_oflow
+PORT darkquad29_wvl_pfb_fft_check_fft_oflow_user_data_in = "", DIR = out, VEC = [31:0]
+
+# darkquad29_wvl/phase_dmp/ch_we
+PORT darkquad29_wvl_phase_dmp_ch_we_user_data_out = "", DIR = in, VEC = [31:0]
+
+# darkquad29_wvl/phase_dmp/on
+PORT darkquad29_wvl_phase_dmp_on_user_data_out = "", DIR = in, VEC = [31:0]
+
+# darkquad29_wvl/phase_port
+PORT darkquad29_wvl_phase_port_user_data_out = "", DIR = in, VEC = [31:0]
+
+# darkquad29_wvl/photon_port
+PORT darkquad29_wvl_photon_port_user_data_out = "", DIR = in, VEC = [31:0]
+
+# darkquad29_wvl/prog_fir0/load_chan
+PORT darkquad29_wvl_prog_fir0_load_chan_user_data_out = "", DIR = in, VEC = [31:0]
+
+# darkquad29_wvl/prog_fir0/single_chan_coeffs
+PORT darkquad29_wvl_prog_fir0_single_chan_coeffs_data_out = "", DIR = in, VEC = [31:0]
+PORT darkquad29_wvl_prog_fir0_single_chan_coeffs_addr = "", DIR = out, VEC = [9:0]
+PORT darkquad29_wvl_prog_fir0_single_chan_coeffs_data_in = "", DIR = out, VEC = [31:0]
+PORT darkquad29_wvl_prog_fir0_single_chan_coeffs_we = "", DIR = out
+
+# darkquad29_wvl/prog_fir1/load_chan
+PORT darkquad29_wvl_prog_fir1_load_chan_user_data_out = "", DIR = in, VEC = [31:0]
+
+# darkquad29_wvl/prog_fir1/single_chan_coeffs
+PORT darkquad29_wvl_prog_fir1_single_chan_coeffs_data_out = "", DIR = in, VEC = [31:0]
+PORT darkquad29_wvl_prog_fir1_single_chan_coeffs_addr = "", DIR = out, VEC = [9:0]
+PORT darkquad29_wvl_prog_fir1_single_chan_coeffs_data_in = "", DIR = out, VEC = [31:0]
+PORT darkquad29_wvl_prog_fir1_single_chan_coeffs_we = "", DIR = out
+
+# darkquad29_wvl/prog_fir2/load_chan
+PORT darkquad29_wvl_prog_fir2_load_chan_user_data_out = "", DIR = in, VEC = [31:0]
+
+# darkquad29_wvl/prog_fir2/single_chan_coeffs
+PORT darkquad29_wvl_prog_fir2_single_chan_coeffs_data_out = "", DIR = in, VEC = [31:0]
+PORT darkquad29_wvl_prog_fir2_single_chan_coeffs_addr = "", DIR = out, VEC = [9:0]
+PORT darkquad29_wvl_prog_fir2_single_chan_coeffs_data_in = "", DIR = out, VEC = [31:0]
+PORT darkquad29_wvl_prog_fir2_single_chan_coeffs_we = "", DIR = out
+
+# darkquad29_wvl/prog_fir3/load_chan
+PORT darkquad29_wvl_prog_fir3_load_chan_user_data_out = "", DIR = in, VEC = [31:0]
+
+# darkquad29_wvl/prog_fir3/single_chan_coeffs
+PORT darkquad29_wvl_prog_fir3_single_chan_coeffs_data_out = "", DIR = in, VEC = [31:0]
+PORT darkquad29_wvl_prog_fir3_single_chan_coeffs_addr = "", DIR = out, VEC = [9:0]
+PORT darkquad29_wvl_prog_fir3_single_chan_coeffs_data_in = "", DIR = out, VEC = [31:0]
+PORT darkquad29_wvl_prog_fir3_single_chan_coeffs_we = "", DIR = out
+
+# darkquad29_wvl/run
+PORT darkquad29_wvl_run_user_data_out = "", DIR = in, VEC = [31:0]
+
+# darkquad29_wvl/sel_ch
+PORT darkquad29_wvl_sel_ch_user_data_out = "", DIR = in, VEC = [31:0]
+
+# darkquad29_wvl/snp_phs/ss/bram
+PORT darkquad29_wvl_snp_phs_ss_bram_data_out = "", DIR = in, VEC = [63:0]
+PORT darkquad29_wvl_snp_phs_ss_bram_addr = "", DIR = out, VEC = [8:0]
+PORT darkquad29_wvl_snp_phs_ss_bram_data_in = "", DIR = out, VEC = [63:0]
+PORT darkquad29_wvl_snp_phs_ss_bram_we = "", DIR = out
+
+# darkquad29_wvl/snp_phs/ss/ctrl
+PORT darkquad29_wvl_snp_phs_ss_ctrl_user_data_out = "", DIR = in, VEC = [31:0]
+
+# darkquad29_wvl/snp_phs/ss/status
+PORT darkquad29_wvl_snp_phs_ss_status_user_data_in = "", DIR = out, VEC = [31:0]
+
+# darkquad29_wvl/start_cap
+PORT darkquad29_wvl_start_cap_user_data_out = "", DIR = in, VEC = [31:0]
+
+# darkquad29_wvl/timekeeper/base_ts
+PORT darkquad29_wvl_timekeeper_base_ts_user_data_out = "", DIR = in, VEC = [31:0]
+
+# darkquad29_wvl/timekeeper/sec_now
+PORT darkquad29_wvl_timekeeper_sec_now_user_data_in = "", DIR = out, VEC = [31:0]
+
+# darkquad29_wvl/trig_snp
+PORT darkquad29_wvl_trig_snp_user_data_out = "", DIR = in, VEC = [31:0]
+
+END

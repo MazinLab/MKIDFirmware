@@ -1,0 +1,396 @@
+Release 14.3 - xst P.40xd (lin64)
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+--> 
+Parameter TMPDIR set to /Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/synthesis/xst_temp_dir/
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.04 secs
+ 
+--> 
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input Format                       : MIXED
+Input File Name                    : "system_sgmii_phy_inst_wrapper_xst.prj"
+Verilog Include Directory          : {"/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/pcores/" "/opt/Xilinx/14.3/ISE_DS/EDK/hw/XilinxBFMinterface/pcores/" "/opt/Xilinx/14.3/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/" }
+
+---- Target Parameters
+Target Device                      : xc6vsx475tff1759-1
+Output File Name                   : "../implementation/system_sgmii_phy_inst_wrapper.ngc"
+
+---- Source Options
+Top Module Name                    : system_sgmii_phy_inst_wrapper
+
+---- Target Options
+Add IO Buffers                     : NO
+
+---- General Options
+Optimization Goal                  : speed
+Netlist Hierarchy                  : as_optimized
+Optimization Effort                : 1
+Hierarchy Separator                : /
+
+---- Other Options
+Cores Search Directories           : {../implementation}
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/pcores/sgmii_phy_v1_00_a/hdl/verilog/sgmii_gtx.v" into library sgmii_phy_v1_00_a
+Parsing module <sgmii_gtx>.
+Analyzing Verilog file "/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/pcores/sgmii_phy_v1_00_a/hdl/verilog/sgmii_phy.v" into library sgmii_phy_v1_00_a
+Parsing module <sgmii_phy>.
+Analyzing Verilog file "/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/hdl/system_sgmii_phy_inst_wrapper.v" into library work
+Parsing module <system_sgmii_phy_inst_wrapper>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+WARNING:HDLCompiler:1016 - "/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/hdl/system_sgmii_phy_inst_wrapper.v" Line 69: Port sgmii_txbufstatus is not connected to this instance
+
+Elaborating module <system_sgmii_phy_inst_wrapper>.
+
+Elaborating module <sgmii_phy>.
+
+Elaborating module <IBUFDS_GTXE1>.
+
+Elaborating module <BUFG>.
+
+Elaborating module <BUFR>.
+
+Elaborating module <sgmii_gtx(GTX_SIM_GTXRESET_SPEEDUP=0,GTX_TX_CLK_SOURCE="RXPLL",GTX_POWER_SAVE=10'b0110100)>.
+
+Elaborating module
+<GTXE1(SIM_RECEIVER_DETECT_PASS="TRUE",SIM_TX_ELEC_IDLE_LEVEL="X",SIM_GTXRESET_SPEEDUP=0,SIM_VERSION="2.0",SIM_TXREFCLK_SOURCE=3'b0,SIM_RXREFCLK_SOURCE=3'b0,TX_CLK_SOURCE="RXPLL",TX_OVERSAMPLE_MODE="FALSE",TXPLL_COM_CFG=24'b01000010110100000001010,TXPLL_CP_CFG=8'b01101,TXPLL_DIVSEL_FB=2,TXPLL_DIVSEL_OUT=2,TXPLL_DIVSEL_REF=1,TXPLL_DIVSEL45_FB=5,TXPLL_LKDET_CFG=3'b111,TX_CLK25_DIVIDER=5,TXPLL_SATA=2'b0,TX_TDCC_CFG=2'b0,PMA_CAS_CLK_EN="FALSE",POWER_SAVE=10'b0110100,GEN_TXUSRCLK="TRUE",TX_DATA_WIDTH=10,TX_USRCLK_CFG=6'b0,TXOUTCLK_CTRL="TXPLLREFCLK_DIV1",TXOUTCLK_DLY=10'b0,TX_PMADATA_OPT=1'b0,PMA_TX_CFG=20'b10000000000010000010,TX_BUFFER_USE="TRUE",TX_BYTECLK_CFG=6'b0,TX_EN_RATE_RESET_BUF="TRUE",TX_XCLK_SEL="TXOUT",TX_DLYALIGN_CTRINC=4'b0100,TX_DLYALIGN_LPFINC=4'b0110,TX_DLYALIGN_MONSEL=3'b0,TX_DLYALIGN_OVRDSETTING=8'b10000000,GEARBOX_ENDEC=3'b0,TXGEARBOX_USE="FALSE",TX_DRIVE_MODE="DIRECT",TX_IDLE_ASSERT_DELAY=3'b101,TX_IDLE_DEASSERT_DELAY=3'b011,TXDRIVE_LOOPBACK_HIZ="FALSE",TXDRIVE_LOOPBACK_PD="FALSE",COM_BURST_V
+AL=4'b1111,TX_DEEMPH_0=5'b11010,TX_DEEMPH_1=5'b10000,TX_MARGIN_FULL_0=7'b1001110,TX_MARGIN_FULL_1=7'b1001001,TX_MARGIN_FULL_2=7'b1000101,TX_MARGIN_FULL_3=7'b1000010,TX_MARGIN_FULL_4=7'b1000000,TX_MARGIN_LOW_0=7'b1000110,TX_MARGIN_LOW_1=7'b1000100,TX_MARGIN_LOW_2=7'b1000010,TX_MARGIN_LOW_3=7'b1000000,TX_MARGIN_LOW_4=7'b1000000,RX_OVERSAMPLE_MODE="FALSE",RXPLL_COM_CFG=24'b01000010110100000001010,RXPLL_CP_CFG=8'b01101,RXPLL_DIVSEL_FB=2,RXPLL_DIVSEL_OUT=2,RXPLL_DIVSEL_REF=1,RXPLL_DIVSEL45_FB=5,RXPLL_LKDET_CFG=3'b111,RX_CLK25_DIVIDER=5,GEN_RXUSRCLK="TRUE",RX_DATA_WIDTH=10,RXRECCLK_CTRL="RXRECCLKPMA_DIV1",RXRECCLK_DLY=10'b0,RXUSRCLK_DLY=16'b0,AC_CAP_DIS="TRUE",CDR_PH_ADJ_TIME=5'b10100,OOBDETECT_THRESHOLD=3'b011,PMA_CDR_SCAN=27'b110010000000100000001001100,PMA_RX_CFG=25'b010111001110000001001000,RCV_TERM_GND="FALSE",RCV_TERM_VTTRX="FALSE",RX_EN_IDLE_HOLD_CDR="FALSE",RX_EN_IDLE_RESET_FR="TRUE",RX_EN_IDLE_RESET_PH="TRUE",TX_DETECT_RX_CFG=14'b01100000110010,TERMINATION_CTRL=5'b0,TERMINATION_OVRD="FALSE",CM_TRIM=2'b01,P
+MA_RXSYNC_CFG=7'b0,PMA_CFG=76'b01000000000000000000000001000000000000000000000000000000000000000011,BGTEST_CFG=2'b0,BIAS_CFG=17'b0,DFE_CAL_TIME=5'b01100,DFE_CFG=8'b011011,RX_EN_IDLE_HOLD_DFE="TRUE",RX_EYE_OFFSET=8'b01001100,RX_EYE_SCANMODE=2'b0,RXPRBSERR_LOOPBACK=1'b0,ALIGN_COMMA_WORD=1,COMMA_10B_ENABLE=10'b01111111,COMMA_DOUBLE="FALSE",DEC_MCOMMA_DETECT="TRUE",DEC_PCOMMA_DETECT="TRUE",DEC_VALID_COMMA_ONLY="FALSE",MCOMMA_10B_VALUE=10'b1010000011,MCOMMA_DETECT="TRUE",PCOMMA_10B_VALUE=10'b0101111100,PCOMMA_DETECT="TRUE",RX_DECODE_SEQ_MATCH="TRUE",RX_SLIDE_AUTO_WAIT=5,RX_SLIDE_MODE="OFF",SHOW_REALIGN_COMMA="FALSE",RX_LOS_INVALID_INCR=1,RX_LOS_THRESHOLD=4,RX_LOSS_OF_SYNC_FSM="FALSE",RXGEARBOX_USE="FALSE",RX_BUFFER_USE="TRUE",RX_EN_IDLE_RESET_BUF="TRUE",RX_EN_MODE_RESET_BUF="TRUE",RX_EN_RATE_RESET_BUF="TRUE",RX_EN_REALIGN_RESET_BUF="FALSE",RX_EN_REALIGN_RESET_BUF2="FALSE",RX_FIFO_ADDR_MODE="FULL",RX_IDLE_HI_CNT=4'b1000,RX_IDLE_LO_CNT=4'b0,RX_XCLK_SEL="RXREC",RX_DLYALIGN_CTRINC=4'b0100,RX_DLYALIGN_EDGESET=5'b010,RX
+_DLYALIGN_LPFINC=4'b0110,RX_DLYALIGN_MONSEL=3'b0,RX_DLYALIGN_OVRDSETTING=8'b10000000,CLK_COR_ADJ_LEN=2,CLK_COR_DET_LEN=2,CLK_COR_INSERT_IDLE_FLAG="FALSE",CLK_COR_KEEP_IDLE="FALSE",CLK_COR_MAX_LAT=18,CLK_COR_MIN_LAT=14,CLK_COR_PRECEDENCE="TRUE",CLK_COR_REPEAT_WAIT=0,CLK_COR_SEQ_1_1=10'b0110111100,CLK_COR_SEQ_1_2=10'b01010000,CLK_COR_SEQ_1_3=10'b0,CLK_COR_SEQ_1_4=10'b0,CLK_COR_SEQ_1_ENABLE=4'b1111,CLK_COR_SEQ_2_1=10'b0110111100,CLK_COR_SEQ_2_2=10'b010110101,CLK_COR_SEQ_2_3=10'b0,CLK_COR_SEQ_2_4=10'b0,CLK_COR_SEQ_2_ENABLE=4'b1111,CLK_COR_SEQ_2_USE="TRUE",CLK_CORRECT_USE="TRUE",CHAN_BOND_1_MAX_SKEW=1,CHAN_BOND_2_MAX_SKEW=1,CHAN_BOND_KEEP_ALIGN="FALSE",CHAN_BOND_SEQ_1_1=10'b0,CHAN_BOND_SEQ_1_2=10'b0,CHAN_BOND_SEQ_1_3=10'b0,CHAN_BOND_SEQ_1_4=10'b0,CHAN_BOND_SEQ_1_ENABLE=4'b1111,CHAN_BOND_SEQ_2_1=10'b0,CHAN_BOND_SEQ_2_2=10'b0,CHAN_BOND_SEQ_2_3=10'b0,CHAN_BOND_SEQ_2_4=10'b0,CHAN_BOND_SEQ_2_CFG=5'b0,CHAN_BOND_SEQ_2_ENABLE=4'b1111,CHAN_BOND_SEQ_2_USE="FALSE",CHAN_BOND_SEQ_LEN=1,PCI_EXPRESS_MODE="FALSE",SAS_MAX_COMSAS=5
+2,SAS_MIN_COMSAS=40,SATA_BURST_VAL=3'b100,SATA_IDLE_VAL=3'b100,SATA_MAX_BURST=9,SATA_MAX_INIT=27,SATA_MAX_WAKE=9,SATA_MIN_BURST=5,SATA_MIN_INIT=15,SATA_MIN_WAKE=5,TRANS_TIME_FROM_P2=12'b0111100,TRANS_TIME_NON_P2=8'b011001,TRANS_TIME_RATE=8'b11111111,TRANS_TIME_TO_P2=10'b01100100>.
+WARNING:HDLCompiler:1127 - "/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/pcores/sgmii_phy_v1_00_a/hdl/verilog/sgmii_gtx.v" Line 415: Assignment to rxchariscomma_float_i ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/pcores/sgmii_phy_v1_00_a/hdl/verilog/sgmii_gtx.v" Line 416: Assignment to rxcharisk_float_i ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/pcores/sgmii_phy_v1_00_a/hdl/verilog/sgmii_gtx.v" Line 418: Assignment to rxdisperr_float_i ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/pcores/sgmii_phy_v1_00_a/hdl/verilog/sgmii_gtx.v" Line 419: Assignment to rxnotintable_float_i ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/pcores/sgmii_phy_v1_00_a/hdl/verilog/sgmii_gtx.v" Line 420: Assignment to rxrundisp_float_i ignored, since the identifier is never used
+WARNING:HDLCompiler:189 - "/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/hdl/system_sgmii_phy_inst_wrapper.v" Line 84: Size mismatch in connection of port <sgmii_rxbufstatus>. Formal port size is 3-bit while actual signal size is 1-bit.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <system_sgmii_phy_inst_wrapper>.
+    Related source file is "/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/hdl/system_sgmii_phy_inst_wrapper.v".
+INFO:Xst:3210 - "/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/hdl/system_sgmii_phy_inst_wrapper.v" line 70: Output port <sgmii_txbufstatus> of the instance <sgmii_phy_inst> is unconnected or connected to loadless signal.
+    Summary:
+	no macro.
+Unit <system_sgmii_phy_inst_wrapper> synthesized.
+
+Synthesizing Unit <sgmii_phy>.
+    Related source file is "/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/pcores/sgmii_phy_v1_00_a/hdl/verilog/sgmii_phy.v".
+WARNING:Xst:647 - Input <sgmii_txbuferr> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+INFO:Xst:3210 - "/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/pcores/sgmii_phy_v1_00_a/hdl/verilog/sgmii_phy.v" line 110: Output port <TXPLLLKDET_OUT> of the instance <sgmii_gtx_inst> is unconnected or connected to loadless signal.
+    Found 4-bit register for signal <reset_r>.
+    Found 1-bit register for signal <resetdone_rx_r>.
+    Found 1-bit register for signal <resetdone_tx_r>.
+    Summary:
+	inferred   6 D-type flip-flop(s).
+Unit <sgmii_phy> synthesized.
+
+Synthesizing Unit <sgmii_gtx>.
+    Related source file is "/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/pcores/sgmii_phy_v1_00_a/hdl/verilog/sgmii_gtx.v".
+        GTX_SIM_GTXRESET_SPEEDUP = 0
+        GTX_TX_CLK_SOURCE = "RXPLL"
+        GTX_POWER_SAVE = 10'b0000110100
+    Summary:
+	no macro.
+Unit <sgmii_gtx> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Registers                                            : 3
+ 1-bit register                                        : 2
+ 4-bit register                                        : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Registers                                            : 6
+ Flip-Flops                                            : 6
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <system_sgmii_phy_inst_wrapper> ...
+
+Optimizing unit <sgmii_phy> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 0) on block system_sgmii_phy_inst_wrapper, actual ratio is 0.
+
+Final Macro Processing ...
+
+Processing Unit <system_sgmii_phy_inst_wrapper> :
+INFO:Xst:741 - HDL ADVISOR - A 4-bit shift register was found for signal <sgmii_phy_inst/reset_r_3> and currently occupies 4 logic cells (2 slices). Removing the set/reset logic would take advantage of SRL32 (and derived) primitives and reduce this to 1 logic cells (1 slices). Evaluate if the set/reset can be removed for this simple shift register. The majority of simple pipeline structures do not need to be set/reset operationally.
+Unit <system_sgmii_phy_inst_wrapper> processed.
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 6
+ Flip-Flops                                            : 6
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : system_sgmii_phy_inst_wrapper.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 3
+#      GND                         : 1
+#      LUT2                        : 1
+#      VCC                         : 1
+# FlipFlops/Latches                : 6
+#      FDC                         : 2
+#      FDP                         : 4
+# Clock Buffers                    : 2
+#      BUFG                        : 2
+# IO Buffers                       : 1
+#      IBUFDS_GTXE1                : 1
+# GigabitIOs                       : 1
+#      GTXE1                       : 1
+# Others                           : 1
+#      BUFR                        : 1
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6vsx475tff1759-1 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:               6  out of  595200     0%  
+ Number of Slice LUTs:                    1  out of  297600     0%  
+    Number used as Logic:                 1  out of  297600     0%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:      7
+   Number with an unused Flip Flop:       1  out of      7    14%  
+   Number with an unused LUT:             6  out of      7    85%  
+   Number of fully used LUT-FF pairs:     0  out of      7     0%  
+   Number of unique control sets:         3
+
+IO Utilization: 
+ Number of IOs:                          46
+ Number of bonded IOBs:                  37  out of    840     4%  
+
+Specific Feature Utilization:
+ Number of BUFG/BUFGCTRLs:                2  out of     32     6%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+mgt_clk_p                          | IBUFDS_GTXE1+BUFR      | 5     |
+sgmii_phy_inst/clk_125_o           | BUFG                   | 2     |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+-----------------------------------+---------------------------------+-------+
+Control Signal                     | Buffer(FF name)                 | Load  |
+-----------------------------------+---------------------------------+-------+
+N0(XST_GND:G)                      | NONE(sgmii_phy_inst/bufr_clk_ds)| 1     |
+N1(XST_VCC:P)                      | NONE(sgmii_phy_inst/bufr_clk_ds)| 1     |
+-----------------------------------+---------------------------------+-------+
+
+Timing Summary:
+---------------
+Speed Grade: -1
+
+   Minimum period: 0.785ns (Maximum Frequency: 1273.885MHz)
+   Minimum input arrival time before clock: 0.434ns
+   Maximum output required time after clock: 0.934ns
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'mgt_clk_p'
+  Clock period: 0.785ns (frequency: 1273.885MHz)
+  Total number of paths / destination ports: 3 / 3
+-------------------------------------------------------------------------
+Delay:               0.785ns (Levels of Logic = 0)
+  Source:            sgmii_phy_inst/reset_r_2 (FF)
+  Destination:       sgmii_phy_inst/reset_r_3 (FF)
+  Source Clock:      mgt_clk_p rising
+  Destination Clock: mgt_clk_p rising
+
+  Data Path: sgmii_phy_inst/reset_r_2 to sgmii_phy_inst/reset_r_3
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDP:C->Q              1   0.375   0.399  sgmii_phy_inst/reset_r_2 (sgmii_phy_inst/reset_r_2)
+     FDP:D                     0.011          sgmii_phy_inst/reset_r_3
+    ----------------------------------------
+    Total                      0.785ns (0.386ns logic, 0.399ns route)
+                                       (49.2% logic, 50.8% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'sgmii_phy_inst/clk_125_o'
+  Total number of paths / destination ports: 2 / 2
+-------------------------------------------------------------------------
+Offset:              0.434ns (Levels of Logic = 0)
+  Source:            sgmii_rxreset (PAD)
+  Destination:       sgmii_phy_inst/resetdone_rx_r (FF)
+  Destination Clock: sgmii_phy_inst/clk_125_o rising
+
+  Data Path: sgmii_rxreset to sgmii_phy_inst/resetdone_rx_r
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:CLR                   0.434          sgmii_phy_inst/resetdone_rx_r
+    ----------------------------------------
+    Total                      0.434ns (0.434ns logic, 0.000ns route)
+                                       (100.0% logic, 0.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'mgt_clk_p'
+  Total number of paths / destination ports: 5 / 5
+-------------------------------------------------------------------------
+Offset:              0.434ns (Levels of Logic = 0)
+  Source:            mgt_reset (PAD)
+  Destination:       sgmii_phy_inst/reset_r_3 (FF)
+  Destination Clock: mgt_clk_p rising
+
+  Data Path: mgt_reset to sgmii_phy_inst/reset_r_3
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDP:PRE                   0.434          sgmii_phy_inst/reset_r_0
+    ----------------------------------------
+    Total                      0.434ns (0.434ns logic, 0.000ns route)
+                                       (100.0% logic, 0.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'sgmii_phy_inst/clk_125_o'
+  Total number of paths / destination ports: 2 / 1
+-------------------------------------------------------------------------
+Offset:              0.934ns (Levels of Logic = 1)
+  Source:            sgmii_phy_inst/resetdone_tx_r (FF)
+  Destination:       sgmii_resetdone (PAD)
+  Source Clock:      sgmii_phy_inst/clk_125_o rising
+
+  Data Path: sgmii_phy_inst/resetdone_tx_r to sgmii_resetdone
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q              1   0.375   0.491  sgmii_phy_inst/resetdone_tx_r (sgmii_phy_inst/resetdone_tx_r)
+     LUT2:I0->O            0   0.068   0.000  sgmii_phy_inst/resetdone_i1 (sgmii_resetdone)
+    ----------------------------------------
+    Total                      0.934ns (0.443ns logic, 0.491ns route)
+                                       (47.4% logic, 52.6% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock mgt_clk_p
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+mgt_clk_p      |    0.785|         |         |         |
+---------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 5.00 secs
+Total CPU time to Xst completion: 5.10 secs
+ 
+--> 
+
+
+Total memory usage is 503248 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    8 (   0 filtered)
+Number of infos    :    3 (   0 filtered)
+

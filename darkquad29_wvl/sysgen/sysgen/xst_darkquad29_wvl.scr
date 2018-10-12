@@ -1,0 +1,1 @@
+run -ifn xst_darkquad29_wvl.prj -ifmt mixed -ofn darkquad29_wvl_cw.ngc -ofmt NGC -p xc6vsx475t-1ff1759 -ent darkquad29_wvl_cw -keep_hierarchy NO -iobuf YES -bus_delimiter () -top darkquad29_wvl_cw -hierarchy_separator / -report_timing_constraint_problems warning -register_balancing no -iob Auto -uc darkquad29_wvl_cw.xcf -write_timing_constraints yes

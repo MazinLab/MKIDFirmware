@@ -1,0 +1,3 @@
+verilog temac_v1_00_a /Scratch/firmware/chan1024/darkquad29/XPS_ROACH2_base/pcores/temac_v1_00_a/hdl/verilog/temac.v
+verilog temac_v1_00_a /Scratch/firmware/chan1024/darkquad29/XPS_ROACH2_base/pcores/temac_v1_00_a/hdl/verilog/emac_wrapper.v
+verilog work ../hdl/system_temac_inst_wrapper.v

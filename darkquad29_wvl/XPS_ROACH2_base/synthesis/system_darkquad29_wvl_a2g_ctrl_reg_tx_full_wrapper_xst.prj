@@ -1,0 +1,2 @@
+verilog opb_register_simulink2ppc_v1_00_a /Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/pcores/opb_register_simulink2ppc_v1_00_a/hdl/verilog/opb_register_simulink2ppc.v
+verilog work ../hdl/system_darkquad29_wvl_a2g_ctrl_reg_tx_full_wrapper.v

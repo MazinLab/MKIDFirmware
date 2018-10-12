@@ -1,0 +1,2 @@
+VERILOG adcdac_2g_interface_v1_00_a /Scratch/firmware/chan1024/darkquad29/XPS_ROACH2_base/pcores/adcdac_2g_interface_v1_00_a/hdl/verilog/adcdac_2g_interface.v
+verilog work ../hdl/system_darkquad29_adc_in_adcdac_2g_wrapper.v

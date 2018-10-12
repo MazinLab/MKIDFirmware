@@ -1,0 +1,500 @@
+Release 14.3 - xst P.40xd (lin64)
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+--> 
+Parameter TMPDIR set to /Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/synthesis/xst_temp_dir/
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.03 secs
+ 
+--> 
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input Format                       : MIXED
+Input File Name                    : "system_darkquad29_wvl_adc_in_adcdac_2g_wrapper_xst.prj"
+Verilog Include Directory          : {"/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/pcores/" "/opt/Xilinx/14.3/ISE_DS/EDK/hw/XilinxBFMinterface/pcores/" "/opt/Xilinx/14.3/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/" }
+
+---- Target Parameters
+Target Device                      : xc6vsx475tff1759-1
+Output File Name                   : "../implementation/system_darkquad29_wvl_adc_in_adcdac_2g_wrapper.ngc"
+
+---- Source Options
+Top Module Name                    : system_darkquad29_wvl_adc_in_adcdac_2g_wrapper
+
+---- Target Options
+Add IO Buffers                     : NO
+
+---- General Options
+Optimization Goal                  : speed
+Netlist Hierarchy                  : as_optimized
+Optimization Effort                : 1
+Hierarchy Separator                : /
+
+---- Other Options
+Cores Search Directories           : {../implementation}
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/pcores/adcdac_2g_interface_v1_00_a/hdl/verilog/adcdac_2g_interface.v" into library adcdac_2g_interface_v1_00_a
+Parsing module <adcdac_2g_interface>.
+Analyzing Verilog file "/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/hdl/system_darkquad29_wvl_adc_in_adcdac_2g_wrapper.v" into library work
+Parsing module <system_darkquad29_wvl_adc_in_adcdac_2g_wrapper>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating module <system_darkquad29_wvl_adc_in_adcdac_2g_wrapper>.
+WARNING:HDLCompiler:1016 - "/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/pcores/adcdac_2g_interface_v1_00_a/hdl/verilog/adcdac_2g_interface.v" Line 229: Port CLKFBOUTB is not connected to this instance
+WARNING:HDLCompiler:1016 - "/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/pcores/adcdac_2g_interface_v1_00_a/hdl/verilog/adcdac_2g_interface.v" Line 454: Port CINVCTRL is not connected to this instance
+WARNING:HDLCompiler:1016 - "/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/pcores/adcdac_2g_interface_v1_00_a/hdl/verilog/adcdac_2g_interface.v" Line 474: Port CINVCTRL is not connected to this instance
+WARNING:HDLCompiler:1016 - "/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/pcores/adcdac_2g_interface_v1_00_a/hdl/verilog/adcdac_2g_interface.v" Line 494: Port CINVCTRL is not connected to this instance
+WARNING:HDLCompiler:1016 - "/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/pcores/adcdac_2g_interface_v1_00_a/hdl/verilog/adcdac_2g_interface.v" Line 514: Port CINVCTRL is not connected to this instance
+WARNING:HDLCompiler:1016 - "/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/pcores/adcdac_2g_interface_v1_00_a/hdl/verilog/adcdac_2g_interface.v" Line 541: Port CE2 is not connected to this instance
+WARNING:HDLCompiler:1016 - "/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/pcores/adcdac_2g_interface_v1_00_a/hdl/verilog/adcdac_2g_interface.v" Line 608: Port CE2 is not connected to this instance
+WARNING:HDLCompiler:1016 - "/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/pcores/adcdac_2g_interface_v1_00_a/hdl/verilog/adcdac_2g_interface.v" Line 674: Port CE2 is not connected to this instance
+WARNING:HDLCompiler:1016 - "/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/pcores/adcdac_2g_interface_v1_00_a/hdl/verilog/adcdac_2g_interface.v" Line 740: Port CE2 is not connected to this instance
+
+Elaborating module <adcdac_2g_interface>.
+
+Elaborating module <IBUFGDS(IOSTANDARD="LVDS_25")>.
+
+Elaborating module <BUFG>.
+
+Elaborating module <MMCM_ADV(BANDWIDTH="HIGH",CLKFBOUT_MULT_F=8.0,CLKFBOUT_PHASE=0.0,CLKIN1_PERIOD=7.407,CLKOUT4_CASCADE="FALSE",CLOCK_HOLD="FALSE",DIVCLK_DIVIDE=1,REF_JITTER1=0.0,STARTUP_WAIT="FALSE",CLKFBOUT_USE_FINE_PS="TRUE",CLKOUT0_DIVIDE_F=2,CLKOUT0_DUTY_CYCLE=0.5,CLKOUT0_PHASE=0.0,CLKOUT1_DIVIDE=8,CLKOUT1_DUTY_CYCLE=0.5,CLKOUT1_PHASE=0.0,CLKOUT2_DIVIDE=4,CLKOUT2_DUTY_CYCLE=0.5,CLKOUT2_PHASE=0.0,CLKOUT3_DIVIDE=4,CLKOUT3_DUTY_CYCLE=0.5,CLKOUT3_PHASE=90.0,CLKOUT4_DIVIDE=4,CLKOUT4_DUTY_CYCLE=0.5,CLKOUT4_PHASE=180.0,CLKOUT5_DIVIDE=4,CLKOUT5_DUTY_CYCLE=0.5,CLKOUT5_PHASE=270.0,CLKOUT6_DIVIDE=4,CLKOUT6_DUTY_CYCLE=0.5,CLKOUT6_PHASE=0.0)>.
+WARNING:HDLCompiler:1127 - "/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/pcores/adcdac_2g_interface_v1_00_a/hdl/verilog/adcdac_2g_interface.v" Line 315: Assignment to smpl_clkdiv ignored, since the identifier is never used
+
+Elaborating module <IBUFDS(IOSTANDARD="LVDS_25")>.
+
+Elaborating module <IODELAYE1(DELAY_SRC="I",IDELAY_TYPE="VAR_LOADABLE",IDELAY_VALUE=1'b0,REFCLK_FREQUENCY=200,HIGH_PERFORMANCE_MODE="TRUE")>.
+
+Elaborating module <ISERDESE1(DATA_RATE="DDR",DATA_WIDTH=4,DYN_CLKDIV_INV_EN="FALSE",DYN_CLK_INV_EN="FALSE",INIT_Q1=1'b0,INIT_Q2=1'b0,INIT_Q3=1'b0,INIT_Q4=1'b0,INTERFACE_TYPE="NETWORKING",IOBDELAY="IFD",NUM_CE=1,OFB_USED="FALSE",SERDES_MODE="MASTER",SRVAL_Q1=1'b0,SRVAL_Q2=1'b0,SRVAL_Q3=1'b0,SRVAL_Q4=1'b0)>.
+
+Elaborating module <OBUFDS(IOSTANDARD="LVDS_25")>.
+WARNING:HDLCompiler:634 - "/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/pcores/adcdac_2g_interface_v1_00_a/hdl/verilog/adcdac_2g_interface.v" Line 592: Net <ISERDES_NODELAY_inst_data0_generate[0].OFB> does not have a driver.
+WARNING:HDLCompiler:634 - "/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/pcores/adcdac_2g_interface_v1_00_a/hdl/verilog/adcdac_2g_interface.v" Line 658: Net <ISERDES_NODELAY_inst_data1_generate[0].OFB> does not have a driver.
+WARNING:HDLCompiler:634 - "/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/pcores/adcdac_2g_interface_v1_00_a/hdl/verilog/adcdac_2g_interface.v" Line 724: Net <ISERDES_NODELAY_inst_data2_generate[0].OFB> does not have a driver.
+WARNING:HDLCompiler:634 - "/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/pcores/adcdac_2g_interface_v1_00_a/hdl/verilog/adcdac_2g_interface.v" Line 790: Net <ISERDES_NODELAY_inst_data3_generate[0].OFB> does not have a driver.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <system_darkquad29_wvl_adc_in_adcdac_2g_wrapper>.
+    Related source file is "/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/hdl/system_darkquad29_wvl_adc_in_adcdac_2g_wrapper.v".
+    Summary:
+	no macro.
+Unit <system_darkquad29_wvl_adc_in_adcdac_2g_wrapper> synthesized.
+
+Synthesizing Unit <adcdac_2g_interface>.
+    Related source file is "/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/pcores/adcdac_2g_interface_v1_00_a/hdl/verilog/adcdac_2g_interface.v".
+WARNING:Xst:653 - Signal <ISERDES_NODELAY_inst_data0_generate[0].OFB> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+WARNING:Xst:653 - Signal <ISERDES_NODELAY_inst_data0_generate[1].OFB> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+WARNING:Xst:653 - Signal <ISERDES_NODELAY_inst_data0_generate[2].OFB> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+WARNING:Xst:653 - Signal <ISERDES_NODELAY_inst_data0_generate[3].OFB> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+WARNING:Xst:653 - Signal <ISERDES_NODELAY_inst_data0_generate[4].OFB> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+WARNING:Xst:653 - Signal <ISERDES_NODELAY_inst_data0_generate[5].OFB> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+WARNING:Xst:653 - Signal <ISERDES_NODELAY_inst_data0_generate[6].OFB> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+WARNING:Xst:653 - Signal <ISERDES_NODELAY_inst_data0_generate[7].OFB> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+WARNING:Xst:653 - Signal <ISERDES_NODELAY_inst_data0_generate[8].OFB> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+WARNING:Xst:653 - Signal <ISERDES_NODELAY_inst_data0_generate[9].OFB> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+WARNING:Xst:653 - Signal <ISERDES_NODELAY_inst_data0_generate[10].OFB> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+WARNING:Xst:653 - Signal <ISERDES_NODELAY_inst_data0_generate[11].OFB> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+WARNING:Xst:653 - Signal <ISERDES_NODELAY_inst_data0_generate[12].OFB> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+WARNING:Xst:653 - Signal <ISERDES_NODELAY_inst_data0_generate[13].OFB> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+WARNING:Xst:653 - Signal <ISERDES_NODELAY_inst_data1_generate[0].OFB> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+WARNING:Xst:653 - Signal <ISERDES_NODELAY_inst_data1_generate[1].OFB> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+WARNING:Xst:653 - Signal <ISERDES_NODELAY_inst_data1_generate[2].OFB> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+WARNING:Xst:653 - Signal <ISERDES_NODELAY_inst_data1_generate[3].OFB> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+WARNING:Xst:653 - Signal <ISERDES_NODELAY_inst_data1_generate[4].OFB> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+WARNING:Xst:653 - Signal <ISERDES_NODELAY_inst_data1_generate[5].OFB> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+WARNING:Xst:653 - Signal <ISERDES_NODELAY_inst_data1_generate[6].OFB> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+WARNING:Xst:653 - Signal <ISERDES_NODELAY_inst_data1_generate[7].OFB> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+WARNING:Xst:653 - Signal <ISERDES_NODELAY_inst_data1_generate[8].OFB> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+WARNING:Xst:653 - Signal <ISERDES_NODELAY_inst_data1_generate[9].OFB> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+WARNING:Xst:653 - Signal <ISERDES_NODELAY_inst_data1_generate[10].OFB> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+WARNING:Xst:653 - Signal <ISERDES_NODELAY_inst_data1_generate[11].OFB> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+WARNING:Xst:653 - Signal <ISERDES_NODELAY_inst_data1_generate[12].OFB> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+WARNING:Xst:653 - Signal <ISERDES_NODELAY_inst_data1_generate[13].OFB> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+WARNING:Xst:653 - Signal <ISERDES_NODELAY_inst_data2_generate[0].OFB> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+WARNING:Xst:653 - Signal <ISERDES_NODELAY_inst_data2_generate[1].OFB> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+WARNING:Xst:653 - Signal <ISERDES_NODELAY_inst_data2_generate[2].OFB> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+WARNING:Xst:653 - Signal <ISERDES_NODELAY_inst_data2_generate[3].OFB> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+WARNING:Xst:653 - Signal <ISERDES_NODELAY_inst_data2_generate[4].OFB> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+WARNING:Xst:653 - Signal <ISERDES_NODELAY_inst_data2_generate[5].OFB> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+WARNING:Xst:653 - Signal <ISERDES_NODELAY_inst_data2_generate[6].OFB> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+WARNING:Xst:653 - Signal <ISERDES_NODELAY_inst_data2_generate[7].OFB> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+WARNING:Xst:653 - Signal <ISERDES_NODELAY_inst_data2_generate[8].OFB> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+WARNING:Xst:653 - Signal <ISERDES_NODELAY_inst_data2_generate[9].OFB> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+WARNING:Xst:653 - Signal <ISERDES_NODELAY_inst_data2_generate[10].OFB> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+WARNING:Xst:653 - Signal <ISERDES_NODELAY_inst_data2_generate[11].OFB> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+WARNING:Xst:653 - Signal <ISERDES_NODELAY_inst_data2_generate[12].OFB> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+WARNING:Xst:653 - Signal <ISERDES_NODELAY_inst_data2_generate[13].OFB> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+WARNING:Xst:653 - Signal <ISERDES_NODELAY_inst_data3_generate[0].OFB> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+WARNING:Xst:653 - Signal <ISERDES_NODELAY_inst_data3_generate[1].OFB> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+WARNING:Xst:653 - Signal <ISERDES_NODELAY_inst_data3_generate[2].OFB> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+WARNING:Xst:653 - Signal <ISERDES_NODELAY_inst_data3_generate[3].OFB> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+WARNING:Xst:653 - Signal <ISERDES_NODELAY_inst_data3_generate[4].OFB> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+WARNING:Xst:653 - Signal <ISERDES_NODELAY_inst_data3_generate[5].OFB> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+WARNING:Xst:653 - Signal <ISERDES_NODELAY_inst_data3_generate[6].OFB> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+WARNING:Xst:653 - Signal <ISERDES_NODELAY_inst_data3_generate[7].OFB> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+WARNING:Xst:653 - Signal <ISERDES_NODELAY_inst_data3_generate[8].OFB> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+WARNING:Xst:653 - Signal <ISERDES_NODELAY_inst_data3_generate[9].OFB> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+WARNING:Xst:653 - Signal <ISERDES_NODELAY_inst_data3_generate[10].OFB> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+WARNING:Xst:653 - Signal <ISERDES_NODELAY_inst_data3_generate[11].OFB> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+WARNING:Xst:653 - Signal <ISERDES_NODELAY_inst_data3_generate[12].OFB> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+WARNING:Xst:653 - Signal <ISERDES_NODELAY_inst_data3_generate[13].OFB> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+    Register <dly_val3> equivalent to <dly_val0> has been removed
+    Register <dly_val2> equivalent to <dly_val0> has been removed
+    Register <dly_val1> equivalent to <dly_val0> has been removed
+    Found 1-bit register for signal <already_triggered_inc>.
+    Found 1-bit register for signal <inc_mmcm_phs>.
+    Found 5-bit register for signal <dly_val0>.
+    Found 14-bit register for signal <recapture_data0_t0>.
+    Found 14-bit register for signal <recapture_data0_t1>.
+    Found 14-bit register for signal <recapture_data0_t2>.
+    Found 14-bit register for signal <recapture_data0_t3>.
+    Found 14-bit register for signal <recapture_data1_t0>.
+    Found 14-bit register for signal <recapture_data1_t1>.
+    Found 14-bit register for signal <recapture_data1_t2>.
+    Found 14-bit register for signal <recapture_data1_t3>.
+    Found 14-bit register for signal <recapture_data2_t0>.
+    Found 14-bit register for signal <recapture_data2_t1>.
+    Found 14-bit register for signal <recapture_data2_t2>.
+    Found 14-bit register for signal <recapture_data2_t3>.
+    Found 14-bit register for signal <recapture_data3_t0>.
+    Found 14-bit register for signal <recapture_data3_t1>.
+    Found 14-bit register for signal <recapture_data3_t2>.
+    Found 14-bit register for signal <recapture_data3_t3>.
+    Found 56-bit register for signal <load_bit_dly_reg>.
+    Summary:
+	inferred 287 D-type flip-flop(s).
+Unit <adcdac_2g_interface> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Registers                                            : 20
+ 1-bit register                                        : 2
+ 14-bit register                                       : 16
+ 5-bit register                                        : 1
+ 56-bit register                                       : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Registers                                            : 287
+ Flip-Flops                                            : 287
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <system_darkquad29_wvl_adc_in_adcdac_2g_wrapper> ...
+
+Optimizing unit <adcdac_2g_interface> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 0) on block system_darkquad29_wvl_adc_in_adcdac_2g_wrapper, actual ratio is 0.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 287
+ Flip-Flops                                            : 287
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : system_darkquad29_wvl_adc_in_adcdac_2g_wrapper.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 60
+#      GND                         : 1
+#      INV                         : 1
+#      LUT3                        : 1
+#      LUT6                        : 56
+#      VCC                         : 1
+# FlipFlops/Latches                : 287
+#      FD                          : 287
+# Clock Buffers                    : 8
+#      BUFG                        : 8
+# IO Buffers                       : 61
+#      IBUFDS                      : 58
+#      IBUFGDS                     : 1
+#      OBUFDS                      : 2
+# Others                           : 113
+#      IODELAYE1                   : 56
+#      ISERDESE1                   : 56
+#      MMCM_ADV                    : 1
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6vsx475tff1759-1 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:             287  out of  595200     0%  
+ Number of Slice LUTs:                   58  out of  297600     0%  
+    Number used as Logic:                58  out of  297600     0%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:    288
+   Number with an unused Flip Flop:       1  out of    288     0%  
+   Number with an unused LUT:           230  out of    288    79%  
+   Number of fully used LUT-FF pairs:    57  out of    288    19%  
+   Number of unique control sets:         2
+
+IO Utilization: 
+ Number of IOs:                         369
+ Number of bonded IOBs:                 124  out of    840    14%  
+
+Specific Feature Utilization:
+ Number of BUFG/BUFGCTRLs:                8  out of     32    25%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+----------------------------------------------+----------------------------------------------------------+-------+
+Clock Signal                                  | Clock buffer(FF name)                                    | Load  |
+----------------------------------------------+----------------------------------------------------------+-------+
+darkquad29_wvl_adc_in_adcdac_2g/mmcm_clk_out_0| BUFG                                                     | 224   |
+sys_clk                                       | NONE(darkquad29_wvl_adc_in_adcdac_2g/load_bit_dly_reg_55)| 63    |
+----------------------------------------------+----------------------------------------------------------+-------+
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -1
+
+   Minimum period: 0.945ns (Maximum Frequency: 1058.201MHz)
+   Minimum input arrival time before clock: 0.458ns
+   Maximum output required time after clock: 0.932ns
+   Maximum combinational path delay: 0.399ns
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'sys_clk'
+  Clock period: 0.945ns (frequency: 1058.201MHz)
+  Total number of paths / destination ports: 2 / 1
+-------------------------------------------------------------------------
+Delay:               0.945ns (Levels of Logic = 1)
+  Source:            darkquad29_wvl_adc_in_adcdac_2g/already_triggered_inc (FF)
+  Destination:       darkquad29_wvl_adc_in_adcdac_2g/inc_mmcm_phs (FF)
+  Source Clock:      sys_clk rising
+  Destination Clock: sys_clk rising
+
+  Data Path: darkquad29_wvl_adc_in_adcdac_2g/already_triggered_inc to darkquad29_wvl_adc_in_adcdac_2g/inc_mmcm_phs
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               1   0.375   0.491  darkquad29_wvl_adc_in_adcdac_2g/already_triggered_inc (darkquad29_wvl_adc_in_adcdac_2g/already_triggered_inc)
+     LUT3:I1->O            1   0.068   0.000  darkquad29_wvl_adc_in_adcdac_2g/inc_mmcm_phs_rstpot (darkquad29_wvl_adc_in_adcdac_2g/inc_mmcm_phs_rstpot)
+     FD:D                      0.011          darkquad29_wvl_adc_in_adcdac_2g/inc_mmcm_phs
+    ----------------------------------------
+    Total                      0.945ns (0.454ns logic, 0.491ns route)
+                                       (48.0% logic, 52.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'darkquad29_wvl_adc_in_adcdac_2g/mmcm_clk_out_0'
+  Total number of paths / destination ports: 224 / 224
+-------------------------------------------------------------------------
+Offset:              0.410ns (Levels of Logic = 0)
+  Source:            darkquad29_wvl_adc_in_adcdac_2g/ISERDES_NODELAY_inst_data3_generate[13].ISERDES_NODELAY_inst_i:Q2 (PAD)
+  Destination:       darkquad29_wvl_adc_in_adcdac_2g/recapture_data3_t2_13 (FF)
+  Destination Clock: darkquad29_wvl_adc_in_adcdac_2g/mmcm_clk_out_0 rising
+
+  Data Path: darkquad29_wvl_adc_in_adcdac_2g/ISERDES_NODELAY_inst_data3_generate[13].ISERDES_NODELAY_inst_i:Q2 to darkquad29_wvl_adc_in_adcdac_2g/recapture_data3_t2_13
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+    ISERDESE1:Q2           1   0.000   0.399  darkquad29_wvl_adc_in_adcdac_2g/ISERDES_NODELAY_inst_data3_generate[13].ISERDES_NODELAY_inst_i (darkquad29_wvl_adc_in_adcdac_2g/serdes_data3_t2<13>)
+     FD:D                      0.011          darkquad29_wvl_adc_in_adcdac_2g/recapture_data3_t2_13
+    ----------------------------------------
+    Total                      0.410ns (0.011ns logic, 0.399ns route)
+                                       (2.7% logic, 97.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'sys_clk'
+  Total number of paths / destination ports: 343 / 63
+-------------------------------------------------------------------------
+Offset:              0.458ns (Levels of Logic = 1)
+  Source:            user_load_dly0<0> (PAD)
+  Destination:       darkquad29_wvl_adc_in_adcdac_2g/load_bit_dly_reg_55 (FF)
+  Destination Clock: sys_clk rising
+
+  Data Path: user_load_dly0<0> to darkquad29_wvl_adc_in_adcdac_2g/load_bit_dly_reg_55
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LUT6:I0->O            1   0.068   0.000  darkquad29_wvl_adc_in_adcdac_2g/load_bit_dly<49><5>1 (darkquad29_wvl_adc_in_adcdac_2g/load_bit_dly<49>)
+     FD:D                      0.011          darkquad29_wvl_adc_in_adcdac_2g/load_bit_dly_reg_49
+    ----------------------------------------
+    Total                      0.458ns (0.458ns logic, 0.000ns route)
+                                       (100.0% logic, 0.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'darkquad29_wvl_adc_in_adcdac_2g/mmcm_clk_out_0'
+  Total number of paths / destination ports: 224 / 224
+-------------------------------------------------------------------------
+Offset:              0.375ns (Levels of Logic = 0)
+  Source:            darkquad29_wvl_adc_in_adcdac_2g/recapture_data0_t0_11 (FF)
+  Destination:       user_data_i0<11> (PAD)
+  Source Clock:      darkquad29_wvl_adc_in_adcdac_2g/mmcm_clk_out_0 rising
+
+  Data Path: darkquad29_wvl_adc_in_adcdac_2g/recapture_data0_t0_11 to user_data_i0<11>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               0   0.375   0.000  darkquad29_wvl_adc_in_adcdac_2g/recapture_data0_t0_11 (darkquad29_wvl_adc_in_adcdac_2g/recapture_data0_t0_11)
+    ----------------------------------------
+    Total                      0.375ns (0.375ns logic, 0.000ns route)
+                                       (100.0% logic, 0.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'sys_clk'
+  Total number of paths / destination ports: 336 / 336
+-------------------------------------------------------------------------
+Offset:              0.932ns (Levels of Logic = 0)
+  Source:            darkquad29_wvl_adc_in_adcdac_2g/dly_val0_4 (FF)
+  Destination:       darkquad29_wvl_adc_in_adcdac_2g/IODELAY_data1<13>:CNTVALUEIN4 (PAD)
+  Source Clock:      sys_clk rising
+
+  Data Path: darkquad29_wvl_adc_in_adcdac_2g/dly_val0_4 to darkquad29_wvl_adc_in_adcdac_2g/IODELAY_data1<13>:CNTVALUEIN4
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q              56   0.375   0.557  darkquad29_wvl_adc_in_adcdac_2g/dly_val0_4 (darkquad29_wvl_adc_in_adcdac_2g/dly_val0_4)
+    IODELAYE1:CNTVALUEIN4        0.000          darkquad29_wvl_adc_in_adcdac_2g/IODELAY_data0<0>
+    ----------------------------------------
+    Total                      0.932ns (0.375ns logic, 0.557ns route)
+                                       (40.2% logic, 59.8% route)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 176 / 118
+-------------------------------------------------------------------------
+Delay:               0.399ns (Levels of Logic = 0)
+  Source:            darkquad29_wvl_adc_in_adcdac_2g/IODELAY_data1<13>:DATAOUT (PAD)
+  Destination:       darkquad29_wvl_adc_in_adcdac_2g/ISERDES_NODELAY_inst_data1_generate[13].ISERDES_NODELAY_inst_i:DDLY (PAD)
+
+  Data Path: darkquad29_wvl_adc_in_adcdac_2g/IODELAY_data1<13>:DATAOUT to darkquad29_wvl_adc_in_adcdac_2g/ISERDES_NODELAY_inst_data1_generate[13].ISERDES_NODELAY_inst_i:DDLY
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+    IODELAYE1:DATAOUT      1   0.000   0.399  darkquad29_wvl_adc_in_adcdac_2g/IODELAY_data1<13> (darkquad29_wvl_adc_in_adcdac_2g/buf_data1_dly<13>)
+    ISERDESE1:DDLY             0.000          darkquad29_wvl_adc_in_adcdac_2g/ISERDES_NODELAY_inst_data1_generate[13].ISERDES_NODELAY_inst_i
+    ----------------------------------------
+    Total                      0.399ns (0.000ns logic, 0.399ns route)
+                                       (0.0% logic, 100.0% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock sys_clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+sys_clk        |    0.945|         |         |         |
+---------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 6.00 secs
+Total CPU time to Xst completion: 6.36 secs
+ 
+--> 
+
+
+Total memory usage is 505508 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   70 (   0 filtered)
+Number of infos    :    1 (   0 filtered)
+

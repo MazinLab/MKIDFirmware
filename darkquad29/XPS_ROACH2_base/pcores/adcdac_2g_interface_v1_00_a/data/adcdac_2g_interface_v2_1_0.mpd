@@ -1,0 +1,145 @@
+
+BEGIN adcdac_2g_interface
+
+########################
+## Peripheral Options ##
+########################
+
+OPTION IPTYPE = IP
+OPTION IMP_NETLIST = TRUE
+OPTION HDL = VERILOG
+OPTION IP_GROUP = MICROBLAZE:PPC:USER
+
+
+
+
+####################
+## Bus Interfaces ##
+####################
+
+
+
+#################################################
+## Generics for VHDL or Parameters for Verilog ##
+#################################################
+
+
+
+###########
+## Ports ##
+###########
+
+PORT data0_p = "", DIR = I, IOB_STATE = BUF, THREE_STATE = FALSE, VEC = [11:0]
+PORT data0_n = "", DIR = I, IOB_STATE = BUF, THREE_STATE = FALSE, VEC = [11:0]
+PORT data1_p = "", DIR = I, IOB_STATE = BUF, THREE_STATE = FALSE, VEC = [11:0]
+PORT data1_n = "", DIR = I, IOB_STATE = BUF, THREE_STATE = FALSE, VEC = [11:0]
+PORT data2_p = "", DIR = I, IOB_STATE = BUF, THREE_STATE = FALSE, VEC = [11:0]
+PORT data2_n = "", DIR = I, IOB_STATE = BUF, THREE_STATE = FALSE, VEC = [11:0]
+PORT data3_p = "", DIR = I, IOB_STATE = BUF, THREE_STATE = FALSE, VEC = [11:0]
+PORT data3_n = "", DIR = I, IOB_STATE = BUF, THREE_STATE = FALSE, VEC = [11:0]
+PORT info0_p = "", DIR = I, IOB_STATE = BUF, THREE_STATE = FALSE, VEC = [1:0]
+PORT info0_n = "", DIR = I, IOB_STATE = BUF, THREE_STATE = FALSE, VEC = [1:0]
+PORT info1_p = "", DIR = I, IOB_STATE = BUF, THREE_STATE = FALSE, VEC = [1:0]
+PORT info1_n = "", DIR = I, IOB_STATE = BUF, THREE_STATE = FALSE, VEC = [1:0]
+PORT info2_p = "", DIR = I, IOB_STATE = BUF, THREE_STATE = FALSE, VEC = [1:0]
+PORT info2_n = "", DIR = I, IOB_STATE = BUF, THREE_STATE = FALSE, VEC = [1:0]
+PORT info3_p = "", DIR = I, IOB_STATE = BUF, THREE_STATE = FALSE, VEC = [1:0]
+PORT info3_n = "", DIR = I, IOB_STATE = BUF, THREE_STATE = FALSE, VEC = [1:0]
+
+PORT valid_p = "", DIR = I, IOB_STATE = BUF, THREE_STATE = FALSE
+PORT valid_n = "", DIR = I, IOB_STATE = BUF, THREE_STATE = FALSE
+
+#    //-- sample clocks
+PORT data0_smpl_clk_p       = "", DIR = I, IOB_STATE = BUF, THREE_STATE = FALSE, SIGIS = CLK
+PORT data0_smpl_clk_n       = "", DIR = I, IOB_STATE = BUF, THREE_STATE = FALSE, SIGIS = CLK
+#    //-- ready to receive pins
+PORT data0_rdy_p   = "", DIR = O, IOB_STATE = BUF, THREE_STATE = FALSE
+PORT data0_rdy_n   = "", DIR = O, IOB_STATE = BUF, THREE_STATE = FALSE
+
+PORT sync_out_p   = "", DIR = O, IOB_STATE = BUF, THREE_STATE = FALSE
+PORT sync_out_n   = "", DIR = O, IOB_STATE = BUF, THREE_STATE = FALSE
+
+PORT sync_pps_p    = "", DIR = I, IOB_STATE = BUF, THREE_STATE = FALSE
+PORT sync_pps_n    = "", DIR = I, IOB_STATE = BUF, THREE_STATE = FALSE
+
+#    output adc_clk_out,
+#    output adc_clk90_out,
+#    output adc_clk180_out,
+#    output adc_clk270_out,
+PORT adc_clk_out    = "", DIR = O, SIGIS = CLK
+PORT adc_clk90_out    = "", DIR = O, SIGIS = CLK
+PORT adc_clk180_out    = "", DIR = O, SIGIS = CLK
+PORT adc_clk270_out    = "", DIR = O, SIGIS = CLK
+PORT sys_clk    = "", DIR = I, SIGIS = CLK
+#   // -- mmcm locked 
+#    output adc_mmcm_locked,
+PORT adc_mmcm_locked = "", DIR = O
+
+#    //-- yellow block ports
+#    output [11:0]user_data_i0,
+#    output [11:0]user_data_i1,
+#    output [11:0]user_data_i2,
+#    output [11:0]user_data_i3,
+#    output [11:0]user_data_i4,
+#    output [11:0]user_data_i5,
+#    output [11:0]user_data_i6,
+#    output [11:0]user_data_i7,
+#    output [11:0]user_data_q0,
+#    output [11:0]user_data_q1,
+#    output [11:0]user_data_q2,
+#    output [11:0]user_data_q3,
+#    output [11:0]user_data_q4,
+#    output [11:0]user_data_q5,
+#    output [11:0]user_data_q6,
+#    output [11:0]user_data_q7,
+PORT user_data_i0   = "", DIR = O, VEC = [11:0]
+PORT user_data_i1   = "", DIR = O, VEC = [11:0]
+PORT user_data_i2   = "", DIR = O, VEC = [11:0]
+PORT user_data_i3   = "", DIR = O, VEC = [11:0]
+PORT user_data_i4   = "", DIR = O, VEC = [11:0]
+PORT user_data_i5   = "", DIR = O, VEC = [11:0]
+PORT user_data_i6   = "", DIR = O, VEC = [11:0]
+PORT user_data_i7   = "", DIR = O, VEC = [11:0]
+PORT user_data_q0   = "", DIR = O, VEC = [11:0]
+PORT user_data_q1   = "", DIR = O, VEC = [11:0]
+PORT user_data_q2   = "", DIR = O, VEC = [11:0]
+PORT user_data_q3   = "", DIR = O, VEC = [11:0]
+PORT user_data_q4   = "", DIR = O, VEC = [11:0]
+PORT user_data_q5   = "", DIR = O, VEC = [11:0]
+PORT user_data_q6   = "", DIR = O, VEC = [11:0]
+PORT user_data_q7   = "", DIR = O, VEC = [11:0]
+
+PORT user_info_i0   = "", DIR = O, VEC = [1:0]
+PORT user_info_i1   = "", DIR = O, VEC = [1:0]
+PORT user_info_i2   = "", DIR = O, VEC = [1:0]
+PORT user_info_i3   = "", DIR = O, VEC = [1:0]
+PORT user_info_i4   = "", DIR = O, VEC = [1:0]
+PORT user_info_i5   = "", DIR = O, VEC = [1:0]
+PORT user_info_i6   = "", DIR = O, VEC = [1:0]
+PORT user_info_i7   = "", DIR = O, VEC = [1:0]
+PORT user_info_q0   = "", DIR = O, VEC = [1:0]
+PORT user_info_q1   = "", DIR = O, VEC = [1:0]
+PORT user_info_q2   = "", DIR = O, VEC = [1:0]
+PORT user_info_q3   = "", DIR = O, VEC = [1:0]
+PORT user_info_q4   = "", DIR = O, VEC = [1:0]
+PORT user_info_q5   = "", DIR = O, VEC = [1:0]
+PORT user_info_q6   = "", DIR = O, VEC = [1:0]
+PORT user_info_q7   = "", DIR = O, VEC = [1:0]
+
+PORT user_valid   = "", DIR = O
+
+PORT user_rdy_i0   = "", DIR = I
+PORT user_dly_val   = "", DIR = I, VEC = [4:0]
+PORT user_load_dly0   = "", DIR = I, VEC = [5:0]
+PORT user_pos_mmcm_phs   = "", DIR = I
+PORT user_inc_mmcm_phs   = "", DIR = I
+
+#    output user_sync
+PORT user_sync	    = "", DIR = O
+PORT user_mmcm_locked    = "", DIR = O
+
+
+
+
+
+END

@@ -1,0 +1,8 @@
+verilog qdr_controller_v1_00_a /Scratch/firmware/chan1024/darkquad29/XPS_ROACH2_base/pcores/qdr_controller_v1_00_a/hdl/verilog/qdr_controller.v
+verilog qdr_controller_v1_00_a /Scratch/firmware/chan1024/darkquad29/XPS_ROACH2_base/pcores/qdr_controller_v1_00_a/hdl/verilog/qdrc_infrastructure.v
+verilog qdr_controller_v1_00_a /Scratch/firmware/chan1024/darkquad29/XPS_ROACH2_base/pcores/qdr_controller_v1_00_a/hdl/verilog/qdrc_rd.v
+verilog qdr_controller_v1_00_a /Scratch/firmware/chan1024/darkquad29/XPS_ROACH2_base/pcores/qdr_controller_v1_00_a/hdl/verilog/qdrc_wr.v
+verilog qdr_controller_v1_00_a /Scratch/firmware/chan1024/darkquad29/XPS_ROACH2_base/pcores/qdr_controller_v1_00_a/hdl/verilog/rt_var_delay.v
+verilog qdr_controller_v1_00_a /Scratch/firmware/chan1024/darkquad29/XPS_ROACH2_base/pcores/qdr_controller_v1_00_a/hdl/verilog/chipscope_icon.v
+verilog qdr_controller_v1_00_a /Scratch/firmware/chan1024/darkquad29/XPS_ROACH2_base/pcores/qdr_controller_v1_00_a/hdl/verilog/chipscope_ila.v
+verilog work ../hdl/system_qdr1_controller_wrapper.v

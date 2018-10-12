@@ -1,0 +1,3 @@
+verilog sgmii_phy_v1_00_a /Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/pcores/sgmii_phy_v1_00_a/hdl/verilog/sgmii_gtx.v
+verilog sgmii_phy_v1_00_a /Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/pcores/sgmii_phy_v1_00_a/hdl/verilog/sgmii_phy.v
+verilog work ../hdl/system_sgmii_phy_inst_wrapper.v

@@ -1,0 +1,2 @@
+/opt/Xilinx/14.3/ISE_DS/ISE/sysgen/bin/lin64/saferun -- /opt/Xilinx/14.3/ISE_DS/ISE//bin/lin64/xst -ifn xst_darkquad29_wvl.scr -ofn darkquad29_wvl_cw.syr
+/opt/Xilinx/14.3/ISE_DS/ISE/sysgen/bin/lin64/saferun -- /opt/Xilinx/14.3/ISE_DS/ISE//bin/lin64/ngcbuild -p xc6vsx475t-1ff1759 darkquad29_wvl_cw darkquad29_wvl_cw_complete.ngc

@@ -1,0 +1,51 @@
+
+BEGIN adcdac_2g_ctrl
+
+########################
+## Peripheral Options ##
+########################
+
+OPTION IPTYPE = IP
+OPTION IMP_NETLIST = TRUE
+OPTION HDL = VERILOG
+OPTION IP_GROUP = MICROBLAZE:PPC:USER
+
+
+
+
+####################
+## Bus Interfaces ##
+####################
+
+
+
+#################################################
+## Generics for VHDL or Parameters for Verilog ##
+#################################################
+
+
+
+###########
+## Ports ##
+###########
+
+PORT zdok_tx_data_p = "", DIR = O, IOB_STATE = BUF, THREE_STATE = FALSE
+PORT zdok_tx_data_n = "", DIR = O, IOB_STATE = BUF, THREE_STATE = FALSE
+PORT zdok_rx_data_p = "", DIR = I, IOB_STATE = BUF, THREE_STATE = FALSE
+PORT zdok_rx_data_n = "", DIR = I, IOB_STATE = BUF, THREE_STATE = FALSE
+
+#    //clock
+PORT fpga_clk       = "", DIR = I, SIGIS = CLK
+#PORT sys_clk       = "", DIR = I, SIGIS = CLK
+
+#    //-- yellow block ports
+PORT user_tx_rst = "", DIR = I
+PORT user_rx_rst = "", DIR = I
+PORT user_tx_data = "", DIR = I, VEC = [7:0]
+PORT user_tx_val = "", DIR = I
+PORT user_tx_full = "", DIR = O
+PORT user_rx_full = "", DIR = O
+PORT user_rx_data = "", DIR = O, VEC = [7:0]
+PORT user_rx_val = "", DIR = O
+
+END

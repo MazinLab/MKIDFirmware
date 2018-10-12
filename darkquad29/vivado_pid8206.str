@@ -1,0 +1,57 @@
+/*
+
+Vivado v2015.4 (64-bit)
+SW Build 1412921 on Wed Nov 18 09:44:32 MST 2015
+Process ID: 8206
+
+Current time: 	8/7/18 5:44:47 PM PDT
+Time zone: 	Pacific Standard Time (America/Los_Angeles)
+
+OS: Scientific Linux release 6.5 (Carbon)
+Version: 2.6.32-358.el6.x86_64
+Architecture: amd64
+Available processors (cores): 16
+
+DISPLAY: localhost:12.0
+Screen size: 1920x1200
+Screen resolution (DPI): 96
+Available screens: 1
+Default font: family=Dialog,name=Dialog,style=plain,size=12
+
+Java version: 	1.8.0_45 64-bit
+Java home: 	/home/kids/Xilinx/Vivado/2015.4/tps/lnx64/jre
+
+User name: 	kids
+User home directory: /home/kids
+User working directory: /Scratch/firmware/chan1024/darkquad29
+User country: 	US
+User language: 	en
+User locale: 	en_US
+
+Vivado preferences path: /home/kids/.Xilinx/Vivado/2015.4/vivado.ini
+Vivado layouts directory: null
+
+GUI allocated memory:	120 MB
+GUI max memory:		3,052 MB
+Engine allocated memory: 4,818 MB
+
+*/
+
+// TclEventType: START_GUI
+/*
+#-------------------------------------------------------------------------------
+# Vivado v2015.4 (64-bit)
+# SW Build 1412921 on Wed Nov 18 09:44:32 MST 2015
+# Current time: 8/7/18 5:44:47 PM PDT
+# Process ID: 8206
+# Platform: Unix
+#
+# This file is an indication that an internal application error occurred.
+# This information is useful for debugging. Please open a case with Xilinx
+# Technical Support with this file and a testcase attached.
+#-------------------------------------------------------------------------------
+java.lang.NullPointerException (See /Scratch/firmware/chan1024/darkquad29/vivado_pid8206.debug)
+*/
+// [GUI Memory]: 11 MB (+9116kb) [00:00:04]
+// [Engine Memory]: 4,818 MB (+4900391kb) [00:00:04]
+// HMemoryUtils.trashcanNow. Engine heap size: 4,823 MB. GUI used memory: 6 MB. Current time: 8/7/18 5:44:52 PM PDT

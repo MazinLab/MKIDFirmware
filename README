@@ -1,0 +1,9 @@
+The simulink files (.slx) contain block diagrams for the full ROACH2 Virtex-6 firmware.
+
+xps_library and casper_library contain dependencies (some of which are custom), and 
+should go in $MLIB_DEVEL_PATH
+
+The top level directories for each firmware version are generated during compilation. The
+XPS_ROACH2_base directory within these is copied from $MLIB_DEVEL_PATH/xps_base/, and
+also contains some custom dependencies. Note: the implementation subdirectory is not 
+included, as it contains multiple files over the 100 MB limit.

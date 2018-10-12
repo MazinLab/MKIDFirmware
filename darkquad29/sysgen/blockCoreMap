@@ -1,0 +1,10 @@
+{
+  'addsub' => 'SELECT Adder_Subtracter virtex6 Xilinx,_Inc. 11.0',
+  'cmult' => 'SELECT Multiplier virtex6 Xilinx,_Inc. 11.2',
+  'cordic_v4_0' => 'SELECT CORDIC virtex6 Xilinx,_Inc. 4.0',
+  'counter' => 'SELECT Binary_Counter virtex6 Xilinx,_Inc. 11.0',
+  'dpram' => 'SELECT Block_Memory_Generator virtex6 Xilinx,_Inc. 7.2',
+  'fifo' => 'SELECT Fifo_Generator virtex6 Xilinx,_Inc. 9.3',
+  'mult' => 'SELECT Multiplier virtex6 Xilinx,_Inc. 11.2',
+  'spram' => 'SELECT Block_Memory_Generator virtex6 Xilinx,_Inc. 7.2'
+}

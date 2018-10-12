@@ -1,0 +1,965 @@
+Release 14.3 - xst P.40xd (lin64)
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+--> 
+Parameter TMPDIR set to /Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/synthesis/xst_temp_dir/
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.03 secs
+ 
+--> 
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input Format                       : MIXED
+Input File Name                    : "system_qdr2_sniffer_wrapper_xst.prj"
+Verilog Include Directory          : {"/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/pcores/" "/opt/Xilinx/14.3/ISE_DS/EDK/hw/XilinxBFMinterface/pcores/" "/opt/Xilinx/14.3/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/" }
+
+---- Target Parameters
+Target Device                      : xc6vsx475tff1759-1
+Output File Name                   : "../implementation/system_qdr2_sniffer_wrapper.ngc"
+
+---- Source Options
+Top Module Name                    : system_qdr2_sniffer_wrapper
+
+---- Target Options
+Add IO Buffers                     : NO
+
+---- General Options
+Optimization Goal                  : speed
+Netlist Hierarchy                  : as_optimized
+Optimization Effort                : 1
+Hierarchy Separator                : /
+
+---- Other Options
+Cores Search Directories           : {../implementation}
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/pcores/opb_qdr_sniffer_v1_00_a/hdl/verilog/opb_qdr_sniffer.v" into library opb_qdr_sniffer_v1_00_a
+Parsing module <opb_qdr_sniffer>.
+Analyzing Verilog file "/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/pcores/opb_qdr_sniffer_v1_00_a/hdl/verilog/async_qdr_interface.v" into library opb_qdr_sniffer_v1_00_a
+Parsing module <async_qdr_interface>.
+Analyzing Verilog file "/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/pcores/opb_qdr_sniffer_v1_00_a/hdl/verilog/async_qdr_interface36.v" into library opb_qdr_sniffer_v1_00_a
+Parsing module <async_qdr_interface36>.
+Analyzing Verilog file "/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/pcores/opb_qdr_sniffer_v1_00_a/hdl/verilog/qdr_config.v" into library opb_qdr_sniffer_v1_00_a
+Parsing module <qdr_config>.
+Analyzing Verilog file "/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/pcores/opb_qdr_sniffer_v1_00_a/hdl/verilog/edge_detect.v" into library opb_qdr_sniffer_v1_00_a
+Parsing module <edge_detect>.
+Analyzing Verilog file "/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/pcores/opb_qdr_sniffer_v1_00_a/hdl/verilog/clk_domain_crosser.v" into library opb_qdr_sniffer_v1_00_a
+Parsing module <clk_domain_crosser>.
+Analyzing Verilog file "/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/pcores/opb_qdr_sniffer_v1_00_a/hdl/verilog/chipscope_ila.v" into library opb_qdr_sniffer_v1_00_a
+Parsing module <chipscope_ila>.
+Analyzing Verilog file "/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/pcores/opb_qdr_sniffer_v1_00_a/hdl/verilog/chipscope_icon.v" into library opb_qdr_sniffer_v1_00_a
+Parsing module <chipscope_icon>.
+Analyzing Verilog file "/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/hdl/system_qdr2_sniffer_wrapper.v" into library work
+Parsing module <system_qdr2_sniffer_wrapper>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating module <system_qdr2_sniffer_wrapper>.
+
+Elaborating module <opb_qdr_sniffer(QDR_DATA_WIDTH=36,QDR_BW_WIDTH=4,QDR_ADDR_WIDTH=21,QDR_LATENCY=10,ENABLE=1,C_BASEADDR=32'b011000000000000000000000000,C_HIGHADDR=32'b011011111111111111111111111,C_OPB_AWIDTH=32,C_OPB_DWIDTH=32,C_CONFIG_BASEADDR=32'b010010000000000000000,C_CONFIG_HIGHADDR=32'b010011111111111111111,C_CONFIG_OPB_AWIDTH=32,C_CONFIG_OPB_DWIDTH=32)>.
+
+Elaborating module <async_qdr_interface36(QDR_LATENCY=10)>.
+WARNING:HDLCompiler:1127 - "/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/pcores/opb_qdr_sniffer_v1_00_a/hdl/verilog/async_qdr_interface36.v" Line 181: Assignment to qdr_inputs_valid ignored, since the identifier is never used
+
+Elaborating module <qdr_config(C_BASEADDR=32'b010010000000000000000,C_HIGHADDR=32'b010011111111111111111,C_OPB_AWIDTH=32,C_OPB_DWIDTH=32)>.
+
+Elaborating module <clk_domain_crosser(DATA_WIDTH=1)>.
+
+Elaborating module <edge_detect(DATA_WIDTH=1,EDGE_TYPE="RISE")>.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <system_qdr2_sniffer_wrapper>.
+    Related source file is "/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/hdl/system_qdr2_sniffer_wrapper.v".
+    Summary:
+	no macro.
+Unit <system_qdr2_sniffer_wrapper> synthesized.
+
+Synthesizing Unit <opb_qdr_sniffer>.
+    Related source file is "/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/pcores/opb_qdr_sniffer_v1_00_a/hdl/verilog/opb_qdr_sniffer.v".
+        C_CONFIG_BASEADDR = 32'b00000000000010010000000000000000
+        C_CONFIG_HIGHADDR = 32'b00000000000010011111111111111111
+        C_CONFIG_OPB_AWIDTH = 32
+        C_CONFIG_OPB_DWIDTH = 32
+        C_BASEADDR = 32'b00000011000000000000000000000000
+        C_HIGHADDR = 32'b00000011011111111111111111111111
+        C_OPB_AWIDTH = 32
+        C_OPB_DWIDTH = 32
+        QDR_ADDR_WIDTH = 21
+        QDR_DATA_WIDTH = 36
+        QDR_BW_WIDTH = 4
+        QDR_LATENCY = 10
+        ENABLE = 1
+WARNING:Xst:647 - Input <slave_addr<31:21>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <OPB_seqAddr> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+INFO:Xst:3210 - "/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/pcores/opb_qdr_sniffer_v1_00_a/hdl/verilog/opb_qdr_sniffer.v" line 141: Output port <sniffer_latch_out> of the instance <qdr_enabled.async_qdr_interface_inst> is unconnected or connected to loadless signal.
+    Found 1-bit register for signal <qdr_enabled.qdr_rst_regR>.
+    Found 1-bit register for signal <qdr_enabled.host_en>.
+    Found 1-bit register for signal <qdr_enabled.opb_sel_state>.
+    Found 4-bit register for signal <qdr_enabled.arb_sel>.
+    Found 1-bit register for signal <phy_rdyR>.
+    Found 1-bit register for signal <cal_failR>.
+    Found 1-bit register for signal <qdr_enabled.qdr_rst_reg>.
+    Found finite state machine <FSM_0> for signal <qdr_enabled.arb_sel>.
+    -----------------------------------------------------------------------
+    | States             | 4                                              |
+    | Transitions        | 6                                              |
+    | Inputs             | 3                                              |
+    | Outputs            | 4                                              |
+    | Clock              | qdr_clk (rising_edge)                          |
+    | Reset              | qdr_enabled.qdr_rst_regR (positive)            |
+    | Reset type         | synchronous                                    |
+    | Reset State        | 0001                                           |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 32-bit subtractor for signal <qdr_enabled.local_addr> created at line 110.
+    Found 32-bit comparator lessequal for signal <n0003> created at line 109
+    Found 32-bit comparator greater for signal <OPB_ABus[0]_GND_2_o_LessThan_3_o> created at line 109
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred   6 D-type flip-flop(s).
+	inferred   2 Comparator(s).
+	inferred   4 Multiplexer(s).
+	inferred   1 Finite State Machine(s).
+Unit <opb_qdr_sniffer> synthesized.
+
+Synthesizing Unit <async_qdr_interface36>.
+    Related source file is "/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/pcores/opb_qdr_sniffer_v1_00_a/hdl/verilog/async_qdr_interface36.v".
+        QDR_LATENCY = 10
+    Set property "HU_SET = SET1" for signal <trans_regR>.
+    Set property "RLOC = X0Y0" for signal <trans_regR>.
+    Set property "HU_SET = SET1" for signal <trans_regRR>.
+    Set property "RLOC = X0Y1" for signal <trans_regRR>.
+    Set property "HU_SET = SET0" for signal <resp_regR>.
+    Set property "RLOC = X0Y0" for signal <resp_regR>.
+    Set property "HU_SET = SET0" for signal <resp_regRR>.
+    Set property "RLOC = X0Y1" for signal <resp_regRR>.
+WARNING:Xst:647 - Input <qdr_q<35:32>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <qdr_q<71:68>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 32-bit register for signal <host_addr_reg_pre>.
+    Found 32-bit register for signal <host_datai_reg_pre>.
+    Found 4-bit register for signal <host_be_reg_pre>.
+    Found 1-bit register for signal <host_rnw_reg_pre>.
+    Found 1-bit register for signal <host_ack_reg>.
+    Found 1-bit register for signal <resp_regR>.
+    Found 1-bit register for signal <resp_regRR>.
+    Found 1-bit register for signal <trans_reg>.
+    Found 1-bit register for signal <wait_clear>.
+    Found 32-bit register for signal <host_addr_reg>.
+    Found 32-bit register for signal <host_datai_reg>.
+    Found 4-bit register for signal <host_be_reg>.
+    Found 1-bit register for signal <host_rnw_reg>.
+    Found 1-bit register for signal <qdr_trans_strb>.
+    Found 1-bit register for signal <trans_regR>.
+    Found 1-bit register for signal <trans_regRR>.
+    Found 3-bit register for signal <hshake_state>.
+    Found 1-bit register for signal <resp_reg>.
+    Found 10-bit register for signal <qvld_shifter>.
+    Found 1-bit register for signal <qdr_resp_ready>.
+    Found 1-bit register for signal <second_cycle>.
+    Found 1-bit register for signal <sniffer_latch>.
+    Found 4-bit register for signal <resp_state>.
+    Found 32-bit register for signal <host_datao_pre>.
+    Found 32-bit register for signal <host_datao_reg>.
+    Found 144-bit register for signal <write_buffer>.
+    Found finite state machine <FSM_1> for signal <hshake_state>.
+    -----------------------------------------------------------------------
+    | States             | 3                                              |
+    | Transitions        | 5                                              |
+    | Inputs             | 2                                              |
+    | Outputs            | 3                                              |
+    | Clock              | qdr_clk (rising_edge)                          |
+    | Reset              | qdr_rst (positive)                             |
+    | Reset type         | synchronous                                    |
+    | Reset State        | 001                                            |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found finite state machine <FSM_2> for signal <resp_state>.
+    -----------------------------------------------------------------------
+    | States             | 4                                              |
+    | Transitions        | 9                                              |
+    | Inputs             | 6                                              |
+    | Outputs            | 4                                              |
+    | Clock              | qdr_clk (rising_edge)                          |
+    | Reset              | qdr_rst (positive)                             |
+    | Reset type         | synchronous                                    |
+    | Reset State        | 0001                                           |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Summary:
+	inferred 368 D-type flip-flop(s).
+	inferred   7 Multiplexer(s).
+	inferred   2 Finite State Machine(s).
+Unit <async_qdr_interface36> synthesized.
+
+Synthesizing Unit <qdr_config>.
+    Related source file is "/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/pcores/opb_qdr_sniffer_v1_00_a/hdl/verilog/qdr_config.v".
+        C_BASEADDR = 32'b00000000000010010000000000000000
+        C_HIGHADDR = 32'b00000000000010011111111111111111
+        C_OPB_AWIDTH = 32
+        C_OPB_DWIDTH = 32
+WARNING:Xst:647 - Input <OPB_BE<0:2>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <dly_cntrs<364:32>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <OPB_seqAddr> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 1-bit register for signal <Sl_xferAck_reg>.
+    Found 4-bit register for signal <opb_data_sel>.
+    Found 36-bit register for signal <dly_en_i_reg>.
+    Found 37-bit register for signal <dly_en_o_reg>.
+    Found 1-bit register for signal <dly_inc_dec_reg>.
+    Found 1-bit register for signal <dly_extra_clk_reg>.
+    Found 1-bit register for signal <qdr_reset_R>.
+    Found 1-bit register for signal <qdr_reset_RR>.
+    Found 5-bit register for signal <qdr_reset_shifter>.
+    Found 32-bit subtractor for signal <opb_addr> created at line 56.
+    Found 32-bit 4-to-1 multiplexer for signal <_n0386> created at line 120.
+WARNING:Xst:737 - Found 1-bit latch for signal <Sl_DBus_reg<0>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <Sl_DBus_reg<1>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <Sl_DBus_reg<2>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <Sl_DBus_reg<3>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <Sl_DBus_reg<4>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <Sl_DBus_reg<5>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <Sl_DBus_reg<6>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <Sl_DBus_reg<7>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <Sl_DBus_reg<8>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <Sl_DBus_reg<9>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <Sl_DBus_reg<10>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <Sl_DBus_reg<11>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <Sl_DBus_reg<12>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <Sl_DBus_reg<13>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <Sl_DBus_reg<14>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <Sl_DBus_reg<15>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <Sl_DBus_reg<16>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <Sl_DBus_reg<17>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <Sl_DBus_reg<18>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <Sl_DBus_reg<19>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <Sl_DBus_reg<20>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <Sl_DBus_reg<21>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <Sl_DBus_reg<22>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <Sl_DBus_reg<23>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <Sl_DBus_reg<24>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <Sl_DBus_reg<25>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <Sl_DBus_reg<26>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <Sl_DBus_reg<27>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <Sl_DBus_reg<28>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <Sl_DBus_reg<29>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <Sl_DBus_reg<30>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+    Found 32-bit comparator lessequal for signal <n0001> created at line 57
+    Found 32-bit comparator greater for signal <OPB_ABus[0]_GND_4_o_LessThan_3_o> created at line 57
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  87 D-type flip-flop(s).
+	inferred  31 Latch(s).
+	inferred   2 Comparator(s).
+	inferred  81 Multiplexer(s).
+Unit <qdr_config> synthesized.
+
+Synthesizing Unit <clk_domain_crosser>.
+    Related source file is "/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/pcores/opb_qdr_sniffer_v1_00_a/hdl/verilog/clk_domain_crosser.v".
+        DATA_WIDTH = 1
+    Found 1-bit register for signal <data_out_reg_0>.
+    Found 1-bit register for signal <data_out_reg_1>.
+    Found 1-bit register for signal <data_out_meta>.
+    Summary:
+	inferred   3 D-type flip-flop(s).
+Unit <clk_domain_crosser> synthesized.
+
+Synthesizing Unit <edge_detect>.
+    Related source file is "/Scratch/firmware/chan1024/darkquad29_wvl/XPS_ROACH2_base/pcores/opb_qdr_sniffer_v1_00_a/hdl/verilog/edge_detect.v".
+        DATA_WIDTH = 1
+        EDGE_TYPE = "RISE"
+WARNING:Xst:647 - Input <en> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 1-bit register for signal <pulse_out_reg>.
+    Found 1-bit register for signal <delay_reg>.
+    Summary:
+	inferred   2 D-type flip-flop(s).
+Unit <edge_detect> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 2
+ 32-bit subtractor                                     : 2
+# Registers                                            : 410
+ 1-bit register                                        : 396
+ 10-bit register                                       : 1
+ 144-bit register                                      : 1
+ 32-bit register                                       : 6
+ 36-bit register                                       : 1
+ 37-bit register                                       : 1
+ 4-bit register                                        : 3
+ 5-bit register                                        : 1
+# Latches                                              : 31
+ 1-bit latch                                           : 31
+# Comparators                                          : 4
+ 32-bit comparator greater                             : 2
+ 32-bit comparator lessequal                           : 2
+# Multiplexers                                         : 92
+ 1-bit 2-to-1 multiplexer                              : 81
+ 21-bit 2-to-1 multiplexer                             : 1
+ 32-bit 2-to-1 multiplexer                             : 4
+ 32-bit 4-to-1 multiplexer                             : 1
+ 72-bit 2-to-1 multiplexer                             : 2
+ 8-bit 2-to-1 multiplexer                              : 3
+# FSMs                                                 : 3
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+WARNING:Xst:2677 - Node <host_addr_reg_pre_0> of sequential type is unconnected in block <async_qdr_interface36>.
+WARNING:Xst:2677 - Node <host_addr_reg_pre_1> of sequential type is unconnected in block <async_qdr_interface36>.
+WARNING:Xst:2677 - Node <host_addr_reg_0> of sequential type is unconnected in block <async_qdr_interface36>.
+WARNING:Xst:2677 - Node <host_addr_reg_1> of sequential type is unconnected in block <async_qdr_interface36>.
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 2
+ 32-bit subtractor                                     : 1
+ 6-bit subtractor                                      : 1
+# Registers                                            : 828
+ Flip-Flops                                            : 828
+# Comparators                                          : 4
+ 32-bit comparator greater                             : 2
+ 32-bit comparator lessequal                           : 2
+# Multiplexers                                         : 92
+ 1-bit 2-to-1 multiplexer                              : 81
+ 21-bit 2-to-1 multiplexer                             : 1
+ 32-bit 2-to-1 multiplexer                             : 4
+ 32-bit 4-to-1 multiplexer                             : 1
+ 72-bit 2-to-1 multiplexer                             : 2
+ 8-bit 2-to-1 multiplexer                              : 3
+# FSMs                                                 : 3
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:1710 - FF/Latch <write_buffer_32> (without init value) has a constant value of 0 in block <async_qdr_interface36>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_buffer_33> (without init value) has a constant value of 0 in block <async_qdr_interface36>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_buffer_34> (without init value) has a constant value of 0 in block <async_qdr_interface36>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_buffer_35> (without init value) has a constant value of 0 in block <async_qdr_interface36>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_buffer_68> (without init value) has a constant value of 0 in block <async_qdr_interface36>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_buffer_69> (without init value) has a constant value of 0 in block <async_qdr_interface36>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_buffer_70> (without init value) has a constant value of 0 in block <async_qdr_interface36>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_buffer_71> (without init value) has a constant value of 0 in block <async_qdr_interface36>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_buffer_104> (without init value) has a constant value of 0 in block <async_qdr_interface36>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_buffer_105> (without init value) has a constant value of 0 in block <async_qdr_interface36>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_buffer_106> (without init value) has a constant value of 0 in block <async_qdr_interface36>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_buffer_107> (without init value) has a constant value of 0 in block <async_qdr_interface36>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_buffer_140> (without init value) has a constant value of 0 in block <async_qdr_interface36>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_buffer_141> (without init value) has a constant value of 0 in block <async_qdr_interface36>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_buffer_142> (without init value) has a constant value of 0 in block <async_qdr_interface36>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_buffer_143> (without init value) has a constant value of 0 in block <async_qdr_interface36>. This FF/Latch will be trimmed during the optimization process.
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <qdr2_sniffer/FSM_0> on signal <qdr_enabled.arb_sel[1:2]> with gray encoding.
+-------------------
+ State | Encoding
+-------------------
+ 0001  | 00
+ 0010  | 01
+ 0100  | 11
+ 1000  | 10
+-------------------
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <qdr2_sniffer/qdr_enabled.async_qdr_interface_inst/FSM_1> on signal <hshake_state[1:2]> with sequential encoding.
+-------------------
+ State | Encoding
+-------------------
+ 001   | 00
+ 010   | 01
+ 100   | 10
+-------------------
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <qdr2_sniffer/qdr_enabled.async_qdr_interface_inst/FSM_2> on signal <resp_state[1:2]> with gray encoding.
+-------------------
+ State | Encoding
+-------------------
+ 0001  | 00
+ 0010  | 01
+ 0100  | 11
+ 1000  | 10
+-------------------
+
+Optimizing unit <system_qdr2_sniffer_wrapper> ...
+
+Optimizing unit <opb_qdr_sniffer> ...
+
+Optimizing unit <async_qdr_interface36> ...
+
+Optimizing unit <qdr_config> ...
+WARNING:Xst:2677 - Node <qdr2_sniffer/qdr_enabled.async_qdr_interface_inst/host_addr_reg_31> of sequential type is unconnected in block <system_qdr2_sniffer_wrapper>.
+WARNING:Xst:2677 - Node <qdr2_sniffer/qdr_enabled.async_qdr_interface_inst/host_addr_reg_30> of sequential type is unconnected in block <system_qdr2_sniffer_wrapper>.
+WARNING:Xst:2677 - Node <qdr2_sniffer/qdr_enabled.async_qdr_interface_inst/host_addr_reg_29> of sequential type is unconnected in block <system_qdr2_sniffer_wrapper>.
+WARNING:Xst:2677 - Node <qdr2_sniffer/qdr_enabled.async_qdr_interface_inst/host_addr_reg_28> of sequential type is unconnected in block <system_qdr2_sniffer_wrapper>.
+WARNING:Xst:2677 - Node <qdr2_sniffer/qdr_enabled.async_qdr_interface_inst/host_addr_reg_27> of sequential type is unconnected in block <system_qdr2_sniffer_wrapper>.
+WARNING:Xst:2677 - Node <qdr2_sniffer/qdr_enabled.async_qdr_interface_inst/host_addr_reg_26> of sequential type is unconnected in block <system_qdr2_sniffer_wrapper>.
+WARNING:Xst:2677 - Node <qdr2_sniffer/qdr_enabled.async_qdr_interface_inst/host_addr_reg_25> of sequential type is unconnected in block <system_qdr2_sniffer_wrapper>.
+WARNING:Xst:2677 - Node <qdr2_sniffer/qdr_enabled.async_qdr_interface_inst/sniffer_latch> of sequential type is unconnected in block <system_qdr2_sniffer_wrapper>.
+WARNING:Xst:2677 - Node <qdr2_sniffer/qdr_enabled.async_qdr_interface_inst/host_addr_reg_pre_31> of sequential type is unconnected in block <system_qdr2_sniffer_wrapper>.
+WARNING:Xst:2677 - Node <qdr2_sniffer/qdr_enabled.async_qdr_interface_inst/host_addr_reg_pre_30> of sequential type is unconnected in block <system_qdr2_sniffer_wrapper>.
+WARNING:Xst:2677 - Node <qdr2_sniffer/qdr_enabled.async_qdr_interface_inst/host_addr_reg_pre_29> of sequential type is unconnected in block <system_qdr2_sniffer_wrapper>.
+WARNING:Xst:2677 - Node <qdr2_sniffer/qdr_enabled.async_qdr_interface_inst/host_addr_reg_pre_28> of sequential type is unconnected in block <system_qdr2_sniffer_wrapper>.
+WARNING:Xst:2677 - Node <qdr2_sniffer/qdr_enabled.async_qdr_interface_inst/host_addr_reg_pre_27> of sequential type is unconnected in block <system_qdr2_sniffer_wrapper>.
+WARNING:Xst:2677 - Node <qdr2_sniffer/qdr_enabled.async_qdr_interface_inst/host_addr_reg_pre_26> of sequential type is unconnected in block <system_qdr2_sniffer_wrapper>.
+WARNING:Xst:2677 - Node <qdr2_sniffer/qdr_enabled.async_qdr_interface_inst/host_addr_reg_pre_25> of sequential type is unconnected in block <system_qdr2_sniffer_wrapper>.
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 0) on block system_qdr2_sniffer_wrapper, actual ratio is 0.
+
+Final Macro Processing ...
+
+Processing Unit <system_qdr2_sniffer_wrapper> :
+	Found 2-bit shift register for signal <qdr2_sniffer/qdr_enabled.qdr_rst_regR>.
+	Found 9-bit shift register for signal <qdr2_sniffer/qdr_enabled.async_qdr_interface_inst/qvld_shifter_9>.
+Unit <system_qdr2_sniffer_wrapper> processed.
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 792
+ Flip-Flops                                            : 792
+# Shift Registers                                      : 2
+ 2-bit shift register                                  : 1
+ 9-bit shift register                                  : 1
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : system_qdr2_sniffer_wrapper.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 588
+#      GND                         : 1
+#      INV                         : 4
+#      LUT2                        : 118
+#      LUT3                        : 73
+#      LUT4                        : 161
+#      LUT5                        : 163
+#      LUT6                        : 54
+#      MUXCY                       : 12
+#      MUXF7                       : 1
+#      VCC                         : 1
+# FlipFlops/Latches                : 825
+#      FD                          : 334
+#      FDC                         : 150
+#      FDE                         : 299
+#      FDR                         : 11
+#      LDC                         : 31
+# Shift Registers                  : 2
+#      SRLC16E                     : 2
+# Clock Buffers                    : 1
+#      BUFG                        : 1
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6vsx475tff1759-1 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:             825  out of  595200     0%  
+ Number of Slice LUTs:                  575  out of  297600     0%  
+    Number used as Logic:               573  out of  297600     0%  
+    Number used as Memory:                2  out of  122240     0%  
+       Number used as SRL:                2
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:    927
+   Number with an unused Flip Flop:     102  out of    927    11%  
+   Number with an unused LUT:           352  out of    927    37%  
+   Number of fully used LUT-FF pairs:   473  out of    927    51%  
+   Number of unique control sets:        14
+
+IO Utilization: 
+ Number of IOs:                        1027
+ Number of bonded IOBs:                   0  out of    840     0%  
+
+Specific Feature Utilization:
+ Number of BUFG/BUFGCTRLs:                1  out of     32     3%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+---------------------------------------------------------------------------+---------------------------------------------------------------------+-------+
+Clock Signal                                                               | Clock buffer(FF name)                                               | Load  |
+---------------------------------------------------------------------------+---------------------------------------------------------------------+-------+
+qdr_clk                                                                    | NONE(qdr2_sniffer/qdr_enabled.arb_sel_FSM_FFd1)                     | 241   |
+OPB_Clk_config                                                             | NONE(qdr2_sniffer/cal_failR)                                        | 162   |
+OPB_Clk                                                                    | NONE(qdr2_sniffer/qdr_enabled.host_en)                              | 99    |
+dly_clk                                                                    | NONE(qdr2_sniffer/qdr_config_inst/dly_en_edge_detect<0>/delay_reg_0)| 294   |
+qdr2_sniffer/qdr_config_inst/_n0389(qdr2_sniffer/qdr_config_inst/_n03891:O)| BUFG(*)(qdr2_sniffer/qdr_config_inst/Sl_DBus_reg_30)                | 31    |
+---------------------------------------------------------------------------+---------------------------------------------------------------------+-------+
+(*) This 1 clock signal(s) are generated by combinatorial logic,
+and XST is not able to identify which are the primary clock signals.
+Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -1
+
+   Minimum period: 1.729ns (Maximum Frequency: 578.519MHz)
+   Minimum input arrival time before clock: 3.209ns
+   Maximum output required time after clock: 1.933ns
+   Maximum combinational path delay: 0.250ns
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'qdr_clk'
+  Clock period: 1.729ns (frequency: 578.519MHz)
+  Total number of paths / destination ports: 828 / 404
+-------------------------------------------------------------------------
+Delay:               1.729ns (Levels of Logic = 1)
+  Source:            qdr2_sniffer/qdr_enabled.async_qdr_interface_inst/host_rnw_reg (FF)
+  Destination:       qdr2_sniffer/qdr_enabled.async_qdr_interface_inst/write_buffer_139 (FF)
+  Source Clock:      qdr_clk rising
+  Destination Clock: qdr_clk rising
+
+  Data Path: qdr2_sniffer/qdr_enabled.async_qdr_interface_inst/host_rnw_reg to qdr2_sniffer/qdr_enabled.async_qdr_interface_inst/write_buffer_139
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q              6   0.375   0.432  qdr2_sniffer/qdr_enabled.async_qdr_interface_inst/host_rnw_reg (qdr2_sniffer/qdr_enabled.async_qdr_interface_inst/host_rnw_reg)
+     INV:I->O            128   0.086   0.573  qdr2_sniffer/qdr_enabled.async_qdr_interface_inst/host_rnw_reg_inv1_INV_0 (qdr2_sniffer/qdr_enabled.async_qdr_interface_inst/host_rnw_reg_inv)
+     FDE:CE                    0.263          qdr2_sniffer/qdr_enabled.async_qdr_interface_inst/write_buffer_0
+    ----------------------------------------
+    Total                      1.729ns (0.724ns logic, 1.005ns route)
+                                       (41.9% logic, 58.1% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'OPB_Clk'
+  Clock period: 1.385ns (frequency: 722.151MHz)
+  Total number of paths / destination ports: 10 / 6
+-------------------------------------------------------------------------
+Delay:               1.385ns (Levels of Logic = 1)
+  Source:            qdr2_sniffer/qdr_enabled.async_qdr_interface_inst/host_ack_reg (FF)
+  Destination:       qdr2_sniffer/qdr_enabled.opb_sel_state (FF)
+  Source Clock:      OPB_Clk rising
+  Destination Clock: OPB_Clk rising
+
+  Data Path: qdr2_sniffer/qdr_enabled.async_qdr_interface_inst/host_ack_reg to qdr2_sniffer/qdr_enabled.opb_sel_state
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q              33   0.375   0.931  qdr2_sniffer/qdr_enabled.async_qdr_interface_inst/host_ack_reg (qdr2_sniffer/qdr_enabled.async_qdr_interface_inst/host_ack_reg)
+     LUT6:I0->O            1   0.068   0.000  qdr2_sniffer/qdr_enabled.opb_sel_state_glue_set (qdr2_sniffer/qdr_enabled.opb_sel_state_glue_set)
+     FDR:D                     0.011          qdr2_sniffer/qdr_enabled.opb_sel_state
+    ----------------------------------------
+    Total                      1.385ns (0.454ns logic, 0.931ns route)
+                                       (32.8% logic, 67.2% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'dly_clk'
+  Clock period: 0.945ns (frequency: 1058.201MHz)
+  Total number of paths / destination ports: 293 / 220
+-------------------------------------------------------------------------
+Delay:               0.945ns (Levels of Logic = 1)
+  Source:            qdr2_sniffer/qdr_config_inst/dly_en_edge_detect<0>/delay_reg_0 (FF)
+  Destination:       qdr2_sniffer/qdr_config_inst/dly_en_edge_detect<0>/pulse_out_reg_0 (FF)
+  Source Clock:      dly_clk rising
+  Destination Clock: dly_clk rising
+
+  Data Path: qdr2_sniffer/qdr_config_inst/dly_en_edge_detect<0>/delay_reg_0 to qdr2_sniffer/qdr_config_inst/dly_en_edge_detect<0>/pulse_out_reg_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               1   0.375   0.491  qdr2_sniffer/qdr_config_inst/dly_en_edge_detect<0>/delay_reg_0 (qdr2_sniffer/qdr_config_inst/dly_en_edge_detect<0>/delay_reg_0)
+     LUT2:I0->O            1   0.068   0.000  qdr2_sniffer/qdr_config_inst/dly_en_edge_detect<0>/pulse_out_reg_0_rstpot (qdr2_sniffer/qdr_config_inst/dly_en_edge_detect<0>/pulse_out_reg_0_rstpot)
+     FD:D                      0.011          qdr2_sniffer/qdr_config_inst/dly_en_edge_detect<0>/pulse_out_reg_0
+    ----------------------------------------
+    Total                      0.945ns (0.454ns logic, 0.491ns route)
+                                       (48.0% logic, 52.0% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'OPB_Clk_config'
+  Clock period: 1.724ns (frequency: 579.917MHz)
+  Total number of paths / destination ports: 271 / 237
+-------------------------------------------------------------------------
+Delay:               1.724ns (Levels of Logic = 1)
+  Source:            qdr2_sniffer/qdr_config_inst/Sl_xferAck_reg (FF)
+  Destination:       qdr2_sniffer/qdr_config_inst/opb_data_sel_3 (FF)
+  Source Clock:      OPB_Clk_config rising
+  Destination Clock: OPB_Clk_config rising
+
+  Data Path: qdr2_sniffer/qdr_config_inst/Sl_xferAck_reg to qdr2_sniffer/qdr_config_inst/opb_data_sel_3
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               7   0.375   0.439  qdr2_sniffer/qdr_config_inst/Sl_xferAck_reg (qdr2_sniffer/qdr_config_inst/Sl_xferAck_reg)
+     INV:I->O             77   0.086   0.561  qdr2_sniffer/qdr_config_inst/opb_sel_Sl_xferAck_reg_AND_30_o4_cepot_INV_0 (qdr2_sniffer/qdr_config_inst/opb_sel_Sl_xferAck_reg_AND_30_o4_cepot)
+     FDE:CE                    0.263          qdr2_sniffer/qdr_config_inst/dly_en_i_reg_0
+    ----------------------------------------
+    Total                      1.724ns (0.724ns logic, 1.000ns route)
+                                       (42.0% logic, 58.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'qdr_clk'
+  Total number of paths / destination ports: 69 / 36
+-------------------------------------------------------------------------
+Offset:              1.017ns (Levels of Logic = 2)
+  Source:            slave_wr_strb (PAD)
+  Destination:       qdr2_sniffer/qdr_enabled.arb_sel_FSM_FFd1 (FF)
+  Destination Clock: qdr_clk rising
+
+  Data Path: slave_wr_strb to qdr2_sniffer/qdr_enabled.arb_sel_FSM_FFd1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LUT2:I0->O            1   0.068   0.778  qdr2_sniffer/qdr_enabled.async_qdr_interface_inst/qdr_req11_SW0 (N12)
+     LUT6:I0->O            1   0.068   0.000  qdr2_sniffer/qdr_enabled.arb_sel_FSM_FFd1-In1 (qdr2_sniffer/qdr_enabled.arb_sel_FSM_FFd1-In)
+     FDR:D                     0.011          qdr2_sniffer/qdr_enabled.arb_sel_FSM_FFd1
+    ----------------------------------------
+    Total                      1.017ns (0.239ns logic, 0.778ns route)
+                                       (23.5% logic, 76.5% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'OPB_Clk_config'
+  Total number of paths / destination ports: 5726 / 83
+-------------------------------------------------------------------------
+Offset:              3.209ns (Levels of Logic = 10)
+  Source:            OPB_ABus_config<31> (PAD)
+  Destination:       qdr2_sniffer/qdr_config_inst/dly_en_o_reg_36 (FF)
+  Destination Clock: OPB_Clk_config rising
+
+  Data Path: OPB_ABus_config<31> to qdr2_sniffer/qdr_config_inst/dly_en_o_reg_36
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LUT5:I0->O            1   0.068   0.000  qdr2_sniffer/qdr_config_inst/Mcompar_OPB_ABus[0]_GND_4_o_LessThan_3_o_lut<0> (qdr2_sniffer/qdr_config_inst/Mcompar_OPB_ABus[0]_GND_4_o_LessThan_3_o_lut<0>)
+     MUXCY:S->O            1   0.290   0.000  qdr2_sniffer/qdr_config_inst/Mcompar_OPB_ABus[0]_GND_4_o_LessThan_3_o_cy<0> (qdr2_sniffer/qdr_config_inst/Mcompar_OPB_ABus[0]_GND_4_o_LessThan_3_o_cy<0>)
+     MUXCY:CI->O           1   0.020   0.000  qdr2_sniffer/qdr_config_inst/Mcompar_OPB_ABus[0]_GND_4_o_LessThan_3_o_cy<1> (qdr2_sniffer/qdr_config_inst/Mcompar_OPB_ABus[0]_GND_4_o_LessThan_3_o_cy<1>)
+     MUXCY:CI->O           1   0.020   0.000  qdr2_sniffer/qdr_config_inst/Mcompar_OPB_ABus[0]_GND_4_o_LessThan_3_o_cy<2> (qdr2_sniffer/qdr_config_inst/Mcompar_OPB_ABus[0]_GND_4_o_LessThan_3_o_cy<2>)
+     MUXCY:CI->O           1   0.020   0.000  qdr2_sniffer/qdr_config_inst/Mcompar_OPB_ABus[0]_GND_4_o_LessThan_3_o_cy<3> (qdr2_sniffer/qdr_config_inst/Mcompar_OPB_ABus[0]_GND_4_o_LessThan_3_o_cy<3>)
+     MUXCY:CI->O           1   0.020   0.000  qdr2_sniffer/qdr_config_inst/Mcompar_OPB_ABus[0]_GND_4_o_LessThan_3_o_cy<4> (qdr2_sniffer/qdr_config_inst/Mcompar_OPB_ABus[0]_GND_4_o_LessThan_3_o_cy<4>)
+     MUXCY:CI->O           1   0.220   0.417  qdr2_sniffer/qdr_config_inst/Mcompar_OPB_ABus[0]_GND_4_o_LessThan_3_o_cy<5> (qdr2_sniffer/qdr_config_inst/Mcompar_OPB_ABus[0]_GND_4_o_LessThan_3_o_cy<5>)
+     LUT3:I2->O            5   0.068   0.802  qdr2_sniffer/qdr_config_inst/Mcompar_OPB_ABus[0]_GND_4_o_LessThan_3_o_cy<6> (qdr2_sniffer/qdr_config_inst/Mcompar_OPB_ABus[0]_GND_4_o_LessThan_3_o_cy<6>)
+     LUT5:I0->O           77   0.068   0.743  qdr2_sniffer/qdr_config_inst/opb_sel_Sl_xferAck_reg_AND_30_o4_rstpot (qdr2_sniffer/qdr_config_inst/opb_sel_Sl_xferAck_reg_AND_30_o4_rstpot)
+     LUT3:I0->O            1   0.068   0.000  qdr2_sniffer/qdr_config_inst/dly_en_o_reg_0_dpot1 (qdr2_sniffer/qdr_config_inst/dly_en_o_reg_0_dpot1)
+     FDE:D                     0.011          qdr2_sniffer/qdr_config_inst/dly_en_o_reg_0
+    ----------------------------------------
+    Total                      3.209ns (1.247ns logic, 1.962ns route)
+                                       (38.8% logic, 61.2% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'OPB_Clk'
+  Total number of paths / destination ports: 159 / 67
+-------------------------------------------------------------------------
+Offset:              2.380ns (Levels of Logic = 9)
+  Source:            OPB_ABus<31> (PAD)
+  Destination:       qdr2_sniffer/qdr_enabled.host_en (FF)
+  Destination Clock: OPB_Clk rising
+
+  Data Path: OPB_ABus<31> to qdr2_sniffer/qdr_enabled.host_en
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LUT5:I0->O            1   0.068   0.000  qdr2_sniffer/Mcompar_OPB_ABus[0]_GND_2_o_LessThan_3_o_lut<0> (qdr2_sniffer/Mcompar_OPB_ABus[0]_GND_2_o_LessThan_3_o_lut<0>)
+     MUXCY:S->O            1   0.290   0.000  qdr2_sniffer/Mcompar_OPB_ABus[0]_GND_2_o_LessThan_3_o_cy<0> (qdr2_sniffer/Mcompar_OPB_ABus[0]_GND_2_o_LessThan_3_o_cy<0>)
+     MUXCY:CI->O           1   0.020   0.000  qdr2_sniffer/Mcompar_OPB_ABus[0]_GND_2_o_LessThan_3_o_cy<1> (qdr2_sniffer/Mcompar_OPB_ABus[0]_GND_2_o_LessThan_3_o_cy<1>)
+     MUXCY:CI->O           1   0.020   0.000  qdr2_sniffer/Mcompar_OPB_ABus[0]_GND_2_o_LessThan_3_o_cy<2> (qdr2_sniffer/Mcompar_OPB_ABus[0]_GND_2_o_LessThan_3_o_cy<2>)
+     MUXCY:CI->O           1   0.020   0.000  qdr2_sniffer/Mcompar_OPB_ABus[0]_GND_2_o_LessThan_3_o_cy<3> (qdr2_sniffer/Mcompar_OPB_ABus[0]_GND_2_o_LessThan_3_o_cy<3>)
+     MUXCY:CI->O           1   0.020   0.000  qdr2_sniffer/Mcompar_OPB_ABus[0]_GND_2_o_LessThan_3_o_cy<4> (qdr2_sniffer/Mcompar_OPB_ABus[0]_GND_2_o_LessThan_3_o_cy<4>)
+     MUXCY:CI->O           1   0.220   0.417  qdr2_sniffer/Mcompar_OPB_ABus[0]_GND_2_o_LessThan_3_o_cy<5> (qdr2_sniffer/Mcompar_OPB_ABus[0]_GND_2_o_LessThan_3_o_cy<5>)
+     LUT3:I2->O            2   0.068   0.784  qdr2_sniffer/Mcompar_OPB_ABus[0]_GND_2_o_LessThan_3_o_cy<6> (qdr2_sniffer/Mcompar_OPB_ABus[0]_GND_2_o_LessThan_3_o_cy<6>)
+     LUT6:I0->O            1   0.068   0.000  qdr2_sniffer/_n00832 (qdr2_sniffer/_n00832)
+     FDR:D                     0.011          qdr2_sniffer/qdr_enabled.host_en
+    ----------------------------------------
+    Total                      2.380ns (1.179ns logic, 1.201ns route)
+                                       (49.5% logic, 50.5% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'dly_clk'
+  Total number of paths / destination ports: 148 / 148
+-------------------------------------------------------------------------
+Offset:              0.434ns (Levels of Logic = 0)
+  Source:            OPB_Rst_config (PAD)
+  Destination:       qdr2_sniffer/qdr_config_inst/clk_domain_crosser<0>/data_out_reg_0_0 (FF)
+  Destination Clock: dly_clk rising
+
+  Data Path: OPB_Rst_config to qdr2_sniffer/qdr_config_inst/clk_domain_crosser<0>/data_out_reg_0_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:CLR                   0.434          qdr2_sniffer/qdr_config_inst/clk_domain_crosser<73>/data_out_reg_0_0
+    ----------------------------------------
+    Total                      0.434ns (0.434ns logic, 0.000ns route)
+                                       (100.0% logic, 0.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'qdr2_sniffer/qdr_config_inst/_n0389'
+  Total number of paths / destination ports: 31 / 31
+-------------------------------------------------------------------------
+Offset:              0.444ns (Levels of Logic = 1)
+  Source:            dly_cntrs<1> (PAD)
+  Destination:       qdr2_sniffer/qdr_config_inst/Sl_DBus_reg_30 (LATCH)
+  Destination Clock: qdr2_sniffer/qdr_config_inst/_n0389 falling
+
+  Data Path: dly_cntrs<1> to qdr2_sniffer/qdr_config_inst/Sl_DBus_reg_30
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LUT5:I0->O            1   0.068   0.000  qdr2_sniffer/qdr_config_inst/Mmux_opb_data_sel[3]_GND_4_o_select_30_OUT111 (qdr2_sniffer/qdr_config_inst/opb_data_sel[3]_GND_4_o_select_30_OUT<1>)
+     LDC:D                    -0.047          qdr2_sniffer/qdr_config_inst/Sl_DBus_reg_30
+    ----------------------------------------
+    Total                      0.444ns (0.444ns logic, 0.000ns route)
+                                       (100.0% logic, 0.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'qdr2_sniffer/qdr_config_inst/_n0389'
+  Total number of paths / destination ports: 31 / 31
+-------------------------------------------------------------------------
+Offset:              0.387ns (Levels of Logic = 0)
+  Source:            qdr2_sniffer/qdr_config_inst/Sl_DBus_reg_0 (LATCH)
+  Destination:       Sl_DBus_config<0> (PAD)
+  Source Clock:      qdr2_sniffer/qdr_config_inst/_n0389 falling
+
+  Data Path: qdr2_sniffer/qdr_config_inst/Sl_DBus_reg_0 to Sl_DBus_config<0>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDC:G->Q              0   0.387   0.000  qdr2_sniffer/qdr_config_inst/Sl_DBus_reg_0 (qdr2_sniffer/qdr_config_inst/Sl_DBus_reg_0)
+    ----------------------------------------
+    Total                      0.387ns (0.387ns logic, 0.000ns route)
+                                       (100.0% logic, 0.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'OPB_Clk_config'
+  Total number of paths / destination ports: 8 / 2
+-------------------------------------------------------------------------
+Offset:              1.933ns (Levels of Logic = 2)
+  Source:            qdr2_sniffer/qdr_config_inst/opb_data_sel_2 (FF)
+  Destination:       Sl_DBus_config<31> (PAD)
+  Source Clock:      OPB_Clk_config rising
+
+  Data Path: qdr2_sniffer/qdr_config_inst/opb_data_sel_2 to Sl_DBus_config<31>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q             34   0.375   0.644  qdr2_sniffer/qdr_config_inst/opb_data_sel_2 (qdr2_sniffer/qdr_config_inst/opb_data_sel_2)
+     LUT3:I1->O            1   0.068   0.778  qdr2_sniffer/qdr_config_inst/Mmux_n02501_SW0 (N4)
+     LUT6:I0->O            0   0.068   0.000  qdr2_sniffer/qdr_config_inst/Mmux_n02501 (Sl_DBus_config<31>)
+    ----------------------------------------
+    Total                      1.933ns (0.511ns logic, 1.422ns route)
+                                       (26.4% logic, 73.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'OPB_Clk'
+  Total number of paths / destination ports: 66 / 34
+-------------------------------------------------------------------------
+Offset:              1.087ns (Levels of Logic = 1)
+  Source:            qdr2_sniffer/qdr_enabled.async_qdr_interface_inst/host_ack_reg (FF)
+  Destination:       Sl_DBus<0> (PAD)
+  Source Clock:      OPB_Clk rising
+
+  Data Path: qdr2_sniffer/qdr_enabled.async_qdr_interface_inst/host_ack_reg to Sl_DBus<0>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q              33   0.375   0.644  qdr2_sniffer/qdr_enabled.async_qdr_interface_inst/host_ack_reg (qdr2_sniffer/qdr_enabled.async_qdr_interface_inst/host_ack_reg)
+     LUT2:I0->O            0   0.068   0.000  qdr2_sniffer/Mmux_Sl_DBus110 (Sl_DBus<0>)
+    ----------------------------------------
+    Total                      1.087ns (0.443ns logic, 0.644ns route)
+                                       (40.8% logic, 59.2% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'qdr_clk'
+  Total number of paths / destination ports: 383 / 106
+-------------------------------------------------------------------------
+Offset:              1.743ns (Levels of Logic = 2)
+  Source:            qdr2_sniffer/qdr_enabled.async_qdr_interface_inst/resp_state_FSM_FFd1 (FF)
+  Destination:       master_wr_strb (PAD)
+  Source Clock:      qdr_clk rising
+
+  Data Path: qdr2_sniffer/qdr_enabled.async_qdr_interface_inst/resp_state_FSM_FFd1 to master_wr_strb
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q              40   0.375   0.735  qdr2_sniffer/qdr_enabled.async_qdr_interface_inst/resp_state_FSM_FFd1 (qdr2_sniffer/qdr_enabled.async_qdr_interface_inst/resp_state_FSM_FFd1)
+     LUT3:I0->O            2   0.068   0.497  qdr2_sniffer/qdr_enabled.async_qdr_interface_inst/qdr_req11 (qdr2_sniffer/master_rd_strb)
+     LUT5:I3->O            0   0.068   0.000  qdr2_sniffer/master_rd_strb2 (master_rd_strb)
+    ----------------------------------------
+    Total                      1.743ns (0.511ns logic, 1.232ns route)
+                                       (29.3% logic, 70.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'dly_clk'
+  Total number of paths / destination ports: 74 / 74
+-------------------------------------------------------------------------
+Offset:              0.375ns (Levels of Logic = 0)
+  Source:            qdr2_sniffer/qdr_config_inst/dly_en_edge_detect<72>/pulse_out_reg_0 (FF)
+  Destination:       dly_en_i<35> (PAD)
+  Source Clock:      dly_clk rising
+
+  Data Path: qdr2_sniffer/qdr_config_inst/dly_en_edge_detect<72>/pulse_out_reg_0 to dly_en_i<35>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               0   0.375   0.000  qdr2_sniffer/qdr_config_inst/dly_en_edge_detect<72>/pulse_out_reg_0 (qdr2_sniffer/qdr_config_inst/dly_en_edge_detect<72>/pulse_out_reg_0)
+    ----------------------------------------
+    Total                      0.375ns (0.375ns logic, 0.000ns route)
+                                       (100.0% logic, 0.0% route)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 177 / 177
+-------------------------------------------------------------------------
+Delay:               0.250ns (Levels of Logic = 1)
+  Source:            dly_cntrs<0> (PAD)
+  Destination:       Sl_DBus_config<31> (PAD)
+
+  Data Path: dly_cntrs<0> to Sl_DBus_config<31>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LUT6:I3->O            0   0.068   0.000  qdr2_sniffer/qdr_config_inst/Mmux_n02501 (Sl_DBus_config<31>)
+    ----------------------------------------
+    Total                      0.250ns (0.250ns logic, 0.000ns route)
+                                       (100.0% logic, 0.0% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock OPB_Clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+OPB_Clk        |    1.385|         |         |         |
+qdr_clk        |    0.791|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock OPB_Clk_config
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+OPB_Clk_config |    1.724|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock dly_clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+OPB_Clk_config |    0.785|         |         |         |
+dly_clk        |    0.945|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock qdr2_sniffer/qdr_config_inst/_n0389
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+OPB_Clk_config |         |         |    1.885|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock qdr_clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+OPB_Clk        |    0.791|         |         |         |
+OPB_Clk_config |    1.235|         |         |         |
+qdr_clk        |    1.729|         |         |         |
+---------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 7.00 secs
+Total CPU time to Xst completion: 6.54 secs
+ 
+--> 
+
+
+Total memory usage is 509240 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   75 (   0 filtered)
+Number of infos    :    2 (   0 filtered)
+

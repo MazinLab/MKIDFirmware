@@ -1,0 +1,1119 @@
+Release 14.3 - xst P.40xd (lin64)
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+--> 
+Parameter TMPDIR set to /Scratch/firmware/chan1024/darkquad29/XPS_ROACH2_base/synthesis/xst_temp_dir/
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.04 secs
+ 
+--> 
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input Format                       : MIXED
+Input File Name                    : "system_darkquad29_gbe64_one_gbe_wrapper_xst.prj"
+Verilog Include Directory          : {"/Scratch/firmware/chan1024/darkquad29/XPS_ROACH2_base/pcores/" "/opt/Xilinx/14.3/ISE_DS/EDK/hw/XilinxBFMinterface/pcores/" "/opt/Xilinx/14.3/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/" }
+
+---- Target Parameters
+Target Device                      : xc6vsx475tff1759-1
+Output File Name                   : "../implementation/system_darkquad29_gbe64_one_gbe_wrapper.ngc"
+
+---- Source Options
+Top Module Name                    : system_darkquad29_gbe64_one_gbe_wrapper
+
+---- Target Options
+Add IO Buffers                     : NO
+
+---- General Options
+Optimization Goal                  : speed
+Netlist Hierarchy                  : as_optimized
+Optimization Effort                : 1
+Hierarchy Separator                : /
+
+---- Other Options
+Cores Search Directories           : {../implementation}
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "/Scratch/firmware/chan1024/darkquad29/XPS_ROACH2_base/pcores/gbe_udp_v1_00_a/hdl/verilog/gbe_arp_cache.v" into library gbe_udp_v1_00_a
+Parsing module <gbe_arp_cache>.
+Analyzing Verilog file "/Scratch/firmware/chan1024/darkquad29/XPS_ROACH2_base/pcores/gbe_udp_v1_00_a/hdl/verilog/gbe_cpu_buffer.v" into library gbe_udp_v1_00_a
+Parsing module <gbe_cpu_buffer>.
+Analyzing Verilog file "/Scratch/firmware/chan1024/darkquad29/XPS_ROACH2_base/pcores/gbe_udp_v1_00_a/hdl/verilog/gbe_ctrl_fifo.v" into library gbe_udp_v1_00_a
+Parsing module <gbe_ctrl_fifo>.
+Analyzing Verilog file "/Scratch/firmware/chan1024/darkquad29/XPS_ROACH2_base/pcores/gbe_udp_v1_00_a/hdl/verilog/gbe_cpu_attach.v" into library gbe_udp_v1_00_a
+Parsing module <gbe_cpu_attach>.
+Analyzing Verilog file "/Scratch/firmware/chan1024/darkquad29/XPS_ROACH2_base/pcores/gbe_udp_v1_00_a/hdl/verilog/gbe_rx_ctrl_fifo.v" into library gbe_udp_v1_00_a
+Parsing module <gbe_rx_ctrl_fifo>.
+Analyzing Verilog file "/Scratch/firmware/chan1024/darkquad29/XPS_ROACH2_base/pcores/gbe_udp_v1_00_a/hdl/verilog/gbe_rx_packet_fifo.v" into library gbe_udp_v1_00_a
+Parsing module <gbe_rx_packet_fifo>.
+Analyzing Verilog file "/Scratch/firmware/chan1024/darkquad29/XPS_ROACH2_base/pcores/gbe_udp_v1_00_a/hdl/verilog/gbe_rx.v" into library gbe_udp_v1_00_a
+Parsing module <gbe_rx>.
+Analyzing Verilog file "/Scratch/firmware/chan1024/darkquad29/XPS_ROACH2_base/pcores/gbe_udp_v1_00_a/hdl/verilog/gbe_tx.v" into library gbe_udp_v1_00_a
+Parsing module <gbe_tx>.
+Analyzing Verilog file "/Scratch/firmware/chan1024/darkquad29/XPS_ROACH2_base/pcores/gbe_udp_v1_00_a/hdl/verilog/gbe_udp.v" into library gbe_udp_v1_00_a
+Parsing module <gbe_udp>.
+Analyzing Verilog file "/Scratch/firmware/chan1024/darkquad29/XPS_ROACH2_base/pcores/gbe_udp_v1_00_a/hdl/verilog/gbe_tx_packet_fifo.v" into library gbe_udp_v1_00_a
+Parsing module <gbe_tx_packet_fifo>.
+Analyzing Verilog file "/Scratch/firmware/chan1024/darkquad29/XPS_ROACH2_base/hdl/system_darkquad29_gbe64_one_gbe_wrapper.v" into library work
+Parsing module <system_darkquad29_gbe64_one_gbe_wrapper>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+WARNING:HDLCompiler:1016 - "/Scratch/firmware/chan1024/darkquad29/XPS_ROACH2_base/hdl/system_darkquad29_gbe64_one_gbe_wrapper.v" Line 97: Port i is not connected to this instance
+
+Elaborating module <system_darkquad29_gbe64_one_gbe_wrapper>.
+
+Elaborating module <gbe_udp(LOCAL_ENABLE=1,DIS_CPU_RX=0,DIS_CPU_TX=0,CPU_PROMISCUOUS=1,LOCAL_MAC=48'b0100100011010001010110011110001001101010111100,LOCAL_IP=32'b01010000000000000000011010011,LOCAL_PORT=16'b1100001101010000,LOCAL_GATEWAY=8'b01,C_BASEADDR=32'b01000110000100000000000000,C_HIGHADDR=32'b01000110000111111111111111,C_OPB_AWIDTH=32,C_OPB_DWIDTH=32)>.
+WARNING:HDLCompiler:1127 - "/Scratch/firmware/chan1024/darkquad29/XPS_ROACH2_base/pcores/gbe_udp_v1_00_a/hdl/verilog/gbe_udp.v" Line 141: Assignment to app_mac_tx_clk_cnt ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/Scratch/firmware/chan1024/darkquad29/XPS_ROACH2_base/pcores/gbe_udp_v1_00_a/hdl/verilog/gbe_udp.v" Line 142: Assignment to app_mac_rx_clk_cnt ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/Scratch/firmware/chan1024/darkquad29/XPS_ROACH2_base/pcores/gbe_udp_v1_00_a/hdl/verilog/gbe_udp.v" Line 143: Assignment to app_app_clk_cnt ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/Scratch/firmware/chan1024/darkquad29/XPS_ROACH2_base/pcores/gbe_udp_v1_00_a/hdl/verilog/gbe_udp.v" Line 144: Assignment to app_mac_tx_ack ignored, since the identifier is never used
+
+Elaborating module <gbe_cpu_attach(LOCAL_ENABLE=1,LOCAL_MAC=48'b0100100011010001010110011110001001101010111100,LOCAL_IP=32'b01010000000000000000011010011,LOCAL_PORT=16'b1100001101010000,LOCAL_GATEWAY=8'b01,CPU_PROMISCUOUS=1,C_BASEADDR=32'b01000110000100000000000000,C_HIGHADDR=32'b01000110000111111111111111,C_OPB_AWIDTH=32,C_OPB_DWIDTH=32)>.
+WARNING:HDLCompiler:634 - "/Scratch/firmware/chan1024/darkquad29/XPS_ROACH2_base/pcores/gbe_udp_v1_00_a/hdl/verilog/gbe_cpu_attach.v" Line 70: Net <cpu_err> does not have a driver.
+WARNING:HDLCompiler:189 - "/Scratch/firmware/chan1024/darkquad29/XPS_ROACH2_base/pcores/gbe_udp_v1_00_a/hdl/verilog/gbe_udp.v" Line 260: Size mismatch in connection of port <cpu_rx_size>. Formal port size is 12-bit while actual signal size is 11-bit.
+WARNING:HDLCompiler:189 - "/Scratch/firmware/chan1024/darkquad29/XPS_ROACH2_base/pcores/gbe_udp_v1_00_a/hdl/verilog/gbe_udp.v" Line 269: Size mismatch in connection of port <cpu_tx_size>. Formal port size is 12-bit while actual signal size is 11-bit.
+
+Elaborating module <gbe_arp_cache>.
+WARNING:HDLCompiler:1499 - "/Scratch/firmware/chan1024/darkquad29/XPS_ROACH2_base/pcores/gbe_udp_v1_00_a/hdl/verilog/gbe_arp_cache.v" Line 59: Empty module <gbe_arp_cache> remains a black box.
+WARNING:HDLCompiler:1016 - "/Scratch/firmware/chan1024/darkquad29/XPS_ROACH2_base/pcores/gbe_udp_v1_00_a/hdl/verilog/gbe_tx.v" Line 59: Port full is not connected to this instance
+WARNING:HDLCompiler:1016 - "/Scratch/firmware/chan1024/darkquad29/XPS_ROACH2_base/pcores/gbe_udp_v1_00_a/hdl/verilog/gbe_tx.v" Line 92: Port full is not connected to this instance
+
+Elaborating module <gbe_tx>.
+
+Elaborating module <gbe_tx_packet_fifo>.
+WARNING:HDLCompiler:1499 - "/Scratch/firmware/chan1024/darkquad29/XPS_ROACH2_base/pcores/gbe_udp_v1_00_a/hdl/verilog/gbe_tx_packet_fifo.v" Line 59: Empty module <gbe_tx_packet_fifo> remains a black box.
+WARNING:HDLCompiler:1127 - "/Scratch/firmware/chan1024/darkquad29/XPS_ROACH2_base/pcores/gbe_udp_v1_00_a/hdl/verilog/gbe_tx.v" Line 69: Assignment to packet_fifo_empty ignored, since the identifier is never used
+
+Elaborating module <gbe_ctrl_fifo>.
+WARNING:HDLCompiler:1499 - "/Scratch/firmware/chan1024/darkquad29/XPS_ROACH2_base/pcores/gbe_udp_v1_00_a/hdl/verilog/gbe_ctrl_fifo.v" Line 59: Empty module <gbe_ctrl_fifo> remains a black box.
+WARNING:HDLCompiler:413 - "/Scratch/firmware/chan1024/darkquad29/XPS_ROACH2_base/pcores/gbe_udp_v1_00_a/hdl/verilog/gbe_tx.v" Line 372: Result of 32-bit expression is truncated to fit in 11-bit target.
+WARNING:HDLCompiler:1016 - "/Scratch/firmware/chan1024/darkquad29/XPS_ROACH2_base/pcores/gbe_udp_v1_00_a/hdl/verilog/gbe_rx.v" Line 50: Port full is not connected to this instance
+WARNING:HDLCompiler:1016 - "/Scratch/firmware/chan1024/darkquad29/XPS_ROACH2_base/pcores/gbe_udp_v1_00_a/hdl/verilog/gbe_rx.v" Line 73: Port full is not connected to this instance
+
+Elaborating module <gbe_rx(DIS_CPU=0)>.
+
+Elaborating module <gbe_rx_packet_fifo>.
+WARNING:HDLCompiler:1499 - "/Scratch/firmware/chan1024/darkquad29/XPS_ROACH2_base/pcores/gbe_udp_v1_00_a/hdl/verilog/gbe_rx_packet_fifo.v" Line 59: Empty module <gbe_rx_packet_fifo> remains a black box.
+
+Elaborating module <gbe_rx_ctrl_fifo>.
+WARNING:HDLCompiler:1499 - "/Scratch/firmware/chan1024/darkquad29/XPS_ROACH2_base/pcores/gbe_udp_v1_00_a/hdl/verilog/gbe_rx_ctrl_fifo.v" Line 59: Empty module <gbe_rx_ctrl_fifo> remains a black box.
+WARNING:HDLCompiler:1127 - "/Scratch/firmware/chan1024/darkquad29/XPS_ROACH2_base/pcores/gbe_udp_v1_00_a/hdl/verilog/gbe_rx.v" Line 82: Assignment to ctrl_fifo_empty ignored, since the identifier is never used
+
+Elaborating module <gbe_cpu_buffer>.
+WARNING:HDLCompiler:1499 - "/Scratch/firmware/chan1024/darkquad29/XPS_ROACH2_base/pcores/gbe_udp_v1_00_a/hdl/verilog/gbe_cpu_buffer.v" Line 59: Empty module <gbe_cpu_buffer> remains a black box.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <system_darkquad29_gbe64_one_gbe_wrapper>.
+    Related source file is "/Scratch/firmware/chan1024/darkquad29/XPS_ROACH2_base/hdl/system_darkquad29_gbe64_one_gbe_wrapper.v".
+INFO:Xst:3210 - "/Scratch/firmware/chan1024/darkquad29/XPS_ROACH2_base/hdl/system_darkquad29_gbe64_one_gbe_wrapper.v" line 112: Output port <i> of the instance <darkquad29_gbe64_one_gbe> is unconnected or connected to loadless signal.
+    Summary:
+	no macro.
+Unit <system_darkquad29_gbe64_one_gbe_wrapper> synthesized.
+
+Synthesizing Unit <gbe_udp>.
+    Related source file is "/Scratch/firmware/chan1024/darkquad29/XPS_ROACH2_base/pcores/gbe_udp_v1_00_a/hdl/verilog/gbe_udp.v".
+        LOCAL_ENABLE = 1
+        LOCAL_MAC = 48'b000100100011010001010110011110001001101010111100
+        LOCAL_IP = 32'b00001010000000000000000011010011
+        LOCAL_PORT = 16'b1100001101010000
+        LOCAL_GATEWAY = 8'b00000001
+        CPU_PROMISCUOUS = 1
+        DIS_CPU_TX = 0
+        DIS_CPU_RX = 0
+        C_BASEADDR = 32'b00000001000110000100000000000000
+        C_HIGHADDR = 32'b00000001000110000111111111111111
+        C_OPB_AWIDTH = 32
+        C_OPB_DWIDTH = 32
+WARNING:Xst:647 - Input <mac_syncacquired> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+INFO:Xst:3210 - "/Scratch/firmware/chan1024/darkquad29/XPS_ROACH2_base/pcores/gbe_udp_v1_00_a/hdl/verilog/gbe_udp.v" line 511: Output port <doutb> of the instance <enable_cpu_rx.cpu_buffer_rx> is unconnected or connected to loadless signal.
+WARNING:Xst:653 - Signal <i> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+    Found 1-bit register for signal <cpu_rx_packet_readyRR>.
+    Found 1-bit register for signal <cpu_rx_packet_ackR>.
+    Found 1-bit register for signal <cpu_rx_packet_ackRR>.
+    Found 1-bit register for signal <cpu_tx_packet_readyR>.
+    Found 1-bit register for signal <cpu_tx_packet_readyRR>.
+    Found 1-bit register for signal <cpu_tx_packet_ackR>.
+    Found 1-bit register for signal <cpu_tx_packet_ackRR>.
+    Found 1-bit register for signal <cpu_tx_buffer_selR>.
+    Found 1-bit register for signal <cpu_tx_buffer_selRR>.
+    Found 1-bit register for signal <cpu_rx_buffer_selR>.
+    Found 1-bit register for signal <cpu_rx_buffer_selRR>.
+    Found 1-bit register for signal <cpu_rx_packet_readyR>.
+    Summary:
+	inferred  12 D-type flip-flop(s).
+Unit <gbe_udp> synthesized.
+
+Synthesizing Unit <gbe_cpu_attach>.
+    Related source file is "/Scratch/firmware/chan1024/darkquad29/XPS_ROACH2_base/pcores/gbe_udp_v1_00_a/hdl/verilog/gbe_cpu_attach.v".
+        LOCAL_MAC = 48'b000100100011010001010110011110001001101010111100
+        LOCAL_IP = 32'b00001010000000000000000011010011
+        LOCAL_PORT = 16'b1100001101010000
+        LOCAL_GATEWAY = 8'b00000001
+        LOCAL_ENABLE = 1
+        CPU_PROMISCUOUS = 1
+        C_BASEADDR = 32'b00000001000110000100000000000000
+        C_HIGHADDR = 32'b00000001000110000111111111111111
+        C_OPB_AWIDTH = 32
+        C_OPB_DWIDTH = 32
+WARNING:Xst:647 - Input <cpu_rx_size<2:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:653 - Signal <cpu_err> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+    Found 1-bit register for signal <cpu_tx_doneR>.
+    Found 1-bit register for signal <cpu_tx_doneRR>.
+    Found 1-bit register for signal <cpu_ack_reg>.
+    Found 1-bit register for signal <use_arp_data>.
+    Found 1-bit register for signal <use_tx_data>.
+    Found 1-bit register for signal <use_rx_data>.
+    Found 12-bit register for signal <cpu_tx_size_reg>.
+    Found 1-bit register for signal <cpu_tx_ready_reg>.
+    Found 1-bit register for signal <cpu_rx_ack_reg>.
+    Found 13-bit register for signal <cpu_rx_size_reg>.
+    Found 13-bit register for signal <cpu_rx_size_reg_latch>.
+    Found 4-bit register for signal <cpu_data_src>.
+    Found 48-bit register for signal <local_mac_reg>.
+    Found 32-bit register for signal <local_ip_reg>.
+    Found 8-bit register for signal <local_gateway_reg>.
+    Found 16-bit register for signal <local_port_reg>.
+    Found 1-bit register for signal <local_enable_reg>.
+    Found 1-bit register for signal <cpu_wait>.
+    Found 1-bit register for signal <cpu_promiscuous_reg>.
+    Found 12-bit register for signal <cpu_tx_size_reg_latch>.
+    Found 1-bit register for signal <arp_cache_we>.
+    Found 1-bit register for signal <tx_buffer_we>.
+    Found 48-bit register for signal <write_data>.
+    Found 1-bit register for signal <OPB_select_z>.
+    Found 15-bit subtractor for signal <n0413> created at line 93.
+    Found 15-bit subtractor for signal <n0414> created at line 94.
+    Found 15-bit subtractor for signal <n0415> created at line 95.
+    Found 10-bit adder for signal <n0521[9:0]> created at line 181.
+    Found 32-bit 13-to-1 multiplexer for signal <cpu_data_int> created at line 364.
+    Found 32-bit comparator lessequal for signal <n0004> created at line 62
+    Found 32-bit comparator lessequal for signal <n0007> created at line 62
+    Found 14-bit comparator lessequal for signal <n0017> created at line 87
+    Found 14-bit comparator lessequal for signal <n0019> created at line 88
+    Found 14-bit comparator lessequal for signal <n0021> created at line 88
+    Found 14-bit comparator lessequal for signal <n0024> created at line 89
+    Found 14-bit comparator lessequal for signal <n0026> created at line 89
+    Found 14-bit comparator lessequal for signal <n0029> created at line 90
+    Found 14-bit comparator lessequal for signal <n0031> created at line 90
+    Summary:
+	inferred   4 Adder/Subtractor(s).
+	inferred 220 D-type flip-flop(s).
+	inferred   9 Comparator(s).
+	inferred 215 Multiplexer(s).
+Unit <gbe_cpu_attach> synthesized.
+
+Synthesizing Unit <gbe_tx>.
+    Related source file is "/Scratch/firmware/chan1024/darkquad29/XPS_ROACH2_base/pcores/gbe_udp_v1_00_a/hdl/verilog/gbe_tx.v".
+        REG_APP_IF = 1
+INFO:Xst:3210 - "/Scratch/firmware/chan1024/darkquad29/XPS_ROACH2_base/pcores/gbe_udp_v1_00_a/hdl/verilog/gbe_tx.v" line 59: Output port <full> of the instance <tx_packet_fifo_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/Scratch/firmware/chan1024/darkquad29/XPS_ROACH2_base/pcores/gbe_udp_v1_00_a/hdl/verilog/gbe_tx.v" line 59: Output port <empty> of the instance <tx_packet_fifo_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/Scratch/firmware/chan1024/darkquad29/XPS_ROACH2_base/pcores/gbe_udp_v1_00_a/hdl/verilog/gbe_tx.v" line 59: Output port <underflow> of the instance <tx_packet_fifo_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/Scratch/firmware/chan1024/darkquad29/XPS_ROACH2_base/pcores/gbe_udp_v1_00_a/hdl/verilog/gbe_tx.v" line 92: Output port <full> of the instance <tx_packet_ctrl_fifo_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/Scratch/firmware/chan1024/darkquad29/XPS_ROACH2_base/pcores/gbe_udp_v1_00_a/hdl/verilog/gbe_tx.v" line 92: Output port <underflow> of the instance <tx_packet_ctrl_fifo_inst> is unconnected or connected to loadless signal.
+    Found 1-bit register for signal <gen_app_if_reg.app_dvld_reg>.
+    Found 32-bit register for signal <gen_app_if_reg.app_destip_reg>.
+    Found 16-bit register for signal <gen_app_if_reg.app_destport_reg>.
+    Found 1-bit register for signal <gen_app_if_reg.packet_eof_reg>.
+    Found 16-bit register for signal <data_count>.
+    Found 1-bit register for signal <app_overflow_reg>.
+    Found 1-bit register for signal <local_enableR>.
+    Found 1-bit register for signal <local_enableRR>.
+    Found 1-bit register for signal <app_overflowR>.
+    Found 1-bit register for signal <app_overflowRR>.
+    Found 1-bit register for signal <cpu_tx_readyR>.
+    Found 1-bit register for signal <cpu_tx_readyRR>.
+    Found 1-bit register for signal <hdr_last>.
+    Found 3-bit register for signal <tx_state>.
+    Found 6-bit register for signal <progress>.
+    Found 1-bit register for signal <cpu_buffer_sel_reg>.
+    Found 1-bit register for signal <cpu_ack>.
+    Found 16-bit register for signal <tx_count>.
+    Found 1-bit register for signal <tx_acked>.
+    Found 11-bit register for signal <cpu_addr_reg>.
+    Found 16-bit register for signal <ip_length>.
+    Found 16-bit register for signal <udp_length>.
+    Found 18-bit register for signal <ip_checksum_0>.
+    Found 17-bit register for signal <ip_checksum_1>.
+    Found 16-bit register for signal <ip_checksum>.
+    Found 8-bit register for signal <hdr0_dat>.
+    Found 8-bit register for signal <hdr1_dat>.
+    Found 8-bit register for signal <hdr2_dat>.
+    Found 3-bit register for signal <tx_state_z>.
+    Found 8-bit register for signal <gen_app_if_reg.app_data_reg>.
+    Found finite state machine <FSM_0> for signal <tx_state>.
+    -----------------------------------------------------------------------
+    | States             | 7                                              |
+    | Transitions        | 21                                             |
+    | Inputs             | 11                                             |
+    | Outputs            | 7                                              |
+    | Clock              | mac_clk (rising_edge)                          |
+    | Reset              | mac_rst (positive)                             |
+    | Reset type         | synchronous                                    |
+    | Reset State        | 000                                            |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 16-bit subtractor for signal <tx_count[15]_GND_5_o_sub_51_OUT> created at line 362.
+    Found 16-bit adder for signal <data_count[15]_GND_5_o_add_8_OUT> created at line 169.
+    Found 6-bit adder for signal <progress[5]_GND_5_o_add_43_OUT> created at line 343.
+    Found 12-bit adder for signal <n0294[11:0]> created at line 372.
+    Found 16-bit adder for signal <ctrl_size[15]_GND_5_o_add_76_OUT> created at line 383.
+    Found 16-bit adder for signal <ctrl_size[15]_GND_5_o_add_77_OUT> created at line 384.
+    Found 17-bit adder for signal <n0300[16:0]> created at line 388.
+    Found 18-bit adder for signal <n0303> created at line 388.
+    Found 17-bit adder for signal <n0306> created at line 391.
+    Found 16-bit adder for signal <ip_checksum_fixed> created at line 393.
+    Found 17-bit adder for signal <n0312[16:0]> created at line 402.
+    Found 17-bit adder for signal <n0284> created at line 406.
+    Found 16-bit adder for signal <ip_checksum_1[15]_GND_5_o_add_89_OUT> created at line 408.
+    Found 18-bit adder for signal <_n0381> created at line 402.
+    Found 18-bit adder for signal <BUS_0013_GND_5_o_add_87_OUT> created at line 402.
+    Found 8-bit 7-to-1 multiplexer for signal <_n0439> created at line 468.
+    Found 24-bit comparator not equal for signal <n0031> created at line 211
+    Summary:
+	inferred  15 Adder/Subtractor(s).
+	inferred 228 D-type flip-flop(s).
+	inferred   1 Comparator(s).
+	inferred  41 Multiplexer(s).
+	inferred   1 Finite State Machine(s).
+Unit <gbe_tx> synthesized.
+
+Synthesizing Unit <gbe_rx>.
+    Related source file is "/Scratch/firmware/chan1024/darkquad29/XPS_ROACH2_base/pcores/gbe_udp_v1_00_a/hdl/verilog/gbe_rx.v".
+        DIS_CPU = 0
+INFO:Xst:3210 - "/Scratch/firmware/chan1024/darkquad29/XPS_ROACH2_base/pcores/gbe_udp_v1_00_a/hdl/verilog/gbe_rx.v" line 50: Output port <full> of the instance <rx_packet_fifo_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/Scratch/firmware/chan1024/darkquad29/XPS_ROACH2_base/pcores/gbe_udp_v1_00_a/hdl/verilog/gbe_rx.v" line 73: Output port <full> of the instance <rx_ctrl_fifo_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/Scratch/firmware/chan1024/darkquad29/XPS_ROACH2_base/pcores/gbe_udp_v1_00_a/hdl/verilog/gbe_rx.v" line 73: Output port <empty> of the instance <rx_ctrl_fifo_inst> is unconnected or connected to loadless signal.
+    Found 3-bit register for signal <rx_state>.
+    Found 8-bit register for signal <mac_data>.
+    Found 1-bit register for signal <mac_dvld>.
+    Found 8-bit register for signal <mac_data_aligned>.
+    Found 1-bit register for signal <mac_dvld_aligned>.
+    Found 32-bit register for signal <src_addr>.
+    Found 16-bit register for signal <src_port>.
+    Found 3-bit register for signal <rx_stateR>.
+    Found 1-bit register for signal <hdr0_cpu_okR>.
+    Found 1-bit register for signal <hdr0_app_okR>.
+    Found 1-bit register for signal <hdr1_app_okR>.
+    Found 1-bit register for signal <hdr2_app_okR>.
+    Found 1-bit register for signal <cpu_ok>.
+    Found 1-bit register for signal <app_ok>.
+    Found 1-bit register for signal <local_enableR>.
+    Found 1-bit register for signal <local_enableRR>.
+    Found 1-bit register for signal <hdr0_cpu_ok>.
+    Found 1-bit register for signal <hdr0_app_ok>.
+    Found 1-bit register for signal <hdr1_app_ok>.
+    Found 1-bit register for signal <icmp_unsearchable>.
+    Found 1-bit register for signal <hdr2_app_ok>.
+    Found 1-bit register for signal <app_overrunR>.
+    Found 1-bit register for signal <app_overrunRR>.
+    Found 1-bit register for signal <app_rst_ackR>.
+    Found 1-bit register for signal <app_rst_ackRR>.
+    Found 1-bit register for signal <app_rst_got>.
+    Found 1-bit register for signal <app_rst_gotR>.
+    Found 1-bit register for signal <app_rst_gotRR>.
+    Found 1-bit register for signal <rx_overrun>.
+    Found 1-bit register for signal <app_rst_ack>.
+    Found 1-bit register for signal <app_state>.
+    Found 1-bit register for signal <packet_dvld>.
+    Found 1-bit register for signal <packet_first>.
+    Found 2-bit register for signal <cpu_state>.
+    Found 1-bit register for signal <cpu_buffer_sel_reg>.
+    Found 11-bit register for signal <cpu_counter>.
+    Found 1-bit register for signal <cpu_invalidate>.
+    Found 1-bit register for signal <cpu_ready_reg>.
+    Found 6-bit register for signal <hdr_progress>.
+    Found finite state machine <FSM_1> for signal <rx_state>.
+    -----------------------------------------------------------------------
+    | States             | 5                                              |
+    | Transitions        | 12                                             |
+    | Inputs             | 6                                              |
+    | Outputs            | 8                                              |
+    | Clock              | mac_clk (rising_edge)                          |
+    | Reset              | mac_rst (positive)                             |
+    | Reset type         | synchronous                                    |
+    | Reset State        | 000                                            |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found finite state machine <FSM_2> for signal <cpu_state>.
+    -----------------------------------------------------------------------
+    | States             | 4                                              |
+    | Transitions        | 10                                             |
+    | Inputs             | 5                                              |
+    | Outputs            | 5                                              |
+    | Clock              | mac_clk (rising_edge)                          |
+    | Reset              | mac_rst (positive)                             |
+    | Reset type         | synchronous                                    |
+    | Reset State        | 00                                             |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 6-bit adder for signal <hdr_progress[5]_GND_8_o_add_4_OUT> created at line 124.
+    Found 11-bit adder for signal <cpu_counter[10]_GND_8_o_add_124_OUT> created at line 596.
+    Found 1-bit 7-to-1 multiplexer for signal <_n0368> created at line 303.
+    Found 32-bit 4-to-1 multiplexer for signal <_n0387> created at line 198.
+    Found 8-bit comparator not equal for signal <n0081> created at line 305
+    Found 8-bit comparator not equal for signal <n0088> created at line 312
+    Found 8-bit comparator not equal for signal <n0093> created at line 319
+    Found 8-bit comparator not equal for signal <n0098> created at line 326
+    Found 8-bit comparator not equal for signal <n0103> created at line 333
+    Found 8-bit comparator not equal for signal <n0108> created at line 340
+    Found 8-bit comparator not equal for signal <n0143> created at line 396
+    Found 8-bit comparator not equal for signal <n0146> created at line 401
+    Found 8-bit comparator not equal for signal <n0149> created at line 406
+    Found 8-bit comparator not equal for signal <n0152> created at line 411
+    Found 8-bit comparator not equal for signal <n0170> created at line 436
+    Found 8-bit comparator not equal for signal <n0173> created at line 441
+    WARNING:Xst:2404 -  FFs/Latches <hdr1_cpu_ok<0:0>> (without init value) have a constant value of 1 in block <gbe_rx>.
+    WARNING:Xst:2404 -  FFs/Latches <hdr2_cpu_ok<0:0>> (without init value) have a constant value of 1 in block <gbe_rx>.
+    WARNING:Xst:2404 -  FFs/Latches <hdr1_cpu_okR<0:0>> (without init value) have a constant value of 1 in block <gbe_rx>.
+    WARNING:Xst:2404 -  FFs/Latches <hdr2_cpu_okR<0:0>> (without init value) have a constant value of 1 in block <gbe_rx>.
+    Summary:
+	inferred   2 Adder/Subtractor(s).
+	inferred 114 D-type flip-flop(s).
+	inferred  12 Comparator(s).
+	inferred  42 Multiplexer(s).
+	inferred   2 Finite State Machine(s).
+Unit <gbe_rx> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 21
+ 10-bit adder                                          : 1
+ 11-bit adder                                          : 1
+ 12-bit adder                                          : 1
+ 15-bit subtractor                                     : 3
+ 16-bit adder                                          : 5
+ 16-bit subtractor                                     : 1
+ 17-bit adder                                          : 4
+ 18-bit adder                                          : 3
+ 6-bit adder                                           : 2
+# Registers                                            : 102
+ 1-bit register                                        : 69
+ 11-bit register                                       : 2
+ 12-bit register                                       : 2
+ 13-bit register                                       : 2
+ 16-bit register                                       : 8
+ 17-bit register                                       : 1
+ 18-bit register                                       : 1
+ 3-bit register                                        : 2
+ 32-bit register                                       : 3
+ 4-bit register                                        : 1
+ 48-bit register                                       : 2
+ 6-bit register                                        : 2
+ 8-bit register                                        : 7
+# Comparators                                          : 22
+ 14-bit comparator lessequal                           : 7
+ 24-bit comparator not equal                           : 1
+ 32-bit comparator lessequal                           : 2
+ 8-bit comparator not equal                            : 12
+# Multiplexers                                         : 298
+ 1-bit 2-to-1 multiplexer                              : 228
+ 1-bit 7-to-1 multiplexer                              : 1
+ 11-bit 2-to-1 multiplexer                             : 1
+ 12-bit 2-to-1 multiplexer                             : 5
+ 13-bit 2-to-1 multiplexer                             : 1
+ 16-bit 2-to-1 multiplexer                             : 3
+ 32-bit 13-to-1 multiplexer                            : 1
+ 32-bit 2-to-1 multiplexer                             : 6
+ 32-bit 4-to-1 multiplexer                             : 1
+ 48-bit 2-to-1 multiplexer                             : 1
+ 6-bit 2-to-1 multiplexer                              : 13
+ 8-bit 2-to-1 multiplexer                              : 36
+ 8-bit 7-to-1 multiplexer                              : 1
+# FSMs                                                 : 3
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+WARNING:Xst:2404 -  FFs/Latches <cpu_rx_size_reg_latch<12:10>> (without init value) have a constant value of 0 in block <gbe_cpu_attach>.
+
+Synthesizing (advanced) Unit <gbe_rx>.
+The following registers are absorbed into counter <cpu_counter>: 1 register on signal <cpu_counter>.
+Unit <gbe_rx> synthesized (advanced).
+
+Synthesizing (advanced) Unit <gbe_tx>.
+The following registers are absorbed into counter <data_count>: 1 register on signal <data_count>.
+The following registers are absorbed into counter <tx_count>: 1 register on signal <tx_count>.
+	The following adders/subtractors are grouped into adder tree <Madd_BUS_0013_GND_5_o_add_87_OUT1> :
+ 	<Madd_n0312[16:0]> in block <gbe_tx>, 	<Madd__n0381> in block <gbe_tx>.
+Unit <gbe_tx> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 15
+ 10-bit adder                                          : 1
+ 11-bit subtractor                                     : 3
+ 12-bit adder                                          : 1
+ 16-bit adder                                          : 4
+ 17-bit adder                                          : 3
+ 18-bit adder                                          : 1
+ 6-bit adder                                           : 2
+# Adder Trees                                          : 1
+ 18-bit / 4-inputs adder tree                          : 1
+# Counters                                             : 3
+ 11-bit up counter                                     : 1
+ 16-bit down counter                                   : 1
+ 16-bit up counter                                     : 1
+# Registers                                            : 528
+ Flip-Flops                                            : 528
+# Comparators                                          : 22
+ 14-bit comparator lessequal                           : 7
+ 24-bit comparator not equal                           : 1
+ 32-bit comparator lessequal                           : 2
+ 8-bit comparator not equal                            : 12
+# Multiplexers                                         : 356
+ 1-bit 2-to-1 multiplexer                              : 292
+ 1-bit 7-to-1 multiplexer                              : 1
+ 12-bit 2-to-1 multiplexer                             : 5
+ 13-bit 2-to-1 multiplexer                             : 1
+ 16-bit 2-to-1 multiplexer                             : 1
+ 32-bit 13-to-1 multiplexer                            : 1
+ 32-bit 2-to-1 multiplexer                             : 6
+ 32-bit 4-to-1 multiplexer                             : 1
+ 6-bit 2-to-1 multiplexer                              : 13
+ 8-bit 2-to-1 multiplexer                              : 34
+ 8-bit 7-to-1 multiplexer                              : 1
+# FSMs                                                 : 3
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:1710 - FF/Latch <cpu_rx_size_reg_10> (without init value) has a constant value of 0 in block <gbe_cpu_attach>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <cpu_rx_size_reg_11> (without init value) has a constant value of 0 in block <gbe_cpu_attach>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <cpu_rx_size_reg_12> (without init value) has a constant value of 0 in block <gbe_cpu_attach>. This FF/Latch will be trimmed during the optimization process.
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <darkquad29_gbe64_one_gbe/gbe_tx_inst/FSM_0> on signal <tx_state[1:3]> with user encoding.
+-------------------
+ State | Encoding
+-------------------
+ 000   | 000
+ 001   | 001
+ 101   | 101
+ 010   | 010
+ 011   | 011
+ 100   | 100
+ 110   | 110
+-------------------
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <darkquad29_gbe64_one_gbe/gbe_rx_inst/FSM_1> on signal <rx_state[1:3]> with user encoding.
+-------------------
+ State | Encoding
+-------------------
+ 000   | 000
+ 001   | 001
+ 010   | 010
+ 011   | 011
+ 100   | 100
+-------------------
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <darkquad29_gbe64_one_gbe/gbe_rx_inst/FSM_2> on signal <cpu_state[1:2]> with user encoding.
+-------------------
+ State | Encoding
+-------------------
+ 00    | 00
+ 01    | 01
+ 10    | 10
+ 11    | 11
+-------------------
+WARNING:Xst:1710 - FF/Latch <cpu_rx_size_reg_9> (without init value) has a constant value of 0 in block <gbe_cpu_attach>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <cpu_rx_size_reg_latch_9> (without init value) has a constant value of 0 in block <gbe_cpu_attach>. This FF/Latch will be trimmed during the optimization process.
+INFO:Xst:2261 - The FF/Latch <ip_length_0> in Unit <gbe_tx> is equivalent to the following FF/Latch, which will be removed : <udp_length_0> 
+INFO:Xst:2261 - The FF/Latch <ip_length_1> in Unit <gbe_tx> is equivalent to the following FF/Latch, which will be removed : <udp_length_1> 
+INFO:Xst:2261 - The FF/Latch <rx_stateR_2> in Unit <gbe_rx> is equivalent to the following FF/Latch, which will be removed : <packet_dvld> 
+
+Optimizing unit <system_darkquad29_gbe64_one_gbe_wrapper> ...
+
+Optimizing unit <gbe_udp> ...
+
+Optimizing unit <gbe_tx> ...
+
+Optimizing unit <gbe_rx> ...
+
+Optimizing unit <gbe_cpu_attach> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 0) on block system_darkquad29_gbe64_one_gbe_wrapper, actual ratio is 0.
+FlipFlop darkquad29_gbe64_one_gbe/gbe_rx_inst/mac_data_2 has been replicated 1 time(s)
+FlipFlop darkquad29_gbe64_one_gbe/gbe_rx_inst/mac_data_3 has been replicated 1 time(s)
+FlipFlop darkquad29_gbe64_one_gbe/gbe_rx_inst/mac_data_6 has been replicated 1 time(s)
+FlipFlop darkquad29_gbe64_one_gbe/gbe_rx_inst/mac_data_7 has been replicated 1 time(s)
+
+Final Macro Processing ...
+
+Processing Unit <system_darkquad29_gbe64_one_gbe_wrapper> :
+	Found 2-bit shift register for signal <darkquad29_gbe64_one_gbe/cpu_tx_buffer_selRR>.
+	Found 2-bit shift register for signal <darkquad29_gbe64_one_gbe/cpu_rx_buffer_selRR>.
+	Found 2-bit shift register for signal <darkquad29_gbe64_one_gbe/cpu_rx_packet_readyRR>.
+	Found 2-bit shift register for signal <darkquad29_gbe64_one_gbe/cpu_rx_packet_ackRR>.
+	Found 2-bit shift register for signal <darkquad29_gbe64_one_gbe/gbe_tx_inst/app_overflowRR>.
+	Found 4-bit shift register for signal <darkquad29_gbe64_one_gbe/gbe_tx_inst/cpu_tx_readyRR>.
+	Found 2-bit shift register for signal <darkquad29_gbe64_one_gbe/gbe_tx_inst/local_enableRR>.
+	Found 2-bit shift register for signal <darkquad29_gbe64_one_gbe/gbe_rx_inst/app_rst_gotRR>.
+	Found 2-bit shift register for signal <darkquad29_gbe64_one_gbe/gbe_rx_inst/app_rst_ackRR>.
+	Found 2-bit shift register for signal <darkquad29_gbe64_one_gbe/gbe_rx_inst/app_overrunRR>.
+	Found 2-bit shift register for signal <darkquad29_gbe64_one_gbe/gbe_rx_inst/local_enableRR>.
+	Found 4-bit shift register for signal <darkquad29_gbe64_one_gbe/enable_cpu.gbe_cpu_attach_inst/cpu_tx_doneRR>.
+Unit <system_darkquad29_gbe64_one_gbe_wrapper> processed.
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 547
+ Flip-Flops                                            : 547
+# Shift Registers                                      : 12
+ 2-bit shift register                                  : 10
+ 4-bit shift register                                  : 2
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : system_darkquad29_gbe64_one_gbe_wrapper.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 1403
+#      GND                         : 1
+#      INV                         : 28
+#      LUT1                        : 79
+#      LUT2                        : 74
+#      LUT3                        : 183
+#      LUT4                        : 84
+#      LUT5                        : 196
+#      LUT6                        : 385
+#      MUXCY                       : 185
+#      MUXF7                       : 1
+#      VCC                         : 1
+#      XORCY                       : 186
+# FlipFlops/Latches                : 559
+#      FD                          : 186
+#      FDE                         : 180
+#      FDR                         : 39
+#      FDRE                        : 113
+#      FDS                         : 4
+#      FDSE                        : 37
+# Shift Registers                  : 12
+#      SRLC16E                     : 12
+# Others                           : 7
+#      gbe_arp_cache               : 1
+#      gbe_cpu_buffer              : 2
+#      gbe_ctrl_fifo               : 1
+#      gbe_rx_ctrl_fifo            : 1
+#      gbe_rx_packet_fifo          : 1
+#      gbe_tx_packet_fifo          : 1
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6vsx475tff1759-1 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:             559  out of  595200     0%  
+ Number of Slice LUTs:                 1041  out of  297600     0%  
+    Number used as Logic:              1029  out of  297600     0%  
+    Number used as Memory:               12  out of  122240     0%  
+       Number used as SRL:               12
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:   1135
+   Number with an unused Flip Flop:     576  out of   1135    50%  
+   Number with an unused LUT:            94  out of   1135     8%  
+   Number of fully used LUT-FF pairs:   465  out of   1135    40%  
+   Number of unique control sets:        31
+
+IO Utilization: 
+ Number of IOs:                         291
+ Number of bonded IOBs:                   0  out of    840     0%  
+
+Specific Feature Utilization:
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+---------------------------------------------------------------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)                                                           | Load  |
+-----------------------------------+---------------------------------------------------------------------------------+-------+
+mac_tx_clk                         | NONE(darkquad29_gbe64_one_gbe/gbe_tx_inst/tx_count_15)                          | 154   |
+app_clk                            | NONE(darkquad29_gbe64_one_gbe/gbe_tx_inst/data_count_15)                        | 80    |
+mac_rx_clk                         | NONE(darkquad29_gbe64_one_gbe/gbe_rx_inst/cpu_state_FSM_FFd1)                   | 119   |
+OPB_Clk                            | NONE(darkquad29_gbe64_one_gbe/enable_cpu.gbe_cpu_attach_inst/cpu_tx_size_reg_11)| 218   |
+-----------------------------------+---------------------------------------------------------------------------------+-------+
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -1
+
+   Minimum period: 3.405ns (Maximum Frequency: 293.688MHz)
+   Minimum input arrival time before clock: 3.290ns
+   Maximum output required time after clock: 3.369ns
+   Maximum combinational path delay: 2.188ns
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'mac_tx_clk'
+  Clock period: 3.192ns (frequency: 313.283MHz)
+  Total number of paths / destination ports: 4680 / 167
+-------------------------------------------------------------------------
+Delay:               3.192ns (Levels of Logic = 21)
+  Source:            darkquad29_gbe64_one_gbe/gbe_tx_inst/ip_length_0 (FF)
+  Destination:       darkquad29_gbe64_one_gbe/gbe_tx_inst/ip_checksum_0_17 (FF)
+  Source Clock:      mac_tx_clk rising
+  Destination Clock: mac_tx_clk rising
+
+  Data Path: darkquad29_gbe64_one_gbe/gbe_tx_inst/ip_length_0 to darkquad29_gbe64_one_gbe/gbe_tx_inst/ip_checksum_0_17
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               3   0.375   0.431  darkquad29_gbe64_one_gbe/gbe_tx_inst/ip_length_0 (darkquad29_gbe64_one_gbe/gbe_tx_inst/ip_length_0)
+     LUT2:I1->O            1   0.068   0.000  darkquad29_gbe64_one_gbe/gbe_tx_inst/ADDERTREE_INTERNAL_Madd_lut<0> (darkquad29_gbe64_one_gbe/gbe_tx_inst/ADDERTREE_INTERNAL_Madd_lut<0>)
+     MUXCY:S->O            1   0.290   0.000  darkquad29_gbe64_one_gbe/gbe_tx_inst/ADDERTREE_INTERNAL_Madd_cy<0> (darkquad29_gbe64_one_gbe/gbe_tx_inst/ADDERTREE_INTERNAL_Madd_cy<0>)
+     MUXCY:CI->O           1   0.020   0.000  darkquad29_gbe64_one_gbe/gbe_tx_inst/ADDERTREE_INTERNAL_Madd_cy<1> (darkquad29_gbe64_one_gbe/gbe_tx_inst/ADDERTREE_INTERNAL_Madd_cy<1>)
+     MUXCY:CI->O           1   0.020   0.000  darkquad29_gbe64_one_gbe/gbe_tx_inst/ADDERTREE_INTERNAL_Madd_cy<2> (darkquad29_gbe64_one_gbe/gbe_tx_inst/ADDERTREE_INTERNAL_Madd_cy<2>)
+     MUXCY:CI->O           1   0.020   0.000  darkquad29_gbe64_one_gbe/gbe_tx_inst/ADDERTREE_INTERNAL_Madd_cy<3> (darkquad29_gbe64_one_gbe/gbe_tx_inst/ADDERTREE_INTERNAL_Madd_cy<3>)
+     MUXCY:CI->O           1   0.020   0.000  darkquad29_gbe64_one_gbe/gbe_tx_inst/ADDERTREE_INTERNAL_Madd_cy<4> (darkquad29_gbe64_one_gbe/gbe_tx_inst/ADDERTREE_INTERNAL_Madd_cy<4>)
+     MUXCY:CI->O           1   0.020   0.000  darkquad29_gbe64_one_gbe/gbe_tx_inst/ADDERTREE_INTERNAL_Madd_cy<5> (darkquad29_gbe64_one_gbe/gbe_tx_inst/ADDERTREE_INTERNAL_Madd_cy<5>)
+     MUXCY:CI->O           1   0.020   0.000  darkquad29_gbe64_one_gbe/gbe_tx_inst/ADDERTREE_INTERNAL_Madd_cy<6> (darkquad29_gbe64_one_gbe/gbe_tx_inst/ADDERTREE_INTERNAL_Madd_cy<6>)
+     MUXCY:CI->O           1   0.020   0.000  darkquad29_gbe64_one_gbe/gbe_tx_inst/ADDERTREE_INTERNAL_Madd_cy<7> (darkquad29_gbe64_one_gbe/gbe_tx_inst/ADDERTREE_INTERNAL_Madd_cy<7>)
+     MUXCY:CI->O           1   0.020   0.000  darkquad29_gbe64_one_gbe/gbe_tx_inst/ADDERTREE_INTERNAL_Madd_cy<8> (darkquad29_gbe64_one_gbe/gbe_tx_inst/ADDERTREE_INTERNAL_Madd_cy<8>)
+     MUXCY:CI->O           1   0.020   0.000  darkquad29_gbe64_one_gbe/gbe_tx_inst/ADDERTREE_INTERNAL_Madd_cy<9> (darkquad29_gbe64_one_gbe/gbe_tx_inst/ADDERTREE_INTERNAL_Madd_cy<9>)
+     MUXCY:CI->O           1   0.020   0.000  darkquad29_gbe64_one_gbe/gbe_tx_inst/ADDERTREE_INTERNAL_Madd_cy<10> (darkquad29_gbe64_one_gbe/gbe_tx_inst/ADDERTREE_INTERNAL_Madd_cy<10>)
+     MUXCY:CI->O           1   0.020   0.000  darkquad29_gbe64_one_gbe/gbe_tx_inst/ADDERTREE_INTERNAL_Madd_cy<11> (darkquad29_gbe64_one_gbe/gbe_tx_inst/ADDERTREE_INTERNAL_Madd_cy<11>)
+     MUXCY:CI->O           1   0.020   0.000  darkquad29_gbe64_one_gbe/gbe_tx_inst/ADDERTREE_INTERNAL_Madd_cy<12> (darkquad29_gbe64_one_gbe/gbe_tx_inst/ADDERTREE_INTERNAL_Madd_cy<12>)
+     MUXCY:CI->O           1   0.020   0.000  darkquad29_gbe64_one_gbe/gbe_tx_inst/ADDERTREE_INTERNAL_Madd_cy<13> (darkquad29_gbe64_one_gbe/gbe_tx_inst/ADDERTREE_INTERNAL_Madd_cy<13>)
+     MUXCY:CI->O           1   0.020   0.000  darkquad29_gbe64_one_gbe/gbe_tx_inst/ADDERTREE_INTERNAL_Madd_cy<14> (darkquad29_gbe64_one_gbe/gbe_tx_inst/ADDERTREE_INTERNAL_Madd_cy<14>)
+     XORCY:CI->O           2   0.239   0.423  darkquad29_gbe64_one_gbe/gbe_tx_inst/ADDERTREE_INTERNAL_Madd_xor<15> (darkquad29_gbe64_one_gbe/gbe_tx_inst/ADDERTREE_INTERNAL_Madd_15)
+     LUT3:I2->O            1   0.068   0.417  darkquad29_gbe64_one_gbe/gbe_tx_inst/ADDERTREE_INTERNAL_Madd215 (darkquad29_gbe64_one_gbe/gbe_tx_inst/ADDERTREE_INTERNAL_Madd215)
+     LUT2:I1->O            1   0.068   0.000  darkquad29_gbe64_one_gbe/gbe_tx_inst/ADDERTREE_INTERNAL_Madd2_lut<0>16 (darkquad29_gbe64_one_gbe/gbe_tx_inst/ADDERTREE_INTERNAL_Madd2_lut<0>16)
+     MUXCY:S->O            0   0.290   0.000  darkquad29_gbe64_one_gbe/gbe_tx_inst/ADDERTREE_INTERNAL_Madd2_cy<0>_15 (darkquad29_gbe64_one_gbe/gbe_tx_inst/ADDERTREE_INTERNAL_Madd2_cy<0>16)
+     XORCY:CI->O           1   0.239   0.000  darkquad29_gbe64_one_gbe/gbe_tx_inst/ADDERTREE_INTERNAL_Madd2_xor<0>_16 (darkquad29_gbe64_one_gbe/gbe_tx_inst/ADDERTREE_INTERNAL_Madd_172)
+     FD:D                      0.011          darkquad29_gbe64_one_gbe/gbe_tx_inst/ip_checksum_0_17
+    ----------------------------------------
+    Total                      3.192ns (1.921ns logic, 1.271ns route)
+                                       (60.2% logic, 39.8% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'app_clk'
+  Clock period: 1.949ns (frequency: 513.084MHz)
+  Total number of paths / destination ports: 325 / 36
+-------------------------------------------------------------------------
+Delay:               1.949ns (Levels of Logic = 17)
+  Source:            darkquad29_gbe64_one_gbe/gbe_tx_inst/gen_app_if_reg.packet_eof_reg (FF)
+  Destination:       darkquad29_gbe64_one_gbe/gbe_tx_inst/data_count_15 (FF)
+  Source Clock:      app_clk rising
+  Destination Clock: app_clk rising
+
+  Data Path: darkquad29_gbe64_one_gbe/gbe_tx_inst/gen_app_if_reg.packet_eof_reg to darkquad29_gbe64_one_gbe/gbe_tx_inst/data_count_15
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q              18   0.375   0.693  darkquad29_gbe64_one_gbe/gbe_tx_inst/gen_app_if_reg.packet_eof_reg (darkquad29_gbe64_one_gbe/gbe_tx_inst/gen_app_if_reg.packet_eof_reg)
+     LUT3:I0->O            1   0.068   0.000  darkquad29_gbe64_one_gbe/gbe_tx_inst/Mcount_data_count_lut<0> (darkquad29_gbe64_one_gbe/gbe_tx_inst/Mcount_data_count_lut<0>)
+     MUXCY:S->O            1   0.290   0.000  darkquad29_gbe64_one_gbe/gbe_tx_inst/Mcount_data_count_cy<0> (darkquad29_gbe64_one_gbe/gbe_tx_inst/Mcount_data_count_cy<0>)
+     MUXCY:CI->O           1   0.020   0.000  darkquad29_gbe64_one_gbe/gbe_tx_inst/Mcount_data_count_cy<1> (darkquad29_gbe64_one_gbe/gbe_tx_inst/Mcount_data_count_cy<1>)
+     MUXCY:CI->O           1   0.020   0.000  darkquad29_gbe64_one_gbe/gbe_tx_inst/Mcount_data_count_cy<2> (darkquad29_gbe64_one_gbe/gbe_tx_inst/Mcount_data_count_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  darkquad29_gbe64_one_gbe/gbe_tx_inst/Mcount_data_count_cy<3> (darkquad29_gbe64_one_gbe/gbe_tx_inst/Mcount_data_count_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  darkquad29_gbe64_one_gbe/gbe_tx_inst/Mcount_data_count_cy<4> (darkquad29_gbe64_one_gbe/gbe_tx_inst/Mcount_data_count_cy<4>)
+     MUXCY:CI->O           1   0.019   0.000  darkquad29_gbe64_one_gbe/gbe_tx_inst/Mcount_data_count_cy<5> (darkquad29_gbe64_one_gbe/gbe_tx_inst/Mcount_data_count_cy<5>)
+     MUXCY:CI->O           1   0.019   0.000  darkquad29_gbe64_one_gbe/gbe_tx_inst/Mcount_data_count_cy<6> (darkquad29_gbe64_one_gbe/gbe_tx_inst/Mcount_data_count_cy<6>)
+     MUXCY:CI->O           1   0.019   0.000  darkquad29_gbe64_one_gbe/gbe_tx_inst/Mcount_data_count_cy<7> (darkquad29_gbe64_one_gbe/gbe_tx_inst/Mcount_data_count_cy<7>)
+     MUXCY:CI->O           1   0.019   0.000  darkquad29_gbe64_one_gbe/gbe_tx_inst/Mcount_data_count_cy<8> (darkquad29_gbe64_one_gbe/gbe_tx_inst/Mcount_data_count_cy<8>)
+     MUXCY:CI->O           1   0.019   0.000  darkquad29_gbe64_one_gbe/gbe_tx_inst/Mcount_data_count_cy<9> (darkquad29_gbe64_one_gbe/gbe_tx_inst/Mcount_data_count_cy<9>)
+     MUXCY:CI->O           1   0.019   0.000  darkquad29_gbe64_one_gbe/gbe_tx_inst/Mcount_data_count_cy<10> (darkquad29_gbe64_one_gbe/gbe_tx_inst/Mcount_data_count_cy<10>)
+     MUXCY:CI->O           1   0.019   0.000  darkquad29_gbe64_one_gbe/gbe_tx_inst/Mcount_data_count_cy<11> (darkquad29_gbe64_one_gbe/gbe_tx_inst/Mcount_data_count_cy<11>)
+     MUXCY:CI->O           1   0.019   0.000  darkquad29_gbe64_one_gbe/gbe_tx_inst/Mcount_data_count_cy<12> (darkquad29_gbe64_one_gbe/gbe_tx_inst/Mcount_data_count_cy<12>)
+     MUXCY:CI->O           1   0.019   0.000  darkquad29_gbe64_one_gbe/gbe_tx_inst/Mcount_data_count_cy<13> (darkquad29_gbe64_one_gbe/gbe_tx_inst/Mcount_data_count_cy<13>)
+     MUXCY:CI->O           0   0.019   0.000  darkquad29_gbe64_one_gbe/gbe_tx_inst/Mcount_data_count_cy<14> (darkquad29_gbe64_one_gbe/gbe_tx_inst/Mcount_data_count_cy<14>)
+     XORCY:CI->O           1   0.239   0.000  darkquad29_gbe64_one_gbe/gbe_tx_inst/Mcount_data_count_xor<15> (darkquad29_gbe64_one_gbe/gbe_tx_inst/Mcount_data_count15)
+     FDRE:D                    0.011          darkquad29_gbe64_one_gbe/gbe_tx_inst/data_count_15
+    ----------------------------------------
+    Total                      1.949ns (1.256ns logic, 0.693ns route)
+                                       (64.4% logic, 35.6% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'mac_rx_clk'
+  Clock period: 3.405ns (frequency: 293.688MHz)
+  Total number of paths / destination ports: 1540 / 162
+-------------------------------------------------------------------------
+Delay:               3.405ns (Levels of Logic = 5)
+  Source:            darkquad29_gbe64_one_gbe/gbe_rx_inst/mac_data_4 (FF)
+  Destination:       darkquad29_gbe64_one_gbe/gbe_rx_inst/hdr0_cpu_ok (FF)
+  Source Clock:      mac_rx_clk rising
+  Destination Clock: mac_rx_clk rising
+
+  Data Path: darkquad29_gbe64_one_gbe/gbe_rx_inst/mac_data_4 to darkquad29_gbe64_one_gbe/gbe_rx_inst/hdr0_cpu_ok
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q              34   0.375   0.734  darkquad29_gbe64_one_gbe/gbe_rx_inst/mac_data_4 (darkquad29_gbe64_one_gbe/gbe_rx_inst/mac_data_4)
+     LUT3:I0->O            1   0.068   0.417  darkquad29_gbe64_one_gbe/gbe_rx_inst/n0083<7>_SW0 (N28)
+     LUT6:I5->O            6   0.068   0.450  darkquad29_gbe64_one_gbe/gbe_rx_inst/n0083<7> (darkquad29_gbe64_one_gbe/gbe_rx_inst/n0083)
+     LUT6:I5->O            2   0.068   0.587  darkquad29_gbe64_one_gbe/gbe_rx_inst/local_mac[15]_mac_data[7]_AND_102_o6 (darkquad29_gbe64_one_gbe/gbe_rx_inst/local_mac[15]_mac_data[7]_AND_102_o)
+     LUT6:I3->O            1   0.068   0.491  darkquad29_gbe64_one_gbe/gbe_rx_inst/Mmux_hdr_progress[5]_PWR_11_o_Select_80_o32 (darkquad29_gbe64_one_gbe/gbe_rx_inst/Mmux_hdr_progress[5]_PWR_11_o_Select_80_o31)
+     LUT6:I4->O            1   0.068   0.000  darkquad29_gbe64_one_gbe/gbe_rx_inst/hdr0_cpu_ok_rstpot (darkquad29_gbe64_one_gbe/gbe_rx_inst/hdr0_cpu_ok_rstpot)
+     FD:D                      0.011          darkquad29_gbe64_one_gbe/gbe_rx_inst/hdr0_cpu_ok
+    ----------------------------------------
+    Total                      3.405ns (0.726ns logic, 2.679ns route)
+                                       (21.3% logic, 78.7% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'OPB_Clk'
+  Clock period: 2.860ns (frequency: 349.650MHz)
+  Total number of paths / destination ports: 609 / 333
+-------------------------------------------------------------------------
+Delay:               2.860ns (Levels of Logic = 3)
+  Source:            darkquad29_gbe64_one_gbe/enable_cpu.gbe_cpu_attach_inst/OPB_select_z (FF)
+  Destination:       darkquad29_gbe64_one_gbe/enable_cpu.gbe_cpu_attach_inst/cpu_rx_size_reg_8 (FF)
+  Source Clock:      OPB_Clk rising
+  Destination Clock: OPB_Clk rising
+
+  Data Path: darkquad29_gbe64_one_gbe/enable_cpu.gbe_cpu_attach_inst/OPB_select_z to darkquad29_gbe64_one_gbe/enable_cpu.gbe_cpu_attach_inst/cpu_rx_size_reg_8
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               1   0.375   0.417  darkquad29_gbe64_one_gbe/enable_cpu.gbe_cpu_attach_inst/OPB_select_z (darkquad29_gbe64_one_gbe/enable_cpu.gbe_cpu_attach_inst/OPB_select_z)
+     LUT5:I4->O            8   0.068   0.463  darkquad29_gbe64_one_gbe/enable_cpu.gbe_cpu_attach_inst/cpu_trans4 (darkquad29_gbe64_one_gbe/enable_cpu.gbe_cpu_attach_inst/cpu_trans)
+     LUT6:I5->O           16   0.068   0.515  darkquad29_gbe64_one_gbe/enable_cpu.gbe_cpu_attach_inst/_n06571 (darkquad29_gbe64_one_gbe/enable_cpu.gbe_cpu_attach_inst/_n06571)
+     LUT6:I5->O            9   0.068   0.452  darkquad29_gbe64_one_gbe/enable_cpu.gbe_cpu_attach_inst/Reset_OR_DriverANDClockEnable (darkquad29_gbe64_one_gbe/enable_cpu.gbe_cpu_attach_inst/Reset_OR_DriverANDClockEnable)
+     FDRE:R                    0.434          darkquad29_gbe64_one_gbe/enable_cpu.gbe_cpu_attach_inst/cpu_rx_size_reg_0
+    ----------------------------------------
+    Total                      2.860ns (1.013ns logic, 1.847ns route)
+                                       (35.4% logic, 64.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'mac_tx_clk'
+  Total number of paths / destination ports: 1422 / 147
+-------------------------------------------------------------------------
+Offset:              2.168ns (Levels of Logic = 2)
+  Source:            darkquad29_gbe64_one_gbe/gbe_tx_inst/tx_packet_ctrl_fifo_inst:empty (PAD)
+  Destination:       darkquad29_gbe64_one_gbe/gbe_tx_inst/tx_count_15 (FF)
+  Destination Clock: mac_tx_clk rising
+
+  Data Path: darkquad29_gbe64_one_gbe/gbe_tx_inst/tx_packet_ctrl_fifo_inst:empty to darkquad29_gbe64_one_gbe/gbe_tx_inst/tx_count_15
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+    gbe_ctrl_fifo:empty    1   0.000   0.775  darkquad29_gbe64_one_gbe/gbe_tx_inst/tx_packet_ctrl_fifo_inst (darkquad29_gbe64_one_gbe/gbe_tx_inst/ctrl_fifo_empty)
+     LUT5:I0->O            2   0.068   0.497  darkquad29_gbe64_one_gbe/gbe_tx_inst/tx_state_FSM_FFd3-In31 (darkquad29_gbe64_one_gbe/gbe_tx_inst/tx_state_FSM_FFd3-In3)
+     LUT5:I3->O           16   0.068   0.497  darkquad29_gbe64_one_gbe/gbe_tx_inst/_n0485_inv1 (darkquad29_gbe64_one_gbe/gbe_tx_inst/_n0485_inv)
+     FDE:CE                    0.263          darkquad29_gbe64_one_gbe/gbe_tx_inst/tx_count_0
+    ----------------------------------------
+    Total                      2.168ns (0.399ns logic, 1.769ns route)
+                                       (18.4% logic, 81.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'app_clk'
+  Total number of paths / destination ports: 79 / 76
+-------------------------------------------------------------------------
+Offset:              0.660ns (Levels of Logic = 1)
+  Source:            darkquad29_gbe64_one_gbe/gbe_tx_inst/tx_packet_ctrl_fifo_inst:overflow (PAD)
+  Destination:       darkquad29_gbe64_one_gbe/gbe_tx_inst/app_overflow_reg (FF)
+  Destination Clock: app_clk rising
+
+  Data Path: darkquad29_gbe64_one_gbe/gbe_tx_inst/tx_packet_ctrl_fifo_inst:overflow to darkquad29_gbe64_one_gbe/gbe_tx_inst/app_overflow_reg
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+    gbe_ctrl_fifo:overflow    1   0.000   0.581  darkquad29_gbe64_one_gbe/gbe_tx_inst/tx_packet_ctrl_fifo_inst (darkquad29_gbe64_one_gbe/gbe_tx_inst/ctrl_fifo_overflow)
+     LUT4:I1->O            1   0.068   0.000  darkquad29_gbe64_one_gbe/gbe_tx_inst/app_overflow_reg_rstpot (darkquad29_gbe64_one_gbe/gbe_tx_inst/app_overflow_reg_rstpot)
+     FD:D                      0.011          darkquad29_gbe64_one_gbe/gbe_tx_inst/app_overflow_reg
+    ----------------------------------------
+    Total                      0.660ns (0.079ns logic, 0.581ns route)
+                                       (12.0% logic, 88.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'mac_rx_clk'
+  Total number of paths / destination ports: 57 / 55
+-------------------------------------------------------------------------
+Offset:              0.970ns (Levels of Logic = 2)
+  Source:            mac_rx_dvld (PAD)
+  Destination:       darkquad29_gbe64_one_gbe/gbe_rx_inst/hdr_progress_5 (FF)
+  Destination Clock: mac_rx_clk rising
+
+  Data Path: mac_rx_dvld to darkquad29_gbe64_one_gbe/gbe_rx_inst/hdr_progress_5
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LUT6:I0->O            5   0.068   0.444  darkquad29_gbe64_one_gbe/gbe_rx_inst/Mmux_rx_state[2]_hdr_progress[5]_wide_mux_22_OUT1012 (darkquad29_gbe64_one_gbe/gbe_rx_inst/Mmux_rx_state[2]_hdr_progress[5]_wide_mux_22_OUT101)
+     LUT6:I5->O            1   0.068   0.000  darkquad29_gbe64_one_gbe/gbe_rx_inst/Mmux_rx_state[2]_hdr_progress[5]_wide_mux_22_OUT102 (darkquad29_gbe64_one_gbe/gbe_rx_inst/rx_state[2]_hdr_progress[5]_wide_mux_22_OUT<4>)
+     FDR:D                     0.011          darkquad29_gbe64_one_gbe/gbe_rx_inst/hdr_progress_4
+    ----------------------------------------
+    Total                      0.970ns (0.526ns logic, 0.444ns route)
+                                       (54.2% logic, 45.8% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'OPB_Clk'
+  Total number of paths / destination ports: 5230 / 506
+-------------------------------------------------------------------------
+Offset:              3.290ns (Levels of Logic = 4)
+  Source:            OPB_ABus<15> (PAD)
+  Destination:       darkquad29_gbe64_one_gbe/enable_cpu.gbe_cpu_attach_inst/cpu_rx_size_reg_8 (FF)
+  Destination Clock: OPB_Clk rising
+
+  Data Path: OPB_ABus<15> to darkquad29_gbe64_one_gbe/enable_cpu.gbe_cpu_attach_inst/cpu_rx_size_reg_8
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LUT6:I0->O            1   0.068   0.775  darkquad29_gbe64_one_gbe/enable_cpu.gbe_cpu_attach_inst/cpu_trans2 (darkquad29_gbe64_one_gbe/enable_cpu.gbe_cpu_attach_inst/cpu_trans2)
+     LUT5:I0->O            8   0.068   0.463  darkquad29_gbe64_one_gbe/enable_cpu.gbe_cpu_attach_inst/cpu_trans4 (darkquad29_gbe64_one_gbe/enable_cpu.gbe_cpu_attach_inst/cpu_trans)
+     LUT6:I5->O           16   0.068   0.515  darkquad29_gbe64_one_gbe/enable_cpu.gbe_cpu_attach_inst/_n06571 (darkquad29_gbe64_one_gbe/enable_cpu.gbe_cpu_attach_inst/_n06571)
+     LUT6:I5->O            9   0.068   0.452  darkquad29_gbe64_one_gbe/enable_cpu.gbe_cpu_attach_inst/Reset_OR_DriverANDClockEnable (darkquad29_gbe64_one_gbe/enable_cpu.gbe_cpu_attach_inst/Reset_OR_DriverANDClockEnable)
+     FDRE:R                    0.434          darkquad29_gbe64_one_gbe/enable_cpu.gbe_cpu_attach_inst/cpu_rx_size_reg_0
+    ----------------------------------------
+    Total                      3.290ns (1.085ns logic, 2.205ns route)
+                                       (33.0% logic, 67.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'mac_tx_clk'
+  Total number of paths / destination ports: 355 / 33
+-------------------------------------------------------------------------
+Offset:              2.979ns (Levels of Logic = 3)
+  Source:            darkquad29_gbe64_one_gbe/gbe_tx_inst/tx_state_FSM_FFd2 (FF)
+  Destination:       darkquad29_gbe64_one_gbe/enable_cpu_tx.cpu_buffer_tx:addrb<10> (PAD)
+  Source Clock:      mac_tx_clk rising
+
+  Data Path: darkquad29_gbe64_one_gbe/gbe_tx_inst/tx_state_FSM_FFd2 to darkquad29_gbe64_one_gbe/enable_cpu_tx.cpu_buffer_tx:addrb<10>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q             30   0.375   0.733  darkquad29_gbe64_one_gbe/gbe_tx_inst/tx_state_FSM_FFd2 (darkquad29_gbe64_one_gbe/gbe_tx_inst/tx_state_FSM_FFd2)
+     LUT3:I0->O            9   0.068   0.831  darkquad29_gbe64_one_gbe/gbe_tx_inst/Mmux_n0208211 (darkquad29_gbe64_one_gbe/gbe_tx_inst/Mmux_n020821)
+     LUT6:I0->O            4   0.068   0.437  darkquad29_gbe64_one_gbe/gbe_tx_inst/Mmux_n020892 (darkquad29_gbe64_one_gbe/gbe_tx_inst/Mmux_n020892)
+     LUT6:I5->O            1   0.068   0.399  darkquad29_gbe64_one_gbe/gbe_tx_inst/Mmux_n0208101 (darkquad29_gbe64_one_gbe/cputx_tx_addr<8>)
+    gbe_cpu_buffer:addrb<8>        0.000          darkquad29_gbe64_one_gbe/enable_cpu_tx.cpu_buffer_tx
+    ----------------------------------------
+    Total                      2.979ns (0.579ns logic, 2.400ns route)
+                                       (19.4% logic, 80.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'OPB_Clk'
+  Total number of paths / destination ports: 945 / 129
+-------------------------------------------------------------------------
+Offset:              3.369ns (Levels of Logic = 4)
+  Source:            darkquad29_gbe64_one_gbe/enable_cpu.gbe_cpu_attach_inst/cpu_data_src_3 (FF)
+  Destination:       Sl_DBus<23> (PAD)
+  Source Clock:      OPB_Clk rising
+
+  Data Path: darkquad29_gbe64_one_gbe/enable_cpu.gbe_cpu_attach_inst/cpu_data_src_3 to Sl_DBus<23>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDRE:C->Q            30   0.375   0.790  darkquad29_gbe64_one_gbe/enable_cpu.gbe_cpu_attach_inst/cpu_data_src_3 (darkquad29_gbe64_one_gbe/enable_cpu.gbe_cpu_attach_inst/cpu_data_src_3)
+     LUT4:I0->O           14   0.068   0.666  darkquad29_gbe64_one_gbe/enable_cpu.gbe_cpu_attach_inst/Mmux_cpu_data_int5221 (darkquad29_gbe64_one_gbe/enable_cpu.gbe_cpu_attach_inst/Mmux_cpu_data_int522)
+     LUT4:I1->O            1   0.068   0.775  darkquad29_gbe64_one_gbe/enable_cpu.gbe_cpu_attach_inst/Mmux_Sl_DBus622 (darkquad29_gbe64_one_gbe/enable_cpu.gbe_cpu_attach_inst/Mmux_Sl_DBus621)
+     LUT6:I1->O            1   0.068   0.491  darkquad29_gbe64_one_gbe/enable_cpu.gbe_cpu_attach_inst/Mmux_Sl_DBus625 (darkquad29_gbe64_one_gbe/enable_cpu.gbe_cpu_attach_inst/Mmux_Sl_DBus624)
+     LUT6:I4->O            0   0.068   0.000  darkquad29_gbe64_one_gbe/enable_cpu.gbe_cpu_attach_inst/Mmux_Sl_DBus626 (Sl_DBus<23>)
+    ----------------------------------------
+    Total                      3.369ns (0.647ns logic, 2.722ns route)
+                                       (19.2% logic, 80.8% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'app_clk'
+  Total number of paths / destination ports: 76 / 76
+-------------------------------------------------------------------------
+Offset:              0.886ns (Levels of Logic = 0)
+  Source:            darkquad29_gbe64_one_gbe/gbe_tx_inst/gen_app_if_reg.packet_eof_reg (FF)
+  Destination:       darkquad29_gbe64_one_gbe/gbe_tx_inst/tx_packet_ctrl_fifo_inst:wr_en (PAD)
+  Source Clock:      app_clk rising
+
+  Data Path: darkquad29_gbe64_one_gbe/gbe_tx_inst/gen_app_if_reg.packet_eof_reg to darkquad29_gbe64_one_gbe/gbe_tx_inst/tx_packet_ctrl_fifo_inst:wr_en
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q              18   0.375   0.511  darkquad29_gbe64_one_gbe/gbe_tx_inst/gen_app_if_reg.packet_eof_reg (darkquad29_gbe64_one_gbe/gbe_tx_inst/gen_app_if_reg.packet_eof_reg)
+    gbe_ctrl_fifo:wr_en        0.000          darkquad29_gbe64_one_gbe/gbe_tx_inst/tx_packet_ctrl_fifo_inst
+    ----------------------------------------
+    Total                      0.886ns (0.375ns logic, 0.511ns route)
+                                       (42.3% logic, 57.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'mac_rx_clk'
+  Total number of paths / destination ports: 85 / 79
+-------------------------------------------------------------------------
+Offset:              1.044ns (Levels of Logic = 1)
+  Source:            darkquad29_gbe64_one_gbe/gbe_rx_inst/app_ok (FF)
+  Destination:       darkquad29_gbe64_one_gbe/gbe_rx_inst/rx_ctrl_fifo_inst:wr_en (PAD)
+  Source Clock:      mac_rx_clk rising
+
+  Data Path: darkquad29_gbe64_one_gbe/gbe_rx_inst/app_ok to darkquad29_gbe64_one_gbe/gbe_rx_inst/rx_ctrl_fifo_inst:wr_en
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDS:C->Q              4   0.375   0.601  darkquad29_gbe64_one_gbe/gbe_rx_inst/app_ok (darkquad29_gbe64_one_gbe/gbe_rx_inst/app_ok)
+     LUT3:I0->O            0   0.068   0.000  darkquad29_gbe64_one_gbe/gbe_rx_inst/ctrl_fifo_wr1 (darkquad29_gbe64_one_gbe/gbe_rx_inst/ctrl_fifo_wr)
+    gbe_rx_ctrl_fifo:wr_en        0.000          darkquad29_gbe64_one_gbe/gbe_rx_inst/rx_ctrl_fifo_inst
+    ----------------------------------------
+    Total                      1.044ns (0.443ns logic, 0.601ns route)
+                                       (42.4% logic, 57.6% route)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 558 / 183
+-------------------------------------------------------------------------
+Delay:               2.188ns (Levels of Logic = 10)
+  Source:            darkquad29_gbe64_one_gbe/gbe_tx_inst/tx_packet_ctrl_fifo_inst:dout<8> (PAD)
+  Destination:       darkquad29_gbe64_one_gbe/arp_cache_inst:addrb<7> (PAD)
+
+  Data Path: darkquad29_gbe64_one_gbe/gbe_tx_inst/tx_packet_ctrl_fifo_inst:dout<8> to darkquad29_gbe64_one_gbe/arp_cache_inst:addrb<7>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+    gbe_ctrl_fifo:dout<8>    4   0.000   0.798  darkquad29_gbe64_one_gbe/gbe_tx_inst/tx_packet_ctrl_fifo_inst (darkquad29_gbe64_one_gbe/gbe_tx_inst/ctrl_fifo_dout<8>)
+     LUT6:I0->O            1   0.068   0.000  darkquad29_gbe64_one_gbe/gbe_tx_inst/Mcompar_ctrl_destip[31]_local_ip[31]_not_equal_20_o_lut<0> (darkquad29_gbe64_one_gbe/gbe_tx_inst/Mcompar_ctrl_destip[31]_local_ip[31]_not_equal_20_o_lut<0>)
+     MUXCY:S->O            1   0.290   0.000  darkquad29_gbe64_one_gbe/gbe_tx_inst/Mcompar_ctrl_destip[31]_local_ip[31]_not_equal_20_o_cy<0> (darkquad29_gbe64_one_gbe/gbe_tx_inst/Mcompar_ctrl_destip[31]_local_ip[31]_not_equal_20_o_cy<0>)
+     MUXCY:CI->O           1   0.020   0.000  darkquad29_gbe64_one_gbe/gbe_tx_inst/Mcompar_ctrl_destip[31]_local_ip[31]_not_equal_20_o_cy<1> (darkquad29_gbe64_one_gbe/gbe_tx_inst/Mcompar_ctrl_destip[31]_local_ip[31]_not_equal_20_o_cy<1>)
+     MUXCY:CI->O           1   0.020   0.000  darkquad29_gbe64_one_gbe/gbe_tx_inst/Mcompar_ctrl_destip[31]_local_ip[31]_not_equal_20_o_cy<2> (darkquad29_gbe64_one_gbe/gbe_tx_inst/Mcompar_ctrl_destip[31]_local_ip[31]_not_equal_20_o_cy<2>)
+     MUXCY:CI->O           1   0.020   0.000  darkquad29_gbe64_one_gbe/gbe_tx_inst/Mcompar_ctrl_destip[31]_local_ip[31]_not_equal_20_o_cy<3> (darkquad29_gbe64_one_gbe/gbe_tx_inst/Mcompar_ctrl_destip[31]_local_ip[31]_not_equal_20_o_cy<3>)
+     MUXCY:CI->O           1   0.020   0.000  darkquad29_gbe64_one_gbe/gbe_tx_inst/Mcompar_ctrl_destip[31]_local_ip[31]_not_equal_20_o_cy<4> (darkquad29_gbe64_one_gbe/gbe_tx_inst/Mcompar_ctrl_destip[31]_local_ip[31]_not_equal_20_o_cy<4>)
+     MUXCY:CI->O           1   0.020   0.000  darkquad29_gbe64_one_gbe/gbe_tx_inst/Mcompar_ctrl_destip[31]_local_ip[31]_not_equal_20_o_cy<5> (darkquad29_gbe64_one_gbe/gbe_tx_inst/Mcompar_ctrl_destip[31]_local_ip[31]_not_equal_20_o_cy<5>)
+     MUXCY:CI->O           1   0.020   0.000  darkquad29_gbe64_one_gbe/gbe_tx_inst/Mcompar_ctrl_destip[31]_local_ip[31]_not_equal_20_o_cy<6> (darkquad29_gbe64_one_gbe/gbe_tx_inst/Mcompar_ctrl_destip[31]_local_ip[31]_not_equal_20_o_cy<6>)
+     MUXCY:CI->O           8   0.220   0.627  darkquad29_gbe64_one_gbe/gbe_tx_inst/Mcompar_ctrl_destip[31]_local_ip[31]_not_equal_20_o_cy<7> (darkquad29_gbe64_one_gbe/gbe_tx_inst/ctrl_destip[31]_local_ip[31]_not_equal_20_o)
+     LUT3:I0->O            0   0.068   0.000  darkquad29_gbe64_one_gbe/gbe_tx_inst/Mmux_arp_cache_addr11 (darkquad29_gbe64_one_gbe/arp_tx_cache_index<0>)
+    gbe_arp_cache:addrb<0>        0.000          darkquad29_gbe64_one_gbe/arp_cache_inst
+    ----------------------------------------
+    Total                      2.188ns (0.763ns logic, 1.425ns route)
+                                       (34.9% logic, 65.1% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock OPB_Clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+OPB_Clk        |    2.860|         |         |         |
+mac_rx_clk     |    1.572|         |         |         |
+mac_tx_clk     |    1.188|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock app_clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+app_clk        |    1.949|         |         |         |
+mac_rx_clk     |    1.072|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock mac_rx_clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+OPB_Clk        |    3.443|         |         |         |
+app_clk        |    1.064|         |         |         |
+mac_rx_clk     |    3.405|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock mac_tx_clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+OPB_Clk        |    7.400|         |         |         |
+app_clk        |    1.064|         |         |         |
+mac_tx_clk     |    3.192|         |         |         |
+---------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 9.00 secs
+Total CPU time to Xst completion: 8.50 secs
+ 
+--> 
+
+
+Total memory usage is 513080 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   35 (   0 filtered)
+Number of infos    :   14 (   0 filtered)
+

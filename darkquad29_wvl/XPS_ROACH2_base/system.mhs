@@ -1,0 +1,3046 @@
+# ##############################################################################
+# Target Board:  ROACH v2.0
+# Family:	     virtex6
+# Device:	     xc6vsx475t
+# Package:	     ff1759
+# Speed Grade:	 -1
+# Processor:     None
+# System clock frequency: 100.000000 MHz
+# ##############################################################################
+
+ PARAMETER VERSION = 2.1.0
+
+
+# Clock Ports
+ PORT sys_clk_n = sys_clk_n, DIR = I, SIGIS = CLK, CLK_FREQ = 100000000
+ PORT sys_clk_p = sys_clk_p, DIR = I, SIGIS = CLK, CLK_FREQ = 100000000
+ #PORT aux_clk_n = aux_clk_n, DIR = I, SIGIS = CLK, CLK_FREQ = 100000000
+ #PORT aux_clk_p = aux_clk_p, DIR = I, SIGIS = CLK, CLK_FREQ = 100000000
+PORT aux_clk_n  = aux_clk_n,  DIR = I, SIGIS = CLK, CLK_FREQ = 250000000
+PORT aux_clk_p  = aux_clk_p,  DIR = I, SIGIS = CLK, CLK_FREQ = 250000000
+# PORT aux_synci_n = aux_synci_n,   DIR = I, SIGIS = CLK, CLK_FREQ = 200000000
+# PORT aux_synci_p = aux_synci_p,   DIR = I, SIGIS = CLK, CLK_FREQ = 200000000
+# PORT aux_synco_n = aux_synco_n,   DIR = I, SIGIS = CLK, CLK_FREQ = 200000000
+# PORT aux_synco_p = aux_synco_p,   DIR = I, SIGIS = CLK, CLK_FREQ = 200000000
+# EPB Ports
+ PORT epb_clk_in = epb_clk_in, DIR = I
+ PORT epb_data = epb_data, DIR = IO, VEC = [0:31]
+ PORT epb_addr = epb_addr, DIR = I, VEC = [5:29]
+ PORT epb_cs_n = epb_cs_n, DIR = I
+ PORT epb_be_n = epb_be_n, DIR = I, VEC = [0:3]
+ PORT epb_r_w_n = epb_r_w_n, DIR = I
+ PORT epb_oe_n = epb_oe_n, DIR = I
+ PORT epb_doe_n = epb_doe_n, DIR = O
+ PORT epb_rdy = epb_rdy, DIR = O
+ PORT ppc_irq_n = ppc_irq_n, DIR = O
+
+BEGIN temac
+  PARAMETER INSTANCE  = temac_inst
+  PARAMETER HW_VER    = 1.00.a
+  PARAMETER REG_SGMII = 1
+  PARAMETER PHY_ADR   = 0
+  PORT clk_125        = clk_125
+  PORT reset          = sys_reset
+  BUS_INTERFACE SGMII = sgmii
+  BUS_INTERFACE MAC   = mac
+END
+
+BEGIN sgmii_phy
+  PARAMETER INSTANCE  = sgmii_phy_inst
+  PARAMETER HW_VER    = 1.00.a
+  PORT mgt_rx_n       = sgmii_rx_n_i
+  PORT mgt_rx_p       = sgmii_rx_p_i
+  PORT mgt_tx_n       = sgmii_tx_n_i
+  PORT mgt_tx_p       = sgmii_tx_p_i
+  PORT mgt_clk_n      = sgmii_clkref_n_i
+  PORT mgt_clk_p      = sgmii_clkref_p_i
+  PORT mgt_reset      = sys_reset
+  PORT clk_125        = clk_125
+  BUS_INTERFACE SGMII = sgmii
+END
+
+  # MARVELL PHY SGMII Pins
+PORT sgmii_rx_n      = sgmii_rx_n_i, DIR = I
+PORT sgmii_rx_p      = sgmii_rx_p_i, DIR = I
+PORT sgmii_tx_n      = sgmii_tx_n_i, DIR = O
+PORT sgmii_tx_p      = sgmii_tx_p_i, DIR = O
+PORT sgmii_clkref_n  = sgmii_clkref_n_i, DIR = I
+PORT sgmii_clkref_p  = sgmii_clkref_p_i, DIR = I
+
+
+
+
+
+
+
+
+BEGIN roach_infrastructure
+ PARAMETER INSTANCE = infrastructure_inst
+ PARAMETER HW_VER = 1.00.a
+  PARAMETER CLK_FREQ     = 250
+  PARAMETER CLK_HIGH_LOW = low
+  PARAMETER MULTIPLY     = 8
+  PARAMETER DIVIDE       = 8
+  PARAMETER DIVCLK       = 1
+ #PARAMETER CLK_FREQ = 100
+ PORT sys_clk_n = sys_clk_n
+ PORT sys_clk_p = sys_clk_p
+ PORT aux_clk_n = aux_clk_n
+ PORT aux_clk_p = aux_clk_p
+# PORT aux_synci_n   = aux1_clk_n
+# PORT aux_synci_p   = aux1_clk_p
+# PORT aux_synco_n   = aux1_clk_n
+# PORT aux_synco_p   = aux1_clk_p
+ PORT epb_clk_in = epb_clk_in
+ PORT sys_clk = sys_clk
+ PORT sys_clk90 = sys_clk90
+ PORT sys_clk180 = sys_clk180
+ PORT sys_clk270 = sys_clk270
+ PORT sys_clk_lock = sys_clk_lock
+ PORT sys_clk2x = sys_clk2x
+ PORT sys_clk2x90 = sys_clk2x90
+ PORT sys_clk2x180 = sys_clk2x180
+ PORT sys_clk2x270 = sys_clk2x270
+ PORT aux_clk       = aux_clk
+ PORT aux_clk90     = aux_clk90
+ PORT aux_clk180    = aux_clk180
+ PORT aux_clk270    = aux_clk270
+ PORT aux_clk2x     = aux_clk2x
+ PORT aux_clk2x90   = aux_clk2x90
+ PORT aux_clk2x180  = aux_clk2x180
+ PORT aux_clk2x270  = aux_clk2x270
+ PORT epb_clk = epb_clk
+ PORT idelay_rst = power_on_rst
+ PORT idelay_rdy = idelay_rdy
+ PORT op_power_on_rst  = power_on_rst
+ PORT clk_100 = clk_100
+END
+
+BEGIN reset_block
+ PARAMETER INSTANCE = reset_block_inst
+ PARAMETER HW_VER = 1.00.a
+ PARAMETER WIDTH = 1000
+ PORT clk = sys_clk
+ PORT ip_async_reset_i = power_on_rst
+ PORT ip_reset_i = power_on_rst
+ PORT op_reset_o = sys_reset
+END
+
+BEGIN opb_v20
+ PARAMETER INSTANCE = opb0
+ PARAMETER HW_VER = 1.10.c
+ PARAMETER C_EXT_RESET_HIGH = 1
+ PARAMETER C_REG_GRANTS = 0
+ PORT SYS_Rst = power_on_rst
+ PORT OPB_Clk = epb_clk
+END
+
+BEGIN epb32_opb_bridge
+ PARAMETER INSTANCE = epb_opb_bridge_inst
+ PARAMETER HW_VER = 1.00.a
+ BUS_INTERFACE MOPB = opb0
+ PORT epb_clk = epb_clk
+ PORT epb_cs_n = epb_cs_n
+ PORT epb_oe_n = epb_oe_n
+ PORT epb_r_w_n = epb_r_w_n
+ PORT epb_be_n = epb_be_n
+ PORT epb_addr = epb_addr
+ PORT epb_doe_n = epb_doe_n
+ PORT epb_data_oe_n = epb_data_oe_n
+ PORT epb_data_i = epb_data_i
+ PORT epb_data_o = epb_data_o
+ PORT epb_rdy = epb_rdy
+END
+
+BEGIN epb_infrastructure
+ PARAMETER INSTANCE = epb_infrastructure_inst
+ PARAMETER HW_VER = 1.00.a
+ PORT epb_data_oe_n_i = epb_data_oe_n
+ PORT epb_data_out_i = epb_data_o
+ PORT epb_data_in_o = epb_data_i
+ PORT epb_data_buf = epb_data
+END
+
+BEGIN sys_block
+ PARAMETER INSTANCE = sys_block_inst
+ PARAMETER HW_VER = 1.00.a
+ PARAMETER BOARD_ID = 0xbabe
+ PARAMETER REV_MAJOR = 0x1
+ PARAMETER REV_MINOR = 0x0
+ PARAMETER REV_RCS = 0x0
+ PARAMETER RCS_UPTODATE = 0x0
+ PARAMETER C_BASEADDR = 0x00000000
+ PARAMETER C_HIGHADDR = 0x0000FFFF
+ BUS_INTERFACE SOPB = opb0
+ PORT OPB_Clk = epb_clk
+ PORT soft_reset = soft_reset
+ PORT irq_n = ppc_irq_n
+ PORT app_irq = 0x0000
+ #PORT fab_clk    = sys_clk
+  PORT fab_clk    = adc0_clk
+END
+
+
+
+##############################################
+# User XSG IP core                           #
+##############################################
+
+BEGIN darkquad29_wvl
+ PARAMETER INSTANCE = darkquad29_wvl_XSG_core_config
+ PARAMETER HW_VER = 1.00.a
+ PORT clk = adc0_clk
+ PORT darkquad29_wvl_a2g_ctrl_adcdac_2g_ctrl_user_rx_data = darkquad29_wvl_a2g_ctrl_adcdac_2g_ctrl_user_rx_data
+ PORT darkquad29_wvl_a2g_ctrl_adcdac_2g_ctrl_user_rx_full = darkquad29_wvl_a2g_ctrl_adcdac_2g_ctrl_user_rx_full
+ PORT darkquad29_wvl_a2g_ctrl_adcdac_2g_ctrl_user_rx_val = darkquad29_wvl_a2g_ctrl_adcdac_2g_ctrl_user_rx_val
+ PORT darkquad29_wvl_a2g_ctrl_adcdac_2g_ctrl_user_tx_full = darkquad29_wvl_a2g_ctrl_adcdac_2g_ctrl_user_tx_full
+ PORT darkquad29_wvl_a2g_ctrl_adcdac_2g_ctrl_user_rx_rst = darkquad29_wvl_a2g_ctrl_adcdac_2g_ctrl_user_rx_rst
+ PORT darkquad29_wvl_a2g_ctrl_adcdac_2g_ctrl_user_tx_data = darkquad29_wvl_a2g_ctrl_adcdac_2g_ctrl_user_tx_data
+ PORT darkquad29_wvl_a2g_ctrl_adcdac_2g_ctrl_user_tx_rst = darkquad29_wvl_a2g_ctrl_adcdac_2g_ctrl_user_tx_rst
+ PORT darkquad29_wvl_a2g_ctrl_adcdac_2g_ctrl_user_tx_val = darkquad29_wvl_a2g_ctrl_adcdac_2g_ctrl_user_tx_val
+ PORT darkquad29_wvl_a2g_ctrl_en_bram_dump_user_data_out = darkquad29_wvl_a2g_ctrl_en_bram_dump_user_data_out
+ PORT darkquad29_wvl_a2g_ctrl_in_val_user_data_out = darkquad29_wvl_a2g_ctrl_in_val_user_data_out
+ PORT darkquad29_wvl_a2g_ctrl_last_tx_data_user_data_in = darkquad29_wvl_a2g_ctrl_last_tx_data_user_data_in
+ PORT darkquad29_wvl_a2g_ctrl_lut_dump_buffer_size_user_data_out = darkquad29_wvl_a2g_ctrl_lut_dump_buffer_size_user_data_out
+ PORT darkquad29_wvl_a2g_ctrl_lut_dump_dac_lut_buffer_data_out = darkquad29_wvl_a2g_ctrl_lut_dump_dac_lut_buffer_data_out
+ PORT darkquad29_wvl_a2g_ctrl_lut_dump_dac_lut_buffer_addr = darkquad29_wvl_a2g_ctrl_lut_dump_dac_lut_buffer_addr
+ PORT darkquad29_wvl_a2g_ctrl_lut_dump_dac_lut_buffer_data_in = darkquad29_wvl_a2g_ctrl_lut_dump_dac_lut_buffer_data_in
+ PORT darkquad29_wvl_a2g_ctrl_lut_dump_dac_lut_buffer_we = darkquad29_wvl_a2g_ctrl_lut_dump_dac_lut_buffer_we
+ PORT darkquad29_wvl_a2g_ctrl_lut_dump_data_period_user_data_out = darkquad29_wvl_a2g_ctrl_lut_dump_data_period_user_data_out
+ PORT darkquad29_wvl_a2g_ctrl_lut_dump_sending_data_user_data_in = darkquad29_wvl_a2g_ctrl_lut_dump_sending_data_user_data_in
+ PORT darkquad29_wvl_a2g_ctrl_reg_rx_full_user_data_in = darkquad29_wvl_a2g_ctrl_reg_rx_full_user_data_in
+ PORT darkquad29_wvl_a2g_ctrl_reg_tx_full_user_data_in = darkquad29_wvl_a2g_ctrl_reg_tx_full_user_data_in
+ PORT darkquad29_wvl_a2g_ctrl_rst_user_data_out = darkquad29_wvl_a2g_ctrl_rst_user_data_out
+ PORT darkquad29_wvl_a2g_ctrl_tx_en_user_data_out = darkquad29_wvl_a2g_ctrl_tx_en_user_data_out
+ PORT darkquad29_wvl_a2g_ctrl_v7_ready_user_data_in = darkquad29_wvl_a2g_ctrl_v7_ready_user_data_in
+ PORT darkquad29_wvl_acc_iq_avg0_ss_bram_data_out = darkquad29_wvl_acc_iq_avg0_ss_bram_data_out
+ PORT darkquad29_wvl_acc_iq_avg0_ss_bram_addr = darkquad29_wvl_acc_iq_avg0_ss_bram_addr
+ PORT darkquad29_wvl_acc_iq_avg0_ss_bram_data_in = darkquad29_wvl_acc_iq_avg0_ss_bram_data_in
+ PORT darkquad29_wvl_acc_iq_avg0_ss_bram_we = darkquad29_wvl_acc_iq_avg0_ss_bram_we
+ PORT darkquad29_wvl_acc_iq_avg0_ss_ctrl_user_data_out = darkquad29_wvl_acc_iq_avg0_ss_ctrl_user_data_out
+ PORT darkquad29_wvl_acc_iq_avg0_ss_status_user_data_in = darkquad29_wvl_acc_iq_avg0_ss_status_user_data_in
+ PORT darkquad29_wvl_acc_iq_avg1_ss_bram_data_out = darkquad29_wvl_acc_iq_avg1_ss_bram_data_out
+ PORT darkquad29_wvl_acc_iq_avg1_ss_bram_addr = darkquad29_wvl_acc_iq_avg1_ss_bram_addr
+ PORT darkquad29_wvl_acc_iq_avg1_ss_bram_data_in = darkquad29_wvl_acc_iq_avg1_ss_bram_data_in
+ PORT darkquad29_wvl_acc_iq_avg1_ss_bram_we = darkquad29_wvl_acc_iq_avg1_ss_bram_we
+ PORT darkquad29_wvl_acc_iq_avg1_ss_ctrl_user_data_out = darkquad29_wvl_acc_iq_avg1_ss_ctrl_user_data_out
+ PORT darkquad29_wvl_acc_iq_avg1_ss_status_user_data_in = darkquad29_wvl_acc_iq_avg1_ss_status_user_data_in
+ PORT darkquad29_wvl_acc_iq_avg2_ss_bram_data_out = darkquad29_wvl_acc_iq_avg2_ss_bram_data_out
+ PORT darkquad29_wvl_acc_iq_avg2_ss_bram_addr = darkquad29_wvl_acc_iq_avg2_ss_bram_addr
+ PORT darkquad29_wvl_acc_iq_avg2_ss_bram_data_in = darkquad29_wvl_acc_iq_avg2_ss_bram_data_in
+ PORT darkquad29_wvl_acc_iq_avg2_ss_bram_we = darkquad29_wvl_acc_iq_avg2_ss_bram_we
+ PORT darkquad29_wvl_acc_iq_avg2_ss_ctrl_user_data_out = darkquad29_wvl_acc_iq_avg2_ss_ctrl_user_data_out
+ PORT darkquad29_wvl_acc_iq_avg2_ss_status_user_data_in = darkquad29_wvl_acc_iq_avg2_ss_status_user_data_in
+ PORT darkquad29_wvl_acc_iq_avg3_ss_bram_data_out = darkquad29_wvl_acc_iq_avg3_ss_bram_data_out
+ PORT darkquad29_wvl_acc_iq_avg3_ss_bram_addr = darkquad29_wvl_acc_iq_avg3_ss_bram_addr
+ PORT darkquad29_wvl_acc_iq_avg3_ss_bram_data_in = darkquad29_wvl_acc_iq_avg3_ss_bram_data_in
+ PORT darkquad29_wvl_acc_iq_avg3_ss_bram_we = darkquad29_wvl_acc_iq_avg3_ss_bram_we
+ PORT darkquad29_wvl_acc_iq_avg3_ss_ctrl_user_data_out = darkquad29_wvl_acc_iq_avg3_ss_ctrl_user_data_out
+ PORT darkquad29_wvl_acc_iq_avg3_ss_status_user_data_in = darkquad29_wvl_acc_iq_avg3_ss_status_user_data_in
+ PORT darkquad29_wvl_acc_iq_start_acc_user_data_out = darkquad29_wvl_acc_iq_start_acc_user_data_out
+ PORT darkquad29_wvl_adc_in_adcdac_2g_user_data_i0 = darkquad29_wvl_adc_in_adcdac_2g_user_data_i0
+ PORT darkquad29_wvl_adc_in_adcdac_2g_user_data_i1 = darkquad29_wvl_adc_in_adcdac_2g_user_data_i1
+ PORT darkquad29_wvl_adc_in_adcdac_2g_user_data_i2 = darkquad29_wvl_adc_in_adcdac_2g_user_data_i2
+ PORT darkquad29_wvl_adc_in_adcdac_2g_user_data_i3 = darkquad29_wvl_adc_in_adcdac_2g_user_data_i3
+ PORT darkquad29_wvl_adc_in_adcdac_2g_user_data_i4 = darkquad29_wvl_adc_in_adcdac_2g_user_data_i4
+ PORT darkquad29_wvl_adc_in_adcdac_2g_user_data_i5 = darkquad29_wvl_adc_in_adcdac_2g_user_data_i5
+ PORT darkquad29_wvl_adc_in_adcdac_2g_user_data_i6 = darkquad29_wvl_adc_in_adcdac_2g_user_data_i6
+ PORT darkquad29_wvl_adc_in_adcdac_2g_user_data_i7 = darkquad29_wvl_adc_in_adcdac_2g_user_data_i7
+ PORT darkquad29_wvl_adc_in_adcdac_2g_user_data_q0 = darkquad29_wvl_adc_in_adcdac_2g_user_data_q0
+ PORT darkquad29_wvl_adc_in_adcdac_2g_user_data_q1 = darkquad29_wvl_adc_in_adcdac_2g_user_data_q1
+ PORT darkquad29_wvl_adc_in_adcdac_2g_user_data_q2 = darkquad29_wvl_adc_in_adcdac_2g_user_data_q2
+ PORT darkquad29_wvl_adc_in_adcdac_2g_user_data_q3 = darkquad29_wvl_adc_in_adcdac_2g_user_data_q3
+ PORT darkquad29_wvl_adc_in_adcdac_2g_user_data_q4 = darkquad29_wvl_adc_in_adcdac_2g_user_data_q4
+ PORT darkquad29_wvl_adc_in_adcdac_2g_user_data_q5 = darkquad29_wvl_adc_in_adcdac_2g_user_data_q5
+ PORT darkquad29_wvl_adc_in_adcdac_2g_user_data_q6 = darkquad29_wvl_adc_in_adcdac_2g_user_data_q6
+ PORT darkquad29_wvl_adc_in_adcdac_2g_user_data_q7 = darkquad29_wvl_adc_in_adcdac_2g_user_data_q7
+ PORT darkquad29_wvl_adc_in_adcdac_2g_user_info_i0 = darkquad29_wvl_adc_in_adcdac_2g_user_info_i0
+ PORT darkquad29_wvl_adc_in_adcdac_2g_user_info_i1 = darkquad29_wvl_adc_in_adcdac_2g_user_info_i1
+ PORT darkquad29_wvl_adc_in_adcdac_2g_user_info_i2 = darkquad29_wvl_adc_in_adcdac_2g_user_info_i2
+ PORT darkquad29_wvl_adc_in_adcdac_2g_user_info_i3 = darkquad29_wvl_adc_in_adcdac_2g_user_info_i3
+ PORT darkquad29_wvl_adc_in_adcdac_2g_user_info_i4 = darkquad29_wvl_adc_in_adcdac_2g_user_info_i4
+ PORT darkquad29_wvl_adc_in_adcdac_2g_user_info_i5 = darkquad29_wvl_adc_in_adcdac_2g_user_info_i5
+ PORT darkquad29_wvl_adc_in_adcdac_2g_user_info_i6 = darkquad29_wvl_adc_in_adcdac_2g_user_info_i6
+ PORT darkquad29_wvl_adc_in_adcdac_2g_user_info_i7 = darkquad29_wvl_adc_in_adcdac_2g_user_info_i7
+ PORT darkquad29_wvl_adc_in_adcdac_2g_user_info_q0 = darkquad29_wvl_adc_in_adcdac_2g_user_info_q0
+ PORT darkquad29_wvl_adc_in_adcdac_2g_user_info_q1 = darkquad29_wvl_adc_in_adcdac_2g_user_info_q1
+ PORT darkquad29_wvl_adc_in_adcdac_2g_user_info_q2 = darkquad29_wvl_adc_in_adcdac_2g_user_info_q2
+ PORT darkquad29_wvl_adc_in_adcdac_2g_user_info_q3 = darkquad29_wvl_adc_in_adcdac_2g_user_info_q3
+ PORT darkquad29_wvl_adc_in_adcdac_2g_user_info_q4 = darkquad29_wvl_adc_in_adcdac_2g_user_info_q4
+ PORT darkquad29_wvl_adc_in_adcdac_2g_user_info_q5 = darkquad29_wvl_adc_in_adcdac_2g_user_info_q5
+ PORT darkquad29_wvl_adc_in_adcdac_2g_user_info_q6 = darkquad29_wvl_adc_in_adcdac_2g_user_info_q6
+ PORT darkquad29_wvl_adc_in_adcdac_2g_user_info_q7 = darkquad29_wvl_adc_in_adcdac_2g_user_info_q7
+ PORT darkquad29_wvl_adc_in_adcdac_2g_user_mmcm_locked = darkquad29_wvl_adc_in_adcdac_2g_user_mmcm_locked
+ PORT darkquad29_wvl_adc_in_adcdac_2g_user_sync = darkquad29_wvl_adc_in_adcdac_2g_user_sync
+ PORT darkquad29_wvl_adc_in_adcdac_2g_user_valid = darkquad29_wvl_adc_in_adcdac_2g_user_valid
+ PORT darkquad29_wvl_adc_in_adcdac_2g_user_dly_val = darkquad29_wvl_adc_in_adcdac_2g_user_dly_val
+ PORT darkquad29_wvl_adc_in_adcdac_2g_user_inc_mmcm_phs = darkquad29_wvl_adc_in_adcdac_2g_user_inc_mmcm_phs
+ PORT darkquad29_wvl_adc_in_adcdac_2g_user_load_dly0 = darkquad29_wvl_adc_in_adcdac_2g_user_load_dly0
+ PORT darkquad29_wvl_adc_in_adcdac_2g_user_pos_mmcm_phs = darkquad29_wvl_adc_in_adcdac_2g_user_pos_mmcm_phs
+ PORT darkquad29_wvl_adc_in_adcdac_2g_user_rdy_i0 = darkquad29_wvl_adc_in_adcdac_2g_user_rdy_i0
+ PORT darkquad29_wvl_adc_in_dly_val_user_data_out = darkquad29_wvl_adc_in_dly_val_user_data_out
+ PORT darkquad29_wvl_adc_in_i_scale_user_data_out = darkquad29_wvl_adc_in_i_scale_user_data_out
+ PORT darkquad29_wvl_adc_in_inc_phs_user_data_out = darkquad29_wvl_adc_in_inc_phs_user_data_out
+ PORT darkquad29_wvl_adc_in_load_dly_user_data_out = darkquad29_wvl_adc_in_load_dly_user_data_out
+ PORT darkquad29_wvl_adc_in_locked_user_data_in = darkquad29_wvl_adc_in_locked_user_data_in
+ PORT darkquad29_wvl_adc_in_n_miss_pps_user_data_in = darkquad29_wvl_adc_in_n_miss_pps_user_data_in
+ PORT darkquad29_wvl_adc_in_pos_phs_user_data_out = darkquad29_wvl_adc_in_pos_phs_user_data_out
+ PORT darkquad29_wvl_adc_in_raw_pps_user_data_in = darkquad29_wvl_adc_in_raw_pps_user_data_in
+ PORT darkquad29_wvl_adc_in_snp_cal0_ss_bram_data_out = darkquad29_wvl_adc_in_snp_cal0_ss_bram_data_out
+ PORT darkquad29_wvl_adc_in_snp_cal0_ss_bram_addr = darkquad29_wvl_adc_in_snp_cal0_ss_bram_addr
+ PORT darkquad29_wvl_adc_in_snp_cal0_ss_bram_data_in = darkquad29_wvl_adc_in_snp_cal0_ss_bram_data_in
+ PORT darkquad29_wvl_adc_in_snp_cal0_ss_bram_we = darkquad29_wvl_adc_in_snp_cal0_ss_bram_we
+ PORT darkquad29_wvl_adc_in_snp_cal0_ss_ctrl_user_data_out = darkquad29_wvl_adc_in_snp_cal0_ss_ctrl_user_data_out
+ PORT darkquad29_wvl_adc_in_snp_cal0_ss_status_user_data_in = darkquad29_wvl_adc_in_snp_cal0_ss_status_user_data_in
+ PORT darkquad29_wvl_adc_in_snp_cal1_ss_bram_data_out = darkquad29_wvl_adc_in_snp_cal1_ss_bram_data_out
+ PORT darkquad29_wvl_adc_in_snp_cal1_ss_bram_addr = darkquad29_wvl_adc_in_snp_cal1_ss_bram_addr
+ PORT darkquad29_wvl_adc_in_snp_cal1_ss_bram_data_in = darkquad29_wvl_adc_in_snp_cal1_ss_bram_data_in
+ PORT darkquad29_wvl_adc_in_snp_cal1_ss_bram_we = darkquad29_wvl_adc_in_snp_cal1_ss_bram_we
+ PORT darkquad29_wvl_adc_in_snp_cal1_ss_ctrl_user_data_out = darkquad29_wvl_adc_in_snp_cal1_ss_ctrl_user_data_out
+ PORT darkquad29_wvl_adc_in_snp_cal1_ss_status_user_data_in = darkquad29_wvl_adc_in_snp_cal1_ss_status_user_data_in
+ PORT darkquad29_wvl_adc_in_snp_cal2_ss_bram_data_out = darkquad29_wvl_adc_in_snp_cal2_ss_bram_data_out
+ PORT darkquad29_wvl_adc_in_snp_cal2_ss_bram_addr = darkquad29_wvl_adc_in_snp_cal2_ss_bram_addr
+ PORT darkquad29_wvl_adc_in_snp_cal2_ss_bram_data_in = darkquad29_wvl_adc_in_snp_cal2_ss_bram_data_in
+ PORT darkquad29_wvl_adc_in_snp_cal2_ss_bram_we = darkquad29_wvl_adc_in_snp_cal2_ss_bram_we
+ PORT darkquad29_wvl_adc_in_snp_cal2_ss_ctrl_user_data_out = darkquad29_wvl_adc_in_snp_cal2_ss_ctrl_user_data_out
+ PORT darkquad29_wvl_adc_in_snp_cal2_ss_status_user_data_in = darkquad29_wvl_adc_in_snp_cal2_ss_status_user_data_in
+ PORT darkquad29_wvl_adc_in_snp_cal3_ss_bram_data_out = darkquad29_wvl_adc_in_snp_cal3_ss_bram_data_out
+ PORT darkquad29_wvl_adc_in_snp_cal3_ss_bram_addr = darkquad29_wvl_adc_in_snp_cal3_ss_bram_addr
+ PORT darkquad29_wvl_adc_in_snp_cal3_ss_bram_data_in = darkquad29_wvl_adc_in_snp_cal3_ss_bram_data_in
+ PORT darkquad29_wvl_adc_in_snp_cal3_ss_bram_we = darkquad29_wvl_adc_in_snp_cal3_ss_bram_we
+ PORT darkquad29_wvl_adc_in_snp_cal3_ss_ctrl_user_data_out = darkquad29_wvl_adc_in_snp_cal3_ss_ctrl_user_data_out
+ PORT darkquad29_wvl_adc_in_snp_cal3_ss_status_user_data_in = darkquad29_wvl_adc_in_snp_cal3_ss_status_user_data_in
+ PORT darkquad29_wvl_adc_in_trig_user_data_out = darkquad29_wvl_adc_in_trig_user_data_out
+ PORT darkquad29_wvl_adc_in_ts0_user_data_in = darkquad29_wvl_adc_in_ts0_user_data_in
+ PORT darkquad29_wvl_adc_in_ts1_user_data_in = darkquad29_wvl_adc_in_ts1_user_data_in
+ PORT darkquad29_wvl_adc_in_ts2_user_data_in = darkquad29_wvl_adc_in_ts2_user_data_in
+ PORT darkquad29_wvl_adc_in_ts3_user_data_in = darkquad29_wvl_adc_in_ts3_user_data_in
+ PORT darkquad29_wvl_adc_in_valid_user_data_in = darkquad29_wvl_adc_in_valid_user_data_in
+ PORT darkquad29_wvl_board_num_user_data_out = darkquad29_wvl_board_num_user_data_out
+ PORT darkquad29_wvl_capture0_base_kf_user_data_out = darkquad29_wvl_capture0_base_kf_user_data_out
+ PORT darkquad29_wvl_capture0_base_kq_user_data_out = darkquad29_wvl_capture0_base_kq_user_data_out
+ PORT darkquad29_wvl_capture0_cps_lim_user_data_out = darkquad29_wvl_capture0_cps_lim_user_data_out
+ PORT darkquad29_wvl_capture0_energy_cal_lut_energy_coeffs_data_out = darkquad29_wvl_capture0_energy_cal_lut_energy_coeffs_data_out
+ PORT darkquad29_wvl_capture0_energy_cal_lut_energy_coeffs_addr = darkquad29_wvl_capture0_energy_cal_lut_energy_coeffs_addr
+ PORT darkquad29_wvl_capture0_energy_cal_lut_energy_coeffs_data_in = darkquad29_wvl_capture0_energy_cal_lut_energy_coeffs_data_in
+ PORT darkquad29_wvl_capture0_energy_cal_lut_energy_coeffs_we = darkquad29_wvl_capture0_energy_cal_lut_energy_coeffs_we
+ PORT darkquad29_wvl_capture0_load_thresh_user_data_out = darkquad29_wvl_capture0_load_thresh_user_data_out
+ PORT darkquad29_wvl_capture0_pix_data_out = darkquad29_wvl_capture0_pix_data_out
+ PORT darkquad29_wvl_capture0_pix_addr = darkquad29_wvl_capture0_pix_addr
+ PORT darkquad29_wvl_capture0_pix_data_in = darkquad29_wvl_capture0_pix_data_in
+ PORT darkquad29_wvl_capture0_pix_we = darkquad29_wvl_capture0_pix_we
+ PORT darkquad29_wvl_capture0_threshold_user_data_out = darkquad29_wvl_capture0_threshold_user_data_out
+ PORT darkquad29_wvl_capture0_use_energy_cal_user_data_out = darkquad29_wvl_capture0_use_energy_cal_user_data_out
+ PORT darkquad29_wvl_capture1_base_kf_user_data_out = darkquad29_wvl_capture1_base_kf_user_data_out
+ PORT darkquad29_wvl_capture1_base_kq_user_data_out = darkquad29_wvl_capture1_base_kq_user_data_out
+ PORT darkquad29_wvl_capture1_cps_lim_user_data_out = darkquad29_wvl_capture1_cps_lim_user_data_out
+ PORT darkquad29_wvl_capture1_energy_cal_lut_energy_coeffs_data_out = darkquad29_wvl_capture1_energy_cal_lut_energy_coeffs_data_out
+ PORT darkquad29_wvl_capture1_energy_cal_lut_energy_coeffs_addr = darkquad29_wvl_capture1_energy_cal_lut_energy_coeffs_addr
+ PORT darkquad29_wvl_capture1_energy_cal_lut_energy_coeffs_data_in = darkquad29_wvl_capture1_energy_cal_lut_energy_coeffs_data_in
+ PORT darkquad29_wvl_capture1_energy_cal_lut_energy_coeffs_we = darkquad29_wvl_capture1_energy_cal_lut_energy_coeffs_we
+ PORT darkquad29_wvl_capture1_load_thresh_user_data_out = darkquad29_wvl_capture1_load_thresh_user_data_out
+ PORT darkquad29_wvl_capture1_pix_data_out = darkquad29_wvl_capture1_pix_data_out
+ PORT darkquad29_wvl_capture1_pix_addr = darkquad29_wvl_capture1_pix_addr
+ PORT darkquad29_wvl_capture1_pix_data_in = darkquad29_wvl_capture1_pix_data_in
+ PORT darkquad29_wvl_capture1_pix_we = darkquad29_wvl_capture1_pix_we
+ PORT darkquad29_wvl_capture1_threshold_user_data_out = darkquad29_wvl_capture1_threshold_user_data_out
+ PORT darkquad29_wvl_capture1_use_energy_cal_user_data_out = darkquad29_wvl_capture1_use_energy_cal_user_data_out
+ PORT darkquad29_wvl_capture2_base_kf_user_data_out = darkquad29_wvl_capture2_base_kf_user_data_out
+ PORT darkquad29_wvl_capture2_base_kq_user_data_out = darkquad29_wvl_capture2_base_kq_user_data_out
+ PORT darkquad29_wvl_capture2_cps_lim_user_data_out = darkquad29_wvl_capture2_cps_lim_user_data_out
+ PORT darkquad29_wvl_capture2_energy_cal_lut_energy_coeffs_data_out = darkquad29_wvl_capture2_energy_cal_lut_energy_coeffs_data_out
+ PORT darkquad29_wvl_capture2_energy_cal_lut_energy_coeffs_addr = darkquad29_wvl_capture2_energy_cal_lut_energy_coeffs_addr
+ PORT darkquad29_wvl_capture2_energy_cal_lut_energy_coeffs_data_in = darkquad29_wvl_capture2_energy_cal_lut_energy_coeffs_data_in
+ PORT darkquad29_wvl_capture2_energy_cal_lut_energy_coeffs_we = darkquad29_wvl_capture2_energy_cal_lut_energy_coeffs_we
+ PORT darkquad29_wvl_capture2_load_thresh_user_data_out = darkquad29_wvl_capture2_load_thresh_user_data_out
+ PORT darkquad29_wvl_capture2_pix_data_out = darkquad29_wvl_capture2_pix_data_out
+ PORT darkquad29_wvl_capture2_pix_addr = darkquad29_wvl_capture2_pix_addr
+ PORT darkquad29_wvl_capture2_pix_data_in = darkquad29_wvl_capture2_pix_data_in
+ PORT darkquad29_wvl_capture2_pix_we = darkquad29_wvl_capture2_pix_we
+ PORT darkquad29_wvl_capture2_threshold_user_data_out = darkquad29_wvl_capture2_threshold_user_data_out
+ PORT darkquad29_wvl_capture2_use_energy_cal_user_data_out = darkquad29_wvl_capture2_use_energy_cal_user_data_out
+ PORT darkquad29_wvl_capture3_base_kf_user_data_out = darkquad29_wvl_capture3_base_kf_user_data_out
+ PORT darkquad29_wvl_capture3_base_kq_user_data_out = darkquad29_wvl_capture3_base_kq_user_data_out
+ PORT darkquad29_wvl_capture3_cps_lim_user_data_out = darkquad29_wvl_capture3_cps_lim_user_data_out
+ PORT darkquad29_wvl_capture3_energy_cal_lut_energy_coeffs_data_out = darkquad29_wvl_capture3_energy_cal_lut_energy_coeffs_data_out
+ PORT darkquad29_wvl_capture3_energy_cal_lut_energy_coeffs_addr = darkquad29_wvl_capture3_energy_cal_lut_energy_coeffs_addr
+ PORT darkquad29_wvl_capture3_energy_cal_lut_energy_coeffs_data_in = darkquad29_wvl_capture3_energy_cal_lut_energy_coeffs_data_in
+ PORT darkquad29_wvl_capture3_energy_cal_lut_energy_coeffs_we = darkquad29_wvl_capture3_energy_cal_lut_energy_coeffs_we
+ PORT darkquad29_wvl_capture3_load_thresh_user_data_out = darkquad29_wvl_capture3_load_thresh_user_data_out
+ PORT darkquad29_wvl_capture3_pix_data_out = darkquad29_wvl_capture3_pix_data_out
+ PORT darkquad29_wvl_capture3_pix_addr = darkquad29_wvl_capture3_pix_addr
+ PORT darkquad29_wvl_capture3_pix_data_in = darkquad29_wvl_capture3_pix_data_in
+ PORT darkquad29_wvl_capture3_pix_we = darkquad29_wvl_capture3_pix_we
+ PORT darkquad29_wvl_capture3_threshold_user_data_out = darkquad29_wvl_capture3_threshold_user_data_out
+ PORT darkquad29_wvl_capture3_use_energy_cal_user_data_out = darkquad29_wvl_capture3_use_energy_cal_user_data_out
+ PORT darkquad29_wvl_chan_sel_ch_bin0_user_data_out = darkquad29_wvl_chan_sel_ch_bin0_user_data_out
+ PORT darkquad29_wvl_chan_sel_ch_bin1_user_data_out = darkquad29_wvl_chan_sel_ch_bin1_user_data_out
+ PORT darkquad29_wvl_chan_sel_ch_bin2_user_data_out = darkquad29_wvl_chan_sel_ch_bin2_user_data_out
+ PORT darkquad29_wvl_chan_sel_ch_bin3_user_data_out = darkquad29_wvl_chan_sel_ch_bin3_user_data_out
+ PORT darkquad29_wvl_chan_sel_load_user_data_out = darkquad29_wvl_chan_sel_load_user_data_out
+ PORT darkquad29_wvl_check_lag_data_ch_user_data_in = darkquad29_wvl_check_lag_data_ch_user_data_in
+ PORT darkquad29_wvl_check_lag_dds_ch_user_data_in = darkquad29_wvl_check_lag_dds_ch_user_data_in
+ PORT darkquad29_wvl_check_lag_latch_user_data_out = darkquad29_wvl_check_lag_latch_user_data_out
+ PORT darkquad29_wvl_conv_phase0_centers_user_data_out = darkquad29_wvl_conv_phase0_centers_user_data_out
+ PORT darkquad29_wvl_conv_phase0_load_centers_user_data_out = darkquad29_wvl_conv_phase0_load_centers_user_data_out
+ PORT darkquad29_wvl_conv_phase1_centers_user_data_out = darkquad29_wvl_conv_phase1_centers_user_data_out
+ PORT darkquad29_wvl_conv_phase1_load_centers_user_data_out = darkquad29_wvl_conv_phase1_load_centers_user_data_out
+ PORT darkquad29_wvl_conv_phase2_centers_user_data_out = darkquad29_wvl_conv_phase2_centers_user_data_out
+ PORT darkquad29_wvl_conv_phase2_load_centers_user_data_out = darkquad29_wvl_conv_phase2_load_centers_user_data_out
+ PORT darkquad29_wvl_conv_phase3_centers_user_data_out = darkquad29_wvl_conv_phase3_centers_user_data_out
+ PORT darkquad29_wvl_conv_phase3_load_centers_user_data_out = darkquad29_wvl_conv_phase3_load_centers_user_data_out
+ PORT darkquad29_wvl_dds_lut_qdr0_ack = darkquad29_wvl_dds_lut_qdr0_ack
+ PORT darkquad29_wvl_dds_lut_qdr0_cal_fail = darkquad29_wvl_dds_lut_qdr0_cal_fail
+ PORT darkquad29_wvl_dds_lut_qdr0_data_out = darkquad29_wvl_dds_lut_qdr0_data_out
+ PORT darkquad29_wvl_dds_lut_qdr0_data_valid = darkquad29_wvl_dds_lut_qdr0_data_valid
+ PORT darkquad29_wvl_dds_lut_qdr0_phy_ready = darkquad29_wvl_dds_lut_qdr0_phy_ready
+ PORT darkquad29_wvl_dds_lut_qdr0_address = darkquad29_wvl_dds_lut_qdr0_address
+ PORT darkquad29_wvl_dds_lut_qdr0_be = darkquad29_wvl_dds_lut_qdr0_be
+ PORT darkquad29_wvl_dds_lut_qdr0_data_in = darkquad29_wvl_dds_lut_qdr0_data_in
+ PORT darkquad29_wvl_dds_lut_qdr0_rd_en = darkquad29_wvl_dds_lut_qdr0_rd_en
+ PORT darkquad29_wvl_dds_lut_qdr0_wr_en = darkquad29_wvl_dds_lut_qdr0_wr_en
+ PORT darkquad29_wvl_dds_lut_qdr1_ack = darkquad29_wvl_dds_lut_qdr1_ack
+ PORT darkquad29_wvl_dds_lut_qdr1_cal_fail = darkquad29_wvl_dds_lut_qdr1_cal_fail
+ PORT darkquad29_wvl_dds_lut_qdr1_data_out = darkquad29_wvl_dds_lut_qdr1_data_out
+ PORT darkquad29_wvl_dds_lut_qdr1_data_valid = darkquad29_wvl_dds_lut_qdr1_data_valid
+ PORT darkquad29_wvl_dds_lut_qdr1_phy_ready = darkquad29_wvl_dds_lut_qdr1_phy_ready
+ PORT darkquad29_wvl_dds_lut_qdr1_address = darkquad29_wvl_dds_lut_qdr1_address
+ PORT darkquad29_wvl_dds_lut_qdr1_be = darkquad29_wvl_dds_lut_qdr1_be
+ PORT darkquad29_wvl_dds_lut_qdr1_data_in = darkquad29_wvl_dds_lut_qdr1_data_in
+ PORT darkquad29_wvl_dds_lut_qdr1_rd_en = darkquad29_wvl_dds_lut_qdr1_rd_en
+ PORT darkquad29_wvl_dds_lut_qdr1_wr_en = darkquad29_wvl_dds_lut_qdr1_wr_en
+ PORT darkquad29_wvl_dds_lut_qdr2_ack = darkquad29_wvl_dds_lut_qdr2_ack
+ PORT darkquad29_wvl_dds_lut_qdr2_cal_fail = darkquad29_wvl_dds_lut_qdr2_cal_fail
+ PORT darkquad29_wvl_dds_lut_qdr2_data_out = darkquad29_wvl_dds_lut_qdr2_data_out
+ PORT darkquad29_wvl_dds_lut_qdr2_data_valid = darkquad29_wvl_dds_lut_qdr2_data_valid
+ PORT darkquad29_wvl_dds_lut_qdr2_phy_ready = darkquad29_wvl_dds_lut_qdr2_phy_ready
+ PORT darkquad29_wvl_dds_lut_qdr2_address = darkquad29_wvl_dds_lut_qdr2_address
+ PORT darkquad29_wvl_dds_lut_qdr2_be = darkquad29_wvl_dds_lut_qdr2_be
+ PORT darkquad29_wvl_dds_lut_qdr2_data_in = darkquad29_wvl_dds_lut_qdr2_data_in
+ PORT darkquad29_wvl_dds_lut_qdr2_rd_en = darkquad29_wvl_dds_lut_qdr2_rd_en
+ PORT darkquad29_wvl_dds_lut_qdr2_wr_en = darkquad29_wvl_dds_lut_qdr2_wr_en
+ PORT darkquad29_wvl_dds_lut_qdr3_ack = darkquad29_wvl_dds_lut_qdr3_ack
+ PORT darkquad29_wvl_dds_lut_qdr3_cal_fail = darkquad29_wvl_dds_lut_qdr3_cal_fail
+ PORT darkquad29_wvl_dds_lut_qdr3_data_out = darkquad29_wvl_dds_lut_qdr3_data_out
+ PORT darkquad29_wvl_dds_lut_qdr3_data_valid = darkquad29_wvl_dds_lut_qdr3_data_valid
+ PORT darkquad29_wvl_dds_lut_qdr3_phy_ready = darkquad29_wvl_dds_lut_qdr3_phy_ready
+ PORT darkquad29_wvl_dds_lut_qdr3_address = darkquad29_wvl_dds_lut_qdr3_address
+ PORT darkquad29_wvl_dds_lut_qdr3_be = darkquad29_wvl_dds_lut_qdr3_be
+ PORT darkquad29_wvl_dds_lut_qdr3_data_in = darkquad29_wvl_dds_lut_qdr3_data_in
+ PORT darkquad29_wvl_dds_lut_qdr3_rd_en = darkquad29_wvl_dds_lut_qdr3_rd_en
+ PORT darkquad29_wvl_dds_lut_qdr3_wr_en = darkquad29_wvl_dds_lut_qdr3_wr_en
+ PORT darkquad29_wvl_dds_lut_run_user_data_out = darkquad29_wvl_dds_lut_run_user_data_out
+ PORT darkquad29_wvl_dds_shift_user_data_out = darkquad29_wvl_dds_shift_user_data_out
+ PORT darkquad29_wvl_gbe64_dest_ip_user_data_out = darkquad29_wvl_gbe64_dest_ip_user_data_out
+ PORT darkquad29_wvl_gbe64_one_gbe_app_dbg_data = darkquad29_wvl_gbe64_one_gbe_app_dbg_data
+ PORT darkquad29_wvl_gbe64_one_gbe_app_dbg_dvld = darkquad29_wvl_gbe64_one_gbe_app_dbg_dvld
+ PORT darkquad29_wvl_gbe64_one_gbe_app_rx_badframe = darkquad29_wvl_gbe64_one_gbe_app_rx_badframe
+ PORT darkquad29_wvl_gbe64_one_gbe_app_rx_data = darkquad29_wvl_gbe64_one_gbe_app_rx_data
+ PORT darkquad29_wvl_gbe64_one_gbe_app_rx_dvld = darkquad29_wvl_gbe64_one_gbe_app_rx_dvld
+ PORT darkquad29_wvl_gbe64_one_gbe_app_rx_eof = darkquad29_wvl_gbe64_one_gbe_app_rx_eof
+ PORT darkquad29_wvl_gbe64_one_gbe_app_rx_overrun = darkquad29_wvl_gbe64_one_gbe_app_rx_overrun
+ PORT darkquad29_wvl_gbe64_one_gbe_app_rx_srcip = darkquad29_wvl_gbe64_one_gbe_app_rx_srcip
+ PORT darkquad29_wvl_gbe64_one_gbe_app_rx_srcport = darkquad29_wvl_gbe64_one_gbe_app_rx_srcport
+ PORT darkquad29_wvl_gbe64_one_gbe_app_tx_afull = darkquad29_wvl_gbe64_one_gbe_app_tx_afull
+ PORT darkquad29_wvl_gbe64_one_gbe_app_tx_overflow = darkquad29_wvl_gbe64_one_gbe_app_tx_overflow
+ PORT darkquad29_wvl_gbe64_one_gbe_app_rx_ack = darkquad29_wvl_gbe64_one_gbe_app_rx_ack
+ PORT darkquad29_wvl_gbe64_one_gbe_app_rx_rst = darkquad29_wvl_gbe64_one_gbe_app_rx_rst
+ PORT darkquad29_wvl_gbe64_one_gbe_app_tx_data = darkquad29_wvl_gbe64_one_gbe_app_tx_data
+ PORT darkquad29_wvl_gbe64_one_gbe_app_tx_destip = darkquad29_wvl_gbe64_one_gbe_app_tx_destip
+ PORT darkquad29_wvl_gbe64_one_gbe_app_tx_destport = darkquad29_wvl_gbe64_one_gbe_app_tx_destport
+ PORT darkquad29_wvl_gbe64_one_gbe_app_tx_dvld = darkquad29_wvl_gbe64_one_gbe_app_tx_dvld
+ PORT darkquad29_wvl_gbe64_one_gbe_app_tx_eof = darkquad29_wvl_gbe64_one_gbe_app_tx_eof
+ PORT darkquad29_wvl_gbe64_one_gbe_app_tx_rst = darkquad29_wvl_gbe64_one_gbe_app_tx_rst
+ PORT darkquad29_wvl_gbe64_rst_user_data_out = darkquad29_wvl_gbe64_rst_user_data_out
+ PORT darkquad29_wvl_gbe64_tx_afull_user_data_in = darkquad29_wvl_gbe64_tx_afull_user_data_in
+ PORT darkquad29_wvl_gbe64_tx_overrun_user_data_in = darkquad29_wvl_gbe64_tx_overrun_user_data_in
+ PORT darkquad29_wvl_gbe64_words_per_frame_user_data_out = darkquad29_wvl_gbe64_words_per_frame_user_data_out
+ PORT darkquad29_wvl_n_eof_sent_user_data_in = darkquad29_wvl_n_eof_sent_user_data_in
+ PORT darkquad29_wvl_n_photons_user_data_in = darkquad29_wvl_n_photons_user_data_in
+ PORT darkquad29_wvl_pfb_fft_check_fft_oflow_user_data_in = darkquad29_wvl_pfb_fft_check_fft_oflow_user_data_in
+ PORT darkquad29_wvl_phase_dmp_ch_we_user_data_out = darkquad29_wvl_phase_dmp_ch_we_user_data_out
+ PORT darkquad29_wvl_phase_dmp_on_user_data_out = darkquad29_wvl_phase_dmp_on_user_data_out
+ PORT darkquad29_wvl_phase_port_user_data_out = darkquad29_wvl_phase_port_user_data_out
+ PORT darkquad29_wvl_photon_port_user_data_out = darkquad29_wvl_photon_port_user_data_out
+ PORT darkquad29_wvl_prog_fir0_load_chan_user_data_out = darkquad29_wvl_prog_fir0_load_chan_user_data_out
+ PORT darkquad29_wvl_prog_fir0_single_chan_coeffs_data_out = darkquad29_wvl_prog_fir0_single_chan_coeffs_data_out
+ PORT darkquad29_wvl_prog_fir0_single_chan_coeffs_addr = darkquad29_wvl_prog_fir0_single_chan_coeffs_addr
+ PORT darkquad29_wvl_prog_fir0_single_chan_coeffs_data_in = darkquad29_wvl_prog_fir0_single_chan_coeffs_data_in
+ PORT darkquad29_wvl_prog_fir0_single_chan_coeffs_we = darkquad29_wvl_prog_fir0_single_chan_coeffs_we
+ PORT darkquad29_wvl_prog_fir1_load_chan_user_data_out = darkquad29_wvl_prog_fir1_load_chan_user_data_out
+ PORT darkquad29_wvl_prog_fir1_single_chan_coeffs_data_out = darkquad29_wvl_prog_fir1_single_chan_coeffs_data_out
+ PORT darkquad29_wvl_prog_fir1_single_chan_coeffs_addr = darkquad29_wvl_prog_fir1_single_chan_coeffs_addr
+ PORT darkquad29_wvl_prog_fir1_single_chan_coeffs_data_in = darkquad29_wvl_prog_fir1_single_chan_coeffs_data_in
+ PORT darkquad29_wvl_prog_fir1_single_chan_coeffs_we = darkquad29_wvl_prog_fir1_single_chan_coeffs_we
+ PORT darkquad29_wvl_prog_fir2_load_chan_user_data_out = darkquad29_wvl_prog_fir2_load_chan_user_data_out
+ PORT darkquad29_wvl_prog_fir2_single_chan_coeffs_data_out = darkquad29_wvl_prog_fir2_single_chan_coeffs_data_out
+ PORT darkquad29_wvl_prog_fir2_single_chan_coeffs_addr = darkquad29_wvl_prog_fir2_single_chan_coeffs_addr
+ PORT darkquad29_wvl_prog_fir2_single_chan_coeffs_data_in = darkquad29_wvl_prog_fir2_single_chan_coeffs_data_in
+ PORT darkquad29_wvl_prog_fir2_single_chan_coeffs_we = darkquad29_wvl_prog_fir2_single_chan_coeffs_we
+ PORT darkquad29_wvl_prog_fir3_load_chan_user_data_out = darkquad29_wvl_prog_fir3_load_chan_user_data_out
+ PORT darkquad29_wvl_prog_fir3_single_chan_coeffs_data_out = darkquad29_wvl_prog_fir3_single_chan_coeffs_data_out
+ PORT darkquad29_wvl_prog_fir3_single_chan_coeffs_addr = darkquad29_wvl_prog_fir3_single_chan_coeffs_addr
+ PORT darkquad29_wvl_prog_fir3_single_chan_coeffs_data_in = darkquad29_wvl_prog_fir3_single_chan_coeffs_data_in
+ PORT darkquad29_wvl_prog_fir3_single_chan_coeffs_we = darkquad29_wvl_prog_fir3_single_chan_coeffs_we
+ PORT darkquad29_wvl_run_user_data_out = darkquad29_wvl_run_user_data_out
+ PORT darkquad29_wvl_sel_ch_user_data_out = darkquad29_wvl_sel_ch_user_data_out
+ PORT darkquad29_wvl_snp_phs_ss_bram_data_out = darkquad29_wvl_snp_phs_ss_bram_data_out
+ PORT darkquad29_wvl_snp_phs_ss_bram_addr = darkquad29_wvl_snp_phs_ss_bram_addr
+ PORT darkquad29_wvl_snp_phs_ss_bram_data_in = darkquad29_wvl_snp_phs_ss_bram_data_in
+ PORT darkquad29_wvl_snp_phs_ss_bram_we = darkquad29_wvl_snp_phs_ss_bram_we
+ PORT darkquad29_wvl_snp_phs_ss_ctrl_user_data_out = darkquad29_wvl_snp_phs_ss_ctrl_user_data_out
+ PORT darkquad29_wvl_snp_phs_ss_status_user_data_in = darkquad29_wvl_snp_phs_ss_status_user_data_in
+ PORT darkquad29_wvl_start_cap_user_data_out = darkquad29_wvl_start_cap_user_data_out
+ PORT darkquad29_wvl_timekeeper_base_ts_user_data_out = darkquad29_wvl_timekeeper_base_ts_user_data_out
+ PORT darkquad29_wvl_timekeeper_sec_now_user_data_in = darkquad29_wvl_timekeeper_sec_now_user_data_in
+ PORT darkquad29_wvl_trig_snp_user_data_out = darkquad29_wvl_trig_snp_user_data_out
+END
+
+############################
+# Simulink interfaces      #
+############################
+
+# darkquad29_wvl/XSG_core_config
+
+
+# darkquad29_wvl/a2g_ctrl/adcdac_2g_ctrl
+BEGIN adcdac_2g_ctrl
+ PARAMETER INSTANCE = darkquad29_wvl_a2g_ctrl_adcdac_2g_ctrl
+ PARAMETER HW_VER = 1.00.a
+ PORT user_rx_data = darkquad29_wvl_a2g_ctrl_adcdac_2g_ctrl_user_rx_data
+ PORT user_rx_full = darkquad29_wvl_a2g_ctrl_adcdac_2g_ctrl_user_rx_full
+ PORT user_rx_val = darkquad29_wvl_a2g_ctrl_adcdac_2g_ctrl_user_rx_val
+ PORT user_tx_full = darkquad29_wvl_a2g_ctrl_adcdac_2g_ctrl_user_tx_full
+ PORT user_rx_rst = darkquad29_wvl_a2g_ctrl_adcdac_2g_ctrl_user_rx_rst
+ PORT user_tx_data = darkquad29_wvl_a2g_ctrl_adcdac_2g_ctrl_user_tx_data
+ PORT user_tx_rst = darkquad29_wvl_a2g_ctrl_adcdac_2g_ctrl_user_tx_rst
+ PORT user_tx_val = darkquad29_wvl_a2g_ctrl_adcdac_2g_ctrl_user_tx_val
+ PORT zdok_tx_data_p = adc_ctrl_tx_data_p
+ PORT zdok_tx_data_n = adc_ctrl_tx_data_n
+ PORT zdok_rx_data_p = adc_ctrl_rx_data_p
+ PORT zdok_rx_data_n = adc_ctrl_rx_data_n
+ PORT fpga_clk = adc0_clk
+END
+PORT adc_ctrl_tx_data_p = adc_ctrl_tx_data_p, DIR = out
+PORT adc_ctrl_tx_data_n = adc_ctrl_tx_data_n, DIR = out
+PORT adc_ctrl_rx_data_p = adc_ctrl_rx_data_p, DIR = in
+PORT adc_ctrl_rx_data_n = adc_ctrl_rx_data_n, DIR = in
+
+# darkquad29_wvl/a2g_ctrl/en_bram_dump
+BEGIN opb_register_ppc2simulink
+ PARAMETER INSTANCE = darkquad29_wvl_a2g_ctrl_en_bram_dump
+ PARAMETER HW_VER = 1.00.a
+ PARAMETER C_BASEADDR = 0x01000000
+ PARAMETER C_HIGHADDR = 0x010000FF
+ BUS_INTERFACE SOPB = opb0
+ PORT OPB_Clk = epb_clk
+ PORT user_data_out = darkquad29_wvl_a2g_ctrl_en_bram_dump_user_data_out
+ PORT user_clk = adc0_clk
+END
+
+# darkquad29_wvl/a2g_ctrl/in_val
+BEGIN opb_register_ppc2simulink
+ PARAMETER INSTANCE = darkquad29_wvl_a2g_ctrl_in_val
+ PARAMETER HW_VER = 1.00.a
+ PARAMETER C_BASEADDR = 0x01000100
+ PARAMETER C_HIGHADDR = 0x010001FF
+ BUS_INTERFACE SOPB = opb0
+ PORT OPB_Clk = epb_clk
+ PORT user_data_out = darkquad29_wvl_a2g_ctrl_in_val_user_data_out
+ PORT user_clk = adc0_clk
+END
+
+# darkquad29_wvl/a2g_ctrl/last_tx_data
+BEGIN opb_register_simulink2ppc
+ PARAMETER INSTANCE = darkquad29_wvl_a2g_ctrl_last_tx_data
+ PARAMETER HW_VER = 1.00.a
+ PARAMETER C_BASEADDR = 0x01000200
+ PARAMETER C_HIGHADDR = 0x010002FF
+ BUS_INTERFACE SOPB = opb0
+ PORT OPB_Clk = epb_clk
+ PORT user_data_in = darkquad29_wvl_a2g_ctrl_last_tx_data_user_data_in
+ PORT user_clk = adc0_clk
+END
+
+# darkquad29_wvl/a2g_ctrl/lut_dump/buffer_size
+BEGIN opb_register_ppc2simulink
+ PARAMETER INSTANCE = darkquad29_wvl_a2g_ctrl_lut_dump_buffer_size
+ PARAMETER HW_VER = 1.00.a
+ PARAMETER C_BASEADDR = 0x01000300
+ PARAMETER C_HIGHADDR = 0x010003FF
+ BUS_INTERFACE SOPB = opb0
+ PORT OPB_Clk = epb_clk
+ PORT user_data_out = darkquad29_wvl_a2g_ctrl_lut_dump_buffer_size_user_data_out
+ PORT user_clk = adc0_clk
+END
+
+# darkquad29_wvl/a2g_ctrl/lut_dump/dac_lut_buffer
+BEGIN bram_block_custom
+ PARAMETER INSTANCE = darkquad29_wvl_a2g_ctrl_lut_dump_dac_lut_buffer_ramblk
+ PARAMETER HW_VER = 1.00.a
+ PARAMETER C_PORTA_DWIDTH   = 8
+ PARAMETER C_PORTA_NUM_WE   = 1
+ PARAMETER C_PORTA_DEPTH    = 12
+ PARAMETER C_PORTB_DEPTH    = 10
+ PARAMETER OPTIMIZATION     = Minimum_Area
+ PARAMETER REG_CORE_OUTPUT  = true
+ PARAMETER REG_PRIM_OUTPUT  = true
+ PORT clk           = adc0_clk
+ PORT bram_addr     = darkquad29_wvl_a2g_ctrl_lut_dump_dac_lut_buffer_addr    
+ PORT bram_rd_data  = darkquad29_wvl_a2g_ctrl_lut_dump_dac_lut_buffer_data_out
+ PORT bram_wr_data  = darkquad29_wvl_a2g_ctrl_lut_dump_dac_lut_buffer_data_in 
+ PORT bram_we       = darkquad29_wvl_a2g_ctrl_lut_dump_dac_lut_buffer_we      
+ BUS_INTERFACE PORTB = darkquad29_wvl_a2g_ctrl_lut_dump_dac_lut_buffer_ramblk_portb
+END
+
+BEGIN opb_bram_if_cntlr
+ PARAMETER INSTANCE = darkquad29_wvl_a2g_ctrl_lut_dump_dac_lut_buffer
+ PARAMETER HW_VER = 1.00.a
+ PARAMETER C_OPB_CLK_PERIOD_PS = 10000
+ PARAMETER C_BASEADDR = 0x01001000
+ PARAMETER C_HIGHADDR = 0x01001FFF
+ BUS_INTERFACE SOPB = opb0
+ BUS_INTERFACE PORTA = darkquad29_wvl_a2g_ctrl_lut_dump_dac_lut_buffer_ramblk_portb
+END
+
+
+# darkquad29_wvl/a2g_ctrl/lut_dump/data_period
+BEGIN opb_register_ppc2simulink
+ PARAMETER INSTANCE = darkquad29_wvl_a2g_ctrl_lut_dump_data_period
+ PARAMETER HW_VER = 1.00.a
+ PARAMETER C_BASEADDR = 0x01002000
+ PARAMETER C_HIGHADDR = 0x010020FF
+ BUS_INTERFACE SOPB = opb0
+ PORT OPB_Clk = epb_clk
+ PORT user_data_out = darkquad29_wvl_a2g_ctrl_lut_dump_data_period_user_data_out
+ PORT user_clk = adc0_clk
+END
+
+# darkquad29_wvl/a2g_ctrl/lut_dump/sending_data
+BEGIN opb_register_simulink2ppc
+ PARAMETER INSTANCE = darkquad29_wvl_a2g_ctrl_lut_dump_sending_data
+ PARAMETER HW_VER = 1.00.a
+ PARAMETER C_BASEADDR = 0x01002100
+ PARAMETER C_HIGHADDR = 0x010021FF
+ BUS_INTERFACE SOPB = opb0
+ PORT OPB_Clk = epb_clk
+ PORT user_data_in = darkquad29_wvl_a2g_ctrl_lut_dump_sending_data_user_data_in
+ PORT user_clk = adc0_clk
+END
+
+# darkquad29_wvl/a2g_ctrl/reg_rx_full
+BEGIN opb_register_simulink2ppc
+ PARAMETER INSTANCE = darkquad29_wvl_a2g_ctrl_reg_rx_full
+ PARAMETER HW_VER = 1.00.a
+ PARAMETER C_BASEADDR = 0x01002200
+ PARAMETER C_HIGHADDR = 0x010022FF
+ BUS_INTERFACE SOPB = opb0
+ PORT OPB_Clk = epb_clk
+ PORT user_data_in = darkquad29_wvl_a2g_ctrl_reg_rx_full_user_data_in
+ PORT user_clk = adc0_clk
+END
+
+# darkquad29_wvl/a2g_ctrl/reg_tx_full
+BEGIN opb_register_simulink2ppc
+ PARAMETER INSTANCE = darkquad29_wvl_a2g_ctrl_reg_tx_full
+ PARAMETER HW_VER = 1.00.a
+ PARAMETER C_BASEADDR = 0x01002300
+ PARAMETER C_HIGHADDR = 0x010023FF
+ BUS_INTERFACE SOPB = opb0
+ PORT OPB_Clk = epb_clk
+ PORT user_data_in = darkquad29_wvl_a2g_ctrl_reg_tx_full_user_data_in
+ PORT user_clk = adc0_clk
+END
+
+# darkquad29_wvl/a2g_ctrl/rst
+BEGIN opb_register_ppc2simulink
+ PARAMETER INSTANCE = darkquad29_wvl_a2g_ctrl_rst
+ PARAMETER HW_VER = 1.00.a
+ PARAMETER C_BASEADDR = 0x01002400
+ PARAMETER C_HIGHADDR = 0x010024FF
+ BUS_INTERFACE SOPB = opb0
+ PORT OPB_Clk = epb_clk
+ PORT user_data_out = darkquad29_wvl_a2g_ctrl_rst_user_data_out
+ PORT user_clk = adc0_clk
+END
+
+# darkquad29_wvl/a2g_ctrl/tx_en
+BEGIN opb_register_ppc2simulink
+ PARAMETER INSTANCE = darkquad29_wvl_a2g_ctrl_tx_en
+ PARAMETER HW_VER = 1.00.a
+ PARAMETER C_BASEADDR = 0x01002500
+ PARAMETER C_HIGHADDR = 0x010025FF
+ BUS_INTERFACE SOPB = opb0
+ PORT OPB_Clk = epb_clk
+ PORT user_data_out = darkquad29_wvl_a2g_ctrl_tx_en_user_data_out
+ PORT user_clk = adc0_clk
+END
+
+# darkquad29_wvl/a2g_ctrl/v7_ready
+BEGIN opb_register_simulink2ppc
+ PARAMETER INSTANCE = darkquad29_wvl_a2g_ctrl_v7_ready
+ PARAMETER HW_VER = 1.00.a
+ PARAMETER C_BASEADDR = 0x01002600
+ PARAMETER C_HIGHADDR = 0x010026FF
+ BUS_INTERFACE SOPB = opb0
+ PORT OPB_Clk = epb_clk
+ PORT user_data_in = darkquad29_wvl_a2g_ctrl_v7_ready_user_data_in
+ PORT user_clk = adc0_clk
+END
+
+# darkquad29_wvl/acc_iq/avg0/ss/bram
+BEGIN bram_block_custom
+ PARAMETER INSTANCE = darkquad29_wvl_acc_iq_avg0_ss_bram_ramblk
+ PARAMETER HW_VER = 1.00.a
+ PARAMETER C_PORTA_DWIDTH   = 32
+ PARAMETER C_PORTA_NUM_WE   = 4
+ PARAMETER C_PORTA_DEPTH    = 10
+ PARAMETER C_PORTB_DEPTH    = 10
+ PARAMETER OPTIMIZATION     = Minimum_Area
+ PARAMETER REG_CORE_OUTPUT  = true
+ PARAMETER REG_PRIM_OUTPUT  = true
+ PORT clk           = adc0_clk
+ PORT bram_addr     = darkquad29_wvl_acc_iq_avg0_ss_bram_addr    
+ PORT bram_rd_data  = darkquad29_wvl_acc_iq_avg0_ss_bram_data_out
+ PORT bram_wr_data  = darkquad29_wvl_acc_iq_avg0_ss_bram_data_in 
+ PORT bram_we       = darkquad29_wvl_acc_iq_avg0_ss_bram_we      
+ BUS_INTERFACE PORTB = darkquad29_wvl_acc_iq_avg0_ss_bram_ramblk_portb
+END
+
+BEGIN opb_bram_if_cntlr
+ PARAMETER INSTANCE = darkquad29_wvl_acc_iq_avg0_ss_bram
+ PARAMETER HW_VER = 1.00.a
+ PARAMETER C_OPB_CLK_PERIOD_PS = 10000
+ PARAMETER C_BASEADDR = 0x01003000
+ PARAMETER C_HIGHADDR = 0x01003FFF
+ BUS_INTERFACE SOPB = opb0
+ BUS_INTERFACE PORTA = darkquad29_wvl_acc_iq_avg0_ss_bram_ramblk_portb
+END
+
+
+# darkquad29_wvl/acc_iq/avg0/ss/ctrl
+BEGIN opb_register_ppc2simulink
+ PARAMETER INSTANCE = darkquad29_wvl_acc_iq_avg0_ss_ctrl
+ PARAMETER HW_VER = 1.00.a
+ PARAMETER C_BASEADDR = 0x01004000
+ PARAMETER C_HIGHADDR = 0x010040FF
+ BUS_INTERFACE SOPB = opb0
+ PORT OPB_Clk = epb_clk
+ PORT user_data_out = darkquad29_wvl_acc_iq_avg0_ss_ctrl_user_data_out
+ PORT user_clk = adc0_clk
+END
+
+# darkquad29_wvl/acc_iq/avg0/ss/status
+BEGIN opb_register_simulink2ppc
+ PARAMETER INSTANCE = darkquad29_wvl_acc_iq_avg0_ss_status
+ PARAMETER HW_VER = 1.00.a
+ PARAMETER C_BASEADDR = 0x01004100
+ PARAMETER C_HIGHADDR = 0x010041FF
+ BUS_INTERFACE SOPB = opb0
+ PORT OPB_Clk = epb_clk
+ PORT user_data_in = darkquad29_wvl_acc_iq_avg0_ss_status_user_data_in
+ PORT user_clk = adc0_clk
+END
+
+# darkquad29_wvl/acc_iq/avg1/ss/bram
+BEGIN bram_block_custom
+ PARAMETER INSTANCE = darkquad29_wvl_acc_iq_avg1_ss_bram_ramblk
+ PARAMETER HW_VER = 1.00.a
+ PARAMETER C_PORTA_DWIDTH   = 32
+ PARAMETER C_PORTA_NUM_WE   = 4
+ PARAMETER C_PORTA_DEPTH    = 10
+ PARAMETER C_PORTB_DEPTH    = 10
+ PARAMETER OPTIMIZATION     = Minimum_Area
+ PARAMETER REG_CORE_OUTPUT  = true
+ PARAMETER REG_PRIM_OUTPUT  = true
+ PORT clk           = adc0_clk
+ PORT bram_addr     = darkquad29_wvl_acc_iq_avg1_ss_bram_addr    
+ PORT bram_rd_data  = darkquad29_wvl_acc_iq_avg1_ss_bram_data_out
+ PORT bram_wr_data  = darkquad29_wvl_acc_iq_avg1_ss_bram_data_in 
+ PORT bram_we       = darkquad29_wvl_acc_iq_avg1_ss_bram_we      
+ BUS_INTERFACE PORTB = darkquad29_wvl_acc_iq_avg1_ss_bram_ramblk_portb
+END
+
+BEGIN opb_bram_if_cntlr
+ PARAMETER INSTANCE = darkquad29_wvl_acc_iq_avg1_ss_bram
+ PARAMETER HW_VER = 1.00.a
+ PARAMETER C_OPB_CLK_PERIOD_PS = 10000
+ PARAMETER C_BASEADDR = 0x01005000
+ PARAMETER C_HIGHADDR = 0x01005FFF
+ BUS_INTERFACE SOPB = opb0
+ BUS_INTERFACE PORTA = darkquad29_wvl_acc_iq_avg1_ss_bram_ramblk_portb
+END
+
+
+# darkquad29_wvl/acc_iq/avg1/ss/ctrl
+BEGIN opb_register_ppc2simulink
+ PARAMETER INSTANCE = darkquad29_wvl_acc_iq_avg1_ss_ctrl
+ PARAMETER HW_VER = 1.00.a
+ PARAMETER C_BASEADDR = 0x01006000
+ PARAMETER C_HIGHADDR = 0x010060FF
+ BUS_INTERFACE SOPB = opb0
+ PORT OPB_Clk = epb_clk
+ PORT user_data_out = darkquad29_wvl_acc_iq_avg1_ss_ctrl_user_data_out
+ PORT user_clk = adc0_clk
+END
+
+# darkquad29_wvl/acc_iq/avg1/ss/status
+BEGIN opb_register_simulink2ppc
+ PARAMETER INSTANCE = darkquad29_wvl_acc_iq_avg1_ss_status
+ PARAMETER HW_VER = 1.00.a
+ PARAMETER C_BASEADDR = 0x01006100
+ PARAMETER C_HIGHADDR = 0x010061FF
+ BUS_INTERFACE SOPB = opb0
+ PORT OPB_Clk = epb_clk
+ PORT user_data_in = darkquad29_wvl_acc_iq_avg1_ss_status_user_data_in
+ PORT user_clk = adc0_clk
+END
+
+# darkquad29_wvl/acc_iq/avg2/ss/bram
+BEGIN bram_block_custom
+ PARAMETER INSTANCE = darkquad29_wvl_acc_iq_avg2_ss_bram_ramblk
+ PARAMETER HW_VER = 1.00.a
+ PARAMETER C_PORTA_DWIDTH   = 32
+ PARAMETER C_PORTA_NUM_WE   = 4
+ PARAMETER C_PORTA_DEPTH    = 10
+ PARAMETER C_PORTB_DEPTH    = 10
+ PARAMETER OPTIMIZATION     = Minimum_Area
+ PARAMETER REG_CORE_OUTPUT  = true
+ PARAMETER REG_PRIM_OUTPUT  = true
+ PORT clk           = adc0_clk
+ PORT bram_addr     = darkquad29_wvl_acc_iq_avg2_ss_bram_addr    
+ PORT bram_rd_data  = darkquad29_wvl_acc_iq_avg2_ss_bram_data_out
+ PORT bram_wr_data  = darkquad29_wvl_acc_iq_avg2_ss_bram_data_in 
+ PORT bram_we       = darkquad29_wvl_acc_iq_avg2_ss_bram_we      
+ BUS_INTERFACE PORTB = darkquad29_wvl_acc_iq_avg2_ss_bram_ramblk_portb
+END
+
+BEGIN opb_bram_if_cntlr
+ PARAMETER INSTANCE = darkquad29_wvl_acc_iq_avg2_ss_bram
+ PARAMETER HW_VER = 1.00.a
+ PARAMETER C_OPB_CLK_PERIOD_PS = 10000
+ PARAMETER C_BASEADDR = 0x01080000
+ PARAMETER C_HIGHADDR = 0x01080FFF
+ BUS_INTERFACE SOPB = opb1
+ BUS_INTERFACE PORTA = darkquad29_wvl_acc_iq_avg2_ss_bram_ramblk_portb
+END
+
+
+# darkquad29_wvl/acc_iq/avg2/ss/ctrl
+BEGIN opb_register_ppc2simulink
+ PARAMETER INSTANCE = darkquad29_wvl_acc_iq_avg2_ss_ctrl
+ PARAMETER HW_VER = 1.00.a
+ PARAMETER C_BASEADDR = 0x01081000
+ PARAMETER C_HIGHADDR = 0x010810FF
+ BUS_INTERFACE SOPB = opb1
+ PORT OPB_Clk = epb_clk
+ PORT user_data_out = darkquad29_wvl_acc_iq_avg2_ss_ctrl_user_data_out
+ PORT user_clk = adc0_clk
+END
+
+# darkquad29_wvl/acc_iq/avg2/ss/status
+BEGIN opb_register_simulink2ppc
+ PARAMETER INSTANCE = darkquad29_wvl_acc_iq_avg2_ss_status
+ PARAMETER HW_VER = 1.00.a
+ PARAMETER C_BASEADDR = 0x01081100
+ PARAMETER C_HIGHADDR = 0x010811FF
+ BUS_INTERFACE SOPB = opb1
+ PORT OPB_Clk = epb_clk
+ PORT user_data_in = darkquad29_wvl_acc_iq_avg2_ss_status_user_data_in
+ PORT user_clk = adc0_clk
+END
+
+# darkquad29_wvl/acc_iq/avg3/ss/bram
+BEGIN bram_block_custom
+ PARAMETER INSTANCE = darkquad29_wvl_acc_iq_avg3_ss_bram_ramblk
+ PARAMETER HW_VER = 1.00.a
+ PARAMETER C_PORTA_DWIDTH   = 32
+ PARAMETER C_PORTA_NUM_WE   = 4
+ PARAMETER C_PORTA_DEPTH    = 10
+ PARAMETER C_PORTB_DEPTH    = 10
+ PARAMETER OPTIMIZATION     = Minimum_Area
+ PARAMETER REG_CORE_OUTPUT  = true
+ PARAMETER REG_PRIM_OUTPUT  = true
+ PORT clk           = adc0_clk
+ PORT bram_addr     = darkquad29_wvl_acc_iq_avg3_ss_bram_addr    
+ PORT bram_rd_data  = darkquad29_wvl_acc_iq_avg3_ss_bram_data_out
+ PORT bram_wr_data  = darkquad29_wvl_acc_iq_avg3_ss_bram_data_in 
+ PORT bram_we       = darkquad29_wvl_acc_iq_avg3_ss_bram_we      
+ BUS_INTERFACE PORTB = darkquad29_wvl_acc_iq_avg3_ss_bram_ramblk_portb
+END
+
+BEGIN opb_bram_if_cntlr
+ PARAMETER INSTANCE = darkquad29_wvl_acc_iq_avg3_ss_bram
+ PARAMETER HW_VER = 1.00.a
+ PARAMETER C_OPB_CLK_PERIOD_PS = 10000
+ PARAMETER C_BASEADDR = 0x01082000
+ PARAMETER C_HIGHADDR = 0x01082FFF
+ BUS_INTERFACE SOPB = opb1
+ BUS_INTERFACE PORTA = darkquad29_wvl_acc_iq_avg3_ss_bram_ramblk_portb
+END
+
+
+# darkquad29_wvl/acc_iq/avg3/ss/ctrl
+BEGIN opb_register_ppc2simulink
+ PARAMETER INSTANCE = darkquad29_wvl_acc_iq_avg3_ss_ctrl
+ PARAMETER HW_VER = 1.00.a
+ PARAMETER C_BASEADDR = 0x01083000
+ PARAMETER C_HIGHADDR = 0x010830FF
+ BUS_INTERFACE SOPB = opb1
+ PORT OPB_Clk = epb_clk
+ PORT user_data_out = darkquad29_wvl_acc_iq_avg3_ss_ctrl_user_data_out
+ PORT user_clk = adc0_clk
+END
+
+# darkquad29_wvl/acc_iq/avg3/ss/status
+BEGIN opb_register_simulink2ppc
+ PARAMETER INSTANCE = darkquad29_wvl_acc_iq_avg3_ss_status
+ PARAMETER HW_VER = 1.00.a
+ PARAMETER C_BASEADDR = 0x01083100
+ PARAMETER C_HIGHADDR = 0x010831FF
+ BUS_INTERFACE SOPB = opb1
+ PORT OPB_Clk = epb_clk
+ PORT user_data_in = darkquad29_wvl_acc_iq_avg3_ss_status_user_data_in
+ PORT user_clk = adc0_clk
+END
+
+# darkquad29_wvl/acc_iq/start_acc
+BEGIN opb_register_ppc2simulink
+ PARAMETER INSTANCE = darkquad29_wvl_acc_iq_start_acc
+ PARAMETER HW_VER = 1.00.a
+ PARAMETER C_BASEADDR = 0x01083200
+ PARAMETER C_HIGHADDR = 0x010832FF
+ BUS_INTERFACE SOPB = opb1
+ PORT OPB_Clk = epb_clk
+ PORT user_data_out = darkquad29_wvl_acc_iq_start_acc_user_data_out
+ PORT user_clk = adc0_clk
+END
+
+# darkquad29_wvl/adc_in/adcdac_2g
+BEGIN adcdac_2g_interface
+ PARAMETER INSTANCE = darkquad29_wvl_adc_in_adcdac_2g
+ PARAMETER HW_VER = 1.00.a
+ PORT user_data_i0 = darkquad29_wvl_adc_in_adcdac_2g_user_data_i0
+ PORT user_data_i1 = darkquad29_wvl_adc_in_adcdac_2g_user_data_i1
+ PORT user_data_i2 = darkquad29_wvl_adc_in_adcdac_2g_user_data_i2
+ PORT user_data_i3 = darkquad29_wvl_adc_in_adcdac_2g_user_data_i3
+ PORT user_data_i4 = darkquad29_wvl_adc_in_adcdac_2g_user_data_i4
+ PORT user_data_i5 = darkquad29_wvl_adc_in_adcdac_2g_user_data_i5
+ PORT user_data_i6 = darkquad29_wvl_adc_in_adcdac_2g_user_data_i6
+ PORT user_data_i7 = darkquad29_wvl_adc_in_adcdac_2g_user_data_i7
+ PORT user_data_q0 = darkquad29_wvl_adc_in_adcdac_2g_user_data_q0
+ PORT user_data_q1 = darkquad29_wvl_adc_in_adcdac_2g_user_data_q1
+ PORT user_data_q2 = darkquad29_wvl_adc_in_adcdac_2g_user_data_q2
+ PORT user_data_q3 = darkquad29_wvl_adc_in_adcdac_2g_user_data_q3
+ PORT user_data_q4 = darkquad29_wvl_adc_in_adcdac_2g_user_data_q4
+ PORT user_data_q5 = darkquad29_wvl_adc_in_adcdac_2g_user_data_q5
+ PORT user_data_q6 = darkquad29_wvl_adc_in_adcdac_2g_user_data_q6
+ PORT user_data_q7 = darkquad29_wvl_adc_in_adcdac_2g_user_data_q7
+ PORT user_info_i0 = darkquad29_wvl_adc_in_adcdac_2g_user_info_i0
+ PORT user_info_i1 = darkquad29_wvl_adc_in_adcdac_2g_user_info_i1
+ PORT user_info_i2 = darkquad29_wvl_adc_in_adcdac_2g_user_info_i2
+ PORT user_info_i3 = darkquad29_wvl_adc_in_adcdac_2g_user_info_i3
+ PORT user_info_i4 = darkquad29_wvl_adc_in_adcdac_2g_user_info_i4
+ PORT user_info_i5 = darkquad29_wvl_adc_in_adcdac_2g_user_info_i5
+ PORT user_info_i6 = darkquad29_wvl_adc_in_adcdac_2g_user_info_i6
+ PORT user_info_i7 = darkquad29_wvl_adc_in_adcdac_2g_user_info_i7
+ PORT user_info_q0 = darkquad29_wvl_adc_in_adcdac_2g_user_info_q0
+ PORT user_info_q1 = darkquad29_wvl_adc_in_adcdac_2g_user_info_q1
+ PORT user_info_q2 = darkquad29_wvl_adc_in_adcdac_2g_user_info_q2
+ PORT user_info_q3 = darkquad29_wvl_adc_in_adcdac_2g_user_info_q3
+ PORT user_info_q4 = darkquad29_wvl_adc_in_adcdac_2g_user_info_q4
+ PORT user_info_q5 = darkquad29_wvl_adc_in_adcdac_2g_user_info_q5
+ PORT user_info_q6 = darkquad29_wvl_adc_in_adcdac_2g_user_info_q6
+ PORT user_info_q7 = darkquad29_wvl_adc_in_adcdac_2g_user_info_q7
+ PORT user_mmcm_locked = darkquad29_wvl_adc_in_adcdac_2g_user_mmcm_locked
+ PORT user_sync = darkquad29_wvl_adc_in_adcdac_2g_user_sync
+ PORT user_valid = darkquad29_wvl_adc_in_adcdac_2g_user_valid
+ PORT user_dly_val = darkquad29_wvl_adc_in_adcdac_2g_user_dly_val
+ PORT user_inc_mmcm_phs = darkquad29_wvl_adc_in_adcdac_2g_user_inc_mmcm_phs
+ PORT user_load_dly0 = darkquad29_wvl_adc_in_adcdac_2g_user_load_dly0
+ PORT user_pos_mmcm_phs = darkquad29_wvl_adc_in_adcdac_2g_user_pos_mmcm_phs
+ PORT user_rdy_i0 = darkquad29_wvl_adc_in_adcdac_2g_user_rdy_i0
+ PORT valid_p = adc_valid_p
+ PORT valid_n = adc_valid_n
+ PORT data0_p = adc_data0_p
+ PORT data0_n = adc_data0_n
+ PORT info0_p = adc_info0_p
+ PORT info0_n = adc_info0_n
+ PORT data1_p = adc_data1_p
+ PORT data1_n = adc_data1_n
+ PORT info1_p = adc_info1_p
+ PORT info1_n = adc_info1_n
+ PORT data2_p = adc_data2z0_p
+ PORT data2_n = adc_data2z0_n
+ PORT info2_p = adc_info2_p
+ PORT info2_n = adc_info2_n
+ PORT data3_p = adc_data3_p
+ PORT data3_n = adc_data3_n
+ PORT info3_p = adc_info3_p
+ PORT info3_n = adc_info3_n
+ PORT data0_smpl_clk_p = adc_data0_smpl_clk_p
+ PORT data0_smpl_clk_n = adc_data0_smpl_clk_n
+ PORT sync_pps_p = adc_sync_pps_p
+ PORT sync_pps_n = adc_sync_pps_n
+ PORT data0_rdy_p = adc_data0_rdy_p
+ PORT data0_rdy_n = adc_data0_rdy_n
+ PORT sync_out_p = adc_sync_out_p
+ PORT sync_out_n = adc_sync_out_n
+ PORT adc_clk_out = adc0_clk
+ PORT adc_clk90_out = adc0_clk90
+ PORT adc_clk180_out = adc0_clk180
+ PORT adc_clk270_out = adc0_clk270
+ PORT adc_mmcm_locked = adc0_mmcm_locked
+ PORT sys_clk = sys_clk
+END
+PORT adc_valid_p = adc_valid_p, DIR = in
+PORT adc_valid_n = adc_valid_n, DIR = in
+PORT adc_data0_p = adc_data0_p, DIR = in, VEC = [11:0]
+PORT adc_data0_n = adc_data0_n, DIR = in, VEC = [11:0]
+PORT adc_info0_p = adc_info0_p, DIR = in, VEC = [1:0]
+PORT adc_info0_n = adc_info0_n, DIR = in, VEC = [1:0]
+PORT adc_data1_p = adc_data1_p, DIR = in, VEC = [11:0]
+PORT adc_data1_n = adc_data1_n, DIR = in, VEC = [11:0]
+PORT adc_info1_p = adc_info1_p, DIR = in, VEC = [1:0]
+PORT adc_info1_n = adc_info1_n, DIR = in, VEC = [1:0]
+PORT adc_data2z0_p = adc_data2z0_p, DIR = in, VEC = [11:0]
+PORT adc_data2z0_n = adc_data2z0_n, DIR = in, VEC = [11:0]
+PORT adc_info2_p = adc_info2_p, DIR = in, VEC = [1:0]
+PORT adc_info2_n = adc_info2_n, DIR = in, VEC = [1:0]
+PORT adc_data3_p = adc_data3_p, DIR = in, VEC = [11:0]
+PORT adc_data3_n = adc_data3_n, DIR = in, VEC = [11:0]
+PORT adc_info3_p = adc_info3_p, DIR = in, VEC = [1:0]
+PORT adc_info3_n = adc_info3_n, DIR = in, VEC = [1:0]
+PORT adc_data0_smpl_clk_p = adc_data0_smpl_clk_p, DIR = in, SIGIS = CLK, CLK_FREQ = 125000000
+PORT adc_data0_smpl_clk_n = adc_data0_smpl_clk_n, DIR = in, SIGIS = CLK, CLK_FREQ = 125000000
+PORT adc_sync_pps_p = adc_sync_pps_p, DIR = in, SIGIS = CLK, CLK_FREQ = 125000000
+PORT adc_sync_pps_n = adc_sync_pps_n, DIR = in, SIGIS = CLK, CLK_FREQ = 125000000
+PORT adc_data0_rdy_p = adc_data0_rdy_p, DIR = out
+PORT adc_data0_rdy_n = adc_data0_rdy_n, DIR = out
+PORT adc_sync_out_p = adc_sync_out_p, DIR = out
+PORT adc_sync_out_n = adc_sync_out_n, DIR = out
+
+# darkquad29_wvl/adc_in/dly_val
+BEGIN opb_register_ppc2simulink
+ PARAMETER INSTANCE = darkquad29_wvl_adc_in_dly_val
+ PARAMETER HW_VER = 1.00.a
+ PARAMETER C_BASEADDR = 0x01083300
+ PARAMETER C_HIGHADDR = 0x010833FF
+ BUS_INTERFACE SOPB = opb1
+ PORT OPB_Clk = epb_clk
+ PORT user_data_out = darkquad29_wvl_adc_in_dly_val_user_data_out
+ PORT user_clk = adc0_clk
+END
+
+# darkquad29_wvl/adc_in/i_scale
+BEGIN opb_register_ppc2simulink
+ PARAMETER INSTANCE = darkquad29_wvl_adc_in_i_scale
+ PARAMETER HW_VER = 1.00.a
+ PARAMETER C_BASEADDR = 0x01083400
+ PARAMETER C_HIGHADDR = 0x010834FF
+ BUS_INTERFACE SOPB = opb1
+ PORT OPB_Clk = epb_clk
+ PORT user_data_out = darkquad29_wvl_adc_in_i_scale_user_data_out
+ PORT user_clk = adc0_clk
+END
+
+# darkquad29_wvl/adc_in/inc_phs
+BEGIN opb_register_ppc2simulink
+ PARAMETER INSTANCE = darkquad29_wvl_adc_in_inc_phs
+ PARAMETER HW_VER = 1.00.a
+ PARAMETER C_BASEADDR = 0x01083500
+ PARAMETER C_HIGHADDR = 0x010835FF
+ BUS_INTERFACE SOPB = opb1
+ PORT OPB_Clk = epb_clk
+ PORT user_data_out = darkquad29_wvl_adc_in_inc_phs_user_data_out
+ PORT user_clk = adc0_clk
+END
+
+# darkquad29_wvl/adc_in/load_dly
+BEGIN opb_register_ppc2simulink
+ PARAMETER INSTANCE = darkquad29_wvl_adc_in_load_dly
+ PARAMETER HW_VER = 1.00.a
+ PARAMETER C_BASEADDR = 0x01083600
+ PARAMETER C_HIGHADDR = 0x010836FF
+ BUS_INTERFACE SOPB = opb1
+ PORT OPB_Clk = epb_clk
+ PORT user_data_out = darkquad29_wvl_adc_in_load_dly_user_data_out
+ PORT user_clk = adc0_clk
+END
+
+# darkquad29_wvl/adc_in/locked
+BEGIN opb_register_simulink2ppc
+ PARAMETER INSTANCE = darkquad29_wvl_adc_in_locked
+ PARAMETER HW_VER = 1.00.a
+ PARAMETER C_BASEADDR = 0x01083700
+ PARAMETER C_HIGHADDR = 0x010837FF
+ BUS_INTERFACE SOPB = opb1
+ PORT OPB_Clk = epb_clk
+ PORT user_data_in = darkquad29_wvl_adc_in_locked_user_data_in
+ PORT user_clk = adc0_clk
+END
+
+# darkquad29_wvl/adc_in/n_miss_pps
+BEGIN opb_register_simulink2ppc
+ PARAMETER INSTANCE = darkquad29_wvl_adc_in_n_miss_pps
+ PARAMETER HW_VER = 1.00.a
+ PARAMETER C_BASEADDR = 0x01083800
+ PARAMETER C_HIGHADDR = 0x010838FF
+ BUS_INTERFACE SOPB = opb1
+ PORT OPB_Clk = epb_clk
+ PORT user_data_in = darkquad29_wvl_adc_in_n_miss_pps_user_data_in
+ PORT user_clk = adc0_clk
+END
+
+# darkquad29_wvl/adc_in/pos_phs
+BEGIN opb_register_ppc2simulink
+ PARAMETER INSTANCE = darkquad29_wvl_adc_in_pos_phs
+ PARAMETER HW_VER = 1.00.a
+ PARAMETER C_BASEADDR = 0x01083900
+ PARAMETER C_HIGHADDR = 0x010839FF
+ BUS_INTERFACE SOPB = opb1
+ PORT OPB_Clk = epb_clk
+ PORT user_data_out = darkquad29_wvl_adc_in_pos_phs_user_data_out
+ PORT user_clk = adc0_clk
+END
+
+# darkquad29_wvl/adc_in/raw_pps
+BEGIN opb_register_simulink2ppc
+ PARAMETER INSTANCE = darkquad29_wvl_adc_in_raw_pps
+ PARAMETER HW_VER = 1.00.a
+ PARAMETER C_BASEADDR = 0x01083A00
+ PARAMETER C_HIGHADDR = 0x01083AFF
+ BUS_INTERFACE SOPB = opb1
+ PORT OPB_Clk = epb_clk
+ PORT user_data_in = darkquad29_wvl_adc_in_raw_pps_user_data_in
+ PORT user_clk = adc0_clk
+END
+
+# darkquad29_wvl/adc_in/snp_cal0/ss/bram
+BEGIN bram_block_custom
+ PARAMETER INSTANCE = darkquad29_wvl_adc_in_snp_cal0_ss_bram_ramblk
+ PARAMETER HW_VER = 1.00.a
+ PARAMETER C_PORTA_DWIDTH   = 64
+ PARAMETER C_PORTA_NUM_WE   = 8
+ PARAMETER C_PORTA_DEPTH    = 9
+ PARAMETER C_PORTB_DEPTH    = 10
+ PARAMETER OPTIMIZATION     = Minimum_Area
+ PARAMETER REG_CORE_OUTPUT  = true
+ PARAMETER REG_PRIM_OUTPUT  = true
+ PORT clk           = adc0_clk
+ PORT bram_addr     = darkquad29_wvl_adc_in_snp_cal0_ss_bram_addr    
+ PORT bram_rd_data  = darkquad29_wvl_adc_in_snp_cal0_ss_bram_data_out
+ PORT bram_wr_data  = darkquad29_wvl_adc_in_snp_cal0_ss_bram_data_in 
+ PORT bram_we       = darkquad29_wvl_adc_in_snp_cal0_ss_bram_we      
+ BUS_INTERFACE PORTB = darkquad29_wvl_adc_in_snp_cal0_ss_bram_ramblk_portb
+END
+
+BEGIN opb_bram_if_cntlr
+ PARAMETER INSTANCE = darkquad29_wvl_adc_in_snp_cal0_ss_bram
+ PARAMETER HW_VER = 1.00.a
+ PARAMETER C_OPB_CLK_PERIOD_PS = 10000
+ PARAMETER C_BASEADDR = 0x01084000
+ PARAMETER C_HIGHADDR = 0x01084FFF
+ BUS_INTERFACE SOPB = opb1
+ BUS_INTERFACE PORTA = darkquad29_wvl_adc_in_snp_cal0_ss_bram_ramblk_portb
+END
+
+
+# darkquad29_wvl/adc_in/snp_cal0/ss/ctrl
+BEGIN opb_register_ppc2simulink
+ PARAMETER INSTANCE = darkquad29_wvl_adc_in_snp_cal0_ss_ctrl
+ PARAMETER HW_VER = 1.00.a
+ PARAMETER C_BASEADDR = 0x01085000
+ PARAMETER C_HIGHADDR = 0x010850FF
+ BUS_INTERFACE SOPB = opb1
+ PORT OPB_Clk = epb_clk
+ PORT user_data_out = darkquad29_wvl_adc_in_snp_cal0_ss_ctrl_user_data_out
+ PORT user_clk = adc0_clk
+END
+
+# darkquad29_wvl/adc_in/snp_cal0/ss/status
+BEGIN opb_register_simulink2ppc
+ PARAMETER INSTANCE = darkquad29_wvl_adc_in_snp_cal0_ss_status
+ PARAMETER HW_VER = 1.00.a
+ PARAMETER C_BASEADDR = 0x01085100
+ PARAMETER C_HIGHADDR = 0x010851FF
+ BUS_INTERFACE SOPB = opb1
+ PORT OPB_Clk = epb_clk
+ PORT user_data_in = darkquad29_wvl_adc_in_snp_cal0_ss_status_user_data_in
+ PORT user_clk = adc0_clk
+END
+
+# darkquad29_wvl/adc_in/snp_cal1/ss/bram
+BEGIN bram_block_custom
+ PARAMETER INSTANCE = darkquad29_wvl_adc_in_snp_cal1_ss_bram_ramblk
+ PARAMETER HW_VER = 1.00.a
+ PARAMETER C_PORTA_DWIDTH   = 64
+ PARAMETER C_PORTA_NUM_WE   = 8
+ PARAMETER C_PORTA_DEPTH    = 9
+ PARAMETER C_PORTB_DEPTH    = 10
+ PARAMETER OPTIMIZATION     = Minimum_Area
+ PARAMETER REG_CORE_OUTPUT  = true
+ PARAMETER REG_PRIM_OUTPUT  = true
+ PORT clk           = adc0_clk
+ PORT bram_addr     = darkquad29_wvl_adc_in_snp_cal1_ss_bram_addr    
+ PORT bram_rd_data  = darkquad29_wvl_adc_in_snp_cal1_ss_bram_data_out
+ PORT bram_wr_data  = darkquad29_wvl_adc_in_snp_cal1_ss_bram_data_in 
+ PORT bram_we       = darkquad29_wvl_adc_in_snp_cal1_ss_bram_we      
+ BUS_INTERFACE PORTB = darkquad29_wvl_adc_in_snp_cal1_ss_bram_ramblk_portb
+END
+
+BEGIN opb_bram_if_cntlr
+ PARAMETER INSTANCE = darkquad29_wvl_adc_in_snp_cal1_ss_bram
+ PARAMETER HW_VER = 1.00.a
+ PARAMETER C_OPB_CLK_PERIOD_PS = 10000
+ PARAMETER C_BASEADDR = 0x01086000
+ PARAMETER C_HIGHADDR = 0x01086FFF
+ BUS_INTERFACE SOPB = opb1
+ BUS_INTERFACE PORTA = darkquad29_wvl_adc_in_snp_cal1_ss_bram_ramblk_portb
+END
+
+
+# darkquad29_wvl/adc_in/snp_cal1/ss/ctrl
+BEGIN opb_register_ppc2simulink
+ PARAMETER INSTANCE = darkquad29_wvl_adc_in_snp_cal1_ss_ctrl
+ PARAMETER HW_VER = 1.00.a
+ PARAMETER C_BASEADDR = 0x01087000
+ PARAMETER C_HIGHADDR = 0x010870FF
+ BUS_INTERFACE SOPB = opb1
+ PORT OPB_Clk = epb_clk
+ PORT user_data_out = darkquad29_wvl_adc_in_snp_cal1_ss_ctrl_user_data_out
+ PORT user_clk = adc0_clk
+END
+
+# darkquad29_wvl/adc_in/snp_cal1/ss/status
+BEGIN opb_register_simulink2ppc
+ PARAMETER INSTANCE = darkquad29_wvl_adc_in_snp_cal1_ss_status
+ PARAMETER HW_VER = 1.00.a
+ PARAMETER C_BASEADDR = 0x01087100
+ PARAMETER C_HIGHADDR = 0x010871FF
+ BUS_INTERFACE SOPB = opb1
+ PORT OPB_Clk = epb_clk
+ PORT user_data_in = darkquad29_wvl_adc_in_snp_cal1_ss_status_user_data_in
+ PORT user_clk = adc0_clk
+END
+
+# darkquad29_wvl/adc_in/snp_cal2/ss/bram
+BEGIN bram_block_custom
+ PARAMETER INSTANCE = darkquad29_wvl_adc_in_snp_cal2_ss_bram_ramblk
+ PARAMETER HW_VER = 1.00.a
+ PARAMETER C_PORTA_DWIDTH   = 64
+ PARAMETER C_PORTA_NUM_WE   = 8
+ PARAMETER C_PORTA_DEPTH    = 9
+ PARAMETER C_PORTB_DEPTH    = 10
+ PARAMETER OPTIMIZATION     = Minimum_Area
+ PARAMETER REG_CORE_OUTPUT  = true
+ PARAMETER REG_PRIM_OUTPUT  = true
+ PORT clk           = adc0_clk
+ PORT bram_addr     = darkquad29_wvl_adc_in_snp_cal2_ss_bram_addr    
+ PORT bram_rd_data  = darkquad29_wvl_adc_in_snp_cal2_ss_bram_data_out
+ PORT bram_wr_data  = darkquad29_wvl_adc_in_snp_cal2_ss_bram_data_in 
+ PORT bram_we       = darkquad29_wvl_adc_in_snp_cal2_ss_bram_we      
+ BUS_INTERFACE PORTB = darkquad29_wvl_adc_in_snp_cal2_ss_bram_ramblk_portb
+END
+
+BEGIN opb_bram_if_cntlr
+ PARAMETER INSTANCE = darkquad29_wvl_adc_in_snp_cal2_ss_bram
+ PARAMETER HW_VER = 1.00.a
+ PARAMETER C_OPB_CLK_PERIOD_PS = 10000
+ PARAMETER C_BASEADDR = 0x01088000
+ PARAMETER C_HIGHADDR = 0x01088FFF
+ BUS_INTERFACE SOPB = opb1
+ BUS_INTERFACE PORTA = darkquad29_wvl_adc_in_snp_cal2_ss_bram_ramblk_portb
+END
+
+
+# darkquad29_wvl/adc_in/snp_cal2/ss/ctrl
+BEGIN opb_register_ppc2simulink
+ PARAMETER INSTANCE = darkquad29_wvl_adc_in_snp_cal2_ss_ctrl
+ PARAMETER HW_VER = 1.00.a
+ PARAMETER C_BASEADDR = 0x01089000
+ PARAMETER C_HIGHADDR = 0x010890FF
+ BUS_INTERFACE SOPB = opb1
+ PORT OPB_Clk = epb_clk
+ PORT user_data_out = darkquad29_wvl_adc_in_snp_cal2_ss_ctrl_user_data_out
+ PORT user_clk = adc0_clk
+END
+
+# darkquad29_wvl/adc_in/snp_cal2/ss/status
+BEGIN opb_register_simulink2ppc
+ PARAMETER INSTANCE = darkquad29_wvl_adc_in_snp_cal2_ss_status
+ PARAMETER HW_VER = 1.00.a
+ PARAMETER C_BASEADDR = 0x01089100
+ PARAMETER C_HIGHADDR = 0x010891FF
+ BUS_INTERFACE SOPB = opb1
+ PORT OPB_Clk = epb_clk
+ PORT user_data_in = darkquad29_wvl_adc_in_snp_cal2_ss_status_user_data_in
+ PORT user_clk = adc0_clk
+END
+
+# darkquad29_wvl/adc_in/snp_cal3/ss/bram
+BEGIN bram_block_custom
+ PARAMETER INSTANCE = darkquad29_wvl_adc_in_snp_cal3_ss_bram_ramblk
+ PARAMETER HW_VER = 1.00.a
+ PARAMETER C_PORTA_DWIDTH   = 64
+ PARAMETER C_PORTA_NUM_WE   = 8
+ PARAMETER C_PORTA_DEPTH    = 9
+ PARAMETER C_PORTB_DEPTH    = 10
+ PARAMETER OPTIMIZATION     = Minimum_Area
+ PARAMETER REG_CORE_OUTPUT  = true
+ PARAMETER REG_PRIM_OUTPUT  = true
+ PORT clk           = adc0_clk
+ PORT bram_addr     = darkquad29_wvl_adc_in_snp_cal3_ss_bram_addr    
+ PORT bram_rd_data  = darkquad29_wvl_adc_in_snp_cal3_ss_bram_data_out
+ PORT bram_wr_data  = darkquad29_wvl_adc_in_snp_cal3_ss_bram_data_in 
+ PORT bram_we       = darkquad29_wvl_adc_in_snp_cal3_ss_bram_we      
+ BUS_INTERFACE PORTB = darkquad29_wvl_adc_in_snp_cal3_ss_bram_ramblk_portb
+END
+
+BEGIN opb_bram_if_cntlr
+ PARAMETER INSTANCE = darkquad29_wvl_adc_in_snp_cal3_ss_bram
+ PARAMETER HW_VER = 1.00.a
+ PARAMETER C_OPB_CLK_PERIOD_PS = 10000
+ PARAMETER C_BASEADDR = 0x0108A000
+ PARAMETER C_HIGHADDR = 0x0108AFFF
+ BUS_INTERFACE SOPB = opb1
+ BUS_INTERFACE PORTA = darkquad29_wvl_adc_in_snp_cal3_ss_bram_ramblk_portb
+END
+
+
+# darkquad29_wvl/adc_in/snp_cal3/ss/ctrl
+BEGIN opb_register_ppc2simulink
+ PARAMETER INSTANCE = darkquad29_wvl_adc_in_snp_cal3_ss_ctrl
+ PARAMETER HW_VER = 1.00.a
+ PARAMETER C_BASEADDR = 0x0108B000
+ PARAMETER C_HIGHADDR = 0x0108B0FF
+ BUS_INTERFACE SOPB = opb1
+ PORT OPB_Clk = epb_clk
+ PORT user_data_out = darkquad29_wvl_adc_in_snp_cal3_ss_ctrl_user_data_out
+ PORT user_clk = adc0_clk
+END
+
+# darkquad29_wvl/adc_in/snp_cal3/ss/status
+BEGIN opb_register_simulink2ppc
+ PARAMETER INSTANCE = darkquad29_wvl_adc_in_snp_cal3_ss_status
+ PARAMETER HW_VER = 1.00.a
+ PARAMETER C_BASEADDR = 0x0108B100
+ PARAMETER C_HIGHADDR = 0x0108B1FF
+ BUS_INTERFACE SOPB = opb1
+ PORT OPB_Clk = epb_clk
+ PORT user_data_in = darkquad29_wvl_adc_in_snp_cal3_ss_status_user_data_in
+ PORT user_clk = adc0_clk
+END
+
+# darkquad29_wvl/adc_in/trig
+BEGIN opb_register_ppc2simulink
+ PARAMETER INSTANCE = darkquad29_wvl_adc_in_trig
+ PARAMETER HW_VER = 1.00.a
+ PARAMETER C_BASEADDR = 0x0108B200
+ PARAMETER C_HIGHADDR = 0x0108B2FF
+ BUS_INTERFACE SOPB = opb1
+ PORT OPB_Clk = epb_clk
+ PORT user_data_out = darkquad29_wvl_adc_in_trig_user_data_out
+ PORT user_clk = adc0_clk
+END
+
+# darkquad29_wvl/adc_in/ts0
+BEGIN opb_register_simulink2ppc
+ PARAMETER INSTANCE = darkquad29_wvl_adc_in_ts0
+ PARAMETER HW_VER = 1.00.a
+ PARAMETER C_BASEADDR = 0x0108B300
+ PARAMETER C_HIGHADDR = 0x0108B3FF
+ BUS_INTERFACE SOPB = opb1
+ PORT OPB_Clk = epb_clk
+ PORT user_data_in = darkquad29_wvl_adc_in_ts0_user_data_in
+ PORT user_clk = adc0_clk
+END
+
+# darkquad29_wvl/adc_in/ts1
+BEGIN opb_register_simulink2ppc
+ PARAMETER INSTANCE = darkquad29_wvl_adc_in_ts1
+ PARAMETER HW_VER = 1.00.a
+ PARAMETER C_BASEADDR = 0x0108B400
+ PARAMETER C_HIGHADDR = 0x0108B4FF
+ BUS_INTERFACE SOPB = opb1
+ PORT OPB_Clk = epb_clk
+ PORT user_data_in = darkquad29_wvl_adc_in_ts1_user_data_in
+ PORT user_clk = adc0_clk
+END
+
+# darkquad29_wvl/adc_in/ts2
+BEGIN opb_register_simulink2ppc
+ PARAMETER INSTANCE = darkquad29_wvl_adc_in_ts2
+ PARAMETER HW_VER = 1.00.a
+ PARAMETER C_BASEADDR = 0x0108B500
+ PARAMETER C_HIGHADDR = 0x0108B5FF
+ BUS_INTERFACE SOPB = opb1
+ PORT OPB_Clk = epb_clk
+ PORT user_data_in = darkquad29_wvl_adc_in_ts2_user_data_in
+ PORT user_clk = adc0_clk
+END
+
+# darkquad29_wvl/adc_in/ts3
+BEGIN opb_register_simulink2ppc
+ PARAMETER INSTANCE = darkquad29_wvl_adc_in_ts3
+ PARAMETER HW_VER = 1.00.a
+ PARAMETER C_BASEADDR = 0x0108B600
+ PARAMETER C_HIGHADDR = 0x0108B6FF
+ BUS_INTERFACE SOPB = opb1
+ PORT OPB_Clk = epb_clk
+ PORT user_data_in = darkquad29_wvl_adc_in_ts3_user_data_in
+ PORT user_clk = adc0_clk
+END
+
+# darkquad29_wvl/adc_in/valid
+BEGIN opb_register_simulink2ppc
+ PARAMETER INSTANCE = darkquad29_wvl_adc_in_valid
+ PARAMETER HW_VER = 1.00.a
+ PARAMETER C_BASEADDR = 0x01100000
+ PARAMETER C_HIGHADDR = 0x011000FF
+ BUS_INTERFACE SOPB = opb2
+ PORT OPB_Clk = epb_clk
+ PORT user_data_in = darkquad29_wvl_adc_in_valid_user_data_in
+ PORT user_clk = adc0_clk
+END
+
+# darkquad29_wvl/board_num
+BEGIN opb_register_ppc2simulink
+ PARAMETER INSTANCE = darkquad29_wvl_board_num
+ PARAMETER HW_VER = 1.00.a
+ PARAMETER C_BASEADDR = 0x01100100
+ PARAMETER C_HIGHADDR = 0x011001FF
+ BUS_INTERFACE SOPB = opb2
+ PORT OPB_Clk = epb_clk
+ PORT user_data_out = darkquad29_wvl_board_num_user_data_out
+ PORT user_clk = adc0_clk
+END
+
+# darkquad29_wvl/capture0/base_kf
+BEGIN opb_register_ppc2simulink
+ PARAMETER INSTANCE = darkquad29_wvl_capture0_base_kf
+ PARAMETER HW_VER = 1.00.a
+ PARAMETER C_BASEADDR = 0x01100200
+ PARAMETER C_HIGHADDR = 0x011002FF
+ BUS_INTERFACE SOPB = opb2
+ PORT OPB_Clk = epb_clk
+ PORT user_data_out = darkquad29_wvl_capture0_base_kf_user_data_out
+ PORT user_clk = adc0_clk
+END
+
+# darkquad29_wvl/capture0/base_kq
+BEGIN opb_register_ppc2simulink
+ PARAMETER INSTANCE = darkquad29_wvl_capture0_base_kq
+ PARAMETER HW_VER = 1.00.a
+ PARAMETER C_BASEADDR = 0x01100300
+ PARAMETER C_HIGHADDR = 0x011003FF
+ BUS_INTERFACE SOPB = opb2
+ PORT OPB_Clk = epb_clk
+ PORT user_data_out = darkquad29_wvl_capture0_base_kq_user_data_out
+ PORT user_clk = adc0_clk
+END
+
+# darkquad29_wvl/capture0/cps_lim
+BEGIN opb_register_ppc2simulink
+ PARAMETER INSTANCE = darkquad29_wvl_capture0_cps_lim
+ PARAMETER HW_VER = 1.00.a
+ PARAMETER C_BASEADDR = 0x01100400
+ PARAMETER C_HIGHADDR = 0x011004FF
+ BUS_INTERFACE SOPB = opb2
+ PORT OPB_Clk = epb_clk
+ PORT user_data_out = darkquad29_wvl_capture0_cps_lim_user_data_out
+ PORT user_clk = adc0_clk
+END
+
+# darkquad29_wvl/capture0/energy_cal_lut/energy_coeffs
+BEGIN bram_block_custom
+ PARAMETER INSTANCE = darkquad29_wvl_capture0_energy_cal_lut_energy_coeffs_ramblk
+ PARAMETER HW_VER = 1.00.a
+ PARAMETER C_PORTA_DWIDTH   = 64
+ PARAMETER C_PORTA_NUM_WE   = 8
+ PARAMETER C_PORTA_DEPTH    = 10
+ PARAMETER C_PORTB_DEPTH    = 11
+ PARAMETER OPTIMIZATION     = Minimum_Area
+ PARAMETER REG_CORE_OUTPUT  = true
+ PARAMETER REG_PRIM_OUTPUT  = true
+ PORT clk           = adc0_clk
+ PORT bram_addr     = darkquad29_wvl_capture0_energy_cal_lut_energy_coeffs_addr    
+ PORT bram_rd_data  = darkquad29_wvl_capture0_energy_cal_lut_energy_coeffs_data_out
+ PORT bram_wr_data  = darkquad29_wvl_capture0_energy_cal_lut_energy_coeffs_data_in 
+ PORT bram_we       = darkquad29_wvl_capture0_energy_cal_lut_energy_coeffs_we      
+ BUS_INTERFACE PORTB = darkquad29_wvl_capture0_energy_cal_lut_energy_coeffs_ramblk_portb
+END
+
+BEGIN opb_bram_if_cntlr
+ PARAMETER INSTANCE = darkquad29_wvl_capture0_energy_cal_lut_energy_coeffs
+ PARAMETER HW_VER = 1.00.a
+ PARAMETER C_OPB_CLK_PERIOD_PS = 10000
+ PARAMETER C_BASEADDR = 0x01102000
+ PARAMETER C_HIGHADDR = 0x01103FFF
+ BUS_INTERFACE SOPB = opb2
+ BUS_INTERFACE PORTA = darkquad29_wvl_capture0_energy_cal_lut_energy_coeffs_ramblk_portb
+END
+
+
+# darkquad29_wvl/capture0/load_thresh
+BEGIN opb_register_ppc2simulink
+ PARAMETER INSTANCE = darkquad29_wvl_capture0_load_thresh
+ PARAMETER HW_VER = 1.00.a
+ PARAMETER C_BASEADDR = 0x01104000
+ PARAMETER C_HIGHADDR = 0x011040FF
+ BUS_INTERFACE SOPB = opb2
+ PORT OPB_Clk = epb_clk
+ PORT user_data_out = darkquad29_wvl_capture0_load_thresh_user_data_out
+ PORT user_clk = adc0_clk
+END
+
+# darkquad29_wvl/capture0/pix
+BEGIN bram_block_custom
+ PARAMETER INSTANCE = darkquad29_wvl_capture0_pix_ramblk
+ PARAMETER HW_VER = 1.00.a
+ PARAMETER C_PORTA_DWIDTH   = 32
+ PARAMETER C_PORTA_NUM_WE   = 4
+ PARAMETER C_PORTA_DEPTH    = 10
+ PARAMETER C_PORTB_DEPTH    = 10
+ PARAMETER OPTIMIZATION     = Minimum_Area
+ PARAMETER REG_CORE_OUTPUT  = true
+ PARAMETER REG_PRIM_OUTPUT  = true
+ PORT clk           = adc0_clk
+ PORT bram_addr     = darkquad29_wvl_capture0_pix_addr    
+ PORT bram_rd_data  = darkquad29_wvl_capture0_pix_data_out
+ PORT bram_wr_data  = darkquad29_wvl_capture0_pix_data_in 
+ PORT bram_we       = darkquad29_wvl_capture0_pix_we      
+ BUS_INTERFACE PORTB = darkquad29_wvl_capture0_pix_ramblk_portb
+END
+
+BEGIN opb_bram_if_cntlr
+ PARAMETER INSTANCE = darkquad29_wvl_capture0_pix
+ PARAMETER HW_VER = 1.00.a
+ PARAMETER C_OPB_CLK_PERIOD_PS = 10000
+ PARAMETER C_BASEADDR = 0x01105000
+ PARAMETER C_HIGHADDR = 0x01105FFF
+ BUS_INTERFACE SOPB = opb2
+ BUS_INTERFACE PORTA = darkquad29_wvl_capture0_pix_ramblk_portb
+END
+
+
+# darkquad29_wvl/capture0/threshold
+BEGIN opb_register_ppc2simulink
+ PARAMETER INSTANCE = darkquad29_wvl_capture0_threshold
+ PARAMETER HW_VER = 1.00.a
+ PARAMETER C_BASEADDR = 0x01106000
+ PARAMETER C_HIGHADDR = 0x011060FF
+ BUS_INTERFACE SOPB = opb2
+ PORT OPB_Clk = epb_clk
+ PORT user_data_out = darkquad29_wvl_capture0_threshold_user_data_out
+ PORT user_clk = adc0_clk
+END
+
+# darkquad29_wvl/capture0/use_energy_cal
+BEGIN opb_register_ppc2simulink
+ PARAMETER INSTANCE = darkquad29_wvl_capture0_use_energy_cal
+ PARAMETER HW_VER = 1.00.a
+ PARAMETER C_BASEADDR = 0x01106100
+ PARAMETER C_HIGHADDR = 0x011061FF
+ BUS_INTERFACE SOPB = opb2
+ PORT OPB_Clk = epb_clk
+ PORT user_data_out = darkquad29_wvl_capture0_use_energy_cal_user_data_out
+ PORT user_clk = adc0_clk
+END
+
+# darkquad29_wvl/capture1/base_kf
+BEGIN opb_register_ppc2simulink
+ PARAMETER INSTANCE = darkquad29_wvl_capture1_base_kf
+ PARAMETER HW_VER = 1.00.a
+ PARAMETER C_BASEADDR = 0x01106200
+ PARAMETER C_HIGHADDR = 0x011062FF
+ BUS_INTERFACE SOPB = opb2
+ PORT OPB_Clk = epb_clk
+ PORT user_data_out = darkquad29_wvl_capture1_base_kf_user_data_out
+ PORT user_clk = adc0_clk
+END
+
+# darkquad29_wvl/capture1/base_kq
+BEGIN opb_register_ppc2simulink
+ PARAMETER INSTANCE = darkquad29_wvl_capture1_base_kq
+ PARAMETER HW_VER = 1.00.a
+ PARAMETER C_BASEADDR = 0x01106300
+ PARAMETER C_HIGHADDR = 0x011063FF
+ BUS_INTERFACE SOPB = opb2
+ PORT OPB_Clk = epb_clk
+ PORT user_data_out = darkquad29_wvl_capture1_base_kq_user_data_out
+ PORT user_clk = adc0_clk
+END
+
+# darkquad29_wvl/capture1/cps_lim
+BEGIN opb_register_ppc2simulink
+ PARAMETER INSTANCE = darkquad29_wvl_capture1_cps_lim
+ PARAMETER HW_VER = 1.00.a
+ PARAMETER C_BASEADDR = 0x01106400
+ PARAMETER C_HIGHADDR = 0x011064FF
+ BUS_INTERFACE SOPB = opb2
+ PORT OPB_Clk = epb_clk
+ PORT user_data_out = darkquad29_wvl_capture1_cps_lim_user_data_out
+ PORT user_clk = adc0_clk
+END
+
+# darkquad29_wvl/capture1/energy_cal_lut/energy_coeffs
+BEGIN bram_block_custom
+ PARAMETER INSTANCE = darkquad29_wvl_capture1_energy_cal_lut_energy_coeffs_ramblk
+ PARAMETER HW_VER = 1.00.a
+ PARAMETER C_PORTA_DWIDTH   = 64
+ PARAMETER C_PORTA_NUM_WE   = 8
+ PARAMETER C_PORTA_DEPTH    = 10
+ PARAMETER C_PORTB_DEPTH    = 11
+ PARAMETER OPTIMIZATION     = Minimum_Area
+ PARAMETER REG_CORE_OUTPUT  = true
+ PARAMETER REG_PRIM_OUTPUT  = true
+ PORT clk           = adc0_clk
+ PORT bram_addr     = darkquad29_wvl_capture1_energy_cal_lut_energy_coeffs_addr    
+ PORT bram_rd_data  = darkquad29_wvl_capture1_energy_cal_lut_energy_coeffs_data_out
+ PORT bram_wr_data  = darkquad29_wvl_capture1_energy_cal_lut_energy_coeffs_data_in 
+ PORT bram_we       = darkquad29_wvl_capture1_energy_cal_lut_energy_coeffs_we      
+ BUS_INTERFACE PORTB = darkquad29_wvl_capture1_energy_cal_lut_energy_coeffs_ramblk_portb
+END
+
+BEGIN opb_bram_if_cntlr
+ PARAMETER INSTANCE = darkquad29_wvl_capture1_energy_cal_lut_energy_coeffs
+ PARAMETER HW_VER = 1.00.a
+ PARAMETER C_OPB_CLK_PERIOD_PS = 10000
+ PARAMETER C_BASEADDR = 0x01108000
+ PARAMETER C_HIGHADDR = 0x01109FFF
+ BUS_INTERFACE SOPB = opb2
+ BUS_INTERFACE PORTA = darkquad29_wvl_capture1_energy_cal_lut_energy_coeffs_ramblk_portb
+END
+
+
+# darkquad29_wvl/capture1/load_thresh
+BEGIN opb_register_ppc2simulink
+ PARAMETER INSTANCE = darkquad29_wvl_capture1_load_thresh
+ PARAMETER HW_VER = 1.00.a
+ PARAMETER C_BASEADDR = 0x0110A000
+ PARAMETER C_HIGHADDR = 0x0110A0FF
+ BUS_INTERFACE SOPB = opb2
+ PORT OPB_Clk = epb_clk
+ PORT user_data_out = darkquad29_wvl_capture1_load_thresh_user_data_out
+ PORT user_clk = adc0_clk
+END
+
+# darkquad29_wvl/capture1/pix
+BEGIN bram_block_custom
+ PARAMETER INSTANCE = darkquad29_wvl_capture1_pix_ramblk
+ PARAMETER HW_VER = 1.00.a
+ PARAMETER C_PORTA_DWIDTH   = 32
+ PARAMETER C_PORTA_NUM_WE   = 4
+ PARAMETER C_PORTA_DEPTH    = 10
+ PARAMETER C_PORTB_DEPTH    = 10
+ PARAMETER OPTIMIZATION     = Minimum_Area
+ PARAMETER REG_CORE_OUTPUT  = true
+ PARAMETER REG_PRIM_OUTPUT  = true
+ PORT clk           = adc0_clk
+ PORT bram_addr     = darkquad29_wvl_capture1_pix_addr    
+ PORT bram_rd_data  = darkquad29_wvl_capture1_pix_data_out
+ PORT bram_wr_data  = darkquad29_wvl_capture1_pix_data_in 
+ PORT bram_we       = darkquad29_wvl_capture1_pix_we      
+ BUS_INTERFACE PORTB = darkquad29_wvl_capture1_pix_ramblk_portb
+END
+
+BEGIN opb_bram_if_cntlr
+ PARAMETER INSTANCE = darkquad29_wvl_capture1_pix
+ PARAMETER HW_VER = 1.00.a
+ PARAMETER C_OPB_CLK_PERIOD_PS = 10000
+ PARAMETER C_BASEADDR = 0x0110B000
+ PARAMETER C_HIGHADDR = 0x0110BFFF
+ BUS_INTERFACE SOPB = opb2
+ BUS_INTERFACE PORTA = darkquad29_wvl_capture1_pix_ramblk_portb
+END
+
+
+# darkquad29_wvl/capture1/threshold
+BEGIN opb_register_ppc2simulink
+ PARAMETER INSTANCE = darkquad29_wvl_capture1_threshold
+ PARAMETER HW_VER = 1.00.a
+ PARAMETER C_BASEADDR = 0x0110C000
+ PARAMETER C_HIGHADDR = 0x0110C0FF
+ BUS_INTERFACE SOPB = opb2
+ PORT OPB_Clk = epb_clk
+ PORT user_data_out = darkquad29_wvl_capture1_threshold_user_data_out
+ PORT user_clk = adc0_clk
+END
+
+# darkquad29_wvl/capture1/use_energy_cal
+BEGIN opb_register_ppc2simulink
+ PARAMETER INSTANCE = darkquad29_wvl_capture1_use_energy_cal
+ PARAMETER HW_VER = 1.00.a
+ PARAMETER C_BASEADDR = 0x0110C100
+ PARAMETER C_HIGHADDR = 0x0110C1FF
+ BUS_INTERFACE SOPB = opb2
+ PORT OPB_Clk = epb_clk
+ PORT user_data_out = darkquad29_wvl_capture1_use_energy_cal_user_data_out
+ PORT user_clk = adc0_clk
+END
+
+# darkquad29_wvl/capture2/base_kf
+BEGIN opb_register_ppc2simulink
+ PARAMETER INSTANCE = darkquad29_wvl_capture2_base_kf
+ PARAMETER HW_VER = 1.00.a
+ PARAMETER C_BASEADDR = 0x0110C200
+ PARAMETER C_HIGHADDR = 0x0110C2FF
+ BUS_INTERFACE SOPB = opb2
+ PORT OPB_Clk = epb_clk
+ PORT user_data_out = darkquad29_wvl_capture2_base_kf_user_data_out
+ PORT user_clk = adc0_clk
+END
+
+# darkquad29_wvl/capture2/base_kq
+BEGIN opb_register_ppc2simulink
+ PARAMETER INSTANCE = darkquad29_wvl_capture2_base_kq
+ PARAMETER HW_VER = 1.00.a
+ PARAMETER C_BASEADDR = 0x0110C300
+ PARAMETER C_HIGHADDR = 0x0110C3FF
+ BUS_INTERFACE SOPB = opb2
+ PORT OPB_Clk = epb_clk
+ PORT user_data_out = darkquad29_wvl_capture2_base_kq_user_data_out
+ PORT user_clk = adc0_clk
+END
+
+# darkquad29_wvl/capture2/cps_lim
+BEGIN opb_register_ppc2simulink
+ PARAMETER INSTANCE = darkquad29_wvl_capture2_cps_lim
+ PARAMETER HW_VER = 1.00.a
+ PARAMETER C_BASEADDR = 0x0110C400
+ PARAMETER C_HIGHADDR = 0x0110C4FF
+ BUS_INTERFACE SOPB = opb2
+ PORT OPB_Clk = epb_clk
+ PORT user_data_out = darkquad29_wvl_capture2_cps_lim_user_data_out
+ PORT user_clk = adc0_clk
+END
+
+# darkquad29_wvl/capture2/energy_cal_lut/energy_coeffs
+BEGIN bram_block_custom
+ PARAMETER INSTANCE = darkquad29_wvl_capture2_energy_cal_lut_energy_coeffs_ramblk
+ PARAMETER HW_VER = 1.00.a
+ PARAMETER C_PORTA_DWIDTH   = 64
+ PARAMETER C_PORTA_NUM_WE   = 8
+ PARAMETER C_PORTA_DEPTH    = 10
+ PARAMETER C_PORTB_DEPTH    = 11
+ PARAMETER OPTIMIZATION     = Minimum_Area
+ PARAMETER REG_CORE_OUTPUT  = true
+ PARAMETER REG_PRIM_OUTPUT  = true
+ PORT clk           = adc0_clk
+ PORT bram_addr     = darkquad29_wvl_capture2_energy_cal_lut_energy_coeffs_addr    
+ PORT bram_rd_data  = darkquad29_wvl_capture2_energy_cal_lut_energy_coeffs_data_out
+ PORT bram_wr_data  = darkquad29_wvl_capture2_energy_cal_lut_energy_coeffs_data_in 
+ PORT bram_we       = darkquad29_wvl_capture2_energy_cal_lut_energy_coeffs_we      
+ BUS_INTERFACE PORTB = darkquad29_wvl_capture2_energy_cal_lut_energy_coeffs_ramblk_portb
+END
+
+BEGIN opb_bram_if_cntlr
+ PARAMETER INSTANCE = darkquad29_wvl_capture2_energy_cal_lut_energy_coeffs
+ PARAMETER HW_VER = 1.00.a
+ PARAMETER C_OPB_CLK_PERIOD_PS = 10000
+ PARAMETER C_BASEADDR = 0x0110E000
+ PARAMETER C_HIGHADDR = 0x0110FFFF
+ BUS_INTERFACE SOPB = opb2
+ BUS_INTERFACE PORTA = darkquad29_wvl_capture2_energy_cal_lut_energy_coeffs_ramblk_portb
+END
+
+
+# darkquad29_wvl/capture2/load_thresh
+BEGIN opb_register_ppc2simulink
+ PARAMETER INSTANCE = darkquad29_wvl_capture2_load_thresh
+ PARAMETER HW_VER = 1.00.a
+ PARAMETER C_BASEADDR = 0x01110000
+ PARAMETER C_HIGHADDR = 0x011100FF
+ BUS_INTERFACE SOPB = opb2
+ PORT OPB_Clk = epb_clk
+ PORT user_data_out = darkquad29_wvl_capture2_load_thresh_user_data_out
+ PORT user_clk = adc0_clk
+END
+
+# darkquad29_wvl/capture2/pix
+BEGIN bram_block_custom
+ PARAMETER INSTANCE = darkquad29_wvl_capture2_pix_ramblk
+ PARAMETER HW_VER = 1.00.a
+ PARAMETER C_PORTA_DWIDTH   = 32
+ PARAMETER C_PORTA_NUM_WE   = 4
+ PARAMETER C_PORTA_DEPTH    = 10
+ PARAMETER C_PORTB_DEPTH    = 10
+ PARAMETER OPTIMIZATION     = Minimum_Area
+ PARAMETER REG_CORE_OUTPUT  = true
+ PARAMETER REG_PRIM_OUTPUT  = true
+ PORT clk           = adc0_clk
+ PORT bram_addr     = darkquad29_wvl_capture2_pix_addr    
+ PORT bram_rd_data  = darkquad29_wvl_capture2_pix_data_out
+ PORT bram_wr_data  = darkquad29_wvl_capture2_pix_data_in 
+ PORT bram_we       = darkquad29_wvl_capture2_pix_we      
+ BUS_INTERFACE PORTB = darkquad29_wvl_capture2_pix_ramblk_portb
+END
+
+BEGIN opb_bram_if_cntlr
+ PARAMETER INSTANCE = darkquad29_wvl_capture2_pix
+ PARAMETER HW_VER = 1.00.a
+ PARAMETER C_OPB_CLK_PERIOD_PS = 10000
+ PARAMETER C_BASEADDR = 0x01111000
+ PARAMETER C_HIGHADDR = 0x01111FFF
+ BUS_INTERFACE SOPB = opb2
+ BUS_INTERFACE PORTA = darkquad29_wvl_capture2_pix_ramblk_portb
+END
+
+
+# darkquad29_wvl/capture2/threshold
+BEGIN opb_register_ppc2simulink
+ PARAMETER INSTANCE = darkquad29_wvl_capture2_threshold
+ PARAMETER HW_VER = 1.00.a
+ PARAMETER C_BASEADDR = 0x01112000
+ PARAMETER C_HIGHADDR = 0x011120FF
+ BUS_INTERFACE SOPB = opb2
+ PORT OPB_Clk = epb_clk
+ PORT user_data_out = darkquad29_wvl_capture2_threshold_user_data_out
+ PORT user_clk = adc0_clk
+END
+
+# darkquad29_wvl/capture2/use_energy_cal
+BEGIN opb_register_ppc2simulink
+ PARAMETER INSTANCE = darkquad29_wvl_capture2_use_energy_cal
+ PARAMETER HW_VER = 1.00.a
+ PARAMETER C_BASEADDR = 0x01112100
+ PARAMETER C_HIGHADDR = 0x011121FF
+ BUS_INTERFACE SOPB = opb2
+ PORT OPB_Clk = epb_clk
+ PORT user_data_out = darkquad29_wvl_capture2_use_energy_cal_user_data_out
+ PORT user_clk = adc0_clk
+END
+
+# darkquad29_wvl/capture3/base_kf
+BEGIN opb_register_ppc2simulink
+ PARAMETER INSTANCE = darkquad29_wvl_capture3_base_kf
+ PARAMETER HW_VER = 1.00.a
+ PARAMETER C_BASEADDR = 0x01112200
+ PARAMETER C_HIGHADDR = 0x011122FF
+ BUS_INTERFACE SOPB = opb2
+ PORT OPB_Clk = epb_clk
+ PORT user_data_out = darkquad29_wvl_capture3_base_kf_user_data_out
+ PORT user_clk = adc0_clk
+END
+
+# darkquad29_wvl/capture3/base_kq
+BEGIN opb_register_ppc2simulink
+ PARAMETER INSTANCE = darkquad29_wvl_capture3_base_kq
+ PARAMETER HW_VER = 1.00.a
+ PARAMETER C_BASEADDR = 0x01112300
+ PARAMETER C_HIGHADDR = 0x011123FF
+ BUS_INTERFACE SOPB = opb2
+ PORT OPB_Clk = epb_clk
+ PORT user_data_out = darkquad29_wvl_capture3_base_kq_user_data_out
+ PORT user_clk = adc0_clk
+END
+
+# darkquad29_wvl/capture3/cps_lim
+BEGIN opb_register_ppc2simulink
+ PARAMETER INSTANCE = darkquad29_wvl_capture3_cps_lim
+ PARAMETER HW_VER = 1.00.a
+ PARAMETER C_BASEADDR = 0x01112400
+ PARAMETER C_HIGHADDR = 0x011124FF
+ BUS_INTERFACE SOPB = opb2
+ PORT OPB_Clk = epb_clk
+ PORT user_data_out = darkquad29_wvl_capture3_cps_lim_user_data_out
+ PORT user_clk = adc0_clk
+END
+
+# darkquad29_wvl/capture3/energy_cal_lut/energy_coeffs
+BEGIN bram_block_custom
+ PARAMETER INSTANCE = darkquad29_wvl_capture3_energy_cal_lut_energy_coeffs_ramblk
+ PARAMETER HW_VER = 1.00.a
+ PARAMETER C_PORTA_DWIDTH   = 64
+ PARAMETER C_PORTA_NUM_WE   = 8
+ PARAMETER C_PORTA_DEPTH    = 10
+ PARAMETER C_PORTB_DEPTH    = 11
+ PARAMETER OPTIMIZATION     = Minimum_Area
+ PARAMETER REG_CORE_OUTPUT  = true
+ PARAMETER REG_PRIM_OUTPUT  = true
+ PORT clk           = adc0_clk
+ PORT bram_addr     = darkquad29_wvl_capture3_energy_cal_lut_energy_coeffs_addr    
+ PORT bram_rd_data  = darkquad29_wvl_capture3_energy_cal_lut_energy_coeffs_data_out
+ PORT bram_wr_data  = darkquad29_wvl_capture3_energy_cal_lut_energy_coeffs_data_in 
+ PORT bram_we       = darkquad29_wvl_capture3_energy_cal_lut_energy_coeffs_we      
+ BUS_INTERFACE PORTB = darkquad29_wvl_capture3_energy_cal_lut_energy_coeffs_ramblk_portb
+END
+
+BEGIN opb_bram_if_cntlr
+ PARAMETER INSTANCE = darkquad29_wvl_capture3_energy_cal_lut_energy_coeffs
+ PARAMETER HW_VER = 1.00.a
+ PARAMETER C_OPB_CLK_PERIOD_PS = 10000
+ PARAMETER C_BASEADDR = 0x01114000
+ PARAMETER C_HIGHADDR = 0x01115FFF
+ BUS_INTERFACE SOPB = opb2
+ BUS_INTERFACE PORTA = darkquad29_wvl_capture3_energy_cal_lut_energy_coeffs_ramblk_portb
+END
+
+
+# darkquad29_wvl/capture3/load_thresh
+BEGIN opb_register_ppc2simulink
+ PARAMETER INSTANCE = darkquad29_wvl_capture3_load_thresh
+ PARAMETER HW_VER = 1.00.a
+ PARAMETER C_BASEADDR = 0x01116000
+ PARAMETER C_HIGHADDR = 0x011160FF
+ BUS_INTERFACE SOPB = opb2
+ PORT OPB_Clk = epb_clk
+ PORT user_data_out = darkquad29_wvl_capture3_load_thresh_user_data_out
+ PORT user_clk = adc0_clk
+END
+
+# darkquad29_wvl/capture3/pix
+BEGIN bram_block_custom
+ PARAMETER INSTANCE = darkquad29_wvl_capture3_pix_ramblk
+ PARAMETER HW_VER = 1.00.a
+ PARAMETER C_PORTA_DWIDTH   = 32
+ PARAMETER C_PORTA_NUM_WE   = 4
+ PARAMETER C_PORTA_DEPTH    = 10
+ PARAMETER C_PORTB_DEPTH    = 10
+ PARAMETER OPTIMIZATION     = Minimum_Area
+ PARAMETER REG_CORE_OUTPUT  = true
+ PARAMETER REG_PRIM_OUTPUT  = true
+ PORT clk           = adc0_clk
+ PORT bram_addr     = darkquad29_wvl_capture3_pix_addr    
+ PORT bram_rd_data  = darkquad29_wvl_capture3_pix_data_out
+ PORT bram_wr_data  = darkquad29_wvl_capture3_pix_data_in 
+ PORT bram_we       = darkquad29_wvl_capture3_pix_we      
+ BUS_INTERFACE PORTB = darkquad29_wvl_capture3_pix_ramblk_portb
+END
+
+BEGIN opb_bram_if_cntlr
+ PARAMETER INSTANCE = darkquad29_wvl_capture3_pix
+ PARAMETER HW_VER = 1.00.a
+ PARAMETER C_OPB_CLK_PERIOD_PS = 10000
+ PARAMETER C_BASEADDR = 0x01117000
+ PARAMETER C_HIGHADDR = 0x01117FFF
+ BUS_INTERFACE SOPB = opb2
+ BUS_INTERFACE PORTA = darkquad29_wvl_capture3_pix_ramblk_portb
+END
+
+
+# darkquad29_wvl/capture3/threshold
+BEGIN opb_register_ppc2simulink
+ PARAMETER INSTANCE = darkquad29_wvl_capture3_threshold
+ PARAMETER HW_VER = 1.00.a
+ PARAMETER C_BASEADDR = 0x01180000
+ PARAMETER C_HIGHADDR = 0x011800FF
+ BUS_INTERFACE SOPB = opb3
+ PORT OPB_Clk = epb_clk
+ PORT user_data_out = darkquad29_wvl_capture3_threshold_user_data_out
+ PORT user_clk = adc0_clk
+END
+
+# darkquad29_wvl/capture3/use_energy_cal
+BEGIN opb_register_ppc2simulink
+ PARAMETER INSTANCE = darkquad29_wvl_capture3_use_energy_cal
+ PARAMETER HW_VER = 1.00.a
+ PARAMETER C_BASEADDR = 0x01180100
+ PARAMETER C_HIGHADDR = 0x011801FF
+ BUS_INTERFACE SOPB = opb3
+ PORT OPB_Clk = epb_clk
+ PORT user_data_out = darkquad29_wvl_capture3_use_energy_cal_user_data_out
+ PORT user_clk = adc0_clk
+END
+
+# darkquad29_wvl/chan_sel/ch_bin0
+BEGIN opb_register_ppc2simulink
+ PARAMETER INSTANCE = darkquad29_wvl_chan_sel_ch_bin0
+ PARAMETER HW_VER = 1.00.a
+ PARAMETER C_BASEADDR = 0x01180200
+ PARAMETER C_HIGHADDR = 0x011802FF
+ BUS_INTERFACE SOPB = opb3
+ PORT OPB_Clk = epb_clk
+ PORT user_data_out = darkquad29_wvl_chan_sel_ch_bin0_user_data_out
+ PORT user_clk = adc0_clk
+END
+
+# darkquad29_wvl/chan_sel/ch_bin1
+BEGIN opb_register_ppc2simulink
+ PARAMETER INSTANCE = darkquad29_wvl_chan_sel_ch_bin1
+ PARAMETER HW_VER = 1.00.a
+ PARAMETER C_BASEADDR = 0x01180300
+ PARAMETER C_HIGHADDR = 0x011803FF
+ BUS_INTERFACE SOPB = opb3
+ PORT OPB_Clk = epb_clk
+ PORT user_data_out = darkquad29_wvl_chan_sel_ch_bin1_user_data_out
+ PORT user_clk = adc0_clk
+END
+
+# darkquad29_wvl/chan_sel/ch_bin2
+BEGIN opb_register_ppc2simulink
+ PARAMETER INSTANCE = darkquad29_wvl_chan_sel_ch_bin2
+ PARAMETER HW_VER = 1.00.a
+ PARAMETER C_BASEADDR = 0x01180400
+ PARAMETER C_HIGHADDR = 0x011804FF
+ BUS_INTERFACE SOPB = opb3
+ PORT OPB_Clk = epb_clk
+ PORT user_data_out = darkquad29_wvl_chan_sel_ch_bin2_user_data_out
+ PORT user_clk = adc0_clk
+END
+
+# darkquad29_wvl/chan_sel/ch_bin3
+BEGIN opb_register_ppc2simulink
+ PARAMETER INSTANCE = darkquad29_wvl_chan_sel_ch_bin3
+ PARAMETER HW_VER = 1.00.a
+ PARAMETER C_BASEADDR = 0x01180500
+ PARAMETER C_HIGHADDR = 0x011805FF
+ BUS_INTERFACE SOPB = opb3
+ PORT OPB_Clk = epb_clk
+ PORT user_data_out = darkquad29_wvl_chan_sel_ch_bin3_user_data_out
+ PORT user_clk = adc0_clk
+END
+
+# darkquad29_wvl/chan_sel/load
+BEGIN opb_register_ppc2simulink
+ PARAMETER INSTANCE = darkquad29_wvl_chan_sel_load
+ PARAMETER HW_VER = 1.00.a
+ PARAMETER C_BASEADDR = 0x01180600
+ PARAMETER C_HIGHADDR = 0x011806FF
+ BUS_INTERFACE SOPB = opb3
+ PORT OPB_Clk = epb_clk
+ PORT user_data_out = darkquad29_wvl_chan_sel_load_user_data_out
+ PORT user_clk = adc0_clk
+END
+
+# darkquad29_wvl/check_lag/data_ch
+BEGIN opb_register_simulink2ppc
+ PARAMETER INSTANCE = darkquad29_wvl_check_lag_data_ch
+ PARAMETER HW_VER = 1.00.a
+ PARAMETER C_BASEADDR = 0x01180700
+ PARAMETER C_HIGHADDR = 0x011807FF
+ BUS_INTERFACE SOPB = opb3
+ PORT OPB_Clk = epb_clk
+ PORT user_data_in = darkquad29_wvl_check_lag_data_ch_user_data_in
+ PORT user_clk = adc0_clk
+END
+
+# darkquad29_wvl/check_lag/dds_ch
+BEGIN opb_register_simulink2ppc
+ PARAMETER INSTANCE = darkquad29_wvl_check_lag_dds_ch
+ PARAMETER HW_VER = 1.00.a
+ PARAMETER C_BASEADDR = 0x01180800
+ PARAMETER C_HIGHADDR = 0x011808FF
+ BUS_INTERFACE SOPB = opb3
+ PORT OPB_Clk = epb_clk
+ PORT user_data_in = darkquad29_wvl_check_lag_dds_ch_user_data_in
+ PORT user_clk = adc0_clk
+END
+
+# darkquad29_wvl/check_lag/latch
+BEGIN opb_register_ppc2simulink
+ PARAMETER INSTANCE = darkquad29_wvl_check_lag_latch
+ PARAMETER HW_VER = 1.00.a
+ PARAMETER C_BASEADDR = 0x01180900
+ PARAMETER C_HIGHADDR = 0x011809FF
+ BUS_INTERFACE SOPB = opb3
+ PORT OPB_Clk = epb_clk
+ PORT user_data_out = darkquad29_wvl_check_lag_latch_user_data_out
+ PORT user_clk = adc0_clk
+END
+
+# darkquad29_wvl/conv_phase0/centers
+BEGIN opb_register_ppc2simulink
+ PARAMETER INSTANCE = darkquad29_wvl_conv_phase0_centers
+ PARAMETER HW_VER = 1.00.a
+ PARAMETER C_BASEADDR = 0x01180A00
+ PARAMETER C_HIGHADDR = 0x01180AFF
+ BUS_INTERFACE SOPB = opb3
+ PORT OPB_Clk = epb_clk
+ PORT user_data_out = darkquad29_wvl_conv_phase0_centers_user_data_out
+ PORT user_clk = adc0_clk
+END
+
+# darkquad29_wvl/conv_phase0/load_centers
+BEGIN opb_register_ppc2simulink
+ PARAMETER INSTANCE = darkquad29_wvl_conv_phase0_load_centers
+ PARAMETER HW_VER = 1.00.a
+ PARAMETER C_BASEADDR = 0x01180B00
+ PARAMETER C_HIGHADDR = 0x01180BFF
+ BUS_INTERFACE SOPB = opb3
+ PORT OPB_Clk = epb_clk
+ PORT user_data_out = darkquad29_wvl_conv_phase0_load_centers_user_data_out
+ PORT user_clk = adc0_clk
+END
+
+# darkquad29_wvl/conv_phase1/centers
+BEGIN opb_register_ppc2simulink
+ PARAMETER INSTANCE = darkquad29_wvl_conv_phase1_centers
+ PARAMETER HW_VER = 1.00.a
+ PARAMETER C_BASEADDR = 0x01180C00
+ PARAMETER C_HIGHADDR = 0x01180CFF
+ BUS_INTERFACE SOPB = opb3
+ PORT OPB_Clk = epb_clk
+ PORT user_data_out = darkquad29_wvl_conv_phase1_centers_user_data_out
+ PORT user_clk = adc0_clk
+END
+
+# darkquad29_wvl/conv_phase1/load_centers
+BEGIN opb_register_ppc2simulink
+ PARAMETER INSTANCE = darkquad29_wvl_conv_phase1_load_centers
+ PARAMETER HW_VER = 1.00.a
+ PARAMETER C_BASEADDR = 0x01180D00
+ PARAMETER C_HIGHADDR = 0x01180DFF
+ BUS_INTERFACE SOPB = opb3
+ PORT OPB_Clk = epb_clk
+ PORT user_data_out = darkquad29_wvl_conv_phase1_load_centers_user_data_out
+ PORT user_clk = adc0_clk
+END
+
+# darkquad29_wvl/conv_phase2/centers
+BEGIN opb_register_ppc2simulink
+ PARAMETER INSTANCE = darkquad29_wvl_conv_phase2_centers
+ PARAMETER HW_VER = 1.00.a
+ PARAMETER C_BASEADDR = 0x01180E00
+ PARAMETER C_HIGHADDR = 0x01180EFF
+ BUS_INTERFACE SOPB = opb3
+ PORT OPB_Clk = epb_clk
+ PORT user_data_out = darkquad29_wvl_conv_phase2_centers_user_data_out
+ PORT user_clk = adc0_clk
+END
+
+# darkquad29_wvl/conv_phase2/load_centers
+BEGIN opb_register_ppc2simulink
+ PARAMETER INSTANCE = darkquad29_wvl_conv_phase2_load_centers
+ PARAMETER HW_VER = 1.00.a
+ PARAMETER C_BASEADDR = 0x01180F00
+ PARAMETER C_HIGHADDR = 0x01180FFF
+ BUS_INTERFACE SOPB = opb3
+ PORT OPB_Clk = epb_clk
+ PORT user_data_out = darkquad29_wvl_conv_phase2_load_centers_user_data_out
+ PORT user_clk = adc0_clk
+END
+
+# darkquad29_wvl/conv_phase3/centers
+BEGIN opb_register_ppc2simulink
+ PARAMETER INSTANCE = darkquad29_wvl_conv_phase3_centers
+ PARAMETER HW_VER = 1.00.a
+ PARAMETER C_BASEADDR = 0x01181000
+ PARAMETER C_HIGHADDR = 0x011810FF
+ BUS_INTERFACE SOPB = opb3
+ PORT OPB_Clk = epb_clk
+ PORT user_data_out = darkquad29_wvl_conv_phase3_centers_user_data_out
+ PORT user_clk = adc0_clk
+END
+
+# darkquad29_wvl/conv_phase3/load_centers
+BEGIN opb_register_ppc2simulink
+ PARAMETER INSTANCE = darkquad29_wvl_conv_phase3_load_centers
+ PARAMETER HW_VER = 1.00.a
+ PARAMETER C_BASEADDR = 0x01181100
+ PARAMETER C_HIGHADDR = 0x011811FF
+ BUS_INTERFACE SOPB = opb3
+ PORT OPB_Clk = epb_clk
+ PORT user_data_out = darkquad29_wvl_conv_phase3_load_centers_user_data_out
+ PORT user_clk = adc0_clk
+END
+
+# darkquad29_wvl/dds_lut/qdr0
+BEGIN qdr_controller
+ PARAMETER INSTANCE = qdr0_controller
+ PARAMETER CLK_FREQ = 250
+ PARAMETER HW_VER   = 1.00.a
+ PARAMETER DATA_WIDTH = 36
+ PARAMETER ADDR_WIDTH = 21
+ PARAMETER BW_WIDTH   = 4
+ PORT clk0    = adc0_clk
+ PORT clk180  = adc0_clk180
+ PORT clk270  = adc0_clk270
+ PORT dly_clk = sys_clk2x
+ PORT idelay_rdy = idelay_rdy
+ PORT reset   = darkquad29_wvl_dds_lut_qdr0_reset
+ PORT qdr_k_n       = qdr0_k_n
+ PORT qdr_k         = qdr0_k
+ PORT qdr_d         = qdr0_d
+ PORT qdr_sa        = qdr0_sa
+ PORT qdr_w_n       = qdr0_w_n
+ PORT qdr_r_n       = qdr0_r_n
+ PORT qdr_q         = qdr0_q
+ PORT qdr_dll_off_n = qdr0_dll_off_n
+ PORT phy_rdy  = darkquad29_wvl_dds_lut_qdr0_phy_ready
+ PORT cal_fail = darkquad29_wvl_dds_lut_qdr0_cal_fail
+ PORT dly_extra_clk = darkquad29_wvl_dds_lut_qdr0_dly_extra_clk
+ PORT dly_en_o     = darkquad29_wvl_dds_lut_qdr0_dly_en_o
+ PORT dly_en_i     = darkquad29_wvl_dds_lut_qdr0_dly_en_i
+ PORT dly_inc_dec  = darkquad29_wvl_dds_lut_qdr0_dly_inc_dec
+ PORT dly_cntrs    = darkquad29_wvl_dds_lut_qdr0_dly_cntrs
+ BUS_INTERFACE MQDR = darkquad29_wvl_dds_lut_qdr0
+END
+
+PORT qdr0_k_n       = qdr0_k_n       , DIR = O
+PORT qdr0_k         = qdr0_k         , DIR = O
+PORT qdr0_d         = qdr0_d         , DIR = O, VEC=[35:0]
+PORT qdr0_sa        = qdr0_sa        , DIR = O, VEC=[20:0]
+PORT qdr0_w_n       = qdr0_w_n       , DIR = O
+PORT qdr0_r_n       = qdr0_r_n       , DIR = O
+PORT qdr0_q         = qdr0_q         , DIR = I, VEC=[35:0]
+PORT qdr0_dll_off_n = qdr0_dll_off_n , DIR = O
+
+
+BEGIN opb_qdr_sniffer
+ PARAMETER INSTANCE   = qdr0_sniffer
+ PARAMETER HW_VER     = 1.00.a
+ PARAMETER ENABLE     = 1
+ PARAMETER QDR_DATA_WIDTH = 36
+ PARAMETER QDR_ADDR_WIDTH = 21
+ PARAMETER QDR_BW_WIDTH   = 4
+ PARAMETER C_CONFIG_BASEADDR = 0x0007_0000
+ PARAMETER C_CONFIG_HIGHADDR = 0x0007_FFFF
+ PARAMETER C_BASEADDR = 0x0200_0000
+ PARAMETER C_HIGHADDR = 0x027F_FFFF
+ BUS_INTERFACE SQDR = darkquad29_wvl_dds_lut_qdr0
+ BUS_INTERFACE SOPB = opb0
+ BUS_INTERFACE COPB = opb0
+ PORT qdr_clk       = adc0_clk
+ PORT OPB_Clk       = epb_clk
+ PORT OPB_Clk_config= epb_clk
+ PORT slave_addr    = darkquad29_wvl_dds_lut_qdr0_address
+ PORT slave_wr_strb = darkquad29_wvl_dds_lut_qdr0_wr_en
+ PORT slave_wr_data = darkquad29_wvl_dds_lut_qdr0_data_in
+ PORT slave_wr_be   = darkquad29_wvl_dds_lut_qdr0_be
+ PORT slave_rd_strb = darkquad29_wvl_dds_lut_qdr0_rd_en
+ PORT slave_rd_data = darkquad29_wvl_dds_lut_qdr0_data_out
+ PORT slave_rd_dvld = darkquad29_wvl_dds_lut_qdr0_data_valid
+ PORT slave_ack     = darkquad29_wvl_dds_lut_qdr0_ack
+ PORT dly_clk = sys_clk2x
+ PORT dly_extra_clk = darkquad29_wvl_dds_lut_qdr0_dly_extra_clk
+ PORT dly_en_o      = darkquad29_wvl_dds_lut_qdr0_dly_en_o
+ PORT dly_en_i      = darkquad29_wvl_dds_lut_qdr0_dly_en_i
+ PORT dly_inc_dec   = darkquad29_wvl_dds_lut_qdr0_dly_inc_dec
+ PORT dly_cntrs     = darkquad29_wvl_dds_lut_qdr0_dly_cntrs
+ PORT phy_rdy       = darkquad29_wvl_dds_lut_qdr0_phy_ready
+ PORT cal_fail      = darkquad29_wvl_dds_lut_qdr0_cal_fail
+ PORT qdr_reset     = darkquad29_wvl_dds_lut_qdr0_reset
+END
+
+
+
+# darkquad29_wvl/dds_lut/qdr1
+BEGIN qdr_controller
+ PARAMETER INSTANCE = qdr1_controller
+ PARAMETER CLK_FREQ = 250
+ PARAMETER HW_VER   = 1.00.a
+ PARAMETER DATA_WIDTH = 36
+ PARAMETER ADDR_WIDTH = 21
+ PARAMETER BW_WIDTH   = 4
+ PORT clk0    = adc0_clk
+ PORT clk180  = adc0_clk180
+ PORT clk270  = adc0_clk270
+ PORT dly_clk = sys_clk2x
+ PORT idelay_rdy = idelay_rdy
+ PORT reset   = darkquad29_wvl_dds_lut_qdr1_reset
+ PORT qdr_k_n       = qdr1_k_n
+ PORT qdr_k         = qdr1_k
+ PORT qdr_d         = qdr1_d
+ PORT qdr_sa        = qdr1_sa
+ PORT qdr_w_n       = qdr1_w_n
+ PORT qdr_r_n       = qdr1_r_n
+ PORT qdr_q         = qdr1_q
+ PORT qdr_dll_off_n = qdr1_dll_off_n
+ PORT phy_rdy  = darkquad29_wvl_dds_lut_qdr1_phy_ready
+ PORT cal_fail = darkquad29_wvl_dds_lut_qdr1_cal_fail
+ PORT dly_extra_clk = darkquad29_wvl_dds_lut_qdr1_dly_extra_clk
+ PORT dly_en_o     = darkquad29_wvl_dds_lut_qdr1_dly_en_o
+ PORT dly_en_i     = darkquad29_wvl_dds_lut_qdr1_dly_en_i
+ PORT dly_inc_dec  = darkquad29_wvl_dds_lut_qdr1_dly_inc_dec
+ PORT dly_cntrs    = darkquad29_wvl_dds_lut_qdr1_dly_cntrs
+ BUS_INTERFACE MQDR = darkquad29_wvl_dds_lut_qdr1
+END
+
+PORT qdr1_k_n       = qdr1_k_n       , DIR = O
+PORT qdr1_k         = qdr1_k         , DIR = O
+PORT qdr1_d         = qdr1_d         , DIR = O, VEC=[35:0]
+PORT qdr1_sa        = qdr1_sa        , DIR = O, VEC=[20:0]
+PORT qdr1_w_n       = qdr1_w_n       , DIR = O
+PORT qdr1_r_n       = qdr1_r_n       , DIR = O
+PORT qdr1_q         = qdr1_q         , DIR = I, VEC=[35:0]
+PORT qdr1_dll_off_n = qdr1_dll_off_n , DIR = O
+
+
+BEGIN opb_qdr_sniffer
+ PARAMETER INSTANCE   = qdr1_sniffer
+ PARAMETER HW_VER     = 1.00.a
+ PARAMETER ENABLE     = 1
+ PARAMETER QDR_DATA_WIDTH = 36
+ PARAMETER QDR_ADDR_WIDTH = 21
+ PARAMETER QDR_BW_WIDTH   = 4
+ PARAMETER C_CONFIG_BASEADDR = 0x0008_0000
+ PARAMETER C_CONFIG_HIGHADDR = 0x0008_FFFF
+ PARAMETER C_BASEADDR = 0x0280_0000
+ PARAMETER C_HIGHADDR = 0x02FF_FFFF
+ BUS_INTERFACE SQDR = darkquad29_wvl_dds_lut_qdr1
+ BUS_INTERFACE SOPB = opb0
+ BUS_INTERFACE COPB = opb0
+ PORT qdr_clk       = adc0_clk
+ PORT OPB_Clk       = epb_clk
+ PORT OPB_Clk_config= epb_clk
+ PORT slave_addr    = darkquad29_wvl_dds_lut_qdr1_address
+ PORT slave_wr_strb = darkquad29_wvl_dds_lut_qdr1_wr_en
+ PORT slave_wr_data = darkquad29_wvl_dds_lut_qdr1_data_in
+ PORT slave_wr_be   = darkquad29_wvl_dds_lut_qdr1_be
+ PORT slave_rd_strb = darkquad29_wvl_dds_lut_qdr1_rd_en
+ PORT slave_rd_data = darkquad29_wvl_dds_lut_qdr1_data_out
+ PORT slave_rd_dvld = darkquad29_wvl_dds_lut_qdr1_data_valid
+ PORT slave_ack     = darkquad29_wvl_dds_lut_qdr1_ack
+ PORT dly_clk = sys_clk2x
+ PORT dly_extra_clk = darkquad29_wvl_dds_lut_qdr1_dly_extra_clk
+ PORT dly_en_o      = darkquad29_wvl_dds_lut_qdr1_dly_en_o
+ PORT dly_en_i      = darkquad29_wvl_dds_lut_qdr1_dly_en_i
+ PORT dly_inc_dec   = darkquad29_wvl_dds_lut_qdr1_dly_inc_dec
+ PORT dly_cntrs     = darkquad29_wvl_dds_lut_qdr1_dly_cntrs
+ PORT phy_rdy       = darkquad29_wvl_dds_lut_qdr1_phy_ready
+ PORT cal_fail      = darkquad29_wvl_dds_lut_qdr1_cal_fail
+ PORT qdr_reset     = darkquad29_wvl_dds_lut_qdr1_reset
+END
+
+
+
+# darkquad29_wvl/dds_lut/qdr2
+BEGIN qdr_controller
+ PARAMETER INSTANCE = qdr2_controller
+ PARAMETER CLK_FREQ = 250
+ PARAMETER HW_VER   = 1.00.a
+ PARAMETER DATA_WIDTH = 36
+ PARAMETER ADDR_WIDTH = 21
+ PARAMETER BW_WIDTH   = 4
+ PORT clk0    = adc0_clk
+ PORT clk180  = adc0_clk180
+ PORT clk270  = adc0_clk270
+ PORT dly_clk = sys_clk2x
+ PORT idelay_rdy = idelay_rdy
+ PORT reset   = darkquad29_wvl_dds_lut_qdr2_reset
+ PORT qdr_k_n       = qdr2_k_n
+ PORT qdr_k         = qdr2_k
+ PORT qdr_d         = qdr2_d
+ PORT qdr_sa        = qdr2_sa
+ PORT qdr_w_n       = qdr2_w_n
+ PORT qdr_r_n       = qdr2_r_n
+ PORT qdr_q         = qdr2_q
+ PORT qdr_dll_off_n = qdr2_dll_off_n
+ PORT phy_rdy  = darkquad29_wvl_dds_lut_qdr2_phy_ready
+ PORT cal_fail = darkquad29_wvl_dds_lut_qdr2_cal_fail
+ PORT dly_extra_clk = darkquad29_wvl_dds_lut_qdr2_dly_extra_clk
+ PORT dly_en_o     = darkquad29_wvl_dds_lut_qdr2_dly_en_o
+ PORT dly_en_i     = darkquad29_wvl_dds_lut_qdr2_dly_en_i
+ PORT dly_inc_dec  = darkquad29_wvl_dds_lut_qdr2_dly_inc_dec
+ PORT dly_cntrs    = darkquad29_wvl_dds_lut_qdr2_dly_cntrs
+ BUS_INTERFACE MQDR = darkquad29_wvl_dds_lut_qdr2
+END
+
+PORT qdr2_k_n       = qdr2_k_n       , DIR = O
+PORT qdr2_k         = qdr2_k         , DIR = O
+PORT qdr2_d         = qdr2_d         , DIR = O, VEC=[35:0]
+PORT qdr2_sa        = qdr2_sa        , DIR = O, VEC=[20:0]
+PORT qdr2_w_n       = qdr2_w_n       , DIR = O
+PORT qdr2_r_n       = qdr2_r_n       , DIR = O
+PORT qdr2_q         = qdr2_q         , DIR = I, VEC=[35:0]
+PORT qdr2_dll_off_n = qdr2_dll_off_n , DIR = O
+
+
+BEGIN opb_qdr_sniffer
+ PARAMETER INSTANCE   = qdr2_sniffer
+ PARAMETER HW_VER     = 1.00.a
+ PARAMETER ENABLE     = 1
+ PARAMETER QDR_DATA_WIDTH = 36
+ PARAMETER QDR_ADDR_WIDTH = 21
+ PARAMETER QDR_BW_WIDTH   = 4
+ PARAMETER C_CONFIG_BASEADDR = 0x0009_0000
+ PARAMETER C_CONFIG_HIGHADDR = 0x0009_FFFF
+ PARAMETER C_BASEADDR = 0x0300_0000
+ PARAMETER C_HIGHADDR = 0x037F_FFFF
+ BUS_INTERFACE SQDR = darkquad29_wvl_dds_lut_qdr2
+ BUS_INTERFACE SOPB = opb0
+ BUS_INTERFACE COPB = opb0
+ PORT qdr_clk       = adc0_clk
+ PORT OPB_Clk       = epb_clk
+ PORT OPB_Clk_config= epb_clk
+ PORT slave_addr    = darkquad29_wvl_dds_lut_qdr2_address
+ PORT slave_wr_strb = darkquad29_wvl_dds_lut_qdr2_wr_en
+ PORT slave_wr_data = darkquad29_wvl_dds_lut_qdr2_data_in
+ PORT slave_wr_be   = darkquad29_wvl_dds_lut_qdr2_be
+ PORT slave_rd_strb = darkquad29_wvl_dds_lut_qdr2_rd_en
+ PORT slave_rd_data = darkquad29_wvl_dds_lut_qdr2_data_out
+ PORT slave_rd_dvld = darkquad29_wvl_dds_lut_qdr2_data_valid
+ PORT slave_ack     = darkquad29_wvl_dds_lut_qdr2_ack
+ PORT dly_clk = sys_clk2x
+ PORT dly_extra_clk = darkquad29_wvl_dds_lut_qdr2_dly_extra_clk
+ PORT dly_en_o      = darkquad29_wvl_dds_lut_qdr2_dly_en_o
+ PORT dly_en_i      = darkquad29_wvl_dds_lut_qdr2_dly_en_i
+ PORT dly_inc_dec   = darkquad29_wvl_dds_lut_qdr2_dly_inc_dec
+ PORT dly_cntrs     = darkquad29_wvl_dds_lut_qdr2_dly_cntrs
+ PORT phy_rdy       = darkquad29_wvl_dds_lut_qdr2_phy_ready
+ PORT cal_fail      = darkquad29_wvl_dds_lut_qdr2_cal_fail
+ PORT qdr_reset     = darkquad29_wvl_dds_lut_qdr2_reset
+END
+
+
+
+# darkquad29_wvl/dds_lut/qdr3
+BEGIN qdr_controller
+ PARAMETER INSTANCE = qdr3_controller
+ PARAMETER CLK_FREQ = 250
+ PARAMETER HW_VER   = 1.00.a
+ PARAMETER DATA_WIDTH = 36
+ PARAMETER ADDR_WIDTH = 21
+ PARAMETER BW_WIDTH   = 4
+ PORT clk0    = adc0_clk
+ PORT clk180  = adc0_clk180
+ PORT clk270  = adc0_clk270
+ PORT dly_clk = sys_clk2x
+ PORT idelay_rdy = idelay_rdy
+ PORT reset   = darkquad29_wvl_dds_lut_qdr3_reset
+ PORT qdr_k_n       = qdr3_k_n
+ PORT qdr_k         = qdr3_k
+ PORT qdr_d         = qdr3_d
+ PORT qdr_sa        = qdr3_sa
+ PORT qdr_w_n       = qdr3_w_n
+ PORT qdr_r_n       = qdr3_r_n
+ PORT qdr_q         = qdr3_q
+ PORT qdr_dll_off_n = qdr3_dll_off_n
+ PORT phy_rdy  = darkquad29_wvl_dds_lut_qdr3_phy_ready
+ PORT cal_fail = darkquad29_wvl_dds_lut_qdr3_cal_fail
+ PORT dly_extra_clk = darkquad29_wvl_dds_lut_qdr3_dly_extra_clk
+ PORT dly_en_o     = darkquad29_wvl_dds_lut_qdr3_dly_en_o
+ PORT dly_en_i     = darkquad29_wvl_dds_lut_qdr3_dly_en_i
+ PORT dly_inc_dec  = darkquad29_wvl_dds_lut_qdr3_dly_inc_dec
+ PORT dly_cntrs    = darkquad29_wvl_dds_lut_qdr3_dly_cntrs
+ BUS_INTERFACE MQDR = darkquad29_wvl_dds_lut_qdr3
+END
+
+PORT qdr3_k_n       = qdr3_k_n       , DIR = O
+PORT qdr3_k         = qdr3_k         , DIR = O
+PORT qdr3_d         = qdr3_d         , DIR = O, VEC=[35:0]
+PORT qdr3_sa        = qdr3_sa        , DIR = O, VEC=[20:0]
+PORT qdr3_w_n       = qdr3_w_n       , DIR = O
+PORT qdr3_r_n       = qdr3_r_n       , DIR = O
+PORT qdr3_q         = qdr3_q         , DIR = I, VEC=[35:0]
+PORT qdr3_dll_off_n = qdr3_dll_off_n , DIR = O
+
+
+BEGIN opb_qdr_sniffer
+ PARAMETER INSTANCE   = qdr3_sniffer
+ PARAMETER HW_VER     = 1.00.a
+ PARAMETER ENABLE     = 1
+ PARAMETER QDR_DATA_WIDTH = 36
+ PARAMETER QDR_ADDR_WIDTH = 21
+ PARAMETER QDR_BW_WIDTH   = 4
+ PARAMETER C_CONFIG_BASEADDR = 0x000A_0000
+ PARAMETER C_CONFIG_HIGHADDR = 0x000A_FFFF
+ PARAMETER C_BASEADDR = 0x0380_0000
+ PARAMETER C_HIGHADDR = 0x03FF_FFFF
+ BUS_INTERFACE SQDR = darkquad29_wvl_dds_lut_qdr3
+ BUS_INTERFACE SOPB = opb0
+ BUS_INTERFACE COPB = opb0
+ PORT qdr_clk       = adc0_clk
+ PORT OPB_Clk       = epb_clk
+ PORT OPB_Clk_config= epb_clk
+ PORT slave_addr    = darkquad29_wvl_dds_lut_qdr3_address
+ PORT slave_wr_strb = darkquad29_wvl_dds_lut_qdr3_wr_en
+ PORT slave_wr_data = darkquad29_wvl_dds_lut_qdr3_data_in
+ PORT slave_wr_be   = darkquad29_wvl_dds_lut_qdr3_be
+ PORT slave_rd_strb = darkquad29_wvl_dds_lut_qdr3_rd_en
+ PORT slave_rd_data = darkquad29_wvl_dds_lut_qdr3_data_out
+ PORT slave_rd_dvld = darkquad29_wvl_dds_lut_qdr3_data_valid
+ PORT slave_ack     = darkquad29_wvl_dds_lut_qdr3_ack
+ PORT dly_clk = sys_clk2x
+ PORT dly_extra_clk = darkquad29_wvl_dds_lut_qdr3_dly_extra_clk
+ PORT dly_en_o      = darkquad29_wvl_dds_lut_qdr3_dly_en_o
+ PORT dly_en_i      = darkquad29_wvl_dds_lut_qdr3_dly_en_i
+ PORT dly_inc_dec   = darkquad29_wvl_dds_lut_qdr3_dly_inc_dec
+ PORT dly_cntrs     = darkquad29_wvl_dds_lut_qdr3_dly_cntrs
+ PORT phy_rdy       = darkquad29_wvl_dds_lut_qdr3_phy_ready
+ PORT cal_fail      = darkquad29_wvl_dds_lut_qdr3_cal_fail
+ PORT qdr_reset     = darkquad29_wvl_dds_lut_qdr3_reset
+END
+
+
+
+# darkquad29_wvl/dds_lut/run
+BEGIN opb_register_ppc2simulink
+ PARAMETER INSTANCE = darkquad29_wvl_dds_lut_run
+ PARAMETER HW_VER = 1.00.a
+ PARAMETER C_BASEADDR = 0x01181200
+ PARAMETER C_HIGHADDR = 0x011812FF
+ BUS_INTERFACE SOPB = opb3
+ PORT OPB_Clk = epb_clk
+ PORT user_data_out = darkquad29_wvl_dds_lut_run_user_data_out
+ PORT user_clk = adc0_clk
+END
+
+# darkquad29_wvl/dds_shift
+BEGIN opb_register_ppc2simulink
+ PARAMETER INSTANCE = darkquad29_wvl_dds_shift
+ PARAMETER HW_VER = 1.00.a
+ PARAMETER C_BASEADDR = 0x01181300
+ PARAMETER C_HIGHADDR = 0x011813FF
+ BUS_INTERFACE SOPB = opb3
+ PORT OPB_Clk = epb_clk
+ PORT user_data_out = darkquad29_wvl_dds_shift_user_data_out
+ PORT user_clk = adc0_clk
+END
+
+# darkquad29_wvl/gbe64/dest_ip
+BEGIN opb_register_ppc2simulink
+ PARAMETER INSTANCE = darkquad29_wvl_gbe64_dest_ip
+ PARAMETER HW_VER = 1.00.a
+ PARAMETER C_BASEADDR = 0x01181400
+ PARAMETER C_HIGHADDR = 0x011814FF
+ BUS_INTERFACE SOPB = opb3
+ PORT OPB_Clk = epb_clk
+ PORT user_data_out = darkquad29_wvl_gbe64_dest_ip_user_data_out
+ PORT user_clk = adc0_clk
+END
+
+# darkquad29_wvl/gbe64/one_gbe
+BEGIN gbe_udp
+ PARAMETER INSTANCE = darkquad29_wvl_gbe64_one_gbe
+ PARAMETER HW_VER = 1.00.a
+ PARAMETER LOCAL_ENABLE = 1
+ PARAMETER LOCAL_MAC = 0x123456789ABC
+ PARAMETER LOCAL_IP = 0xA0000D3
+ PARAMETER LOCAL_PORT = 0xC350
+ PARAMETER LOCAL_GATEWAY = 0x1
+ PARAMETER CPU_PROMISCUOUS = 1
+ PARAMETER DIS_CPU_TX = 0
+ PARAMETER DIS_CPU_RX = 0
+ PARAMETER C_BASEADDR = 0x01184000
+ PARAMETER C_HIGHADDR = 0x01187FFF
+ BUS_INTERFACE SOPB = opb3
+ PORT OPB_Clk = epb_clk
+ BUS_INTERFACE MAC = mac
+ PORT app_dbg_data = darkquad29_wvl_gbe64_one_gbe_app_dbg_data
+ PORT app_dbg_dvld = darkquad29_wvl_gbe64_one_gbe_app_dbg_dvld
+ PORT app_rx_badframe = darkquad29_wvl_gbe64_one_gbe_app_rx_badframe
+ PORT app_rx_data = darkquad29_wvl_gbe64_one_gbe_app_rx_data
+ PORT app_rx_dvld = darkquad29_wvl_gbe64_one_gbe_app_rx_dvld
+ PORT app_rx_eof = darkquad29_wvl_gbe64_one_gbe_app_rx_eof
+ PORT app_rx_overrun = darkquad29_wvl_gbe64_one_gbe_app_rx_overrun
+ PORT app_rx_srcip = darkquad29_wvl_gbe64_one_gbe_app_rx_srcip
+ PORT app_rx_srcport = darkquad29_wvl_gbe64_one_gbe_app_rx_srcport
+ PORT app_tx_afull = darkquad29_wvl_gbe64_one_gbe_app_tx_afull
+ PORT app_tx_overflow = darkquad29_wvl_gbe64_one_gbe_app_tx_overflow
+ PORT app_rx_ack = darkquad29_wvl_gbe64_one_gbe_app_rx_ack
+ PORT app_rx_rst = darkquad29_wvl_gbe64_one_gbe_app_rx_rst
+ PORT app_tx_data = darkquad29_wvl_gbe64_one_gbe_app_tx_data
+ PORT app_tx_destip = darkquad29_wvl_gbe64_one_gbe_app_tx_destip
+ PORT app_tx_destport = darkquad29_wvl_gbe64_one_gbe_app_tx_destport
+ PORT app_tx_dvld = darkquad29_wvl_gbe64_one_gbe_app_tx_dvld
+ PORT app_tx_eof = darkquad29_wvl_gbe64_one_gbe_app_tx_eof
+ PORT app_tx_rst = darkquad29_wvl_gbe64_one_gbe_app_tx_rst
+ PORT app_clk = adc0_clk
+ PORT mac_tx_rst = darkquad29_wvl_gbe64_one_gbe_app_tx_rst
+ PORT mac_rx_rst = darkquad29_wvl_gbe64_one_gbe_app_rx_rst
+END
+
+
+# darkquad29_wvl/gbe64/rst
+BEGIN opb_register_ppc2simulink
+ PARAMETER INSTANCE = darkquad29_wvl_gbe64_rst
+ PARAMETER HW_VER = 1.00.a
+ PARAMETER C_BASEADDR = 0x01188000
+ PARAMETER C_HIGHADDR = 0x011880FF
+ BUS_INTERFACE SOPB = opb3
+ PORT OPB_Clk = epb_clk
+ PORT user_data_out = darkquad29_wvl_gbe64_rst_user_data_out
+ PORT user_clk = adc0_clk
+END
+
+# darkquad29_wvl/gbe64/tx_afull
+BEGIN opb_register_simulink2ppc
+ PARAMETER INSTANCE = darkquad29_wvl_gbe64_tx_afull
+ PARAMETER HW_VER = 1.00.a
+ PARAMETER C_BASEADDR = 0x01188100
+ PARAMETER C_HIGHADDR = 0x011881FF
+ BUS_INTERFACE SOPB = opb3
+ PORT OPB_Clk = epb_clk
+ PORT user_data_in = darkquad29_wvl_gbe64_tx_afull_user_data_in
+ PORT user_clk = adc0_clk
+END
+
+# darkquad29_wvl/gbe64/tx_overrun
+BEGIN opb_register_simulink2ppc
+ PARAMETER INSTANCE = darkquad29_wvl_gbe64_tx_overrun
+ PARAMETER HW_VER = 1.00.a
+ PARAMETER C_BASEADDR = 0x01188200
+ PARAMETER C_HIGHADDR = 0x011882FF
+ BUS_INTERFACE SOPB = opb3
+ PORT OPB_Clk = epb_clk
+ PORT user_data_in = darkquad29_wvl_gbe64_tx_overrun_user_data_in
+ PORT user_clk = adc0_clk
+END
+
+# darkquad29_wvl/gbe64/words_per_frame
+BEGIN opb_register_ppc2simulink
+ PARAMETER INSTANCE = darkquad29_wvl_gbe64_words_per_frame
+ PARAMETER HW_VER = 1.00.a
+ PARAMETER C_BASEADDR = 0x01188300
+ PARAMETER C_HIGHADDR = 0x011883FF
+ BUS_INTERFACE SOPB = opb3
+ PORT OPB_Clk = epb_clk
+ PORT user_data_out = darkquad29_wvl_gbe64_words_per_frame_user_data_out
+ PORT user_clk = adc0_clk
+END
+
+# darkquad29_wvl/n_eof_sent
+BEGIN opb_register_simulink2ppc
+ PARAMETER INSTANCE = darkquad29_wvl_n_eof_sent
+ PARAMETER HW_VER = 1.00.a
+ PARAMETER C_BASEADDR = 0x01188400
+ PARAMETER C_HIGHADDR = 0x011884FF
+ BUS_INTERFACE SOPB = opb3
+ PORT OPB_Clk = epb_clk
+ PORT user_data_in = darkquad29_wvl_n_eof_sent_user_data_in
+ PORT user_clk = adc0_clk
+END
+
+# darkquad29_wvl/n_photons
+BEGIN opb_register_simulink2ppc
+ PARAMETER INSTANCE = darkquad29_wvl_n_photons
+ PARAMETER HW_VER = 1.00.a
+ PARAMETER C_BASEADDR = 0x01188500
+ PARAMETER C_HIGHADDR = 0x011885FF
+ BUS_INTERFACE SOPB = opb3
+ PORT OPB_Clk = epb_clk
+ PORT user_data_in = darkquad29_wvl_n_photons_user_data_in
+ PORT user_clk = adc0_clk
+END
+
+# darkquad29_wvl/pfb_fft/check/fft_oflow
+BEGIN opb_register_simulink2ppc
+ PARAMETER INSTANCE = darkquad29_wvl_pfb_fft_check_fft_oflow
+ PARAMETER HW_VER = 1.00.a
+ PARAMETER C_BASEADDR = 0x01188600
+ PARAMETER C_HIGHADDR = 0x011886FF
+ BUS_INTERFACE SOPB = opb3
+ PORT OPB_Clk = epb_clk
+ PORT user_data_in = darkquad29_wvl_pfb_fft_check_fft_oflow_user_data_in
+ PORT user_clk = adc0_clk
+END
+
+# darkquad29_wvl/phase_dmp/ch_we
+BEGIN opb_register_ppc2simulink
+ PARAMETER INSTANCE = darkquad29_wvl_phase_dmp_ch_we
+ PARAMETER HW_VER = 1.00.a
+ PARAMETER C_BASEADDR = 0x01188700
+ PARAMETER C_HIGHADDR = 0x011887FF
+ BUS_INTERFACE SOPB = opb3
+ PORT OPB_Clk = epb_clk
+ PORT user_data_out = darkquad29_wvl_phase_dmp_ch_we_user_data_out
+ PORT user_clk = adc0_clk
+END
+
+# darkquad29_wvl/phase_dmp/on
+BEGIN opb_register_ppc2simulink
+ PARAMETER INSTANCE = darkquad29_wvl_phase_dmp_on
+ PARAMETER HW_VER = 1.00.a
+ PARAMETER C_BASEADDR = 0x01188800
+ PARAMETER C_HIGHADDR = 0x011888FF
+ BUS_INTERFACE SOPB = opb3
+ PORT OPB_Clk = epb_clk
+ PORT user_data_out = darkquad29_wvl_phase_dmp_on_user_data_out
+ PORT user_clk = adc0_clk
+END
+
+# darkquad29_wvl/phase_port
+BEGIN opb_register_ppc2simulink
+ PARAMETER INSTANCE = darkquad29_wvl_phase_port
+ PARAMETER HW_VER = 1.00.a
+ PARAMETER C_BASEADDR = 0x01188900
+ PARAMETER C_HIGHADDR = 0x011889FF
+ BUS_INTERFACE SOPB = opb3
+ PORT OPB_Clk = epb_clk
+ PORT user_data_out = darkquad29_wvl_phase_port_user_data_out
+ PORT user_clk = adc0_clk
+END
+
+# darkquad29_wvl/photon_port
+BEGIN opb_register_ppc2simulink
+ PARAMETER INSTANCE = darkquad29_wvl_photon_port
+ PARAMETER HW_VER = 1.00.a
+ PARAMETER C_BASEADDR = 0x01200000
+ PARAMETER C_HIGHADDR = 0x012000FF
+ BUS_INTERFACE SOPB = opb4
+ PORT OPB_Clk = epb_clk
+ PORT user_data_out = darkquad29_wvl_photon_port_user_data_out
+ PORT user_clk = adc0_clk
+END
+
+# darkquad29_wvl/prog_fir0/load_chan
+BEGIN opb_register_ppc2simulink
+ PARAMETER INSTANCE = darkquad29_wvl_prog_fir0_load_chan
+ PARAMETER HW_VER = 1.00.a
+ PARAMETER C_BASEADDR = 0x01200100
+ PARAMETER C_HIGHADDR = 0x012001FF
+ BUS_INTERFACE SOPB = opb4
+ PORT OPB_Clk = epb_clk
+ PORT user_data_out = darkquad29_wvl_prog_fir0_load_chan_user_data_out
+ PORT user_clk = adc0_clk
+END
+
+# darkquad29_wvl/prog_fir0/single_chan_coeffs
+BEGIN bram_block_custom
+ PARAMETER INSTANCE = darkquad29_wvl_prog_fir0_single_chan_coeffs_ramblk
+ PARAMETER HW_VER = 1.00.a
+ PARAMETER C_PORTA_DWIDTH   = 32
+ PARAMETER C_PORTA_NUM_WE   = 4
+ PARAMETER C_PORTA_DEPTH    = 10
+ PARAMETER C_PORTB_DEPTH    = 10
+ PARAMETER OPTIMIZATION     = Minimum_Area
+ PARAMETER REG_CORE_OUTPUT  = true
+ PARAMETER REG_PRIM_OUTPUT  = true
+ PORT clk           = adc0_clk
+ PORT bram_addr     = darkquad29_wvl_prog_fir0_single_chan_coeffs_addr    
+ PORT bram_rd_data  = darkquad29_wvl_prog_fir0_single_chan_coeffs_data_out
+ PORT bram_wr_data  = darkquad29_wvl_prog_fir0_single_chan_coeffs_data_in 
+ PORT bram_we       = darkquad29_wvl_prog_fir0_single_chan_coeffs_we      
+ BUS_INTERFACE PORTB = darkquad29_wvl_prog_fir0_single_chan_coeffs_ramblk_portb
+END
+
+BEGIN opb_bram_if_cntlr
+ PARAMETER INSTANCE = darkquad29_wvl_prog_fir0_single_chan_coeffs
+ PARAMETER HW_VER = 1.00.a
+ PARAMETER C_OPB_CLK_PERIOD_PS = 10000
+ PARAMETER C_BASEADDR = 0x01201000
+ PARAMETER C_HIGHADDR = 0x01201FFF
+ BUS_INTERFACE SOPB = opb4
+ BUS_INTERFACE PORTA = darkquad29_wvl_prog_fir0_single_chan_coeffs_ramblk_portb
+END
+
+
+# darkquad29_wvl/prog_fir1/load_chan
+BEGIN opb_register_ppc2simulink
+ PARAMETER INSTANCE = darkquad29_wvl_prog_fir1_load_chan
+ PARAMETER HW_VER = 1.00.a
+ PARAMETER C_BASEADDR = 0x01202000
+ PARAMETER C_HIGHADDR = 0x012020FF
+ BUS_INTERFACE SOPB = opb4
+ PORT OPB_Clk = epb_clk
+ PORT user_data_out = darkquad29_wvl_prog_fir1_load_chan_user_data_out
+ PORT user_clk = adc0_clk
+END
+
+# darkquad29_wvl/prog_fir1/single_chan_coeffs
+BEGIN bram_block_custom
+ PARAMETER INSTANCE = darkquad29_wvl_prog_fir1_single_chan_coeffs_ramblk
+ PARAMETER HW_VER = 1.00.a
+ PARAMETER C_PORTA_DWIDTH   = 32
+ PARAMETER C_PORTA_NUM_WE   = 4
+ PARAMETER C_PORTA_DEPTH    = 10
+ PARAMETER C_PORTB_DEPTH    = 10
+ PARAMETER OPTIMIZATION     = Minimum_Area
+ PARAMETER REG_CORE_OUTPUT  = true
+ PARAMETER REG_PRIM_OUTPUT  = true
+ PORT clk           = adc0_clk
+ PORT bram_addr     = darkquad29_wvl_prog_fir1_single_chan_coeffs_addr    
+ PORT bram_rd_data  = darkquad29_wvl_prog_fir1_single_chan_coeffs_data_out
+ PORT bram_wr_data  = darkquad29_wvl_prog_fir1_single_chan_coeffs_data_in 
+ PORT bram_we       = darkquad29_wvl_prog_fir1_single_chan_coeffs_we      
+ BUS_INTERFACE PORTB = darkquad29_wvl_prog_fir1_single_chan_coeffs_ramblk_portb
+END
+
+BEGIN opb_bram_if_cntlr
+ PARAMETER INSTANCE = darkquad29_wvl_prog_fir1_single_chan_coeffs
+ PARAMETER HW_VER = 1.00.a
+ PARAMETER C_OPB_CLK_PERIOD_PS = 10000
+ PARAMETER C_BASEADDR = 0x01203000
+ PARAMETER C_HIGHADDR = 0x01203FFF
+ BUS_INTERFACE SOPB = opb4
+ BUS_INTERFACE PORTA = darkquad29_wvl_prog_fir1_single_chan_coeffs_ramblk_portb
+END
+
+
+# darkquad29_wvl/prog_fir2/load_chan
+BEGIN opb_register_ppc2simulink
+ PARAMETER INSTANCE = darkquad29_wvl_prog_fir2_load_chan
+ PARAMETER HW_VER = 1.00.a
+ PARAMETER C_BASEADDR = 0x01204000
+ PARAMETER C_HIGHADDR = 0x012040FF
+ BUS_INTERFACE SOPB = opb4
+ PORT OPB_Clk = epb_clk
+ PORT user_data_out = darkquad29_wvl_prog_fir2_load_chan_user_data_out
+ PORT user_clk = adc0_clk
+END
+
+# darkquad29_wvl/prog_fir2/single_chan_coeffs
+BEGIN bram_block_custom
+ PARAMETER INSTANCE = darkquad29_wvl_prog_fir2_single_chan_coeffs_ramblk
+ PARAMETER HW_VER = 1.00.a
+ PARAMETER C_PORTA_DWIDTH   = 32
+ PARAMETER C_PORTA_NUM_WE   = 4
+ PARAMETER C_PORTA_DEPTH    = 10
+ PARAMETER C_PORTB_DEPTH    = 10
+ PARAMETER OPTIMIZATION     = Minimum_Area
+ PARAMETER REG_CORE_OUTPUT  = true
+ PARAMETER REG_PRIM_OUTPUT  = true
+ PORT clk           = adc0_clk
+ PORT bram_addr     = darkquad29_wvl_prog_fir2_single_chan_coeffs_addr    
+ PORT bram_rd_data  = darkquad29_wvl_prog_fir2_single_chan_coeffs_data_out
+ PORT bram_wr_data  = darkquad29_wvl_prog_fir2_single_chan_coeffs_data_in 
+ PORT bram_we       = darkquad29_wvl_prog_fir2_single_chan_coeffs_we      
+ BUS_INTERFACE PORTB = darkquad29_wvl_prog_fir2_single_chan_coeffs_ramblk_portb
+END
+
+BEGIN opb_bram_if_cntlr
+ PARAMETER INSTANCE = darkquad29_wvl_prog_fir2_single_chan_coeffs
+ PARAMETER HW_VER = 1.00.a
+ PARAMETER C_OPB_CLK_PERIOD_PS = 10000
+ PARAMETER C_BASEADDR = 0x01205000
+ PARAMETER C_HIGHADDR = 0x01205FFF
+ BUS_INTERFACE SOPB = opb4
+ BUS_INTERFACE PORTA = darkquad29_wvl_prog_fir2_single_chan_coeffs_ramblk_portb
+END
+
+
+# darkquad29_wvl/prog_fir3/load_chan
+BEGIN opb_register_ppc2simulink
+ PARAMETER INSTANCE = darkquad29_wvl_prog_fir3_load_chan
+ PARAMETER HW_VER = 1.00.a
+ PARAMETER C_BASEADDR = 0x01206000
+ PARAMETER C_HIGHADDR = 0x012060FF
+ BUS_INTERFACE SOPB = opb4
+ PORT OPB_Clk = epb_clk
+ PORT user_data_out = darkquad29_wvl_prog_fir3_load_chan_user_data_out
+ PORT user_clk = adc0_clk
+END
+
+# darkquad29_wvl/prog_fir3/single_chan_coeffs
+BEGIN bram_block_custom
+ PARAMETER INSTANCE = darkquad29_wvl_prog_fir3_single_chan_coeffs_ramblk
+ PARAMETER HW_VER = 1.00.a
+ PARAMETER C_PORTA_DWIDTH   = 32
+ PARAMETER C_PORTA_NUM_WE   = 4
+ PARAMETER C_PORTA_DEPTH    = 10
+ PARAMETER C_PORTB_DEPTH    = 10
+ PARAMETER OPTIMIZATION     = Minimum_Area
+ PARAMETER REG_CORE_OUTPUT  = true
+ PARAMETER REG_PRIM_OUTPUT  = true
+ PORT clk           = adc0_clk
+ PORT bram_addr     = darkquad29_wvl_prog_fir3_single_chan_coeffs_addr    
+ PORT bram_rd_data  = darkquad29_wvl_prog_fir3_single_chan_coeffs_data_out
+ PORT bram_wr_data  = darkquad29_wvl_prog_fir3_single_chan_coeffs_data_in 
+ PORT bram_we       = darkquad29_wvl_prog_fir3_single_chan_coeffs_we      
+ BUS_INTERFACE PORTB = darkquad29_wvl_prog_fir3_single_chan_coeffs_ramblk_portb
+END
+
+BEGIN opb_bram_if_cntlr
+ PARAMETER INSTANCE = darkquad29_wvl_prog_fir3_single_chan_coeffs
+ PARAMETER HW_VER = 1.00.a
+ PARAMETER C_OPB_CLK_PERIOD_PS = 10000
+ PARAMETER C_BASEADDR = 0x01207000
+ PARAMETER C_HIGHADDR = 0x01207FFF
+ BUS_INTERFACE SOPB = opb4
+ BUS_INTERFACE PORTA = darkquad29_wvl_prog_fir3_single_chan_coeffs_ramblk_portb
+END
+
+
+# darkquad29_wvl/run
+BEGIN opb_register_ppc2simulink
+ PARAMETER INSTANCE = darkquad29_wvl_run
+ PARAMETER HW_VER = 1.00.a
+ PARAMETER C_BASEADDR = 0x01208000
+ PARAMETER C_HIGHADDR = 0x012080FF
+ BUS_INTERFACE SOPB = opb4
+ PORT OPB_Clk = epb_clk
+ PORT user_data_out = darkquad29_wvl_run_user_data_out
+ PORT user_clk = adc0_clk
+END
+
+# darkquad29_wvl/sel_ch
+BEGIN opb_register_ppc2simulink
+ PARAMETER INSTANCE = darkquad29_wvl_sel_ch
+ PARAMETER HW_VER = 1.00.a
+ PARAMETER C_BASEADDR = 0x01208100
+ PARAMETER C_HIGHADDR = 0x012081FF
+ BUS_INTERFACE SOPB = opb4
+ PORT OPB_Clk = epb_clk
+ PORT user_data_out = darkquad29_wvl_sel_ch_user_data_out
+ PORT user_clk = adc0_clk
+END
+
+# darkquad29_wvl/snp_phs/ss/bram
+BEGIN bram_block_custom
+ PARAMETER INSTANCE = darkquad29_wvl_snp_phs_ss_bram_ramblk
+ PARAMETER HW_VER = 1.00.a
+ PARAMETER C_PORTA_DWIDTH   = 64
+ PARAMETER C_PORTA_NUM_WE   = 8
+ PARAMETER C_PORTA_DEPTH    = 9
+ PARAMETER C_PORTB_DEPTH    = 10
+ PARAMETER OPTIMIZATION     = Minimum_Area
+ PARAMETER REG_CORE_OUTPUT  = true
+ PARAMETER REG_PRIM_OUTPUT  = true
+ PORT clk           = adc0_clk
+ PORT bram_addr     = darkquad29_wvl_snp_phs_ss_bram_addr    
+ PORT bram_rd_data  = darkquad29_wvl_snp_phs_ss_bram_data_out
+ PORT bram_wr_data  = darkquad29_wvl_snp_phs_ss_bram_data_in 
+ PORT bram_we       = darkquad29_wvl_snp_phs_ss_bram_we      
+ BUS_INTERFACE PORTB = darkquad29_wvl_snp_phs_ss_bram_ramblk_portb
+END
+
+BEGIN opb_bram_if_cntlr
+ PARAMETER INSTANCE = darkquad29_wvl_snp_phs_ss_bram
+ PARAMETER HW_VER = 1.00.a
+ PARAMETER C_OPB_CLK_PERIOD_PS = 10000
+ PARAMETER C_BASEADDR = 0x01209000
+ PARAMETER C_HIGHADDR = 0x01209FFF
+ BUS_INTERFACE SOPB = opb4
+ BUS_INTERFACE PORTA = darkquad29_wvl_snp_phs_ss_bram_ramblk_portb
+END
+
+
+# darkquad29_wvl/snp_phs/ss/ctrl
+BEGIN opb_register_ppc2simulink
+ PARAMETER INSTANCE = darkquad29_wvl_snp_phs_ss_ctrl
+ PARAMETER HW_VER = 1.00.a
+ PARAMETER C_BASEADDR = 0x0120A000
+ PARAMETER C_HIGHADDR = 0x0120A0FF
+ BUS_INTERFACE SOPB = opb4
+ PORT OPB_Clk = epb_clk
+ PORT user_data_out = darkquad29_wvl_snp_phs_ss_ctrl_user_data_out
+ PORT user_clk = adc0_clk
+END
+
+# darkquad29_wvl/snp_phs/ss/status
+BEGIN opb_register_simulink2ppc
+ PARAMETER INSTANCE = darkquad29_wvl_snp_phs_ss_status
+ PARAMETER HW_VER = 1.00.a
+ PARAMETER C_BASEADDR = 0x0120A100
+ PARAMETER C_HIGHADDR = 0x0120A1FF
+ BUS_INTERFACE SOPB = opb4
+ PORT OPB_Clk = epb_clk
+ PORT user_data_in = darkquad29_wvl_snp_phs_ss_status_user_data_in
+ PORT user_clk = adc0_clk
+END
+
+# darkquad29_wvl/start_cap
+BEGIN opb_register_ppc2simulink
+ PARAMETER INSTANCE = darkquad29_wvl_start_cap
+ PARAMETER HW_VER = 1.00.a
+ PARAMETER C_BASEADDR = 0x0120A200
+ PARAMETER C_HIGHADDR = 0x0120A2FF
+ BUS_INTERFACE SOPB = opb4
+ PORT OPB_Clk = epb_clk
+ PORT user_data_out = darkquad29_wvl_start_cap_user_data_out
+ PORT user_clk = adc0_clk
+END
+
+# darkquad29_wvl/timekeeper/base_ts
+BEGIN opb_register_ppc2simulink
+ PARAMETER INSTANCE = darkquad29_wvl_timekeeper_base_ts
+ PARAMETER HW_VER = 1.00.a
+ PARAMETER C_BASEADDR = 0x0120A300
+ PARAMETER C_HIGHADDR = 0x0120A3FF
+ BUS_INTERFACE SOPB = opb4
+ PORT OPB_Clk = epb_clk
+ PORT user_data_out = darkquad29_wvl_timekeeper_base_ts_user_data_out
+ PORT user_clk = adc0_clk
+END
+
+# darkquad29_wvl/timekeeper/sec_now
+BEGIN opb_register_simulink2ppc
+ PARAMETER INSTANCE = darkquad29_wvl_timekeeper_sec_now
+ PARAMETER HW_VER = 1.00.a
+ PARAMETER C_BASEADDR = 0x0120A400
+ PARAMETER C_HIGHADDR = 0x0120A4FF
+ BUS_INTERFACE SOPB = opb4
+ PORT OPB_Clk = epb_clk
+ PORT user_data_in = darkquad29_wvl_timekeeper_sec_now_user_data_in
+ PORT user_clk = adc0_clk
+END
+
+# darkquad29_wvl/trig_snp
+BEGIN opb_register_ppc2simulink
+ PARAMETER INSTANCE = darkquad29_wvl_trig_snp
+ PARAMETER HW_VER = 1.00.a
+ PARAMETER C_BASEADDR = 0x0120A500
+ PARAMETER C_HIGHADDR = 0x0120A5FF
+ BUS_INTERFACE SOPB = opb4
+ PORT OPB_Clk = epb_clk
+ PORT user_data_out = darkquad29_wvl_trig_snp_user_data_out
+ PORT user_clk = adc0_clk
+END
+
+# OPB to OPB bridge added at 0x1080000
+BEGIN opb_v20
+ PARAMETER INSTANCE = opb1
+ PARAMETER HW_VER = 1.10.c
+ PARAMETER C_EXT_RESET_HIGH = 1
+ PORT SYS_Rst = sys_reset
+ PORT OPB_Clk = epb_clk
+END
+
+BEGIN opb_opb_lite
+ PARAMETER INSTANCE = opb2opb_bridge_opb1
+ PARAMETER HW_VER = 1.00.a
+ PARAMETER C_NUM_DECODES  = 1
+ PARAMETER C_DEC0_BASEADDR = 0x01080000
+ PARAMETER C_DEC0_HIGHADDR = 0x010FFFFF
+ BUS_INTERFACE SOPB = opb0
+ BUS_INTERFACE MOPB = opb1
+ PORT MOPB_Clk = epb_clk
+ PORT SOPB_Clk = epb_clk
+END
+
+# OPB to OPB bridge added at 0x1100000
+BEGIN opb_v20
+ PARAMETER INSTANCE = opb2
+ PARAMETER HW_VER = 1.10.c
+ PARAMETER C_EXT_RESET_HIGH = 1
+ PORT SYS_Rst = sys_reset
+ PORT OPB_Clk = epb_clk
+END
+
+BEGIN opb_opb_lite
+ PARAMETER INSTANCE = opb2opb_bridge_opb2
+ PARAMETER HW_VER = 1.00.a
+ PARAMETER C_NUM_DECODES  = 1
+ PARAMETER C_DEC0_BASEADDR = 0x01100000
+ PARAMETER C_DEC0_HIGHADDR = 0x0117FFFF
+ BUS_INTERFACE SOPB = opb0
+ BUS_INTERFACE MOPB = opb2
+ PORT MOPB_Clk = epb_clk
+ PORT SOPB_Clk = epb_clk
+END
+
+# OPB to OPB bridge added at 0x1180000
+BEGIN opb_v20
+ PARAMETER INSTANCE = opb3
+ PARAMETER HW_VER = 1.10.c
+ PARAMETER C_EXT_RESET_HIGH = 1
+ PORT SYS_Rst = sys_reset
+ PORT OPB_Clk = epb_clk
+END
+
+BEGIN opb_opb_lite
+ PARAMETER INSTANCE = opb2opb_bridge_opb3
+ PARAMETER HW_VER = 1.00.a
+ PARAMETER C_NUM_DECODES  = 1
+ PARAMETER C_DEC0_BASEADDR = 0x01180000
+ PARAMETER C_DEC0_HIGHADDR = 0x011FFFFF
+ BUS_INTERFACE SOPB = opb0
+ BUS_INTERFACE MOPB = opb3
+ PORT MOPB_Clk = epb_clk
+ PORT SOPB_Clk = epb_clk
+END
+
+# OPB to OPB bridge added at 0x1200000
+BEGIN opb_v20
+ PARAMETER INSTANCE = opb4
+ PARAMETER HW_VER = 1.10.c
+ PARAMETER C_EXT_RESET_HIGH = 1
+ PORT SYS_Rst = sys_reset
+ PORT OPB_Clk = epb_clk
+END
+
+BEGIN opb_opb_lite
+ PARAMETER INSTANCE = opb2opb_bridge_opb4
+ PARAMETER HW_VER = 1.00.a
+ PARAMETER C_NUM_DECODES  = 1
+ PARAMETER C_DEC0_BASEADDR = 0x01200000
+ PARAMETER C_DEC0_HIGHADDR = 0x0127FFFF
+ BUS_INTERFACE SOPB = opb0
+ BUS_INTERFACE MOPB = opb4
+ PORT MOPB_Clk = epb_clk
+ PORT SOPB_Clk = epb_clk
+END
+

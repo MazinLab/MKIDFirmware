@@ -1,0 +1,2 @@
+verilog opb_register_ppc2simulink_v1_00_a /Scratch/firmware/chan1024/darkquad29/XPS_ROACH2_base/pcores/opb_register_ppc2simulink_v1_00_a/hdl/verilog/opb_register_ppc2simulink.v
+verilog work ../hdl/system_darkquad29_conv_phase1_centers_wrapper.v

@@ -1,0 +1,1 @@
+/opt/Xilinx/14.3/ISE_DS/ISE/sysgen/bin/lin64/saferun -a /Scratch/firmware/chan1024/darkquad29/sysgen/darkquad29_cw_import.log -- /opt/Xilinx/14.3/ISE_DS/ISE//bin/lin64/xtclsh ProjectGeneration.tcl

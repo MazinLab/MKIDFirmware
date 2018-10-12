@@ -1,0 +1,11 @@
+verilog gbe_udp_v1_00_a /Scratch/firmware/chan1024/darkquad29/XPS_ROACH2_base/pcores/gbe_udp_v1_00_a/hdl/verilog/gbe_arp_cache.v
+verilog gbe_udp_v1_00_a /Scratch/firmware/chan1024/darkquad29/XPS_ROACH2_base/pcores/gbe_udp_v1_00_a/hdl/verilog/gbe_cpu_buffer.v
+verilog gbe_udp_v1_00_a /Scratch/firmware/chan1024/darkquad29/XPS_ROACH2_base/pcores/gbe_udp_v1_00_a/hdl/verilog/gbe_ctrl_fifo.v
+verilog gbe_udp_v1_00_a /Scratch/firmware/chan1024/darkquad29/XPS_ROACH2_base/pcores/gbe_udp_v1_00_a/hdl/verilog/gbe_cpu_attach.v
+verilog gbe_udp_v1_00_a /Scratch/firmware/chan1024/darkquad29/XPS_ROACH2_base/pcores/gbe_udp_v1_00_a/hdl/verilog/gbe_rx_ctrl_fifo.v
+verilog gbe_udp_v1_00_a /Scratch/firmware/chan1024/darkquad29/XPS_ROACH2_base/pcores/gbe_udp_v1_00_a/hdl/verilog/gbe_rx_packet_fifo.v
+verilog gbe_udp_v1_00_a /Scratch/firmware/chan1024/darkquad29/XPS_ROACH2_base/pcores/gbe_udp_v1_00_a/hdl/verilog/gbe_rx.v
+verilog gbe_udp_v1_00_a /Scratch/firmware/chan1024/darkquad29/XPS_ROACH2_base/pcores/gbe_udp_v1_00_a/hdl/verilog/gbe_tx.v
+verilog gbe_udp_v1_00_a /Scratch/firmware/chan1024/darkquad29/XPS_ROACH2_base/pcores/gbe_udp_v1_00_a/hdl/verilog/gbe_udp.v
+verilog gbe_udp_v1_00_a /Scratch/firmware/chan1024/darkquad29/XPS_ROACH2_base/pcores/gbe_udp_v1_00_a/hdl/verilog/gbe_tx_packet_fifo.v
+verilog work ../hdl/system_darkquad29_gbe64_one_gbe_wrapper.v
